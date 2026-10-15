@@ -44,30 +44,30 @@ zlib.crc32 (the old runs used Python's salted `hash()` and were NOT reproducible
 | Blur | Gaussian PSF, σ = hypot(0.5 px base, extra σ) |
 | Sensor | full well 6000 e⁻, read noise 3 e⁻, white LED → 75 % full well, 8-bit, RGGB Bayer + OpenCV bilinear demosaic |
 | Crosstalk (sensor RGB × LED RGB) | [[.85,.10,.05],[.12,.78,.10],[.04,.14,.82]] |
-| Ambient | 0.03 × white-LED level (sweep 0–0.6) |
+| Ambient | 0.03 × white-LED level, uniform (ambient sweep: 0–0.6 at 2.5 m, non-uniform gradient + hotspot) |
 | Lambertian order | m = 1 (radiance independent of angle; only foreshortening matters) |
 | Finder detection | ground-truth corners + N(0, 0.3 px) jitter (no real finder detector) |
 | Sub-pixel phase | random per frame |
 | Defaults for non-swept vars | d = 1 m, yaw 0°, extra blur 0, ambient 0.03 |
-| Frames | 300 random-payload frames per scheme per point |
+| Frames | 1000 per scheme per point, common random numbers, seeds from `config.py` (genie order chosen on 300 separate-seed frames) |
 
 Metrics: see the evaluation protocol above.
 
 ## Schemes (all reserve the same 4 corner pilots: TL white, TR red, BL green, BR blue = finder + colour reference)
-| Scheme | Bits/frame | Notes |
-|---|---|---|
-| **HNCSM** (proposed) | 16 base + 64 enh = 80 | per 4×4 quadrant: constant-weight (8 of 15) binary texture from a 16-word max-distance codebook; each lit LED ∈ {W,R,G,B} |
-| **HNCSM v2** | 48 base + 36 enh = 84 | base = QCD-style colour-balanced 2×2 cells (one R/G/B/dark LED, 16 of 24 permutations = 4 bits/cell, 12 cells); enh = per lit LED intensity full vs 0.5 (1 bit, 3 per cell). Joint per-cell ML decoding (arrangement × level) |
-| **HNCSM v2-CS (d=0.2,2b)** (chosen) / (d=0.1,1b) | 48 base + 72 enh = 120 / 48 + 36 = 84 | QCD-style base; each lit LED kept at full primary drive, enhancement = leak of δ into the next/previous primary (2 bits: pure, +next, +prev, +both; 1 bit: pure, +next). The leak adds emission, so it is not strictly equal-luminance. Base decided on pure-primary templates first, then enhancement (two-stage; joint ML gave the same results in `experiments/tune_cs.py`). δ∈{0.1,0.2,0.3} × {1,2} bits tuned in `results/tune_v2cs_joint{0,1}.csv` |
-| HNCSM base-only | 16 | same textures, all lit LEDs white |
-| CSK-8 | 180 | RGB-cube palette {K,R,G,B,Y,C,M,W} per LED |
-| CSK-4 | 120 | {K,R,G,B} |
-| OOK-8x8 (MIMO-OOK / LiCamIoT-like) | 60 | white on/off per LED |
-| QR/Aztec-style | 28 | 2×2 finder blocks in 3 corners, Hamming(7,4) on 49 modules |
-| NestedTexture-inspired (Salvi & Geetha, IEEE Access 2022) | 16 outer + 16 inner | **assumption**: per quadrant 11-LED outer ring (16-word codebook) nested with 2×2 inner pattern; independent template matching |
-| QCD-style-inspired (Vasantha & Salvi, Appl. Sci. 2022) | 48 | **assumption**: colour-neutral 2×2 "hadrons" (one R, G, B and dark LED; 16 of 24 arrangements = 4 bits/cell), 12 cells, ML decoding |
-| Overlay-inspired (Nishimoto et al. 2012, doi:10.1109/GLOCOMW.2012.6477757) | 12 L1 + 24 L2 | **assumption**: monochrome; L1 = 1 bit per 2×2 block as block mean; L2 = zero-mean ±pattern inside block (2 bits); intensity 0.5+0.3·s1+0.2·s2 |
-| Adaptive-CSK genie (Onodera 2021-style upper bound) | – | per operating point, best goodput among {OOK, CSK-4, CSK-8} assuming ideal feedback |
+| Scheme | Bits/frame (gross; net = −8 CRC per layer) | Avg power (drive units, pilots incl.) | Notes |
+|---|---|---|---|
+| **HNCSM v1** | 16 base + 64 enh = 80 | 53.9 | per 4×4 quadrant: constant-weight (8 of 15) binary texture from a 16-word max-distance codebook; lit LEDs ∈ {W,R,G,B} |
+| **HNCSM v2** | 48 base + 36 enh = 84 | 33.0 | QCD-style colour-balanced 2×2 base cells (first-16 permutations); enh = intensity full vs 0.5 on each lit LED; joint ML |
+| **HNCSM v2-CS** (current) | 48 base + 72 enh = 120 | 42.0 | QCD-style base (first-16 permutations); enh = power-neutral colour shift, **δ = 0.2, 2 bits per lit LED**: p, (1−δ)p+δ·next, (1−δ)p+δ·prev, (1−2δ)p+δ(next+prev); base decoded with leaked templates (joint ML). δ/bits tuned on held-out seeds (`results/tuned_params.json`) |
+| HNCSM v1 base-only | 16 | 102.0 | v1 textures, all lit LEDs white |
+| CSK-8 | 180 | 96.1 | RGB-cube palette {K,R,G,B,Y,C,M,W} per LED (digital RGB keying, not CIE-xy CSK) |
+| CSK-4 | 120 | 51.0 | {K,R,G,B} |
+| OOK-8x8 (MIMO-OOK / LiCamIoT-like) | 60 | 96.0 | white on/off per LED |
+| QR/Aztec-style | 28 | 106.3 | 2×2 finders in 3 corners, Hamming(7,4) on 49 modules |
+| NestedTexture-inspired (Salvi & Geetha, IEEE Access 2022) | 16 outer + 16 inner | 93.8 | **assumption** (abstract only): per quadrant 11-LED outer ring (16-word codebook) + 2×2 inner pattern; independent template matching |
+| QCD-style-inspired (Vasantha & Salvi, Appl. Sci. 2022) | 48 | 42.0 | **assumption** (abstract only): colour-neutral 2×2 cells (one R, G, B, dark LED); **tuned subset = `last16`** of the 24 permutations; 12 cells; ML decoding |
+| Overlay-inspired (Nishimoto et al. 2012, doi:10.1109/GLOCOMW.2012.6477757) | 12 L1 + 24 L2 | 78.2 | **assumption** (abstract only): monochrome; L1 = 2×2 block mean, L2 = zero-mean ± pattern; intensity 0.5 + a1·s1 + a2·s2 with **tuned a1 = a2 = 0.25** (edge of tuning grid) |
+| Adaptive-CSK genie (Onodera 2021-style bound) | – | as chosen | per point, best of {OOK, CSK-4, CSK-8} chosen on separate seeds, reported on evaluation seeds |
 
 **Assumptions:** the author's schemes and Nishimoto's were re-implemented from abstracts only, because the full texts weren't retrievable. Matrix sub-structure, codebooks and amplitudes are my design choices, not the originals. "CSK" here is digital RGB-LED keying, not IEEE 802.15.7 CIE-xy CSK.
 
@@ -81,3 +81,22 @@ Metrics: see the evaluation protocol above.
 - Ambient up to 0.6 doesn't hurt at 1 m because there's no saturation of the dark level. A low-exposure or high-ambient regime still needs a sweep.
 - Codebooks and amplitudes haven't been optimized. The Gaussian PSF is not calibrated to a real lens.
 - Hard-decision decoding only, with no soft FEC.
+
+## Power-budget and graceful-degradation study
+```bash
+for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --pref $P --tag _P$P; done
+.venv/bin/python -m experiments.efficiency
+```
+- Every scheme's drive, pilots included, is scaled to average power P. The scale can exceed 1 (LED overdrive up to 1.82× for v2 at P=60), and sensor saturation is modelled.
+- **Efficiency** = net goodput / P, with Wilson 95% CIs (`results/efficiency_all_budgets.csv`, `efficiency_winners.csv`).
+- **Degradation metrics** (`results/degradation_metrics.csv`):
+  - **Peak:** the highest goodput over the sweep.
+  - **AUC:** the trapezoid area under goodput vs distance over 0.5–5 m.
+  - **auc_norm:** AUC / (peak × 4.5 m).
+  - **d90 / d50 / d10:** the first distance after the peak where goodput falls below 90 / 50 / 10 % of peak (linear interpolation).
+  - **max_step_drop_frac:** the largest drop between adjacent 0.25 m points, divided by peak.
+  - **cliff_ratio:** the largest single-step drop divided by the total decline (peak − goodput at 5 m). 1 means the whole decline happens in one step.
+  - **CI bounds** for AUC, d50 and d10 come from the curves built from the Wilson lower and upper goodput bounds.
+- **Energy per delivered bit** = P / goodput, in power-unit·s/bit (`results/energy_per_bit.csv`).
+- **Figures:** `results/fig_efficiency_vs_distance.{png,pdf}` and `results/fig_degradation_energy_P33.{png,pdf}`.
+- **Caveat:** in this channel model goodput hardly depends on P over 25–60 (AUC changes by less than 1.5 %). Failure with distance is set by resolution and blur, not SNR, so efficiency scales as ~1/P. The power axis therefore mainly reflects each scheme's mean drive.
