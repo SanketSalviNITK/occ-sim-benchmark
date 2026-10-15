@@ -42,9 +42,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--frames', type=int, default=1000); ap.add_argument('--seed', type=int, default=config.SEED)
     ap.add_argument('--power', default='equal', choices=['equal', 'peak']); ap.add_argument('--quick', action='store_true')
-    ap.add_argument('--sweeps', default=','.join(SWEEPS)); ap.add_argument('--tag', default='')
+    ap.add_argument('--sweeps', default=','.join(SWEEPS)); ap.add_argument('--tag', default=''); ap.add_argument('--pref', type=float, default=None, help='fixed average-power budget (overrides tuned pref); scales may exceed 1 (LED overdrive; sensor saturation is modelled)')
     a = ap.parse_args(); frames = 20 if a.quick else a.frames
-    tp = tuned_params(); pref = tp.get('pref_power') if a.power == 'equal' else None
+    tp = tuned_params(); pref = (a.pref if a.pref is not None else tp.get('pref_power')) if a.power == 'equal' else None
     sws = a.sweeps.split(',')
     jobs = [(sw, i, v, frames, a.seed, a.power, pref) for sw in sws for i, v in enumerate(SWEEPS[sw][0])]
     t = time.time()
