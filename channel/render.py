@@ -16,10 +16,12 @@ def panel_texture(drive):
     return np.repeat(np.repeat(drive.astype(np.float32), PPL, 0), PPL, 1) * np.tile(disc, (n, n))[:, :, None]
 
 def simulate(drive, distance_m=1.0, yaw_deg=0.0, roll_deg=0.0, blur_sigma_px=0.0, ambient=0.03,
-             sp=None, lambert_m=1.0, ambient_nonuniform=False, base_blur_px=0.5, corner_jitter_px=0.3, rng=np.random):
+             sp=None, lambert_m=1.0, ambient_nonuniform=False, distance_jitter_frac=0.0, base_blur_px=0.5, corner_jitter_px=0.3, rng=np.random):
     sp = sp or SensorParams()
     n = drive.shape[0]
     tex = panel_texture(drive) * lambertian_gain(yaw_deg, lambert_m)
+    if distance_jitter_frac > 0:   # hand-held / placement jitter; avoids exact integer-pitch (Bayer-phase-locked) points
+        distance_m = distance_m * (1 + rng.uniform(-distance_jitter_frac, distance_jitter_frac))
     img_c = project_panel(distance_m, yaw_deg, 0.0, roll_deg, n) + rng.uniform(0, 1, 2)  # random sub-pixel phase
     lo = np.floor(img_c.min(0)) - 12
     size = (np.ceil(img_c.max(0)) + 12 - lo).astype(int)

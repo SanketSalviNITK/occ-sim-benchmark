@@ -14,13 +14,14 @@ def mean_power(sch, n=2000, seed=0):
     rng = np.random.RandomState(seed)
     return float(np.mean([sch.encode(list(rng.randint(0, 2, sch.nbits))).sum() for _ in range(n)]))
 
-def power_scales(schemes, pref=None, mode='equal'):
+def power_scales(schemes, pref=None, mode='equal', cap=False):
     """mode='equal': scale every scheme's drive (incl. pilots) to the same average power pref (default: the lowest
     scheme's, so nothing clips). mode='peak': no scaling (peak drive <= 1 per channel)."""
     P = {s.name: mean_power(s) for s in schemes}
     if mode == 'peak': return {k: 1.0 for k in P}, P, None
     pref = pref if pref is not None else min(P.values())
-    return {k: pref / v for k, v in P.items()}, P, pref
+    # cap=True: no overdrive above full LED drive -> schemes whose full-drive power is below the budget run at full drive
+    return {k: (min(pref / v, 1.0) if cap else pref / v) for k, v in P.items()}, P, pref
 
 def wilson(k, n, z=1.96):
     if n == 0: return (0.0, 1.0)
