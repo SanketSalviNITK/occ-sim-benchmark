@@ -1,4 +1,8 @@
 {
+ "channel": "default",
+ "exposure_ms": 1.0,
+ "cap": false,
+ "distance_jitter_frac": 0.02,
  "seed": 20261015,
  "frames": 1000,
  "genie_frames": 300,
@@ -30,13 +34,10 @@
    4.0
   ]
  },
- "git": "2140cd86573bbaf195d2ef0abb8bceb6a76d238b-dirty",
+ "git": "708204be7bc45cf60cd6c067fbd9355d580c110f-dirty",
  "sweeps": [
-  "distance_m",
-  "blur_sigma_px",
-  "yaw_deg",
-  "ambient"
+  "distance_m"
  ],
- "utc": "2026-10-15T09:51:58.692780+00:00",
- "elapsed_s": 244
+ "utc": "2026-10-15T10:32:32.310550+00:00",
+ "elapsed_s": 94
 }

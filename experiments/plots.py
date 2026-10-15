@@ -1,7 +1,7 @@
 import os, glob, pandas as pd, matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
 RES = os.path.join(os.path.dirname(__file__), '..', 'results')
 LBL = {'distance_m': 'Distance (m)', 'blur_sigma_px': 'Extra defocus blur sigma (px) @1 m',
-       'yaw_deg': 'Viewing angle / yaw (deg) @1 m', 'ambient': 'Non-uniform ambient level @2.5 m (rel. to white LED)'}
+       'yaw_deg': 'Viewing angle / yaw (deg) @1 m', 'ambient': 'Non-uniform ambient level @2.5 m (rel. to white LED)', 'exposure_ms': 'Exposure (ms), low light, 2.0 m, P=33'}
 for f in sorted(glob.glob(os.path.join(RES, 'sweep_*.csv'))):
     df = pd.read_csv(f); sw = df.sweep.iloc[0]; tag = os.path.basename(f)[6:-4]
     fig, ax = plt.subplots(1, 2, figsize=(15, 6))

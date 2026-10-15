@@ -28,3 +28,8 @@ def test_crc_charge():
     s = [CSK(4)]; res = {s[0].name: {'all': [0, 0]}}
     r = rows_from(res, s, 10, 1.0, {})[-1]
     assert r['goodput_bps'] == (120 - CRC_BITS) * 30
+
+def test_power_cap_no_overdrive():
+    s = all_schemes(); sc, P, pref = power_scales(s, 60.0, cap=True)
+    for k in P: assert sc[k] <= 1.0 + 1e-12 and P[k] * sc[k] <= 60.0 + 1e-9
+    assert any(sc[k] == 1.0 for k in P)   # v2 (33) cannot reach 60

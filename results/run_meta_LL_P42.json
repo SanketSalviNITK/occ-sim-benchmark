@@ -1,0 +1,43 @@
+{
+ "channel": "lowlight",
+ "exposure_ms": 1.0,
+ "cap": true,
+ "distance_jitter_frac": 0.02,
+ "seed": 20261015,
+ "frames": 1000,
+ "genie_frames": 300,
+ "genie_seed_base": 22261044,
+ "power_mode": "equal",
+ "pref_power": 42.0,
+ "tuned": {
+  "v2cs": {
+   "delta": 0.2,
+   "bpl": 2
+  },
+  "qcd": {
+   "subset": "last16"
+  },
+  "overlay": {
+   "a1": 0.25,
+   "a2": 0.25
+  },
+  "pref_power": 33.011,
+  "tune_seed": 21261018,
+  "frames_per_point": 200,
+  "distances": [
+   1.5,
+   2.0,
+   2.25,
+   2.5,
+   3.0,
+   3.5,
+   4.0
+  ]
+ },
+ "git": "708204be7bc45cf60cd6c067fbd9355d580c110f-dirty",
+ "sweeps": [
+  "distance_m"
+ ],
+ "utc": "2026-10-15T10:30:15.616104+00:00",
+ "elapsed_s": 439
+}

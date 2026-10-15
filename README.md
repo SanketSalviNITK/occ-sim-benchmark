@@ -100,3 +100,37 @@ for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --swe
 - **Energy per delivered bit** = P / goodput, in power-unit·s/bit (`results/energy_per_bit.csv`).
 - **Figures:** `results/fig_efficiency_vs_distance.{png,pdf}` and `results/fig_degradation_energy_P33.{png,pdf}`.
 - **Caveat:** in this channel model goodput hardly depends on P over 25–60 (AUC changes by less than 1.5 %). Failure with distance is set by resolution and blur, not SNR, so efficiency scales as ~1/P. The power axis therefore mainly reflects each scheme's mean drive.
+
+## Low-light (power-limited) channel
+Preset `channel/presets.py::low_light(exposure_ms)`. The main results still use `presets.default()`.
+
+| Parameter | Low light | Default | Justification |
+|---|---|---|---|
+| Photo-electrons, full-drive LED pixel | 80 e⁻ per ms of exposure (80 e⁻ at 1 ms) | 4500 e⁻ (75 % of 6000) | Dim LED, small 1.0–1.4 µm smartphone pixel, short exposure. Calibrated, not derived from a radiometric link budget (see below) |
+| Full well | 4000 e⁻ | 6000 e⁻ | small-pixel CMOS, typically 3–6 ke⁻ |
+| Analog gain | 1.5 DN/e⁻ (8-bit saturates at ~170 e⁻) | 255/6000 DN/e⁻ | high-ISO mode, so the low signal isn't lost to quantisation |
+| Read noise | 3 e⁻ rms | 3 e⁻ | high-gain read noise, typically 1.5–3 e⁻ |
+| Dark current | 20 e⁻/s (0.02 e⁻ at 1 ms) + 0.5 e⁻ per-frame offset (Poisson) | 0 | room-temperature CMOS |
+| Power cap | no overdrive: scale = min(P/P_scheme, 1); the achieved power is reported | – | v2 (33.0) can't reach P = 42 and runs at 33 |
+
+- **Calibration scan:** PHOTO_E_PER_MS ∈ {20, 40, 80} × P ∈ {15, 33} × d ∈ {1, 2, 3} m, 100 frames each.
+  - At 80 e⁻/ms, CSK-8 at P = 33 still works at 1 m (4541 bps) but fails at 2 m.
+  - v2 at 3 m gives 348 bps here against 1097 in the default channel.
+  - So the link is SNR-limited before it is resolution-limited at mid range, and P changes the results.
+- **Distance jitter:** all runs now use ±2 % uniform distance jitter per frame (`distance_jitter_frac = 0.02`). This models hand-held placement and breaks lock-step with the Bayer phase at exact integer LED pitches.
+
+Commands:
+```bash
+for P in 15 25 33 42; do .venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --channel lowlight --exposure-ms 1.0 --cap --pref $P --tag _LL_P$P; done
+.venv/bin/python -m experiments.run --frames 1000 --sweeps exposure_ms --channel lowlight --cap --pref 33 --tag _LL_P33
+.venv/bin/python -m experiments.efficiency --pattern 'sweep_distance_m_LL_P*.csv' --prefix lowlight_
+.venv/bin/python -m experiments.exposure_plot
+```
+Outputs: `results/lowlight_*` (efficiency, winners, degradation metrics, energy per bit, figures in png and pdf) and `results/sweep_exposure_ms_LL_P33.csv`.
+
+## The v2-CS "dip" near 1.75 m
+`experiments/dip_probe.py` (`results/dip_probe.csv`) scans 1.40–2.20 m in 0.05 m steps, with 400 frames per point at P = 33.
+- **With Bayer on, enhancement-layer frame error rises steadily:** 0.025 at 1.4 m, 0.74 at 1.75 m, 0.99 at 1.9 m. Then it falls back sharply to **0.30 at exactly 2.00 m** and returns to 0.96 at 2.05 m. CSK-8 shows the same spike at 2.00 m.
+- **With Bayer off, the curve is monotonic and much lower:** 0.07 at 1.75 m, 0.17 at 2.0 m.
+- **Explanation:** 2.00 m gives an LED pitch of exactly 4 px, an integer multiple of the 2-px RGGB period. Every LED then sits on the same colour-filter phase, which favours the colour-shift layer. So the "dip" at 1.75 m is the normal decline, and 2.00 m is an aliasing *peak*. The enhancement layer is limited by demosaic colour moiré, not noise.
+- **Mitigation:** ±2 % distance jitter (now the default) cuts the 2.0 m spike (v2-CS 2579 → 2104 bps) but doesn't remove it. A wider receiver sampling window (6 px) lowers the 1.75 m frame error to 0.22, but makes it worse at 1.4–1.5 m. It has not been adopted, because it would need equal re-tuning for all schemes.

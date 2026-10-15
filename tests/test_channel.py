@@ -56,3 +56,21 @@ def test_yaw_foreshortening():
     c = project_panel(1.0, 60, 0, 0)
     w = c[:, 0].max() - c[:, 0].min()
     assert w < 0.6 * 64  # ~cos60 * 64 px
+
+def test_lowlight_preset_and_dark_current():
+    from channel.presets import low_light, PHOTO_E_PER_MS
+    sp = low_light(1.0); sp.bayer = False; sp.crosstalk = np.eye(3)
+    rad = np.full((150, 150, 3), 0.5)
+    dn = capture(rad, sp, 0.0, np.random.RandomState(0)).astype(float)
+    e = 0.5 * PHOTO_E_PER_MS + sp.dark_e
+    assert abs(dn.mean() - e * sp.conversion_gain) < 0.3
+    assert abs(dn.std() - np.sqrt(e + sp.read_noise_e ** 2) * sp.conversion_gain) / (np.sqrt(e + 9) * 1.5) < 0.06
+    assert np.isclose(low_light(2.0).exposure_gain, 2 * low_light(1.0).exposure_gain)
+
+def test_distance_jitter_changes_scale():
+    from channel.render import simulate
+    d = np.ones((8, 8, 3))
+    _, c0 = simulate(d, distance_m=2.0, corner_jitter_px=0, rng=np.random.RandomState(1))
+    _, c1 = simulate(d, distance_m=2.0, corner_jitter_px=0, distance_jitter_frac=0.02, rng=np.random.RandomState(1))
+    w0 = c0[1, 0] - c0[0, 0]; w1 = c1[1, 0] - c1[0, 0]
+    assert abs(w0 - 32.0) < 1e-6 and 0.97 * 32 < w1 < 1.03 * 32 and abs(w1 - 32) > 1e-6
