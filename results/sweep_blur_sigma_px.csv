@@ -1,0 +1,311 @@
+sweep,value,scheme,layer,bits_per_frame,ber,fer,goodput_bps
+blur_sigma_px,0.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,0.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+blur_sigma_px,0.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+blur_sigma_px,0.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,0.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,9.259259259259259e-05,0.0033333333333333335,1076.4
+blur_sigma_px,0.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,3.968253968253968e-05,,2516.4
+blur_sigma_px,0.0,HNCSM v2,base,48,0.0,0.0,1440.0
+blur_sigma_px,0.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+blur_sigma_px,0.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+blur_sigma_px,0.0,HNCSM,base,16,0.0,0.0,480.0
+blur_sigma_px,0.0,HNCSM,enh,64,0.0,0.0,1920.0
+blur_sigma_px,0.0,HNCSM,TOTAL,80,0.0,,2400.0
+blur_sigma_px,0.0,HNCSM base-only,base,16,0.0,0.0,480.0
+blur_sigma_px,0.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+blur_sigma_px,0.0,CSK-8,all,180,0.0,0.0,5400.0
+blur_sigma_px,0.0,CSK-8,TOTAL,180,0.0,,5400.0
+blur_sigma_px,0.0,CSK-4,all,120,0.0,0.0,3600.0
+blur_sigma_px,0.0,CSK-4,TOTAL,120,0.0,,3600.0
+blur_sigma_px,0.0,OOK-8x8,all,60,0.0,0.0,1800.0
+blur_sigma_px,0.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+blur_sigma_px,0.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+blur_sigma_px,0.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+blur_sigma_px,0.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+blur_sigma_px,0.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+blur_sigma_px,0.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+blur_sigma_px,0.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+blur_sigma_px,0.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+blur_sigma_px,0.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+blur_sigma_px,0.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+blur_sigma_px,0.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+blur_sigma_px,0.5,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,0.5,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+blur_sigma_px,0.5,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+blur_sigma_px,0.5,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,0.5,"HNCSM v2-CS (d=0.1,1b)",enh,36,9.259259259259259e-05,0.0033333333333333335,1076.4
+blur_sigma_px,0.5,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,3.968253968253968e-05,,2516.4
+blur_sigma_px,0.5,HNCSM v2,base,48,0.0,0.0,1440.0
+blur_sigma_px,0.5,HNCSM v2,enh,36,0.0,0.0,1080.0
+blur_sigma_px,0.5,HNCSM v2,TOTAL,84,0.0,,2520.0
+blur_sigma_px,0.5,HNCSM,base,16,0.0,0.0,480.0
+blur_sigma_px,0.5,HNCSM,enh,64,0.0,0.0,1920.0
+blur_sigma_px,0.5,HNCSM,TOTAL,80,0.0,,2400.0
+blur_sigma_px,0.5,HNCSM base-only,base,16,0.0,0.0,480.0
+blur_sigma_px,0.5,HNCSM base-only,TOTAL,16,0.0,,480.0
+blur_sigma_px,0.5,CSK-8,all,180,0.0,0.0,5400.0
+blur_sigma_px,0.5,CSK-8,TOTAL,180,0.0,,5400.0
+blur_sigma_px,0.5,CSK-4,all,120,0.0,0.0,3600.0
+blur_sigma_px,0.5,CSK-4,TOTAL,120,0.0,,3600.0
+blur_sigma_px,0.5,OOK-8x8,all,60,0.0,0.0,1800.0
+blur_sigma_px,0.5,OOK-8x8,TOTAL,60,0.0,,1800.0
+blur_sigma_px,0.5,QR/Aztec-style,all,28,0.0,0.0,840.0
+blur_sigma_px,0.5,QR/Aztec-style,TOTAL,28,0.0,,840.0
+blur_sigma_px,0.5,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+blur_sigma_px,0.5,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+blur_sigma_px,0.5,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+blur_sigma_px,0.5,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+blur_sigma_px,0.5,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+blur_sigma_px,0.5,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+blur_sigma_px,0.5,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+blur_sigma_px,0.5,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+blur_sigma_px,1.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,1.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+blur_sigma_px,1.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+blur_sigma_px,1.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,1.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0,0.0,1080.0
+blur_sigma_px,1.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.0,,2520.0
+blur_sigma_px,1.0,HNCSM v2,base,48,0.0,0.0,1440.0
+blur_sigma_px,1.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+blur_sigma_px,1.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+blur_sigma_px,1.0,HNCSM,base,16,0.0,0.0,480.0
+blur_sigma_px,1.0,HNCSM,enh,64,0.0,0.0,1920.0
+blur_sigma_px,1.0,HNCSM,TOTAL,80,0.0,,2400.0
+blur_sigma_px,1.0,HNCSM base-only,base,16,0.0,0.0,480.0
+blur_sigma_px,1.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+blur_sigma_px,1.0,CSK-8,all,180,0.0,0.0,5400.0
+blur_sigma_px,1.0,CSK-8,TOTAL,180,0.0,,5400.0
+blur_sigma_px,1.0,CSK-4,all,120,0.0,0.0,3600.0
+blur_sigma_px,1.0,CSK-4,TOTAL,120,0.0,,3600.0
+blur_sigma_px,1.0,OOK-8x8,all,60,0.0,0.0,1800.0
+blur_sigma_px,1.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+blur_sigma_px,1.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+blur_sigma_px,1.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+blur_sigma_px,1.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+blur_sigma_px,1.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+blur_sigma_px,1.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+blur_sigma_px,1.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+blur_sigma_px,1.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+blur_sigma_px,1.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+blur_sigma_px,1.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+blur_sigma_px,1.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+blur_sigma_px,1.5,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,1.5,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+blur_sigma_px,1.5,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+blur_sigma_px,1.5,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,1.5,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0,0.0,1080.0
+blur_sigma_px,1.5,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.0,,2520.0
+blur_sigma_px,1.5,HNCSM v2,base,48,0.0,0.0,1440.0
+blur_sigma_px,1.5,HNCSM v2,enh,36,0.0,0.0,1080.0
+blur_sigma_px,1.5,HNCSM v2,TOTAL,84,0.0,,2520.0
+blur_sigma_px,1.5,HNCSM,base,16,0.0,0.0,480.0
+blur_sigma_px,1.5,HNCSM,enh,64,0.0,0.0,1920.0
+blur_sigma_px,1.5,HNCSM,TOTAL,80,0.0,,2400.0
+blur_sigma_px,1.5,HNCSM base-only,base,16,0.0,0.0,480.0
+blur_sigma_px,1.5,HNCSM base-only,TOTAL,16,0.0,,480.0
+blur_sigma_px,1.5,CSK-8,all,180,0.0,0.0,5400.0
+blur_sigma_px,1.5,CSK-8,TOTAL,180,0.0,,5400.0
+blur_sigma_px,1.5,CSK-4,all,120,0.0,0.0,3600.0
+blur_sigma_px,1.5,CSK-4,TOTAL,120,0.0,,3600.0
+blur_sigma_px,1.5,OOK-8x8,all,60,0.0,0.0,1800.0
+blur_sigma_px,1.5,OOK-8x8,TOTAL,60,0.0,,1800.0
+blur_sigma_px,1.5,QR/Aztec-style,all,28,0.0,0.0,840.0
+blur_sigma_px,1.5,QR/Aztec-style,TOTAL,28,0.0,,840.0
+blur_sigma_px,1.5,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+blur_sigma_px,1.5,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+blur_sigma_px,1.5,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+blur_sigma_px,1.5,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+blur_sigma_px,1.5,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+blur_sigma_px,1.5,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+blur_sigma_px,1.5,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+blur_sigma_px,1.5,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+blur_sigma_px,2.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,2.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+blur_sigma_px,2.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+blur_sigma_px,2.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,2.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.01138888888888889,0.30333333333333334,752.4
+blur_sigma_px,2.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.004880952380952381,,2192.4
+blur_sigma_px,2.0,HNCSM v2,base,48,0.0,0.0,1440.0
+blur_sigma_px,2.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+blur_sigma_px,2.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+blur_sigma_px,2.0,HNCSM,base,16,0.0,0.0,480.0
+blur_sigma_px,2.0,HNCSM,enh,64,0.0,0.0,1920.0
+blur_sigma_px,2.0,HNCSM,TOTAL,80,0.0,,2400.0
+blur_sigma_px,2.0,HNCSM base-only,base,16,0.0,0.0,480.0
+blur_sigma_px,2.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+blur_sigma_px,2.0,CSK-8,all,180,0.0,0.0,5400.0
+blur_sigma_px,2.0,CSK-8,TOTAL,180,0.0,,5400.0
+blur_sigma_px,2.0,CSK-4,all,120,0.0,0.0,3600.0
+blur_sigma_px,2.0,CSK-4,TOTAL,120,0.0,,3600.0
+blur_sigma_px,2.0,OOK-8x8,all,60,0.0,0.0,1800.0
+blur_sigma_px,2.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+blur_sigma_px,2.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+blur_sigma_px,2.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+blur_sigma_px,2.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+blur_sigma_px,2.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+blur_sigma_px,2.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+blur_sigma_px,2.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+blur_sigma_px,2.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+blur_sigma_px,2.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+blur_sigma_px,2.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+blur_sigma_px,2.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+blur_sigma_px,2.5,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,2.5,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0675,0.9866666666666667,28.799999999999947
+blur_sigma_px,2.5,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0405,,1468.8
+blur_sigma_px,2.5,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,2.5,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.2942592592592593,1.0,0.0
+blur_sigma_px,2.5,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.12611111111111112,,1440.0
+blur_sigma_px,2.5,HNCSM v2,base,48,0.0,0.0,1440.0
+blur_sigma_px,2.5,HNCSM v2,enh,36,0.0,0.0,1080.0
+blur_sigma_px,2.5,HNCSM v2,TOTAL,84,0.0,,2520.0
+blur_sigma_px,2.5,HNCSM,base,16,0.0,0.0,480.0
+blur_sigma_px,2.5,HNCSM,enh,64,0.0,0.0,1920.0
+blur_sigma_px,2.5,HNCSM,TOTAL,80,0.0,,2400.0
+blur_sigma_px,2.5,HNCSM base-only,base,16,0.0,0.0,480.0
+blur_sigma_px,2.5,HNCSM base-only,TOTAL,16,0.0,,480.0
+blur_sigma_px,2.5,CSK-8,all,180,0.0,0.0,5400.0
+blur_sigma_px,2.5,CSK-8,TOTAL,180,0.0,,5400.0
+blur_sigma_px,2.5,CSK-4,all,120,0.0,0.0,3600.0
+blur_sigma_px,2.5,CSK-4,TOTAL,120,0.0,,3600.0
+blur_sigma_px,2.5,OOK-8x8,all,60,0.0,0.0,1800.0
+blur_sigma_px,2.5,OOK-8x8,TOTAL,60,0.0,,1800.0
+blur_sigma_px,2.5,QR/Aztec-style,all,28,0.0,0.0,840.0
+blur_sigma_px,2.5,QR/Aztec-style,TOTAL,28,0.0,,840.0
+blur_sigma_px,2.5,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+blur_sigma_px,2.5,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+blur_sigma_px,2.5,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+blur_sigma_px,2.5,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+blur_sigma_px,2.5,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+blur_sigma_px,2.5,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+blur_sigma_px,2.5,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+blur_sigma_px,2.5,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+blur_sigma_px,3.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,3.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.3154166666666667,1.0,0.0
+blur_sigma_px,3.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.18925,,1440.0
+blur_sigma_px,3.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,3.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.43824074074074076,1.0,0.0
+blur_sigma_px,3.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.18781746031746033,,1440.0
+blur_sigma_px,3.0,HNCSM v2,base,48,0.0,0.0,1440.0
+blur_sigma_px,3.0,HNCSM v2,enh,36,9.259259259259259e-05,0.0033333333333333335,1076.4
+blur_sigma_px,3.0,HNCSM v2,TOTAL,84,3.968253968253968e-05,,2516.4
+blur_sigma_px,3.0,HNCSM,base,16,0.0,0.0,480.0
+blur_sigma_px,3.0,HNCSM,enh,64,0.0,0.0,1920.0
+blur_sigma_px,3.0,HNCSM,TOTAL,80,0.0,,2400.0
+blur_sigma_px,3.0,HNCSM base-only,base,16,0.0,0.0,480.0
+blur_sigma_px,3.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+blur_sigma_px,3.0,CSK-8,all,180,0.00038888888888888887,0.03,5238.0
+blur_sigma_px,3.0,CSK-8,TOTAL,180,0.00038888888888888887,,5238.0
+blur_sigma_px,3.0,CSK-4,all,120,0.0,0.0,3600.0
+blur_sigma_px,3.0,CSK-4,TOTAL,120,0.0,,3600.0
+blur_sigma_px,3.0,OOK-8x8,all,60,0.0,0.0,1800.0
+blur_sigma_px,3.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+blur_sigma_px,3.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+blur_sigma_px,3.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+blur_sigma_px,3.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+blur_sigma_px,3.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+blur_sigma_px,3.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+blur_sigma_px,3.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+blur_sigma_px,3.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+blur_sigma_px,3.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+blur_sigma_px,3.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+blur_sigma_px,3.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+blur_sigma_px,4.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,4.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.4806944444444444,1.0,0.0
+blur_sigma_px,4.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.28841666666666665,,1440.0
+blur_sigma_px,4.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+blur_sigma_px,4.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.49898148148148147,1.0,0.0
+blur_sigma_px,4.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.21384920634920634,,1440.0
+blur_sigma_px,4.0,HNCSM v2,base,48,0.00020833333333333335,0.006666666666666667,1430.3999999999999
+blur_sigma_px,4.0,HNCSM v2,enh,36,0.07277777777777777,0.94,64.80000000000005
+blur_sigma_px,4.0,HNCSM v2,TOTAL,84,0.03130952380952381,,1495.1999999999998
+blur_sigma_px,4.0,HNCSM,base,16,0.0,0.0,480.0
+blur_sigma_px,4.0,HNCSM,enh,64,0.006875,0.21666666666666667,1504.0
+blur_sigma_px,4.0,HNCSM,TOTAL,80,0.0055,,1984.0
+blur_sigma_px,4.0,HNCSM base-only,base,16,0.0,0.0,480.0
+blur_sigma_px,4.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+blur_sigma_px,4.0,CSK-8,all,180,0.1431851851851852,1.0,0.0
+blur_sigma_px,4.0,CSK-8,TOTAL,180,0.1431851851851852,,0.0
+blur_sigma_px,4.0,CSK-4,all,120,0.03911111111111111,0.97,108.0000000000001
+blur_sigma_px,4.0,CSK-4,TOTAL,120,0.03911111111111111,,108.0000000000001
+blur_sigma_px,4.0,OOK-8x8,all,60,0.034333333333333334,0.6633333333333333,606.0
+blur_sigma_px,4.0,OOK-8x8,TOTAL,60,0.034333333333333334,,606.0
+blur_sigma_px,4.0,QR/Aztec-style,all,28,0.0016666666666666668,0.02666666666666667,817.6
+blur_sigma_px,4.0,QR/Aztec-style,TOTAL,28,0.0016666666666666668,,817.6
+blur_sigma_px,4.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+blur_sigma_px,4.0,NestedTexture (Salvi22),inner,16,0.03979166666666667,0.4266666666666667,275.19999999999993
+blur_sigma_px,4.0,NestedTexture (Salvi22),TOTAL,32,0.019895833333333335,,755.1999999999999
+blur_sigma_px,4.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+blur_sigma_px,4.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+blur_sigma_px,4.0,Overlay (Nishimoto12),L1,12,0.15138888888888888,0.9333333333333333,23.999999999999993
+blur_sigma_px,4.0,Overlay (Nishimoto12),L2,24,0.04972222222222222,0.5633333333333334,314.4
+blur_sigma_px,4.0,Overlay (Nishimoto12),TOTAL,36,0.08361111111111111,,338.4
+blur_sigma_px,5.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0001388888888888889,0.0033333333333333335,1435.2
+blur_sigma_px,5.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.5038888888888889,1.0,0.0
+blur_sigma_px,5.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.3023888888888889,,1435.2
+blur_sigma_px,5.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0006944444444444445,0.02,1411.2
+blur_sigma_px,5.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.5062962962962962,1.0,0.0
+blur_sigma_px,5.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.21738095238095237,,1411.2
+blur_sigma_px,5.0,HNCSM v2,base,48,0.01923611111111111,0.43,820.8000000000001
+blur_sigma_px,5.0,HNCSM v2,enh,36,0.24842592592592594,1.0,0.0
+blur_sigma_px,5.0,HNCSM v2,TOTAL,84,0.11746031746031746,,820.8000000000001
+blur_sigma_px,5.0,HNCSM,base,16,0.000625,0.006666666666666667,476.79999999999995
+blur_sigma_px,5.0,HNCSM,enh,64,0.08197916666666667,0.9633333333333334,70.39999999999992
+blur_sigma_px,5.0,HNCSM,TOTAL,80,0.06570833333333333,,547.1999999999998
+blur_sigma_px,5.0,HNCSM base-only,base,16,0.0008333333333333334,0.0033333333333333335,478.40000000000003
+blur_sigma_px,5.0,HNCSM base-only,TOTAL,16,0.0008333333333333334,,478.40000000000003
+blur_sigma_px,5.0,CSK-8,all,180,0.29807407407407405,1.0,0.0
+blur_sigma_px,5.0,CSK-8,TOTAL,180,0.29807407407407405,,0.0
+blur_sigma_px,5.0,CSK-4,all,120,0.1725,1.0,0.0
+blur_sigma_px,5.0,CSK-4,TOTAL,120,0.1725,,0.0
+blur_sigma_px,5.0,OOK-8x8,all,60,0.17527777777777778,1.0,0.0
+blur_sigma_px,5.0,OOK-8x8,TOTAL,60,0.17527777777777778,,0.0
+blur_sigma_px,5.0,QR/Aztec-style,all,28,0.06321428571428571,0.6833333333333333,266.0
+blur_sigma_px,5.0,QR/Aztec-style,TOTAL,28,0.06321428571428571,,266.0
+blur_sigma_px,5.0,NestedTexture (Salvi22),outer,16,0.043125,0.24,364.8
+blur_sigma_px,5.0,NestedTexture (Salvi22),inner,16,0.19770833333333335,0.9466666666666667,25.600000000000005
+blur_sigma_px,5.0,NestedTexture (Salvi22),TOTAL,32,0.12041666666666667,,390.40000000000003
+blur_sigma_px,5.0,QCD-style (Vasantha22),all,48,0.0004166666666666667,0.013333333333333334,1420.8
+blur_sigma_px,5.0,QCD-style (Vasantha22),TOTAL,48,0.0004166666666666667,,1420.8
+blur_sigma_px,5.0,Overlay (Nishimoto12),L1,12,0.4313888888888889,1.0,0.0
+blur_sigma_px,5.0,Overlay (Nishimoto12),L2,24,0.2613888888888889,0.99,7.200000000000006
+blur_sigma_px,5.0,Overlay (Nishimoto12),TOTAL,36,0.31805555555555554,,7.200000000000006
+blur_sigma_px,6.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.03944444444444444,0.74,374.40000000000003
+blur_sigma_px,6.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.5025462962962963,1.0,0.0
+blur_sigma_px,6.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.31730555555555556,,374.40000000000003
+blur_sigma_px,6.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.029097222222222222,0.61,561.6
+blur_sigma_px,6.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.5037962962962963,1.0,0.0
+blur_sigma_px,6.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.23253968253968255,,561.6
+blur_sigma_px,6.0,HNCSM v2,base,48,0.07833333333333334,0.93,100.79999999999993
+blur_sigma_px,6.0,HNCSM v2,enh,36,0.38666666666666666,1.0,0.0
+blur_sigma_px,6.0,HNCSM v2,TOTAL,84,0.21047619047619048,,100.79999999999993
+blur_sigma_px,6.0,HNCSM,base,16,0.06583333333333333,0.37666666666666665,299.2
+blur_sigma_px,6.0,HNCSM,enh,64,0.20614583333333333,1.0,0.0
+blur_sigma_px,6.0,HNCSM,TOTAL,80,0.17808333333333334,,299.2
+blur_sigma_px,6.0,HNCSM base-only,base,16,0.025625,0.13666666666666666,414.4
+blur_sigma_px,6.0,HNCSM base-only,TOTAL,16,0.025625,,414.4
+blur_sigma_px,6.0,CSK-8,all,180,0.37405555555555553,1.0,0.0
+blur_sigma_px,6.0,CSK-8,TOTAL,180,0.37405555555555553,,0.0
+blur_sigma_px,6.0,CSK-4,all,120,0.27055555555555555,1.0,0.0
+blur_sigma_px,6.0,CSK-4,TOTAL,120,0.27055555555555555,,0.0
+blur_sigma_px,6.0,OOK-8x8,all,60,0.28755555555555556,1.0,0.0
+blur_sigma_px,6.0,OOK-8x8,TOTAL,60,0.28755555555555556,,0.0
+blur_sigma_px,6.0,QR/Aztec-style,all,28,0.1936904761904762,0.9766666666666667,19.599999999999987
+blur_sigma_px,6.0,QR/Aztec-style,TOTAL,28,0.1936904761904762,,19.599999999999987
+blur_sigma_px,6.0,NestedTexture (Salvi22),outer,16,0.17604166666666668,0.7266666666666667,131.2
+blur_sigma_px,6.0,NestedTexture (Salvi22),inner,16,0.32625,0.9966666666666667,1.5999999999999837
+blur_sigma_px,6.0,NestedTexture (Salvi22),TOTAL,32,0.25114583333333335,,132.79999999999998
+blur_sigma_px,6.0,QCD-style (Vasantha22),all,48,0.025902777777777778,0.5733333333333334,614.4
+blur_sigma_px,6.0,QCD-style (Vasantha22),TOTAL,48,0.025902777777777778,,614.4
+blur_sigma_px,6.0,Overlay (Nishimoto12),L1,12,0.48694444444444446,1.0,0.0
+blur_sigma_px,6.0,Overlay (Nishimoto12),L2,24,0.3498611111111111,1.0,0.0
+blur_sigma_px,6.0,Overlay (Nishimoto12),TOTAL,36,0.39555555555555555,,0.0
+blur_sigma_px,6.0,Adaptive-CSK genie,TOTAL(CSK-4),120,0.27055555555555555,,0.0
+blur_sigma_px,5.0,Adaptive-CSK genie,TOTAL(OOK-8x8),60,0.17527777777777778,,0.0
+blur_sigma_px,4.0,Adaptive-CSK genie,TOTAL(OOK-8x8),60,0.034333333333333334,,606.0
+blur_sigma_px,3.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.00038888888888888887,,5238.0
+blur_sigma_px,0.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+blur_sigma_px,1.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+blur_sigma_px,0.5,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+blur_sigma_px,2.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+blur_sigma_px,1.5,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+blur_sigma_px,2.5,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0

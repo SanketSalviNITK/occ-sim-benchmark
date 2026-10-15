@@ -1,0 +1,311 @@
+sweep,value,scheme,layer,bits_per_frame,ber,fer,goodput_bps
+yaw_deg,0.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+yaw_deg,0.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+yaw_deg,0.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+yaw_deg,0.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+yaw_deg,0.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0,0.0,1080.0
+yaw_deg,0.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.0,,2520.0
+yaw_deg,0.0,HNCSM v2,base,48,0.0,0.0,1440.0
+yaw_deg,0.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+yaw_deg,0.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+yaw_deg,0.0,HNCSM,base,16,0.0,0.0,480.0
+yaw_deg,0.0,HNCSM,enh,64,0.0,0.0,1920.0
+yaw_deg,0.0,HNCSM,TOTAL,80,0.0,,2400.0
+yaw_deg,0.0,HNCSM base-only,base,16,0.0,0.0,480.0
+yaw_deg,0.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+yaw_deg,0.0,CSK-8,all,180,0.0,0.0,5400.0
+yaw_deg,0.0,CSK-8,TOTAL,180,0.0,,5400.0
+yaw_deg,0.0,CSK-4,all,120,0.0,0.0,3600.0
+yaw_deg,0.0,CSK-4,TOTAL,120,0.0,,3600.0
+yaw_deg,0.0,OOK-8x8,all,60,0.0,0.0,1800.0
+yaw_deg,0.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+yaw_deg,0.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+yaw_deg,0.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+yaw_deg,0.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+yaw_deg,0.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+yaw_deg,0.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+yaw_deg,0.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+yaw_deg,0.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+yaw_deg,0.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+yaw_deg,0.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+yaw_deg,0.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+yaw_deg,10.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+yaw_deg,10.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+yaw_deg,10.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+yaw_deg,10.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+yaw_deg,10.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,9.259259259259259e-05,0.0033333333333333335,1076.4
+yaw_deg,10.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,3.968253968253968e-05,,2516.4
+yaw_deg,10.0,HNCSM v2,base,48,0.0,0.0,1440.0
+yaw_deg,10.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+yaw_deg,10.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+yaw_deg,10.0,HNCSM,base,16,0.0,0.0,480.0
+yaw_deg,10.0,HNCSM,enh,64,0.0,0.0,1920.0
+yaw_deg,10.0,HNCSM,TOTAL,80,0.0,,2400.0
+yaw_deg,10.0,HNCSM base-only,base,16,0.0,0.0,480.0
+yaw_deg,10.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+yaw_deg,10.0,CSK-8,all,180,0.0,0.0,5400.0
+yaw_deg,10.0,CSK-8,TOTAL,180,0.0,,5400.0
+yaw_deg,10.0,CSK-4,all,120,0.0,0.0,3600.0
+yaw_deg,10.0,CSK-4,TOTAL,120,0.0,,3600.0
+yaw_deg,10.0,OOK-8x8,all,60,0.0,0.0,1800.0
+yaw_deg,10.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+yaw_deg,10.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+yaw_deg,10.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+yaw_deg,10.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+yaw_deg,10.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+yaw_deg,10.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+yaw_deg,10.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+yaw_deg,10.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+yaw_deg,10.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+yaw_deg,10.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+yaw_deg,10.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+yaw_deg,20.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+yaw_deg,20.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+yaw_deg,20.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+yaw_deg,20.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+yaw_deg,20.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0002777777777777778,0.006666666666666667,1072.8
+yaw_deg,20.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.00011904761904761905,,2512.8
+yaw_deg,20.0,HNCSM v2,base,48,0.0,0.0,1440.0
+yaw_deg,20.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+yaw_deg,20.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+yaw_deg,20.0,HNCSM,base,16,0.0,0.0,480.0
+yaw_deg,20.0,HNCSM,enh,64,0.0,0.0,1920.0
+yaw_deg,20.0,HNCSM,TOTAL,80,0.0,,2400.0
+yaw_deg,20.0,HNCSM base-only,base,16,0.0,0.0,480.0
+yaw_deg,20.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+yaw_deg,20.0,CSK-8,all,180,0.0,0.0,5400.0
+yaw_deg,20.0,CSK-8,TOTAL,180,0.0,,5400.0
+yaw_deg,20.0,CSK-4,all,120,0.0,0.0,3600.0
+yaw_deg,20.0,CSK-4,TOTAL,120,0.0,,3600.0
+yaw_deg,20.0,OOK-8x8,all,60,0.0,0.0,1800.0
+yaw_deg,20.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+yaw_deg,20.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+yaw_deg,20.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+yaw_deg,20.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+yaw_deg,20.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+yaw_deg,20.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+yaw_deg,20.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+yaw_deg,20.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+yaw_deg,20.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+yaw_deg,20.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+yaw_deg,20.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+yaw_deg,30.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+yaw_deg,30.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+yaw_deg,30.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+yaw_deg,30.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+yaw_deg,30.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,9.259259259259259e-05,0.0033333333333333335,1076.4
+yaw_deg,30.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,3.968253968253968e-05,,2516.4
+yaw_deg,30.0,HNCSM v2,base,48,0.0,0.0,1440.0
+yaw_deg,30.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+yaw_deg,30.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+yaw_deg,30.0,HNCSM,base,16,0.0,0.0,480.0
+yaw_deg,30.0,HNCSM,enh,64,0.0,0.0,1920.0
+yaw_deg,30.0,HNCSM,TOTAL,80,0.0,,2400.0
+yaw_deg,30.0,HNCSM base-only,base,16,0.0,0.0,480.0
+yaw_deg,30.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+yaw_deg,30.0,CSK-8,all,180,0.0,0.0,5400.0
+yaw_deg,30.0,CSK-8,TOTAL,180,0.0,,5400.0
+yaw_deg,30.0,CSK-4,all,120,0.0,0.0,3600.0
+yaw_deg,30.0,CSK-4,TOTAL,120,0.0,,3600.0
+yaw_deg,30.0,OOK-8x8,all,60,0.0,0.0,1800.0
+yaw_deg,30.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+yaw_deg,30.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+yaw_deg,30.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+yaw_deg,30.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+yaw_deg,30.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+yaw_deg,30.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+yaw_deg,30.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+yaw_deg,30.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+yaw_deg,30.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+yaw_deg,30.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+yaw_deg,30.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+yaw_deg,40.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+yaw_deg,40.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+yaw_deg,40.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+yaw_deg,40.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+yaw_deg,40.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0010185185185185184,0.02666666666666667,1051.2
+yaw_deg,40.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.0004365079365079365,,2491.2
+yaw_deg,40.0,HNCSM v2,base,48,0.0,0.0,1440.0
+yaw_deg,40.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+yaw_deg,40.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+yaw_deg,40.0,HNCSM,base,16,0.0,0.0,480.0
+yaw_deg,40.0,HNCSM,enh,64,0.0,0.0,1920.0
+yaw_deg,40.0,HNCSM,TOTAL,80,0.0,,2400.0
+yaw_deg,40.0,HNCSM base-only,base,16,0.0,0.0,480.0
+yaw_deg,40.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+yaw_deg,40.0,CSK-8,all,180,0.0,0.0,5400.0
+yaw_deg,40.0,CSK-8,TOTAL,180,0.0,,5400.0
+yaw_deg,40.0,CSK-4,all,120,0.0,0.0,3600.0
+yaw_deg,40.0,CSK-4,TOTAL,120,0.0,,3600.0
+yaw_deg,40.0,OOK-8x8,all,60,0.0,0.0,1800.0
+yaw_deg,40.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+yaw_deg,40.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+yaw_deg,40.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+yaw_deg,40.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+yaw_deg,40.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+yaw_deg,40.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+yaw_deg,40.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+yaw_deg,40.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+yaw_deg,40.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+yaw_deg,40.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+yaw_deg,40.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+yaw_deg,50.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+yaw_deg,50.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+yaw_deg,50.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+yaw_deg,50.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+yaw_deg,50.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0007407407407407407,0.023333333333333334,1054.8
+yaw_deg,50.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.00031746031746031746,,2494.8
+yaw_deg,50.0,HNCSM v2,base,48,0.0,0.0,1440.0
+yaw_deg,50.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+yaw_deg,50.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+yaw_deg,50.0,HNCSM,base,16,0.0,0.0,480.0
+yaw_deg,50.0,HNCSM,enh,64,0.0,0.0,1920.0
+yaw_deg,50.0,HNCSM,TOTAL,80,0.0,,2400.0
+yaw_deg,50.0,HNCSM base-only,base,16,0.0,0.0,480.0
+yaw_deg,50.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+yaw_deg,50.0,CSK-8,all,180,0.0,0.0,5400.0
+yaw_deg,50.0,CSK-8,TOTAL,180,0.0,,5400.0
+yaw_deg,50.0,CSK-4,all,120,0.0,0.0,3600.0
+yaw_deg,50.0,CSK-4,TOTAL,120,0.0,,3600.0
+yaw_deg,50.0,OOK-8x8,all,60,0.0,0.0,1800.0
+yaw_deg,50.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+yaw_deg,50.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+yaw_deg,50.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+yaw_deg,50.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+yaw_deg,50.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+yaw_deg,50.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+yaw_deg,50.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+yaw_deg,50.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+yaw_deg,50.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+yaw_deg,50.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+yaw_deg,50.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+yaw_deg,60.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+yaw_deg,60.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0005555555555555556,0.023333333333333334,2109.6
+yaw_deg,60.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0003333333333333333,,3549.6
+yaw_deg,60.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+yaw_deg,60.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.03111111111111111,0.45666666666666667,586.8
+yaw_deg,60.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.013333333333333334,,2026.8
+yaw_deg,60.0,HNCSM v2,base,48,0.0,0.0,1440.0
+yaw_deg,60.0,HNCSM v2,enh,36,0.002685185185185185,0.07666666666666666,997.2
+yaw_deg,60.0,HNCSM v2,TOTAL,84,0.0011507936507936507,,2437.2
+yaw_deg,60.0,HNCSM,base,16,0.0,0.0,480.0
+yaw_deg,60.0,HNCSM,enh,64,0.0,0.0,1920.0
+yaw_deg,60.0,HNCSM,TOTAL,80,0.0,,2400.0
+yaw_deg,60.0,HNCSM base-only,base,16,0.0,0.0,480.0
+yaw_deg,60.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+yaw_deg,60.0,CSK-8,all,180,0.0,0.0,5400.0
+yaw_deg,60.0,CSK-8,TOTAL,180,0.0,,5400.0
+yaw_deg,60.0,CSK-4,all,120,0.0,0.0,3600.0
+yaw_deg,60.0,CSK-4,TOTAL,120,0.0,,3600.0
+yaw_deg,60.0,OOK-8x8,all,60,0.0,0.0,1800.0
+yaw_deg,60.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+yaw_deg,60.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+yaw_deg,60.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+yaw_deg,60.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+yaw_deg,60.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+yaw_deg,60.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+yaw_deg,60.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+yaw_deg,60.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+yaw_deg,60.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+yaw_deg,60.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+yaw_deg,60.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+yaw_deg,70.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.00020833333333333335,0.0033333333333333335,1435.2
+yaw_deg,70.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.13194444444444445,1.0,0.0
+yaw_deg,70.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.07925,,1435.2
+yaw_deg,70.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+yaw_deg,70.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.23342592592592593,0.9966666666666667,3.5999999999999632
+yaw_deg,70.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.10003968253968254,,1443.6
+yaw_deg,70.0,HNCSM v2,base,48,0.0,0.0,1440.0
+yaw_deg,70.0,HNCSM v2,enh,36,0.14916666666666667,0.9966666666666667,3.5999999999999632
+yaw_deg,70.0,HNCSM v2,TOTAL,84,0.06392857142857143,,1443.6
+yaw_deg,70.0,HNCSM,base,16,0.0,0.0,480.0
+yaw_deg,70.0,HNCSM,enh,64,0.01078125,0.37333333333333335,1203.2
+yaw_deg,70.0,HNCSM,TOTAL,80,0.008625,,1683.2
+yaw_deg,70.0,HNCSM base-only,base,16,0.0,0.0,480.0
+yaw_deg,70.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+yaw_deg,70.0,CSK-8,all,180,0.08325925925925926,0.9566666666666667,234.0
+yaw_deg,70.0,CSK-8,TOTAL,180,0.08325925925925926,,234.0
+yaw_deg,70.0,CSK-4,all,120,0.029472222222222223,0.7033333333333334,1067.9999999999998
+yaw_deg,70.0,CSK-4,TOTAL,120,0.029472222222222223,,1067.9999999999998
+yaw_deg,70.0,OOK-8x8,all,60,0.0033888888888888888,0.09333333333333334,1632.0
+yaw_deg,70.0,OOK-8x8,TOTAL,60,0.0033888888888888888,,1632.0
+yaw_deg,70.0,QR/Aztec-style,all,28,0.0002380952380952381,0.0033333333333333335,837.2
+yaw_deg,70.0,QR/Aztec-style,TOTAL,28,0.0002380952380952381,,837.2
+yaw_deg,70.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+yaw_deg,70.0,NestedTexture (Salvi22),inner,16,0.002916666666666667,0.04,460.79999999999995
+yaw_deg,70.0,NestedTexture (Salvi22),TOTAL,32,0.0014583333333333334,,940.8
+yaw_deg,70.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+yaw_deg,70.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+yaw_deg,70.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+yaw_deg,70.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+yaw_deg,70.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+yaw_deg,75.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0015972222222222223,0.06,1353.6
+yaw_deg,75.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.2551388888888889,1.0,0.0
+yaw_deg,75.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.15372222222222223,,1353.6
+yaw_deg,75.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0025694444444444445,0.07333333333333333,1334.3999999999999
+yaw_deg,75.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.3262037037037037,1.0,0.0
+yaw_deg,75.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.14126984126984127,,1334.3999999999999
+yaw_deg,75.0,HNCSM v2,base,48,0.007013888888888889,0.15666666666666668,1214.3999999999999
+yaw_deg,75.0,HNCSM v2,enh,36,0.20824074074074075,0.9733333333333334,28.799999999999947
+yaw_deg,75.0,HNCSM v2,TOTAL,84,0.09325396825396826,,1243.1999999999998
+yaw_deg,75.0,HNCSM,base,16,0.011458333333333333,0.07,446.4
+yaw_deg,75.0,HNCSM,enh,64,0.03755208333333333,0.5733333333333334,819.1999999999999
+yaw_deg,75.0,HNCSM,TOTAL,80,0.03233333333333333,,1265.6
+yaw_deg,75.0,HNCSM base-only,base,16,0.020625,0.11666666666666667,424.0
+yaw_deg,75.0,HNCSM base-only,TOTAL,16,0.020625,,424.0
+yaw_deg,75.0,CSK-8,all,180,0.15983333333333333,0.9933333333333333,36.000000000000234
+yaw_deg,75.0,CSK-8,TOTAL,180,0.15983333333333333,,36.000000000000234
+yaw_deg,75.0,CSK-4,all,120,0.06041666666666667,0.9466666666666667,192.00000000000003
+yaw_deg,75.0,CSK-4,TOTAL,120,0.06041666666666667,,192.00000000000003
+yaw_deg,75.0,OOK-8x8,all,60,0.1481111111111111,0.88,216.0
+yaw_deg,75.0,OOK-8x8,TOTAL,60,0.1481111111111111,,216.0
+yaw_deg,75.0,QR/Aztec-style,all,28,0.12535714285714286,0.7066666666666667,246.4
+yaw_deg,75.0,QR/Aztec-style,TOTAL,28,0.12535714285714286,,246.4
+yaw_deg,75.0,NestedTexture (Salvi22),outer,16,0.05645833333333333,0.33,321.59999999999997
+yaw_deg,75.0,NestedTexture (Salvi22),inner,16,0.15666666666666668,0.8233333333333334,84.79999999999998
+yaw_deg,75.0,NestedTexture (Salvi22),TOTAL,32,0.1065625,,406.4
+yaw_deg,75.0,QCD-style (Vasantha22),all,48,0.002777777777777778,0.07333333333333333,1334.3999999999999
+yaw_deg,75.0,QCD-style (Vasantha22),TOTAL,48,0.002777777777777778,,1334.3999999999999
+yaw_deg,75.0,Overlay (Nishimoto12),L1,12,0.002777777777777778,0.03,349.2
+yaw_deg,75.0,Overlay (Nishimoto12),L2,24,0.008194444444444445,0.12666666666666668,628.8
+yaw_deg,75.0,Overlay (Nishimoto12),TOTAL,36,0.006388888888888889,,978.0
+yaw_deg,80.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.10381944444444445,0.94,86.40000000000008
+yaw_deg,80.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.39675925925925926,1.0,0.0
+yaw_deg,80.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.27958333333333335,,86.40000000000008
+yaw_deg,80.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.09215277777777778,0.9066666666666666,134.40000000000006
+yaw_deg,80.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.42277777777777775,1.0,0.0
+yaw_deg,80.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.23384920634920636,,134.40000000000006
+yaw_deg,80.0,HNCSM v2,base,48,0.09604166666666666,0.95,72.00000000000006
+yaw_deg,80.0,HNCSM v2,enh,36,0.31175925925925924,1.0,0.0
+yaw_deg,80.0,HNCSM v2,TOTAL,84,0.1884920634920635,,72.00000000000006
+yaw_deg,80.0,HNCSM,base,16,0.10833333333333334,0.5666666666666667,208.0
+yaw_deg,80.0,HNCSM,enh,64,0.20104166666666667,1.0,0.0
+yaw_deg,80.0,HNCSM,TOTAL,80,0.1825,,208.0
+yaw_deg,80.0,HNCSM base-only,base,16,0.09625,0.48333333333333334,247.99999999999997
+yaw_deg,80.0,HNCSM base-only,TOTAL,16,0.09625,,247.99999999999997
+yaw_deg,80.0,CSK-8,all,180,0.32392592592592595,1.0,0.0
+yaw_deg,80.0,CSK-8,TOTAL,180,0.32392592592592595,,0.0
+yaw_deg,80.0,CSK-4,all,120,0.19852777777777778,1.0,0.0
+yaw_deg,80.0,CSK-4,TOTAL,120,0.19852777777777778,,0.0
+yaw_deg,80.0,OOK-8x8,all,60,0.25727777777777777,1.0,0.0
+yaw_deg,80.0,OOK-8x8,TOTAL,60,0.25727777777777777,,0.0
+yaw_deg,80.0,QR/Aztec-style,all,28,0.27035714285714285,1.0,0.0
+yaw_deg,80.0,QR/Aztec-style,TOTAL,28,0.27035714285714285,,0.0
+yaw_deg,80.0,NestedTexture (Salvi22),outer,16,0.25854166666666667,0.9166666666666666,40.000000000000014
+yaw_deg,80.0,NestedTexture (Salvi22),inner,16,0.2604166666666667,0.9866666666666667,6.399999999999988
+yaw_deg,80.0,NestedTexture (Salvi22),TOTAL,32,0.25947916666666665,,46.400000000000006
+yaw_deg,80.0,QCD-style (Vasantha22),all,48,0.09118055555555556,0.9166666666666666,120.00000000000006
+yaw_deg,80.0,QCD-style (Vasantha22),TOTAL,48,0.09118055555555556,,120.00000000000006
+yaw_deg,80.0,Overlay (Nishimoto12),L1,12,0.12916666666666668,0.7766666666666666,80.40000000000002
+yaw_deg,80.0,Overlay (Nishimoto12),L2,24,0.13375,0.89,79.19999999999999
+yaw_deg,80.0,Overlay (Nishimoto12),TOTAL,36,0.1322222222222222,,159.60000000000002
+yaw_deg,80.0,Adaptive-CSK genie,TOTAL(CSK-4),120,0.19852777777777778,,0.0
+yaw_deg,75.0,Adaptive-CSK genie,TOTAL(OOK-8x8),60,0.1481111111111111,,216.0
+yaw_deg,70.0,Adaptive-CSK genie,TOTAL(OOK-8x8),60,0.0033888888888888888,,1632.0
+yaw_deg,20.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+yaw_deg,10.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+yaw_deg,0.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+yaw_deg,60.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+yaw_deg,30.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+yaw_deg,40.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+yaw_deg,50.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0

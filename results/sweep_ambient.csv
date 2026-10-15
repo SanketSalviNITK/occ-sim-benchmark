@@ -1,0 +1,187 @@
+sweep,value,scheme,layer,bits_per_frame,ber,fer,goodput_bps
+ambient,0.0,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+ambient,0.0,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+ambient,0.0,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+ambient,0.0,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+ambient,0.0,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0,0.0,1080.0
+ambient,0.0,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.0,,2520.0
+ambient,0.0,HNCSM v2,base,48,0.0,0.0,1440.0
+ambient,0.0,HNCSM v2,enh,36,0.0,0.0,1080.0
+ambient,0.0,HNCSM v2,TOTAL,84,0.0,,2520.0
+ambient,0.0,HNCSM,base,16,0.0,0.0,480.0
+ambient,0.0,HNCSM,enh,64,0.0,0.0,1920.0
+ambient,0.0,HNCSM,TOTAL,80,0.0,,2400.0
+ambient,0.0,HNCSM base-only,base,16,0.0,0.0,480.0
+ambient,0.0,HNCSM base-only,TOTAL,16,0.0,,480.0
+ambient,0.0,CSK-8,all,180,0.0,0.0,5400.0
+ambient,0.0,CSK-8,TOTAL,180,0.0,,5400.0
+ambient,0.0,CSK-4,all,120,0.0,0.0,3600.0
+ambient,0.0,CSK-4,TOTAL,120,0.0,,3600.0
+ambient,0.0,OOK-8x8,all,60,0.0,0.0,1800.0
+ambient,0.0,OOK-8x8,TOTAL,60,0.0,,1800.0
+ambient,0.0,QR/Aztec-style,all,28,0.0,0.0,840.0
+ambient,0.0,QR/Aztec-style,TOTAL,28,0.0,,840.0
+ambient,0.0,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+ambient,0.0,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+ambient,0.0,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+ambient,0.0,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+ambient,0.0,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+ambient,0.0,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+ambient,0.0,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+ambient,0.0,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+ambient,0.03,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+ambient,0.03,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+ambient,0.03,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+ambient,0.03,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+ambient,0.03,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0,0.0,1080.0
+ambient,0.03,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.0,,2520.0
+ambient,0.03,HNCSM v2,base,48,0.0,0.0,1440.0
+ambient,0.03,HNCSM v2,enh,36,0.0,0.0,1080.0
+ambient,0.03,HNCSM v2,TOTAL,84,0.0,,2520.0
+ambient,0.03,HNCSM,base,16,0.0,0.0,480.0
+ambient,0.03,HNCSM,enh,64,0.0,0.0,1920.0
+ambient,0.03,HNCSM,TOTAL,80,0.0,,2400.0
+ambient,0.03,HNCSM base-only,base,16,0.0,0.0,480.0
+ambient,0.03,HNCSM base-only,TOTAL,16,0.0,,480.0
+ambient,0.03,CSK-8,all,180,0.0,0.0,5400.0
+ambient,0.03,CSK-8,TOTAL,180,0.0,,5400.0
+ambient,0.03,CSK-4,all,120,0.0,0.0,3600.0
+ambient,0.03,CSK-4,TOTAL,120,0.0,,3600.0
+ambient,0.03,OOK-8x8,all,60,0.0,0.0,1800.0
+ambient,0.03,OOK-8x8,TOTAL,60,0.0,,1800.0
+ambient,0.03,QR/Aztec-style,all,28,0.0,0.0,840.0
+ambient,0.03,QR/Aztec-style,TOTAL,28,0.0,,840.0
+ambient,0.03,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+ambient,0.03,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+ambient,0.03,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+ambient,0.03,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+ambient,0.03,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+ambient,0.03,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+ambient,0.03,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+ambient,0.03,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+ambient,0.1,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+ambient,0.1,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+ambient,0.1,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+ambient,0.1,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+ambient,0.1,"HNCSM v2-CS (d=0.1,1b)",enh,36,9.259259259259259e-05,0.0033333333333333335,1076.4
+ambient,0.1,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,3.968253968253968e-05,,2516.4
+ambient,0.1,HNCSM v2,base,48,0.0,0.0,1440.0
+ambient,0.1,HNCSM v2,enh,36,0.0,0.0,1080.0
+ambient,0.1,HNCSM v2,TOTAL,84,0.0,,2520.0
+ambient,0.1,HNCSM,base,16,0.0,0.0,480.0
+ambient,0.1,HNCSM,enh,64,0.0,0.0,1920.0
+ambient,0.1,HNCSM,TOTAL,80,0.0,,2400.0
+ambient,0.1,HNCSM base-only,base,16,0.0,0.0,480.0
+ambient,0.1,HNCSM base-only,TOTAL,16,0.0,,480.0
+ambient,0.1,CSK-8,all,180,0.0,0.0,5400.0
+ambient,0.1,CSK-8,TOTAL,180,0.0,,5400.0
+ambient,0.1,CSK-4,all,120,0.0,0.0,3600.0
+ambient,0.1,CSK-4,TOTAL,120,0.0,,3600.0
+ambient,0.1,OOK-8x8,all,60,0.0,0.0,1800.0
+ambient,0.1,OOK-8x8,TOTAL,60,0.0,,1800.0
+ambient,0.1,QR/Aztec-style,all,28,0.0,0.0,840.0
+ambient,0.1,QR/Aztec-style,TOTAL,28,0.0,,840.0
+ambient,0.1,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+ambient,0.1,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+ambient,0.1,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+ambient,0.1,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+ambient,0.1,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+ambient,0.1,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+ambient,0.1,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+ambient,0.1,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+ambient,0.2,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+ambient,0.2,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+ambient,0.2,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+ambient,0.2,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+ambient,0.2,"HNCSM v2-CS (d=0.1,1b)",enh,36,9.259259259259259e-05,0.0033333333333333335,1076.4
+ambient,0.2,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,3.968253968253968e-05,,2516.4
+ambient,0.2,HNCSM v2,base,48,0.0,0.0,1440.0
+ambient,0.2,HNCSM v2,enh,36,0.0,0.0,1080.0
+ambient,0.2,HNCSM v2,TOTAL,84,0.0,,2520.0
+ambient,0.2,HNCSM,base,16,0.0,0.0,480.0
+ambient,0.2,HNCSM,enh,64,0.0,0.0,1920.0
+ambient,0.2,HNCSM,TOTAL,80,0.0,,2400.0
+ambient,0.2,HNCSM base-only,base,16,0.0,0.0,480.0
+ambient,0.2,HNCSM base-only,TOTAL,16,0.0,,480.0
+ambient,0.2,CSK-8,all,180,0.0,0.0,5400.0
+ambient,0.2,CSK-8,TOTAL,180,0.0,,5400.0
+ambient,0.2,CSK-4,all,120,0.0,0.0,3600.0
+ambient,0.2,CSK-4,TOTAL,120,0.0,,3600.0
+ambient,0.2,OOK-8x8,all,60,0.0,0.0,1800.0
+ambient,0.2,OOK-8x8,TOTAL,60,0.0,,1800.0
+ambient,0.2,QR/Aztec-style,all,28,0.0,0.0,840.0
+ambient,0.2,QR/Aztec-style,TOTAL,28,0.0,,840.0
+ambient,0.2,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+ambient,0.2,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+ambient,0.2,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+ambient,0.2,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+ambient,0.2,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+ambient,0.2,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+ambient,0.2,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+ambient,0.2,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+ambient,0.4,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+ambient,0.4,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+ambient,0.4,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+ambient,0.4,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+ambient,0.4,"HNCSM v2-CS (d=0.1,1b)",enh,36,0.0,0.0,1080.0
+ambient,0.4,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,0.0,,2520.0
+ambient,0.4,HNCSM v2,base,48,0.0,0.0,1440.0
+ambient,0.4,HNCSM v2,enh,36,0.0,0.0,1080.0
+ambient,0.4,HNCSM v2,TOTAL,84,0.0,,2520.0
+ambient,0.4,HNCSM,base,16,0.0,0.0,480.0
+ambient,0.4,HNCSM,enh,64,0.0,0.0,1920.0
+ambient,0.4,HNCSM,TOTAL,80,0.0,,2400.0
+ambient,0.4,HNCSM base-only,base,16,0.0,0.0,480.0
+ambient,0.4,HNCSM base-only,TOTAL,16,0.0,,480.0
+ambient,0.4,CSK-8,all,180,0.0,0.0,5400.0
+ambient,0.4,CSK-8,TOTAL,180,0.0,,5400.0
+ambient,0.4,CSK-4,all,120,0.0,0.0,3600.0
+ambient,0.4,CSK-4,TOTAL,120,0.0,,3600.0
+ambient,0.4,OOK-8x8,all,60,0.0,0.0,1800.0
+ambient,0.4,OOK-8x8,TOTAL,60,0.0,,1800.0
+ambient,0.4,QR/Aztec-style,all,28,0.0,0.0,840.0
+ambient,0.4,QR/Aztec-style,TOTAL,28,0.0,,840.0
+ambient,0.4,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+ambient,0.4,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+ambient,0.4,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+ambient,0.4,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+ambient,0.4,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+ambient,0.4,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+ambient,0.4,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+ambient,0.4,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+ambient,0.6,"HNCSM v2-CS (d=0.2,2b)",base,48,0.0,0.0,1440.0
+ambient,0.6,"HNCSM v2-CS (d=0.2,2b)",enh,72,0.0,0.0,2160.0
+ambient,0.6,"HNCSM v2-CS (d=0.2,2b)",TOTAL,120,0.0,,3600.0
+ambient,0.6,"HNCSM v2-CS (d=0.1,1b)",base,48,0.0,0.0,1440.0
+ambient,0.6,"HNCSM v2-CS (d=0.1,1b)",enh,36,9.259259259259259e-05,0.0033333333333333335,1076.4
+ambient,0.6,"HNCSM v2-CS (d=0.1,1b)",TOTAL,84,3.968253968253968e-05,,2516.4
+ambient,0.6,HNCSM v2,base,48,0.0,0.0,1440.0
+ambient,0.6,HNCSM v2,enh,36,0.0,0.0,1080.0
+ambient,0.6,HNCSM v2,TOTAL,84,0.0,,2520.0
+ambient,0.6,HNCSM,base,16,0.0,0.0,480.0
+ambient,0.6,HNCSM,enh,64,0.0,0.0,1920.0
+ambient,0.6,HNCSM,TOTAL,80,0.0,,2400.0
+ambient,0.6,HNCSM base-only,base,16,0.0,0.0,480.0
+ambient,0.6,HNCSM base-only,TOTAL,16,0.0,,480.0
+ambient,0.6,CSK-8,all,180,0.0,0.0,5400.0
+ambient,0.6,CSK-8,TOTAL,180,0.0,,5400.0
+ambient,0.6,CSK-4,all,120,0.0,0.0,3600.0
+ambient,0.6,CSK-4,TOTAL,120,0.0,,3600.0
+ambient,0.6,OOK-8x8,all,60,0.0,0.0,1800.0
+ambient,0.6,OOK-8x8,TOTAL,60,0.0,,1800.0
+ambient,0.6,QR/Aztec-style,all,28,0.0,0.0,840.0
+ambient,0.6,QR/Aztec-style,TOTAL,28,0.0,,840.0
+ambient,0.6,NestedTexture (Salvi22),outer,16,0.0,0.0,480.0
+ambient,0.6,NestedTexture (Salvi22),inner,16,0.0,0.0,480.0
+ambient,0.6,NestedTexture (Salvi22),TOTAL,32,0.0,,960.0
+ambient,0.6,QCD-style (Vasantha22),all,48,0.0,0.0,1440.0
+ambient,0.6,QCD-style (Vasantha22),TOTAL,48,0.0,,1440.0
+ambient,0.6,Overlay (Nishimoto12),L1,12,0.0,0.0,360.0
+ambient,0.6,Overlay (Nishimoto12),L2,24,0.0,0.0,720.0
+ambient,0.6,Overlay (Nishimoto12),TOTAL,36,0.0,,1080.0
+ambient,0.2,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+ambient,0.1,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+ambient,0.03,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+ambient,0.0,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+ambient,0.4,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
+ambient,0.6,Adaptive-CSK genie,TOTAL(CSK-8),180,0.0,,5400.0
