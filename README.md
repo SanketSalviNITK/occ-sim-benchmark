@@ -134,3 +134,18 @@ Outputs: `results/lowlight_*` (efficiency, winners, degradation metrics, energy 
 - **With Bayer off, the curve is monotonic and much lower:** 0.07 at 1.75 m, 0.17 at 2.0 m.
 - **Explanation:** 2.00 m gives an LED pitch of exactly 4 px, an integer multiple of the 2-px RGGB period. Every LED then sits on the same colour-filter phase, which favours the colour-shift layer. So the "dip" at 1.75 m is the normal decline, and 2.00 m is an aliasing *peak*. The enhancement layer is limited by demosaic colour moiré, not noise.
 - **Mitigation:** ±2 % distance jitter (now the default) cuts the 2.0 m spike (v2-CS 2579 → 2104 bps) but doesn't remove it. A wider receiver sampling window (6 px) lowers the 1.75 m frame error to 0.22, but makes it worse at 1.4–1.5 m. It has not been adopted, because it would need equal re-tuning for all schemes.
+
+## Revision runs (16 Oct 2026, all with ±2 % distance jitter, seed 20261015, 1000 frames/point)
+Commands:
+```bash
+for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --pref $P --tag _P$P; done
+.venv/bin/python -m experiments.efficiency          # regenerates degradation_metrics.csv, energy_per_bit.csv, efficiency_*.csv, fig_*_P33
+.venv/bin/python -m experiments.run --frames 1000 --pref 33 --sweeps yaw_deg,ambient,blur_sigma_px --tag _J_P33
+```
+- The default-channel power sweeps (`sweep_distance_m_P{25,33,42,60}.csv`) used to be pre-jitter. They have been **re-run with jitter**, so every run is now consistent. The pre-jitter files are kept in `results/archive_prejitter/`.
+- Effect at P = 33:
+  - d10 v2 4.16 → 4.18 m; v2-CS 4.20 → 4.18 m; CSK-4 2.66 → 2.74 m; genie 2.63 → 2.68 m.
+  - AUC v2-CS 6264 → 6121 (its CI now overlaps CSK-4's, 5919).
+  - v2-CS at 2.0 m: 2588 → 2093 bps.
+- New stress sweeps at P = 33 with jitter: `sweep_{yaw_deg,ambient,blur_sigma_px}_J_P33.csv` and `run_meta_J_P33.json`. The older `sweep_{yaw_deg,ambient,blur_sigma_px}.csv` are pre-jitter, at pref 33.011.
+- Run metadata: `run_meta_P*.json` and `run_meta_J_P33.json` record `distance_jitter_frac = 0.02` and git `392d057-dirty`.

@@ -1,4 +1,8 @@
 {
+ "channel": "default",
+ "exposure_ms": 1.0,
+ "cap": false,
+ "distance_jitter_frac": 0.02,
  "seed": 20261015,
  "frames": 1000,
  "genie_frames": 300,
@@ -30,10 +34,10 @@
    4.0
   ]
  },
- "git": "64054c3d5ff82b5e60a3c348721d18564ff57282-dirty",
+ "git": "392d0574ca38c07c09a6f23d69770e94614ee176-dirty",
  "sweeps": [
   "distance_m"
  ],
- "utc": "2026-10-15T10:07:24.991801+00:00",
- "elapsed_s": 92
+ "utc": "2026-10-16T17:30:56.922002+00:00",
+ "elapsed_s": 85
 }
