@@ -4,11 +4,11 @@
 ```bash
 cd /workspace/occ_sim
 python3 -m venv .venv && .venv/bin/pip install numpy opencv-python-headless matplotlib pandas pytest
-.venv/bin/python -m pytest -q tests                                   # 58 tests
+.venv/bin/python -m pytest -q tests                                   # 61 tests
 .venv/bin/python -m experiments.tune                                  # held-out-seed tuning -> results/tuned_params.json
 .venv/bin/python -m experiments.run --frames 1000                     # equal-average-power sweeps (all 4)
 .venv/bin/python -m experiments.run --frames 1000 --power peak --sweeps distance_m   # peak-power + goodput/power
-.venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --tag _repro   # must be byte-identical to sweep_distance_m.csv
+.venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --pref 33 --tag _repro   # must be byte-identical to sweep_distance_m_P33.csv (headline, jittered)
 .venv/bin/python -m experiments.plots
 ```
 Seeds: `config.py` (SEED=20261015 for evaluation, TUNE_SEED and GENIE_SEED are held out). Per-condition seeds come from
@@ -133,7 +133,7 @@ Outputs: `results/lowlight_*` (efficiency, winners, degradation metrics, energy 
 - **With Bayer on, enhancement-layer frame error rises steadily:** 0.025 at 1.4 m, 0.74 at 1.75 m, 0.99 at 1.9 m. Then it falls back sharply to **0.30 at exactly 2.00 m** and returns to 0.96 at 2.05 m. CSK-8 shows the same spike at 2.00 m.
 - **With Bayer off, the curve is monotonic and much lower:** 0.07 at 1.75 m, 0.17 at 2.0 m.
 - **Explanation:** 2.00 m gives an LED pitch of exactly 4 px, an integer multiple of the 2-px RGGB period. Every LED then sits on the same colour-filter phase, which favours the colour-shift layer. So the "dip" at 1.75 m is the normal decline, and 2.00 m is an aliasing *peak*. The enhancement layer is limited by demosaic colour moiré, not noise.
-- **Mitigation:** ±2 % distance jitter (now the default) cuts the 2.0 m spike (v2-CS 2579 → 2104 bps) but doesn't remove it. A wider receiver sampling window (6 px) lowers the 1.75 m frame error to 0.22, but makes it worse at 1.4–1.5 m. It has not been adopted, because it would need equal re-tuning for all schemes.
+- **Mitigation:** ±2 % distance jitter (now the default) cuts the 2.0 m spike (v2-CS at P=33: 2588 → 2093 bps, archive_prejitter/sweep_distance_m_P33.csv vs sweep_distance_m_P33.csv; the earlier "2579" could not be traced to any stored file and is withdrawn) but doesn't remove it. A wider receiver sampling window (6 px) lowers the 1.75 m frame error to 0.22, but makes it worse at 1.4–1.5 m. It has not been adopted, because it would need equal re-tuning for all schemes.
 
 ## Revision runs (16 Oct 2026, all with ±2 % distance jitter, seed 20261015, 1000 frames/point)
 Commands:
@@ -149,3 +149,8 @@ for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --swe
   - v2-CS at 2.0 m: 2588 → 2093 bps.
 - New stress sweeps at P = 33 with jitter: `sweep_{yaw_deg,ambient,blur_sigma_px}_J_P33.csv` and `run_meta_J_P33.json`. The older `sweep_{yaw_deg,ambient,blur_sigma_px}.csv` are pre-jitter, at pref 33.011.
 - Run metadata: `run_meta_P*.json` and `run_meta_J_P33.json` record `distance_jitter_frac = 0.02` and git `392d057-dirty`.
+
+## Reproducibility check and run provenance (16 Oct 2026)
+- Repro: `--frames 1000 --sweeps distance_m --pref 33 --tag _repro` (89 s) gives `sweep_distance_m_repro.csv` byte-identical to `sweep_distance_m_P33.csv` (`cmp` clean). That replaces the stale pre-jitter repro file. Its run_meta records `ddf7e7e-dirty`; the only dirty files were these untracked/modified result outputs, and the source matched ddf7e7e.
+- Commits per result set: 708204b = low-light preset, jitter, overdrive cap, dip probe; 392d057 = low-light study (`*_LL_*`, lowlight_*), dip analysis; 2140cd8 = audit fixes (equal power, CRN, per-layer CRC, Wilson CI, tuning, seeds); pre-jitter baseline code; ddf7e7e = jittered default power sweeps (`sweep_distance_m_P{25,33,42,60}.csv`) and stress sweeps (`*_J_P33.csv`). run_meta files that show `-dirty` were written before their results were committed.
+- Default channel (`cap: false`): the power scale can exceed 1 (overdrive up to 1.82× for v2 at P=60). Low light uses `cap: true`.

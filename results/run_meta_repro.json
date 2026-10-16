@@ -1,10 +1,14 @@
 {
+ "channel": "default",
+ "exposure_ms": 1.0,
+ "cap": false,
+ "distance_jitter_frac": 0.02,
  "seed": 20261015,
  "frames": 1000,
  "genie_frames": 300,
  "genie_seed_base": 22261044,
  "power_mode": "equal",
- "pref_power": 33.011,
+ "pref_power": 33.0,
  "tuned": {
   "v2cs": {
    "delta": 0.2,
@@ -30,10 +34,10 @@
    4.0
   ]
  },
- "git": "2140cd86573bbaf195d2ef0abb8bceb6a76d238b-dirty",
+ "git": "ddf7e7ef4cfa0659427537559bc0d618473cdd7e-dirty",
  "sweeps": [
   "distance_m"
  ],
- "utc": "2026-10-15T09:55:13.368359+00:00",
- "elapsed_s": 97
+ "utc": "2026-10-16T17:47:21.472685+00:00",
+ "elapsed_s": 89
 }
