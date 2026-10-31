@@ -1,0 +1,37 @@
+budget,distance,case,metric,n_sets,mean,min,max,min_lo,max_hi,all_lo_gt0,all_hi_lt0,spread,verdict
+25,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,149.4,133.2,165.6,109.2,187.8,True,False,32.4,positive on every set
+25,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,89.4,80.5,98.2,58.5,119.8,True,False,17.7,positive on every set
+25,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,19.4,16.6,22.2,1.2,38.5,True,False,5.6,positive on every set
+33,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,157.2,150.0,164.4,127.2,186.6,True,False,14.4,positive on every set
+33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,2,169.5,155.4,183.6,133.8,204.6,True,False,28.2,positive on every set
+33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only [lit 0.75],1,76.8,76.8,76.8,55.8,97.8,True,False,0.0,positive on every set
+33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [2-level dec] - HNCSM v2-base-only,1,7.8,7.8,7.8,3.0,13.2,True,False,0.0,positive on every set
+33,d3.0,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [2-level dec]",1,120.0,120.0,120.0,103.8,137.4,True,False,0.0,positive on every set
+33,d3.0,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [lit 0.75]",1,21.0,21.0,21.0,14.4,28.2,True,False,0.0,positive on every set
+33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [lit 0.75] - HNCSM v2-base-only,1,106.8,106.8,106.8,90.0,124.2,True,False,0.0,positive on every set
+33,d3.0,"E2 fixed, 1/256",v2 - binding baseline,2,-57.0,-69.6,-44.4,-89.4,-24.0,False,True,25.2,negative on every set
+33,d3.0,"E2 tuned, 1/128",v2 - binding baseline,2,-59.7,-69.0,-50.4,-88.8,-31.8,False,True,18.6,negative on every set
+33,d3.0,"E2 tuned, 1/256",v2 - binding baseline,2,-37.5,-53.4,-21.6,-73.2,1.2,False,False,31.8,NOT stable in sign / n.s. on some set
+33,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,115.4,107.6,123.2,85.2,145.1,True,False,15.6,positive on every set
+33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,2,132.9,131.4,134.4,109.8,156.0,True,False,3.0,positive on every set
+33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only [lit 0.75],1,66.6,66.6,66.6,43.8,88.8,True,False,0.0,positive on every set
+33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [2-level dec] - HNCSM v2-base-only,1,26.4,26.4,26.4,18.0,34.8,True,False,0.0,positive on every set
+33,d3.25,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [2-level dec]",1,78.6,78.6,78.6,62.4,95.4,True,False,0.0,positive on every set
+33,d3.25,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [lit 0.75]",1,37.2,37.2,37.2,28.2,47.4,True,False,0.0,positive on every set
+33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [lit 0.75] - HNCSM v2-base-only,1,67.8,67.8,67.8,51.6,84.0,True,False,0.0,positive on every set
+33,d3.25,"E2 fixed, 1/256",v2 - binding baseline,2,-75.0,-78.6,-71.4,-101.4,-47.4,False,True,7.2,negative on every set
+33,d3.25,"E2 tuned, 1/128",v2 - binding baseline,2,-61.2,-65.4,-57.0,-89.4,-33.6,False,True,8.4,negative on every set
+33,d3.25,"E2 tuned, 1/256",v2 - binding baseline,2,-85.2,-91.8,-78.6,-116.4,-53.4,False,True,13.2,negative on every set
+33,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,16.2,4.3,28.2,-10.1,43.7,False,False,23.9,NOT stable in sign / n.s. on some set
+33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,2,70.2,60.0,80.4,44.4,97.2,True,False,20.4,positive on every set
+33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only [lit 0.75],1,57.6,57.6,57.6,40.2,75.0,True,False,0.0,positive on every set
+33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [2-level dec] - HNCSM v2-base-only,1,17.4,17.4,17.4,11.4,24.0,True,False,0.0,positive on every set
+33,d3.5,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [2-level dec]",1,45.6,45.6,45.6,31.8,60.6,True,False,0.0,positive on every set
+33,d3.5,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [lit 0.75]",1,40.2,40.2,40.2,30.0,51.0,True,False,0.0,positive on every set
+33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [lit 0.75] - HNCSM v2-base-only,1,22.8,22.8,22.8,10.8,34.8,True,False,0.0,positive on every set
+33,d3.5,"E2 fixed, 1/256",v2 - binding baseline,2,-16.2,-19.2,-13.2,-42.6,9.6,False,False,6.0,NOT stable in sign / n.s. on some set
+33,d3.5,"E2 tuned, 1/128",v2 - binding baseline,2,2.1,1.2,3.0,-22.8,27.0,False,False,1.8,NOT stable in sign / n.s. on some set
+33,d3.5,"E2 tuned, 1/256",v2 - binding baseline,2,-16.2,-19.2,-13.2,-42.6,9.6,False,False,6.0,NOT stable in sign / n.s. on some set
+42,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,166.8,156.6,177.0,135.6,200.4,True,False,20.4,positive on every set
+42,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,125.7,119.6,131.8,101.5,151.0,True,False,12.2,positive on every set
+42,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,2,17.6,15.0,20.3,0.6,36.5,True,False,5.3,positive on every set

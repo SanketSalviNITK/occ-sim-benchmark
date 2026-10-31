@@ -1,0 +1,58 @@
+seed_set,budget,distance,case,metric,baseline,crc,value,lo,hi
+SEED (claims/E2 seeds),25,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,133.2,109.2,157.2
+SEED (claims/E2 seeds),25,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,Overlay-inspired (Nishimoto12),48-bit,80.5,58.5,102.8
+SEED (claims/E2 seeds),25,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,HNCSM base-only,native,16.6,1.2,32.6
+SEED (claims/E2 seeds),33,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,150.0,127.2,174.0
+SEED (claims/E2 seeds),33,d3.0,"E2 tuned, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-69.0,-88.8,-48.0
+SEED (claims/E2 seeds),33,d3.0,"E2 fixed, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-69.6,-89.4,-48.6
+SEED (claims/E2 seeds),33,d3.0,"E2 tuned, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-21.6,-44.4,1.2
+SEED (claims/E2 seeds),33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,,native,155.4,133.8,178.2
+SEED (claims/E2 seeds),33,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,Overlay-inspired (Nishimoto12),48-bit,107.6,85.2,128.8
+SEED (claims/E2 seeds),33,d3.25,"E2 tuned, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-65.4,-89.4,-40.8
+SEED (claims/E2 seeds),33,d3.25,"E2 fixed, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-71.4,-97.2,-47.4
+SEED (claims/E2 seeds),33,d3.25,"E2 tuned, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-91.8,-116.4,-66.6
+SEED (claims/E2 seeds),33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,,native,131.4,109.8,153.0
+SEED (claims/E2 seeds),33,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,HNCSM base-only,native,4.3,-10.1,19.3
+SEED (claims/E2 seeds),33,d3.5,"E2 tuned, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,1.2,-22.8,24.0
+SEED (claims/E2 seeds),33,d3.5,"E2 fixed, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-13.2,-35.4,9.6
+SEED (claims/E2 seeds),33,d3.5,"E2 tuned, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-13.2,-35.4,9.6
+SEED (claims/E2 seeds),33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,,native,60.0,44.4,75.6
+SEED (claims/E2 seeds),42,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,156.6,135.6,179.4
+SEED (claims/E2 seeds),42,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,HNCSM base-only,native,119.6,101.5,138.0
+SEED (claims/E2 seeds),42,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,HNCSM base-only,native,15.0,0.6,29.9
+A=31415926,25,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,165.6,141.6,187.8
+A=31415926,25,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,Overlay-inspired (Nishimoto12),48-bit,98.2,76.1,119.8
+A=31415926,25,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,HNCSM base-only,native,22.2,7.1,38.5
+A=31415926,33,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,164.4,141.6,186.6
+A=31415926,33,d3.0,"E2 tuned, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-50.4,-70.2,-31.8
+A=31415926,33,d3.0,"E2 fixed, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-44.4,-63.6,-24.0
+A=31415926,33,d3.0,"E2 tuned, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-53.4,-73.2,-32.4
+A=31415926,33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,,native,183.6,162.6,204.6
+A=31415926,33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only [lit 0.75],,native,76.8,55.8,97.8
+A=31415926,33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [2-level dec] - HNCSM v2-base-only,,native,7.8,3.0,13.2
+A=31415926,33,d3.0,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [lit 0.75]",,native,21.0,14.4,28.2
+A=31415926,33,d3.0,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [lit 0.75] - HNCSM v2-base-only,,native,106.8,90.0,124.2
+A=31415926,33,d3.0,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [2-level dec]",,native,120.0,103.8,137.4
+A=31415926,33,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,Overlay-inspired (Nishimoto12),48-bit,123.2,101.6,145.1
+A=31415926,33,d3.25,"E2 tuned, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-57.0,-81.0,-33.6
+A=31415926,33,d3.25,"E2 fixed, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-78.6,-101.4,-53.4
+A=31415926,33,d3.25,"E2 tuned, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-78.6,-101.4,-53.4
+A=31415926,33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,,native,134.4,111.6,156.0
+A=31415926,33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only [lit 0.75],,native,66.6,43.8,88.8
+A=31415926,33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [2-level dec] - HNCSM v2-base-only,,native,26.4,18.0,34.8
+A=31415926,33,d3.25,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [lit 0.75]",,native,37.2,28.2,47.4
+A=31415926,33,d3.25,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [lit 0.75] - HNCSM v2-base-only,,native,67.8,51.6,84.0
+A=31415926,33,d3.25,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [2-level dec]",,native,78.6,62.4,95.4
+A=31415926,33,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,HNCSM base-only,native,28.2,13.1,43.7
+A=31415926,33,d3.5,"E2 tuned, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,3.0,-21.6,27.0
+A=31415926,33,d3.5,"E2 fixed, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-19.2,-42.6,4.8
+A=31415926,33,d3.5,"E2 tuned, 1/256",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,-19.2,-42.6,4.8
+A=31415926,33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only,,native,80.4,64.8,97.2
+A=31415926,33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2 - HNCSM v2-base-only [lit 0.75],,native,57.6,40.2,75.0
+A=31415926,33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [2-level dec] - HNCSM v2-base-only,,native,17.4,11.4,24.0
+A=31415926,33,d3.5,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [lit 0.75]",,native,40.2,30.0,51.0
+A=31415926,33,d3.5,"E1 fixed 1/1500, 1/128",HNCSM v2-base-only [lit 0.75] - HNCSM v2-base-only,,native,22.8,10.8,34.8
+A=31415926,33,d3.5,"E1 fixed 1/1500, 1/128","HNCSM v2-base-only [lit 0.75, 2-level dec] - HNCSM v2-base-only [2-level dec]",,native,45.6,31.8,60.6
+A=31415926,42,d3.0,"C2 fixed 1/1500, 1/128",v2 - binding baseline,QCD-style-inspired (Vasantha22),native,177.0,154.2,200.4
+A=31415926,42,d3.25,"C2 fixed 1/1500, 1/128",v2 - binding baseline,HNCSM base-only,native,131.8,113.2,151.0
+A=31415926,42,d3.5,"C2 fixed 1/1500, 1/128",v2 - binding baseline,HNCSM base-only,native,20.3,5.4,36.5
