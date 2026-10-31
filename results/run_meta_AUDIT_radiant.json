@@ -1,0 +1,92 @@
+{
+"group": "radiant",
+"git": "e1a2904185749589a169cbf80e65ff0008b57b43",
+"utc": "2026-10-31T07:05:45.986186+00:00",
+"elapsed_s": 155,
+"jobs": [
+{
+"key": "0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {},
+"pref": 33.011,
+"power_mode": "radiant",
+"cap": false,
+"seed": 131340837,
+"symbols": 500
+},
+{
+"key": "1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {},
+"pref": 33.011,
+"power_mode": "radiant",
+"cap": false,
+"seed": 2020317133,
+"symbols": 500
+},
+{
+"key": "1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {},
+"pref": 33.011,
+"power_mode": "radiant",
+"cap": false,
+"seed": 143770706,
+"symbols": 500
+},
+{
+"key": "2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {},
+"pref": 33.011,
+"power_mode": "radiant",
+"cap": false,
+"seed": 1990588932,
+"symbols": 500
+},
+{
+"key": "2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {},
+"pref": 33.011,
+"power_mode": "radiant",
+"cap": false,
+"seed": 105860731,
+"symbols": 500
+},
+{
+"key": "3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {},
+"pref": 33.011,
+"power_mode": "radiant",
+"cap": false,
+"seed": 1978131443,
+"symbols": 500
+},
+{
+"key": "3.5|eval",
+"cond": {
+"distance_m": 3.5
+},
+"pmod": {},
+"pref": 33.011,
+"power_mode": "radiant",
+"cap": false,
+"seed": 101546092,
+"symbols": 500
+}
+]
+}

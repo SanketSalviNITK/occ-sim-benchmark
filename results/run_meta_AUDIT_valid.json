@@ -1,0 +1,56 @@
+{
+"group": "valid",
+"git": "e1a2904185749589a169cbf80e65ff0008b57b43",
+"utc": "2026-10-31T06:35:53.023744+00:00",
+"elapsed_s": 2,
+"jobs": [
+{
+"key": "0.015625|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"pmod": {
+"brightness": 0.015625,
+"f_tx": 25.0
+},
+"pref": null,
+"power_mode": "unit",
+"cap": false,
+"seed": 1515494823,
+"symbols": 400
+},
+{
+"key": "0.0078125|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"pmod": {
+"brightness": 0.0078125,
+"f_tx": 25.0
+},
+"pref": null,
+"power_mode": "unit",
+"cap": false,
+"seed": 105981039,
+"symbols": 400
+},
+{
+"key": "0.00390625|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"pmod": {
+"brightness": 0.00390625,
+"f_tx": 25.0
+},
+"pref": null,
+"power_mode": "unit",
+"cap": false,
+"seed": 1270574738,
+"symbols": 400
+}
+]
+}

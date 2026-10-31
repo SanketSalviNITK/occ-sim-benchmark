@@ -1,0 +1,92 @@
+{
+"group": "trow",
+"git": "e1a2904185749589a169cbf80e65ff0008b57b43",
+"utc": "2026-10-31T07:03:10.828650+00:00",
+"elapsed_s": 133,
+"jobs": [
+{
+"key": "0.0|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"t_row": 0.0
+},
+"pref": 33.011,
+"power_mode": "equal",
+"cap": false,
+"seed": 44890642,
+"symbols": 1000
+},
+{
+"key": "0.0|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"t_row": 0.0
+},
+"pref": 33.011,
+"power_mode": "equal",
+"cap": false,
+"seed": 1917996683,
+"symbols": 1000
+},
+{
+"key": "1e-05|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"t_row": 1e-05
+},
+"pref": 33.011,
+"power_mode": "equal",
+"cap": false,
+"seed": 44890642,
+"symbols": 1000
+},
+{
+"key": "1e-05|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"t_row": 1e-05
+},
+"pref": 33.011,
+"power_mode": "equal",
+"cap": false,
+"seed": 1917996683,
+"symbols": 1000
+},
+{
+"key": "2.7e-05|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"t_row": 2.7e-05
+},
+"pref": 33.011,
+"power_mode": "equal",
+"cap": false,
+"seed": 44890642,
+"symbols": 1000
+},
+{
+"key": "2.7e-05|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"t_row": 2.7e-05
+},
+"pref": 33.011,
+"power_mode": "equal",
+"cap": false,
+"seed": 1917996683,
+"symbols": 1000
+}
+]
+}
