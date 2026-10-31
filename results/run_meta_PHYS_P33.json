@@ -17,14 +17,10 @@
   "lux": 27.0,
   "jitter": 0.02
  },
- "git": "11b1072b0ad3f303d58712c8cd11c2f154825bed-dirty",
+ "git": "034f240ef3249ec6fe4c02ad234c56305a965840",
  "sweeps": [
-  "distance_m",
-  "blur_sigma_px",
-  "yaw_deg",
-  "lux",
-  "t_exp"
+  "distance_m"
  ],
- "utc": "2026-10-31T04:22:04.314897+00:00",
- "elapsed_s": 1518
+ "utc": "2026-10-31T07:45:12.970785+00:00",
+ "elapsed_s": 416
 }
