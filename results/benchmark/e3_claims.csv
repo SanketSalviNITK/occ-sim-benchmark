@@ -1,0 +1,33 @@
+preset,corners,cond,exposure,v2,best_baseline,best_bps,binding_baseline,binding_crc,binding_margin,lo,hi,verdict
+imx219f,real finder (scale-free),d2.5,fixed 1/1500,1020.0,genie(CSK802-8@1/1500),2293.6,CSK802-8,native,-1273.6,-1322.6,-1222.0,v2 < binding
+imx219f,real finder (scale-free),d2.5,tuned,1015.3,genie(CSK802-8@1/500),2577.4,CSK802-8,native,-1562.2,-1567.8,-1555.3,v2 < binding
+imx219f,real finder (scale-free),d3.0,fixed 1/1500,1020.0,QCD-OCC (paper frame),2019.6,QCD-OCC (paper frame),native,-999.6,-1009.9,-985.3,v2 < binding
+imx219f,real finder (scale-free),d3.0,tuned,1020.0,genie(CSK802-8@1/500),2569.7,CSK802-8,native,-1549.7,-1557.4,-1539.3,v2 < binding
+imx219f,real finder (scale-free),d3.25,fixed 1/1500,1018.3,QCD-OCC (paper frame),1944.1,QCD-OCC (paper frame),native,-925.8,-951.1,-898.4,v2 < binding
+imx219f,real finder (scale-free),d3.25,tuned,1018.3,genie(CSK802-8@1/500),2536.1,CSK802-8,native,-1517.8,-1536.3,-1495.9,v2 < binding
+imx219f,real finder (scale-free),d3.5,fixed 1/1500,1014.5,QCD-OCC (paper frame),1897.2,QCD-OCC (paper frame),native,-882.7,-914.9,-848.8,v2 < binding
+imx219f,real finder (scale-free),d3.5,tuned,1019.2,genie(CSK802-8@1/250),2556.8,CSK802-8,native,-1537.6,-1552.3,-1521.3,v2 < binding
+imx219f,real finder (scale-free),m2.5,fixed 1/1500,596.7,genie(OOK-8x8@1/1500),762.1,OOK-8x8,native,-165.4,-173.3,-157.1,v2 < binding
+imx219f,real finder (scale-free),m2.5,tuned,595.6,genie(OOK-8x8@1/1500),762.1,OOK-8x8,native,-166.5,-175.0,-157.6,v2 < binding
+imx219f,real finder (scale-free),m3.0,fixed 1/1500,434.4,QCD-style-inspired (Vasantha22),491.4,QCD-style-inspired (Vasantha22),native,-57.0,-75.6,-38.4,v2 < binding
+imx219f,real finder (scale-free),m3.0,tuned,434.4,QCD-style-inspired (Vasantha22),491.4,QCD-style-inspired (Vasantha22),native,-57.0,-75.6,-38.4,v2 < binding
+imx219f,real finder (scale-free),m3.25,fixed 1/1500,281.4,QCD-style-inspired (Vasantha22),363.6,QCD-style-inspired (Vasantha22),native,-82.2,-107.4,-57.0,v2 < binding
+imx219f,real finder (scale-free),m3.25,tuned,281.4,QCD-style-inspired (Vasantha22),363.6,QCD-style-inspired (Vasantha22),native,-82.2,-108.6,-57.0,v2 < binding
+imx219f,real finder (scale-free),m3.5,fixed 1/1500,190.8,QCD-style-inspired (Vasantha22),177.6,QCD-style-inspired (Vasantha22),native,13.2,-11.4,36.0,n.s.
+imx219f,real finder (scale-free),m3.5,tuned,190.8,QCD-style-inspired (Vasantha22),177.6,QCD-style-inspired (Vasantha22),native,13.2,-11.4,36.0,n.s.
+imx219f,genie corners,d2.5,fixed 1/1500,1020.0,genie(CSK802-8@1/1500),2260.1,CSK802-8,native,-1240.1,-1291.7,-1185.9,v2 < binding
+imx219f,genie corners,d2.5,tuned,1015.3,genie(CSK802-8@1/500),2577.4,CSK802-8,native,-1562.2,-1567.8,-1555.3,v2 < binding
+imx219f,genie corners,d3.0,fixed 1/1500,1020.0,QCD-OCC (paper frame),2011.4,QCD-OCC (paper frame),native,-991.4,-1005.7,-977.2,v2 < binding
+imx219f,genie corners,d3.0,tuned,1020.0,genie(CSK802-8@1/500),2567.1,CSK802-8,native,-1547.1,-1557.4,-1534.2,v2 < binding
+imx219f,genie corners,d3.25,fixed 1/1500,1017.5,QCD-OCC (paper frame),1962.5,QCD-OCC (paper frame),native,-945.0,-968.3,-919.7,v2 < binding
+imx219f,genie corners,d3.25,tuned,1017.5,genie(CSK802-8@1/250),2569.7,CSK802-8,native,-1552.2,-1561.2,-1541.0,v2 < binding
+imx219f,genie corners,d3.5,fixed 1/1500,1013.7,QCD-OCC (paper frame),1899.2,QCD-OCC (paper frame),native,-885.5,-917.4,-852.1,v2 < binding
+imx219f,genie corners,d3.5,tuned,1019.6,genie(CSK802-8@1/250),2541.3,CSK802-8,native,-1521.7,-1539.8,-1500.7,v2 < binding
+imx219f,genie corners,m2.5,fixed 1/1500,593.8,genie(OOK-8x8@1/1500),768.3,OOK-8x8,native,-174.5,-181.2,-167.6,v2 < binding
+imx219f,genie corners,m2.5,tuned,598.3,genie(OOK-8x8@1/500),780.0,OOK-8x8,native,-181.7,-185.6,-178.3,v2 < binding
+imx219f,genie corners,m3.0,fixed 1/1500,435.0,QCD-style-inspired (Vasantha22),511.8,QCD-style-inspired (Vasantha22),native,-76.8,-97.2,-55.8,v2 < binding
+imx219f,genie corners,m3.0,tuned,460.2,genie(OOK-8x8@1/250),597.5,OOK-8x8,native,-137.3,-164.3,-110.3,v2 < binding
+imx219f,genie corners,m3.25,fixed 1/1500,334.2,QCD-style-inspired (Vasantha22),378.6,QCD-style-inspired (Vasantha22),native,-44.4,-66.6,-21.0,v2 < binding
+imx219f,genie corners,m3.25,tuned,369.0,QCD-style-inspired (Vasantha22),427.8,QCD-style-inspired (Vasantha22),native,-58.8,-81.0,-36.6,v2 < binding
+imx219f,genie corners,m3.5,fixed 1/1500,279.6,QCD-style-inspired (Vasantha22),279.0,QCD-style-inspired (Vasantha22),native,0.6,-23.4,24.6,n.s.
+imx219f,genie corners,m3.5,tuned,329.4,QCD-style-inspired (Vasantha22),306.0,QCD-style-inspired (Vasantha22),native,23.4,1.2,45.6,v2 > all

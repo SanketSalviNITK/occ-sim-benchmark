@@ -1,0 +1,189 @@
+{
+"group": "e3valid@imx219f",
+"git": "8d579f240378d691c1f4f3c4c8bce2d987b372d7",
+"utc": "2026-10-31T16:44:55.553002+00:00",
+"elapsed_s": 15,
+"procs": 7,
+"jobs": [
+{
+"key": "0.00048828125|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.00048828125,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.0009765625|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.0009765625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.001953125|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.001953125,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.00390625|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.00390625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.0078125|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.0078125,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.015625|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.015625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.03125|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.03125,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.0625|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.0625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.125|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.125,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+},
+{
+"key": "0.25|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"preset": "imx219fraw",
+"pmod": {
+"brightness": 0.25,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 105981039,
+"symbols": 400,
+"only": [
+"QCD-OCC (paper frame)"
+]
+}
+]
+}

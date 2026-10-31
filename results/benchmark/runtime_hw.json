@@ -1,0 +1,15 @@
+{
+ "cpu": "Intel(R) Xeon(R) Processor",
+ "logical_cpus": 8,
+ "mem_gb": 15.6,
+ "python": "3.13.5",
+ "numpy": "2.5.4",
+ "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+ "loadavg_at_end": [
+  51.77099609375,
+  34.1982421875,
+  22.8701171875
+ ],
+ "process": "single process; numpy default threads",
+ "note": "load average shows concurrent jobs, if any; timings are wall-clock"
+}
