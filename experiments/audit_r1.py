@@ -52,20 +52,21 @@ def jobs_for(group):
         for bn, br in {'1/128': 1 / 128, '1/256': 1 / 256}.items():
             for cn, c in CLAIM_CONDS.items():
                 for tn, t in T_EXPS.items():
+                    # seeds depend on the geometry only -> CRN pairing also ACROSS exposures/brightness (tuned-exposure comparisons)
                     cc = dict(c, t_exp=t); k = f'{cn}|{tn}|{bn}'
-                    J.append((k + '|eval', cc, dict(brightness=br), 33.011, 'equal', False, config.cond_seed(k, 0, config.SEED), 1000, None))
-                    J.append((k + '|tune', cc, dict(brightness=br), 33.011, 'equal', False, config.cond_seed(k, 0, config.TUNE_SEED), 200, None))
+                    J.append((k + '|eval', cc, dict(brightness=br), 33.011, 'equal', False, config.cond_seed(cn, 0, config.SEED), 1000, None))
+                    J.append((k + '|tune', cc, dict(brightness=br), 33.011, 'equal', False, config.cond_seed(cn, 0, config.TUNE_SEED), 200, None))
     elif group == 'lowlight':
         for bn, br in LL_BR.items():
             for bits in (8, 10, 12):
                 for d in LL_DIST:
                     k = f'{bn}|{bits}|{d}'; pm = dict(brightness=br, bits=bits)
-                    J.append((k + '|eval', dict(distance_m=d), pm, 15.0, 'equal', True, config.cond_seed(k, 0, config.SEED), 250, None))
-                    J.append((k + '|tune', dict(distance_m=d), pm, 15.0, 'equal', True, config.cond_seed(k, 0, config.TUNE_SEED), 100, None))
+                    J.append((k + '|eval', dict(distance_m=d), pm, 15.0, 'equal', True, config.cond_seed(f'll{d}', 0, config.SEED), 250, None))
+                    J.append((k + '|tune', dict(distance_m=d), pm, 15.0, 'equal', True, config.cond_seed(f'll{d}', 0, config.TUNE_SEED), 100, None))
     elif group == 'trow':
         for tr in (0.0, 10e-6, 27e-6):
             for d in (2.0, 2.5):
-                k = f'{tr}|{d}'; J.append((k + '|eval', dict(distance_m=d), dict(t_row=tr), 33.011, 'equal', False, config.cond_seed(k, 0, config.SEED), 1000, None))
+                k = f'{tr}|{d}'; J.append((k + '|eval', dict(distance_m=d), dict(t_row=tr), 33.011, 'equal', False, config.cond_seed(f'tr{d}', 0, config.SEED), 1000, None))
     elif group == 'radiant':
         for d in np.round(np.arange(0.5, 3.51, 0.5), 2):
             k = f'{d}'; J.append((k + '|eval', dict(distance_m=float(d)), {}, 33.011, 'radiant', False, config.cond_seed(k, 0, config.SEED), 500, None))
