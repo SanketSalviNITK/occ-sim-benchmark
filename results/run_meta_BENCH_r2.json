@@ -8,5 +8,6 @@
   "review_e1dec": "regenerated at 83b67a7 (clean), OMP=1: 144/144 arrays np.array_equal to shipped npz; original npz kept; dirty meta kept as run_meta_REVIEW_e1dec_orig_dirty.json",
   "review_e1sweep": "NOT completed (regeneration in progress, 189/1160 chunks at tag time); shipped meta still -dirty",
   "review_e2_P33": "NOT started; shipped meta still -dirty"
- }
+ },
+ "n6_regen_final": "benchmark-r4: all three regenerated at clean 83b67a7, OMP=1; np.array_equal vs shipped npz: review_e1dec 144/144, review_e1sweep 174/174, review_e2_P33 2808/2808; clean metas shipped, dirty kept as *_orig_dirty.json; original npz kept"
 }

@@ -72,3 +72,5 @@ Of the four -dirty run metas, only e3valid was regenerated from a clean commit (
 e1sweep, e1dec and e2_P33 were not regenerated (time budget); the Research Validator regenerated sampled arrays (57/57 bit-identical: e1sweep P33 3.25 m, P42 3.0 m; e1dec P33 3.5 m, P25 3.0 m; E2 P33 d3.25 1/256) from a89ad29.
 
 N6 status at benchmark-r2: review_e1dec regenerated from clean commit 83b67a7 with OMP=1, 144/144 arrays identical (clean meta shipped; dirty meta kept as `_orig_dirty`). review_e1sweep and review_e2_P33 regeneration not finished at tag time; their metas remain `-dirty` (validator regenerated sampled arrays from a89ad29).
+
+N6 final (benchmark-r4): review_e1sweep (174/174) and review_e2_P33 (2808/2808) also regenerated from clean 83b67a7 with OMP=1, all arrays identical; clean metas shipped, dirty metas kept as `*_orig_dirty.json`. No shipped meta is `-dirty` for these three groups.
