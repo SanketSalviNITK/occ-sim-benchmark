@@ -10,11 +10,21 @@ Groups:
   e3claims: IMX219, P33, C1/C2 geometry at the same metres (2.5,3.0,3.25,3.5) and at matched px/LED (x f_px ratio),
             t_exp grid, eval 1000 + tune 200.
   e3bracket: IMX219 brightness 1/64 and 1/256 at 1/1500 (eval only) for d2.5 and the matched-px/LED points.
-  e3sweep : IMX219, P33, distance 1.0..4.0 step 0.25 plus 5..10 m, eval 1000 + tune 200 (genie chosen on tune)."""
+  e3sweep : IMX219, P33, distance 1.0..4.0 step 0.25 plus 5..10 m, eval 1000 + tune 200 (genie chosen on tune).
+Benchmark r0 groups (oracle = cond['genie_corners']=True: decoder samples at the TRUE projected corners instead of
+detect_corners; RNG consumption is unchanged, so oracle runs are CRN-paired with the detector runs of the same seeds):
+  or_sweep : IMX174 P33, oracle, distance 1..4 m step 0.5 (sweep indices 2..14 step 2), default exposure, eval 1000,
+             seeds of run_phys -> paired with sweeps_PHYS_P33 (+ review_e1sweep for v2-base-only).
+  or_claims: IMX174 P33, oracle, claims conds d2.5/d3.0/yaw70/blur4 x T_EXPS at 1/128, eval 1000 + tune 200 -> paired with claims.npz.
+  or_imx   : IMX219 P33, oracle, matched-px/LED points m2.5..m3.5 x T_EXPS, eval 1000 + tune 200 -> paired with review_e3claims.
+  seed{A,B}: replication with master seed SEEDS[x] (tune = master + 1_000_003): P33 d3.0/3.25/3.5 x T_EXPS x {1/128,1/256}
+             (C2 points + E2 worst cases + E1 ablation incl. decomposition variants), and P25/P42 d3.0/3.25/3.5 at 1/1500, 1/128.
+Chunks are checkpointed in $CKPT (default /workspace/r2_work/ckpt/<group>/); a re-run skips finished chunks."""
 import os, sys, json, time, datetime, numpy as np
 from multiprocessing import Pool
 import config
-from tx.ablation import HNCSMv2BaseOnly
+from tx.ablation import HNCSMv2BaseOnly, BaseOnly2LevelDecoder, BaseOnlyLevel075
+import pickle, hashlib
 from experiments.audit_r1 import lineup, BASE, T_EXPS
 from experiments.common import power_scales
 from experiments.phys_eval import eval_point_phys
@@ -32,6 +42,8 @@ E3_LINE = ['HNCSM v2', 'HNCSM v2-base-only', 'QCD-style-inspired (Vasantha22)', 
 E3_BR = None   # filled from results/review_r1/e3_calibration.json
 
 def lineup_r1(): return lineup() + [HNCSMv2BaseOnly()]
+SEEDS = {'A': 31415926, 'B': 27182818}   # benchmark r0 replication master seeds (chosen a priori, independent of SEED)
+def lineup_seed(): return lineup_r1() + [BaseOnly2LevelDecoder(), BaseOnlyLevel075()]
 
 def preset(name):
     if name == 'imx174': return dict(ph.P)
@@ -41,11 +53,14 @@ def preset(name):
 def job(a):
     key, cond, pset, pmod, pref, seed, c0, n, only = a
     sch = lineup_r1()
+    if only == 'SEEDLINE': sch = lineup_seed(); only = None
     sc = {s.name: 1.0 for s in sch} if pref is None else power_scales(sch, pref, 'equal', False)[0]
     if only: sch = [s for s in sch if s.name in only]
     p = preset(pset); p.update(pmod); c = dict(BASE); c.update(cond); rec = {}
     eval_point_phys(sch, sc, c, n, seed, p, f0=c0, rec=rec)
     return key, c0, rec
+
+def _ijob(a): return a[0], job(a[1])
 
 def jobs_for(group):
     J = []
@@ -89,13 +104,53 @@ def jobs_for(group):
             c = dict(distance_m=float(d)); k = f'{float(d)}'
             J.append((k + '|eval', c, 'imx219', {}, 33.011, config.cond_seed('imx-dist', i, config.SEED), 1000, E3_LINE))
             J.append((k + '|tune', c, 'imx219', {}, 33.011, config.cond_seed('imx-dist', i, config.TUNE_SEED), 200, E3_LINE))
+    elif group == 'idcheck':   # byte-identity audit point: v2 at P33 3.0 m, run_phys seeds -> must equal sweeps_PHYS_P33
+        J.append(('P33|distance_m|10|eval|check', dict(distance_m=3.0), 'imx174', {}, 33.011,
+                  config.cond_seed('distance_m', 10, config.SEED), 1000, ['HNCSM v2']))
+    elif group == 'or_sweep':
+        for i in range(2, 15, 2):
+            J.append((f'distance_m|{i}|eval', dict(distance_m=float(DIST[i]), genie_corners=True), 'imx174', {}, 33.011,
+                      config.cond_seed('distance_m', i, config.SEED), 1000, None))
+    elif group == 'or_claims':
+        from experiments.audit_r1 import CLAIM_CONDS
+        for cn, cc in CLAIM_CONDS.items():
+            for tn, t in T_EXPS.items():
+                c = dict(cc, t_exp=t, genie_corners=True); k = f'{cn}|{tn}|1/128'
+                J.append((k + '|eval', c, 'imx174', dict(brightness=1 / 128), 33.011, config.cond_seed(cn, 0, config.SEED), 1000, None))
+                J.append((k + '|tune', c, 'imx174', dict(brightness=1 / 128), 33.011, config.cond_seed(cn, 0, config.TUNE_SEED), 200, None))
+    elif group == 'or_imx':
+        for d in (2.5, 3.0, 3.25, 3.5):
+            cn = f'm{d}'
+            for tn, t in T_EXPS.items():
+                c = dict(distance_m=round(d * FPX_RATIO, 3), t_exp=t, genie_corners=True); k = f'{cn}|{tn}'
+                J.append((k + '|eval', c, 'imx219', {}, 33.011, config.cond_seed('imx-' + cn, 0, config.SEED), 1000, None))
+                J.append((k + '|tune', c, 'imx219', {}, 33.011, config.cond_seed('imx-' + cn, 0, config.TUNE_SEED), 200, None))
+    elif group.startswith('seed'):
+        S = SEEDS[group[4:]]; TS = S + 1_000_003
+        for b, pref in PREFS.items():
+            brs = BRS if b == '33' else {'1/128': 1 / 128}
+            tes = T_EXPS if b == '33' else {'1/1500': 1 / 1500}
+            for bn, br in brs.items():
+                if bn == '1/64': continue
+                for cn, d in E2_D.items():
+                    for tn, t in tes.items():
+                        k = f'P{b}|{cn}|{tn}|{bn}'; c = dict(distance_m=d, t_exp=t)
+                        J.append((k + '|eval', c, 'imx174', dict(brightness=br), pref, config.cond_seed(cn, 0, S), 1000, 'SEEDLINE'))
+                        if b == '33': J.append((k + '|tune', c, 'imx174', dict(brightness=br), pref, config.cond_seed(cn, 0, TS), 200, 'SEEDLINE'))
     return J
 
 def run(group, procs):
     t = time.time(); J = jobs_for(group); work = []
     for key, cond, ps, pm, pref, seed, N, only in J:
         for c0 in range(0, N, CHUNK): work.append((key, cond, ps, pm, pref, seed, c0, min(CHUNK, N - c0), only))
-    with Pool(procs) as pl: out = pl.map(job, work, chunksize=1)
+    ck = os.path.join(os.environ.get('CKPT', '/workspace/r2_work/ckpt'), group); os.makedirs(ck, exist_ok=True)
+    fn = lambda w: os.path.join(ck, hashlib.sha1(repr(w).encode()).hexdigest() + '.pkl')
+    todo = [w for w in work if not os.path.exists(fn(w))]
+    print(group, len(work), 'chunks,', len(work) - len(todo), 'already checkpointed', flush=True)
+    with Pool(procs) as pl:
+        for j, r in pl.imap_unordered(_ijob, list(enumerate(todo)), chunksize=1):
+            w = todo[j]; pickle.dump(r, open(fn(w) + '.tmp', 'wb')); os.replace(fn(w) + '.tmp', fn(w))
+    out = [pickle.load(open(fn(w), 'rb')) for w in work]
     out.sort(key=lambda x: (x[0], x[1])); arr = {}
     for key, c0, rec in out:
         for s, d in rec.items():
