@@ -29,6 +29,49 @@ zlib.crc32 (the old runs used Python's salted `hash()` and were NOT reproducible
   QCD subset `last16`; overlay a1=a2=0.25 (at the edge of the grid).
 - **Ambient sweep:** at 2.5 m with non-uniform light (random linear gradient 0.4–1.6× plus a Gaussian hotspot).
 
+## Claims (Research-Validator round 2, audit-r2)
+Only the two statements below are claimed. All numbers come from `results/audit_r1/claims_paired.csv` (C1, C2
+reversals) and `results/audit_r1/efficiency_winners_paired.csv` (C2), per-symbol data `results/phys_sym/{claims,sweeps_PHYS_P25,sweeps_PHYS_P33,sweeps_PHYS_P42}.npz`;
+differences are paired CRN symbol-bootstrap 95 % CIs (METHODS §9.1). Physical channel, equal summed drive, P33 unless stated.
+Former claim 3 (low-light v1 advantage) is **dropped** (METHODS §9.4). Nothing in `results/legacy/` is used.
+(The submission's C1/C2 wording was not stored in the repo; the text below is restated from the round-2 report and the CSVs.)
+
+**C1 (conditional).** At t_exp = 1/1500 s, LED brightness 1/128 and 2.5 m, HNCSM v2 delivers 592 bps [586, 596] against
+25 bps [13, 39] for IEEE 802.15.7 4-CSK (paired diff +566 [552, 579]; 8-CSK 0 bps). The comparison is against the IEEE
+802.15.7 CSK baselines only: at the same point OOK is higher (v2 − OOK −147 [−159, −135]); at 70° yaw (1 m) v2 ties
+QCD-style (0 [−17, 18]); at 4 px blur (1 m) QCD-style wins (HNCSM v1 119 vs 395 bps, −276 [−293, −258]). C1 does not hold
+under per-scheme tuned exposure (CSK802-4 at 1/250 s: 648 bps, v2 − CSK802-4 −57 [−109, −5]); with 48-bit-CRC baselines at
+fixed 1/1500 s it holds against 4-CSK (+335 [313, 355]) and OOK still wins (−34 [−45, −24]).
+
+**C2 (conditional).** v2 has the highest goodput at 3.0–3.5 m at budgets P25/P33/P42 (paired CIs exclude 0; absolute
+128–418 bps) under t_exp 1/1500 s, LED brightness 1/128 and equal summed drive. Repo numbers, v2 − runner-up
+(`efficiency_winners_paired.csv`, runner-up named):
+
+| Budget | 3.0 m | 3.25 m | 3.5 m |
+|---|---|---|---|
+| P25 | 417.6 bps; +141.0 [118.8, 163.2] (QCD-style) | 247.8; +114.6 [94.8, 134.1] (QR) | 130.8; +21.4 [7.3, 37.2] (v1-base) |
+| P33 | 412.8; +148.2 [126.6, 171.6] (QCD-style) | 242.4; +126.1 [107.3, 144.8] (v1-base) | 133.2; +28.6 [13.9, 45.0] (v1-base) |
+| P42 | 412.8; +157.8 [136.2, 180.6] (QCD-style) | 234.0; +117.7 [99.5, 134.6] (v1-base) | 128.4; +29.8 [15.0, 46.1] (v1-base) |
+
+It also holds for radiant-equal power (`radiant_equal.csv`, 1/1500 s, 1/128: 3.0 m v2 397 [371, 422] vs QCD-style 242
+[216, 269]; 3.5 m v2 134 [112, 156] vs v1-base 101 [97, 105]; no paired diffs, no 3.25 m point) and for 48-bit-CRC
+baselines. The 48-bit-CRC check for C2 was not computed by the repo; the validator's independent computation
+(round-2 report, NB2) gives, at P33, v2 − best 48-bit baseline +148 [125, 171] / +116 [94, 138] / +61 [43, 80] at
+3.0 / 3.25 / 3.5 m (all 9 budget × distance points separated). It **reverses** at 3.0 m against QCD-style under
+per-scheme tuned exposure (v2 425 vs 494 bps, −69 [−89, −48]) and at brightness 1/256 (−70 [−89, −49]); at 1/256 with
+tuned exposure it is a tie (−22 [−44, 1]) (`claims_paired.csv`, cond d3.0). **3.25 and 3.5 m were not perturbed**
+(no exposure or brightness runs), so C2 is not claimed there beyond the stated conditions.
+
+**Limitations of the claims (round 2).** (i) There is no second validation anchor: the channel is calibrated to the
+QCD-OCC 200 cm point only, to order of magnitude, through one unidentified brightness constant (METHODS §9.2).
+(ii) Tuning (v2-CS, QCD-style, overlay, per-scheme exposure and the genie) used held-out seeds but the **same
+distances/geometry** as the evaluation; there was no tuning on disjoint distances. (iii) In
+`efficiency_winners_paired.csv`, where the winner is OOK or a CSK802 scheme, the "runner-up" is the genie, which
+duplicates the winner (diff 0, `separated=False`); those rows say nothing about separation. The C2 rows have real
+runner-ups. (iv) The radiant-equal run (`radiant_equal.csv`) has no paired differences and no 3.25 m point, and was run
+only at 1/1500 s and brightness 1/128. (v) The 48-bit-CRC baseline variant reuses the native-CRC tuning picks
+(exposure, genie); it was not re-tuned.
+
 ## Layout
 - `tx/schemes.py` — all modulation schemes (encode/decode, layers)
 - `channel/geometry.py` pinhole projection of the panel (distance, yaw/pitch/roll) · `optics.py` Lambertian gain, Gaussian defocus PSF ·
@@ -172,10 +215,10 @@ Key differences from the legacy channel:
 - The CSK baselines are IEEE 802.15.7 CIE-xy 4/8-CSK.
 - A real corner detector replaces the true corners + jitter.
 
-Validation: QCD-OCC at 200 cm, 3600 bps gives a simulated BER of 6.0e-3 (95 % CI 5.4–6.7e-3) against the measured 1.13e-2.
+Validation: QCD-OCC at 200 cm, 3600 bps gives a simulated BER of 6.0e-3 (symbol-cluster 95 % CI 4.5–7.5e-3, METHODS §9.2) against the measured 1.13e-2; order-of-magnitude calibration only.
 
 ## Audit round 1 fixes (31 Oct 2026)
 See METHODS §9. New: `experiments/stats.py` (cluster/paired bootstrap), `experiments/audit_r1.py` (runs),
 `experiments/audit_r1_report.py` (tables → `results/audit_r1/`), per-symbol data `results/phys_sym/`,
-`results/MANIFEST.sha256`. Claims are conditional on t_exp = 1/1500 s; brightness is an unidentified nuisance parameter
-(validation = order of magnitude only); the blue channel clips at the default brightness 1/128.
+`results/MANIFEST.sha256`. The claims are stated only in the "Claims" section above; brightness is an unidentified nuisance parameter
+(validation = order of magnitude only); the blue channel clips at the default brightness 1/128. Legacy outputs: `results/legacy/`.

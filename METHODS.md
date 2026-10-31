@@ -253,10 +253,10 @@ Code: `channel/physical.py`, `experiments/phys_eval.py`, `experiments/run_phys.p
 ## 8.3 Validation
 - **QCD-OCC** (`results/validation_qcd.csv`, `phys_validation_qcd.png/pdf`).
   - Setup: the paper's frame (48 data LEDs × 3 bit RGB on/off, corner anchors) on the physical channel, with **no parameter change**.
-  - Result at 200 cm, 3600 bps, 27 lux: BER 6.0e-3 (95 % CI 5.4–6.7e-3), against the published 1.13e-2.
+  - Result at 200 cm, 3600 bps, 27 lux: BER 6.0e-3 (per-bit CI 5.4–6.7e-3; symbol-cluster CI 4.51–7.52e-3, §9.2), against the published 1.13e-2.
   - This is the same order, but a factor of ~1.9 lower, and the CI excludes the published value.
   - BER is 0 (CI upper 6.7e-5) at 50–150 cm.
-  - At full WS2812B brightness the model saturates and BER is ≈0.39. This differs from the real prototype (C310 webcam, unknown gain/optics), so `brightness` is effectively an unidentified parameter. It was set by a saturation argument, **not** fitted to the 1.13e-2.
+  - At full WS2812B brightness the model saturates and BER is ≈0.39. This differs from the real prototype (C310 webcam, unknown gain/optics), so `brightness` is effectively an unidentified parameter. The default 1/128 is **ASSUMED** (not fitted to the 1.13e-2); the bracket 1/128–1/256 around the published value is given in §9.2.
 - **Second published point (Nguyen et al. 2021, BER 1e-4 at 20 m): infeasible.**
   - The paper gives neither the lens focal length nor the LED luminance.
   - Its 8×8 cm panel at 20 m is ≈0.4 px per LED with our assumed 6 mm lens.
@@ -277,6 +277,49 @@ Code: `channel/physical.py`, `experiments/phys_eval.py`, `experiments/run_phys.p
 # 9. Research-Validator round 1 fixes (31 Oct 2026)
 Driver `experiments/audit_r1.py`, analysis `experiments/audit_r1_report.py`, statistics `experiments/stats.py`
 (tests `tests/test_stats.py`). Per-symbol bit-error matrices: `results/phys_sym/*.npz`; tables: `results/audit_r1/*.csv`.
+
+## 9.0 Claims (Research-Validator round 2, audit-r2)
+Only the two statements below are claimed. All numbers come from `results/audit_r1/claims_paired.csv` (C1, C2
+reversals) and `results/audit_r1/efficiency_winners_paired.csv` (C2), per-symbol data `results/phys_sym/{claims,sweeps_PHYS_P25,sweeps_PHYS_P33,sweeps_PHYS_P42}.npz`;
+differences are paired CRN symbol-bootstrap 95 % CIs (METHODS §9.1). Physical channel, equal summed drive, P33 unless stated.
+Former claim 3 (low-light v1 advantage) is **dropped** (METHODS §9.4). Nothing in `results/legacy/` is used.
+(The submission's C1/C2 wording was not stored in the repo; the text below is restated from the round-2 report and the CSVs.)
+
+**C1 (conditional).** At t_exp = 1/1500 s, LED brightness 1/128 and 2.5 m, HNCSM v2 delivers 592 bps [586, 596] against
+25 bps [13, 39] for IEEE 802.15.7 4-CSK (paired diff +566 [552, 579]; 8-CSK 0 bps). The comparison is against the IEEE
+802.15.7 CSK baselines only: at the same point OOK is higher (v2 − OOK −147 [−159, −135]); at 70° yaw (1 m) v2 ties
+QCD-style (0 [−17, 18]); at 4 px blur (1 m) QCD-style wins (HNCSM v1 119 vs 395 bps, −276 [−293, −258]). C1 does not hold
+under per-scheme tuned exposure (CSK802-4 at 1/250 s: 648 bps, v2 − CSK802-4 −57 [−109, −5]); with 48-bit-CRC baselines at
+fixed 1/1500 s it holds against 4-CSK (+335 [313, 355]) and OOK still wins (−34 [−45, −24]).
+
+**C2 (conditional).** v2 has the highest goodput at 3.0–3.5 m at budgets P25/P33/P42 (paired CIs exclude 0; absolute
+128–418 bps) under t_exp 1/1500 s, LED brightness 1/128 and equal summed drive. Repo numbers, v2 − runner-up
+(`efficiency_winners_paired.csv`, runner-up named):
+
+| Budget | 3.0 m | 3.25 m | 3.5 m |
+|---|---|---|---|
+| P25 | 417.6 bps; +141.0 [118.8, 163.2] (QCD-style) | 247.8; +114.6 [94.8, 134.1] (QR) | 130.8; +21.4 [7.3, 37.2] (v1-base) |
+| P33 | 412.8; +148.2 [126.6, 171.6] (QCD-style) | 242.4; +126.1 [107.3, 144.8] (v1-base) | 133.2; +28.6 [13.9, 45.0] (v1-base) |
+| P42 | 412.8; +157.8 [136.2, 180.6] (QCD-style) | 234.0; +117.7 [99.5, 134.6] (v1-base) | 128.4; +29.8 [15.0, 46.1] (v1-base) |
+
+It also holds for radiant-equal power (`radiant_equal.csv`, 1/1500 s, 1/128: 3.0 m v2 397 [371, 422] vs QCD-style 242
+[216, 269]; 3.5 m v2 134 [112, 156] vs v1-base 101 [97, 105]; no paired diffs, no 3.25 m point) and for 48-bit-CRC
+baselines. The 48-bit-CRC check for C2 was not computed by the repo; the validator's independent computation
+(round-2 report, NB2) gives, at P33, v2 − best 48-bit baseline +148 [125, 171] / +116 [94, 138] / +61 [43, 80] at
+3.0 / 3.25 / 3.5 m (all 9 budget × distance points separated). It **reverses** at 3.0 m against QCD-style under
+per-scheme tuned exposure (v2 425 vs 494 bps, −69 [−89, −48]) and at brightness 1/256 (−70 [−89, −49]); at 1/256 with
+tuned exposure it is a tie (−22 [−44, 1]) (`claims_paired.csv`, cond d3.0). **3.25 and 3.5 m were not perturbed**
+(no exposure or brightness runs), so C2 is not claimed there beyond the stated conditions.
+
+**Limitations of the claims (round 2).** (i) There is no second validation anchor: the channel is calibrated to the
+QCD-OCC 200 cm point only, to order of magnitude, through one unidentified brightness constant (METHODS §9.2).
+(ii) Tuning (v2-CS, QCD-style, overlay, per-scheme exposure and the genie) used held-out seeds but the **same
+distances/geometry** as the evaluation; there was no tuning on disjoint distances. (iii) In
+`efficiency_winners_paired.csv`, where the winner is OOK or a CSK802 scheme, the "runner-up" is the genie, which
+duplicates the winner (diff 0, `separated=False`); those rows say nothing about separation. The C2 rows have real
+runner-ups. (iv) The radiant-equal run (`radiant_equal.csv`) has no paired differences and no 3.25 m point, and was run
+only at 1/1500 s and brightness 1/128. (v) The 48-bit-CRC baseline variant reuses the native-CRC tuning picks
+(exposure, genie); it was not re-tuned.
 
 ## 9.1 Statistics (B5)
 - BER: symbol(frame)-cluster bootstrap (2000 resamples of symbols), not per-bit Wilson.
@@ -313,17 +356,19 @@ clips; CSK runs at scale 0.5 and does not. The old "full drive would saturate" r
 point. 1/256 (no clipping) is reported as a sensitivity case for every claim (§9.3). K8 = 0.0313 DN/e⁻ (1 DN ≈ 32 e⁻).
 EMVA 1288 values come from the **mono** IMX174 sheet at 250 µs exposure; the CFA (colour filter array) is ASSUMED.
 
-## 9.3 Claims vs the best baseline, paired CIs, exposure (B1, B4)
+## 9.3 Evidence vs the best baseline, paired CIs, exposure (B1, B4; claims are stated in §9.0)
 Conditions 2.5 m, 3.0 m, 70° yaw (1 m), 4 px blur (1 m) × t_exp {1/4000, 1/1500, 1/500, 1/250} × brightness
 {1/128, 1/256}; 1000 eval symbols; per-scheme exposure and the genie chosen on 200 held-out symbols (TUNE_SEED); seeds
 shared across exposures (CRN), so tuned comparisons are paired. Full table: `claims_paired.csv`, points incl. BER,
 48-bit-CRC baseline goodput, saturation ratio and RS-mixing weight: `claims_points.csv`.
-**All claims are conditional on t_exp = 1/1500 s unless stated**: e.g. at 2.5 m CSK802-4 goes 25 → 648 bps from 1/1500 to
+**C1/C2 are conditional on t_exp = 1/1500 s (§9.0)**: e.g. at 2.5 m CSK802-4 goes 25 → 648 bps from 1/1500 to
 1/250 s while v2 goes 592 → 263.
-Mechanism diagnostic (1/128, 2.5 m): RS mixing weight of the selected frame is ≤ 0.01 for all schemes at all exposures,
-so the rolling shutter does not drive the asymmetry. Saturation ratio (saturated px / px above 15 % of panel peak) at
-1/250: v2 0.94, CSK802-4 0.42, OOK 0.50 (0 at 1/4000). Longer exposure buys CSK SNR (BER 0.072 → 0.014) while clipping
-v2's amplitude layers (BER 0.068 → 0.338). t_row ∈ {0, 10, 27 µs} changes no scheme by more than 5 bps (`trow.csv`).
+Mechanism diagnostic (1/128, 2.5 m): RS mixing weight of the selected frame (`claims_points.csv`, `rs_mix`, verified in round 2) is ≤ 0.009 for v2,
+CSK802-4 and OOK at every exposure (max 0.0085, v2 at 1/250 s), so the rolling shutter does not drive the asymmetry.
+Over all 12 schemes at this condition the max is 0.015, and over all claim conditions 0.033 (OOK, 4 px blur, 1/250 s);
+the earlier "≤ 0.01 for all schemes" was not correct as stated. Saturation ratio (saturated px / px above 15 % of panel peak) at
+1/250: v2 0.94, CSK802-4 0.42, OOK 0.50 (0 at 1/4000). Longer exposure buys CSK SNR: CSK802-4 BER is 0.072 at 1/1500 s and 0.014 at 1/250 s (the exposure the tuned-exposure
+variant picks), while clipping v2's amplitude layers (v2 BER 0.068 → 0.338). t_row ∈ {0, 10, 27 µs} changes no scheme by more than 5 bps (`trow.csv`).
 
 ## 9.4 Low-light knife-edge (B2)
 P15 with cap, 0.5–3.0 m, 250 symbols/point, brightness × ADC grid (`lowlight_grid.csv`). AUC v1 − genie [paired 95 % CI],
@@ -350,6 +395,10 @@ the 8-bit ADC; the result is a quantisation artefact and **claim 3 is dropped** 
   overlay are tuned.
 - The QCD-OCC 3600-bps paper frame is now in the claim line-up ("QCD-paper", power-equalised); the 48-bit QCD-style
   variant stays because it is the HNCSM-comparable layered design. The paper frame is 0 bps at 2.5–3.0 m at 1/1500 s.
-- Provenance (B6): code commit e1a2904 (clean; `git_hash` now ignores results/). Audit runs and the P25/P33/P42 distance
-  sweeps were regenerated from clean commits, and the CSVs are bit-identical to the committed ones. Hashes are in
-  `results/MANIFEST.sha256`.
+- Provenance (B6, corrected in round 2): code commit e1a2904 (clean; `git_hash` now ignores results/). Audit runs
+  (meta e1a2904 / e6d9687) and the P25/P33/P42 physical distance sweeps (meta 034f240, clean) were regenerated from clean
+  commits, and the CSVs are bit-identical to the committed ones. **P60 was not regenerated**: its run_meta records
+  `11b1072-dirty`, so it is LEGACY, excluded from all claims, and moved to `results/legacy/` together with the P33
+  yaw/blur/t_exp/lux sweeps (no matching run_meta) and the superseded Wilson-envelope efficiency tables (see
+  `results/legacy/README.md`). In round 2 `claims.npz` was regenerated after the saturation-diagnostic fix (F4).
+  Hashes are in `results/MANIFEST.sha256` (legacy files listed under `results/legacy/`).
