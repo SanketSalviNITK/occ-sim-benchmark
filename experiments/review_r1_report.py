@@ -42,8 +42,6 @@ def e1():
     pd.DataFrame(rows).to_csv(os.path.join(OUT, 'e1_layers.csv'), index=False); pd.DataFrame(ab).to_csv(os.path.join(OUT, 'e1_ablation_sweep.csv'), index=False)
     return pd.DataFrame(rows), pd.DataFrame(ab)
 
-if __name__ == '__main__':
-    for g in sys.argv[1:]: globals()[g]()
 
 # ---------------- E2: C2 robustness grid ----------------
 def _variant_vals(z, pre_fn, names, tu_fn, var, block=None):
@@ -171,3 +169,20 @@ def plot_pxled(df):
         a.set_xscale('log'); a.set_xlabel('px per LED (pitch on sensor)'); a.set_title(f'{sen}, P33'); a.grid(alpha=0.3)
     ax[0].set_ylabel('goodput [bps]'); ax[1].legend(fontsize=7); fig.tight_layout()
     for e in ('png', 'pdf'): fig.savefig(os.path.join(OUT, f'e3_goodput_vs_pxled.{e}'), dpi=150)
+
+# ---------------- E1: decomposition of the v2 vs base-only gap (P25/P33/P42, 2.25-4.0 m) ----------------
+def e1_decomp():
+    zd = np.load(os.path.join(SYM, 'review_e1dec.npz')); zb = np.load(os.path.join(SYM, 'review_e1sweep.npz'))
+    L2, L7 = BO + ' [2-level dec]', BO + ' [lit 0.75]'; f = lambda d: f"{d[0]:+.1f} [{d[1]:.1f},{d[2]:.1f}]"; rows = []
+    for b in PREFS:
+        z = np.load(os.path.join(SYM, f'sweeps_PHYS_P{b}.npz'))
+        for i in sorted({int(k.split('|')[2]) for k in zd}):
+            pre = f'distance_m|{i}|eval'; v2 = G(z, pre, V2); base, _ = layer(z, pre)
+            g = lambda zz, n: sym_goodput(zz[f'P{b}|{pre}|{n}|err'], [('base', 48)], RATE)
+            bo, b2, b7 = g(zb, BO), g(zd, L2), g(zd, L7)
+            rows.append({'P': b, 'd': DIST[i], 'v2': round(v2.mean(), 2), 'v2base': round(base.mean(), 2), 'bo': round(bo.mean(), 2), 'bo_2lvdec': round(b2.mean(), 2),
+                         'bo_lit075': round(b7.mean(), 2), 'v2-bo2lv': f(paired_diff(v2, b2)), 'v2-lit075': f(paired_diff(v2, b7)), 'bo2lv-bo': f(paired_diff(b2, bo))})
+    df = pd.DataFrame(rows); df.to_csv(os.path.join(OUT, 'e1_decomposition.csv'), index=False); return df
+
+if __name__ == '__main__':
+    for g in sys.argv[1:]: globals()[g]()
