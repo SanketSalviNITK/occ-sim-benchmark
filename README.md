@@ -4,7 +4,7 @@
 ```bash
 cd /workspace/occ_sim
 python3 -m venv .venv && .venv/bin/pip install numpy opencv-python-headless matplotlib pandas pytest
-.venv/bin/python -m pytest -q tests                                   # 61 tests
+.venv/bin/python -m pytest -q tests                                   # 78 tests
 .venv/bin/python -m experiments.tune                                  # held-out-seed tuning -> results/tuned_params.json
 .venv/bin/python -m experiments.run --frames 1000                     # equal-average-power sweeps (all 4)
 .venv/bin/python -m experiments.run --frames 1000 --power peak --sweeps distance_m   # peak-power + goodput/power
