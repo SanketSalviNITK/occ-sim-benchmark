@@ -1,0 +1,3968 @@
+{
+"group": "lowlight",
+"git": "e6d96873962905df90858e55d3e098fa9e62c7a2",
+"utc": "2026-10-31T07:26:09.405695+00:00",
+"elapsed_s": 1223,
+"jobs": [
+{
+"key": "1/256|8|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/256|8|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/256|8|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/256|8|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/256|8|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/256|8|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/256|8|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/256|8|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/256|8|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/256|8|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/256|8|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/256|8|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/256|8|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/256|8|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/256|8|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/256|8|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/256|8|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/256|8|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/256|8|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/256|8|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/256|8|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/256|8|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/256|10|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/256|10|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/256|10|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/256|10|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/256|10|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/256|10|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/256|10|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/256|10|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/256|10|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/256|10|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/256|10|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/256|10|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/256|10|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/256|10|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/256|10|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/256|10|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/256|10|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/256|10|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/256|10|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/256|10|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/256|10|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/256|10|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/256|12|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/256|12|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/256|12|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/256|12|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/256|12|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/256|12|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/256|12|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/256|12|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/256|12|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/256|12|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/256|12|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/256|12|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/256|12|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/256|12|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/256|12|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/256|12|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/256|12|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/256|12|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/256|12|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/256|12|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/256|12|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/256|12|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00390625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/512|8|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/512|8|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/512|8|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/512|8|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/512|8|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/512|8|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/512|8|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/512|8|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/512|8|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/512|8|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/512|8|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/512|8|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/512|8|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/512|8|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/512|8|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/512|8|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/512|8|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/512|8|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/512|8|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/512|8|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/512|8|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/512|8|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/512|10|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/512|10|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/512|10|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/512|10|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/512|10|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/512|10|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/512|10|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/512|10|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/512|10|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/512|10|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/512|10|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/512|10|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/512|10|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/512|10|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/512|10|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/512|10|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/512|10|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/512|10|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/512|10|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/512|10|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/512|10|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/512|10|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/512|12|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/512|12|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/512|12|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/512|12|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/512|12|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/512|12|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/512|12|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/512|12|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/512|12|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/512|12|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/512|12|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/512|12|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/512|12|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/512|12|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/512|12|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/512|12|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/512|12|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/512|12|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/512|12|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/512|12|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/512|12|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/512|12|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.001953125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/1024|8|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/1024|8|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/1024|8|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/1024|8|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/1024|8|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/1024|8|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/1024|8|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/1024|8|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/1024|8|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/1024|8|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/1024|8|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/1024|8|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/1024|8|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/1024|8|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/1024|8|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/1024|8|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/1024|8|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/1024|8|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/1024|8|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/1024|8|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/1024|8|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/1024|8|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/1024|10|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/1024|10|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/1024|10|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/1024|10|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/1024|10|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/1024|10|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/1024|10|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/1024|10|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/1024|10|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/1024|10|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/1024|10|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/1024|10|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/1024|10|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/1024|10|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/1024|10|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/1024|10|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/1024|10|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/1024|10|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/1024|10|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/1024|10|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/1024|10|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/1024|10|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/1024|12|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/1024|12|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/1024|12|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/1024|12|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/1024|12|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/1024|12|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/1024|12|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/1024|12|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/1024|12|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/1024|12|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/1024|12|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/1024|12|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/1024|12|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/1024|12|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/1024|12|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/1024|12|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/1024|12|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/1024|12|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/1024|12|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/1024|12|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/1024|12|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/1024|12|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.0009765625,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/2048|8|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/2048|8|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/2048|8|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/2048|8|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/2048|8|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/2048|8|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/2048|8|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/2048|8|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/2048|8|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/2048|8|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/2048|8|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/2048|8|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/2048|8|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/2048|8|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/2048|8|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/2048|8|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/2048|8|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/2048|8|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/2048|8|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/2048|8|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/2048|8|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/2048|8|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 8
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/2048|10|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/2048|10|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/2048|10|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/2048|10|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/2048|10|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/2048|10|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/2048|10|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/2048|10|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/2048|10|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/2048|10|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/2048|10|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/2048|10|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/2048|10|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/2048|10|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/2048|10|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/2048|10|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/2048|10|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/2048|10|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/2048|10|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/2048|10|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/2048|10|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/2048|10|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 10
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+},
+{
+"key": "1/2048|12|0.5|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 335820301,
+"symbols": 250
+},
+{
+"key": "1/2048|12|0.5|tune",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 336820304,
+"symbols": 100
+},
+{
+"key": "1/2048|12|0.75|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 397356074,
+"symbols": 250
+},
+{
+"key": "1/2048|12|0.75|tune",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 398356077,
+"symbols": 100
+},
+{
+"key": "1/2048|12|1.0|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1687993445,
+"symbols": 250
+},
+{
+"key": "1/2048|12|1.0|tune",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1688993448,
+"symbols": 100
+},
+{
+"key": "1/2048|12|1.25|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1424406857,
+"symbols": 250
+},
+{
+"key": "1/2048|12|1.25|tune",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1425406860,
+"symbols": 100
+},
+{
+"key": "1/2048|12|1.5|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 339906522,
+"symbols": 250
+},
+{
+"key": "1/2048|12|1.5|tune",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 340906525,
+"symbols": 100
+},
+{
+"key": "1/2048|12|1.75|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 805014926,
+"symbols": 250
+},
+{
+"key": "1/2048|12|1.75|tune",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 806014929,
+"symbols": 100
+},
+{
+"key": "1/2048|12|2.0|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1649825324,
+"symbols": 250
+},
+{
+"key": "1/2048|12|2.0|tune",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1650825327,
+"symbols": 100
+},
+{
+"key": "1/2048|12|2.25|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1111058419,
+"symbols": 250
+},
+{
+"key": "1/2048|12|2.25|tune",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1112058422,
+"symbols": 100
+},
+{
+"key": "1/2048|12|2.5|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 310444467,
+"symbols": 250
+},
+{
+"key": "1/2048|12|2.5|tune",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 311444470,
+"symbols": 100
+},
+{
+"key": "1/2048|12|2.75|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1034482608,
+"symbols": 250
+},
+{
+"key": "1/2048|12|2.75|tune",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1035482611,
+"symbols": 100
+},
+{
+"key": "1/2048|12|3.0|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1645768763,
+"symbols": 250
+},
+{
+"key": "1/2048|12|3.0|tune",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {
+"brightness": 0.00048828125,
+"bits": 12
+},
+"pref": 15.0,
+"power_mode": "equal",
+"cap": true,
+"seed": 1646768766,
+"symbols": 100
+}
+]
+}
