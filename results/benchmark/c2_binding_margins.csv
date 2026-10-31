@@ -1,0 +1,7 @@
+seeds,budget,distance,v2,binding_baseline,crc,margin,lo,hi
+claims/E2,33,d3.0,402.0,QCD-style-inspired (Vasantha22),native,150.0,127.2,174.0
+claims/E2,33,d3.25,234.0,Overlay-inspired (Nishimoto12),48-bit,107.6,85.2,128.8
+claims/E2,33,d3.5,109.8,HNCSM base-only,native,4.3,-10.1,19.3
+sweep (run_phys),33,d3.0,412.8,QCD-style-inspired (Vasantha22),native,148.2,126.6,171.6
+sweep (run_phys),33,d3.25,242.4,Overlay-inspired (Nishimoto12),48-bit,116.4,94.4,139.2
+sweep (run_phys),33,d3.5,133.2,HNCSM base-only,native,28.6,13.9,45.0

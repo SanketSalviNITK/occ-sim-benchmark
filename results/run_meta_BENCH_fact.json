@@ -1,0 +1,16 @@
+{
+"group": "fact",
+"git": "8d579f240378d691c1f4f3c4c8bce2d987b372d7",
+"utc": "2026-10-31T16:43:31.497712+00:00",
+"elapsed_s": 7,
+"scales": {
+"HNCSM v2-base-only [lit 0.75, 2-level dec]": 1.0003333333333335
+},
+"idx": [
+10,
+11,
+12
+],
+"seeds": "cond_seed('distance_m', i, SEED)",
+"symbols": 1000
+}

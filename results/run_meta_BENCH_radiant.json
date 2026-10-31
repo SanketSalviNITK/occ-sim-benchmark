@@ -1,0 +1,21 @@
+{
+"group": "radiant",
+"git": "8d579f240378d691c1f4f3c4c8bce2d987b372d7",
+"utc": "2026-10-31T16:44:14.882552+00:00",
+"elapsed_s": 43,
+"scales": {
+"HNCSM v2": 0.9999144718780834,
+"QCD-style-inspired (Vasantha22)": 0.7859761904761905,
+"HNCSM v2-base-only": 0.7859761904761905,
+"HNCSM v2-base-only [2-level dec]": 0.7859761904761905,
+"HNCSM v2-base-only [lit 0.75]": 1.0003333333333335,
+"HNCSM v2-base-only [lit 0.75, 2-level dec]": 1.0003333333333335
+},
+"idx": [
+10,
+11,
+12
+],
+"seeds": "cond_seed('distance_m', i, SEED)",
+"symbols": 1000
+}
