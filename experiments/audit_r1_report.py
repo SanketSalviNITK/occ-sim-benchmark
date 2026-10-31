@@ -89,7 +89,7 @@ def claims():
 def sweeps():
     win, aucs = [], []
     x = SWEEPS['distance_m'][0]
-    for P in ('25', '33', '42', '60'):
+    for P in ('25', '33', '42'):   # P60 is LEGACY (results/legacy/), excluded
         if not os.path.exists(os.path.join(SYM, f'sweeps_PHYS_P{P}.npz')): continue
         z = np.load(os.path.join(SYM, f'sweeps_PHYS_P{P}.npz')); names = [n for n in SCH if n != 'QCD-OCC (paper frame)']
         V = {i: {n: G(z, f'distance_m|{i}|eval', n) for n in names} for i in range(len(x))}

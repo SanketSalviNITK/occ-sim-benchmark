@@ -56,8 +56,11 @@ fixed 1/1500 s it holds against 4-CSK (+335 [313, 355]) and OOK still wins (−3
 It also holds for radiant-equal power (`radiant_equal.csv`, 1/1500 s, 1/128: 3.0 m v2 397 [371, 422] vs QCD-style 242
 [216, 269]; 3.5 m v2 134 [112, 156] vs v1-base 101 [97, 105]; no paired diffs, no 3.25 m point) and for 48-bit-CRC
 baselines. The 48-bit-CRC check for C2 was not computed by the repo; the validator's independent computation
-(round-2 report, NB2) gives, at P33, v2 − best 48-bit baseline +148 [125, 171] / +116 [94, 138] / +61 [43, 80] at
-3.0 / 3.25 / 3.5 m (all 9 budget × distance points separated). It **reverses** at 3.0 m against QCD-style under
+(round-2 report, NB2) re-segments only the **non-HNCSM baselines** into 48-bit CRC-8 blocks (the HNCSM family — v1-base,
+v1, v2-CS — is excluded from that opponent set) and gives, at P33, v2 − best 48-bit baseline +148 [125, 171] vs
+QCD-style / +116 [94, 138] vs Overlay / +61 [43, 80] vs Overlay at 3.0 / 3.25 / 3.5 m (all 9 budget × distance points
+separated). The binding margin at 3.5 m is **not** +61 but the native margin over v1-base, +21 to +30 across
+P25/P33/P42 (+28.6 [13.9, 45.0] at P33, table above), to which the 48-bit variant does not apply. It **reverses** at 3.0 m against QCD-style under
 per-scheme tuned exposure (v2 425 vs 494 bps, −69 [−89, −48]) and at brightness 1/256 (−70 [−89, −49]); at 1/256 with
 tuned exposure it is a tie (−22 [−44, 1]) (`claims_paired.csv`, cond d3.0). **3.25 and 3.5 m were not perturbed**
 (no exposure or brightness runs), so C2 is not claimed there beyond the stated conditions.
@@ -79,7 +82,12 @@ only at 1/1500 s and brightness 1/128. (v) The 48-bit-CRC baseline variant reuse
 - `rx/sampler.py` homography rectification from finder corners + per-LED sampling + ambient reference · `rx/refs.py` pilot colour references, crosstalk-inverted on/off metric, nearest-colour classifier
 - `experiments/run.py` sweeps (multiprocessing) · `experiments/plots.py`
 
-## Channel parameters (defaults)
+# IDEAL (legacy) channel — historical, NOT used by any claim
+Everything from here to "Physical channel" describes the original ideal channel (global-shutter static frames, true
+corners + jitter, 30 fps). The Claims section above uses only the physical channel (METHODS §8–§9). Historical
+ideal-channel P60 files (`sweep_distance_m_P60.csv`, `run_meta_P60.json`) are kept for traceability only.
+
+## [Ideal channel] Channel parameters (defaults)
 | Parameter | Value |
 |---|---|
 | Panel | 8x8 RGB LEDs, 8 mm pitch (64 mm panel), emitter diameter 0.6×pitch |
@@ -96,7 +104,7 @@ only at 1/1500 s and brightness 1/128. (v) The 48-bit-CRC baseline variant reuse
 
 Metrics: see the evaluation protocol above.
 
-## Schemes (all reserve the same 4 corner pilots: TL white, TR red, BL green, BR blue = finder + colour reference)
+## [Ideal channel] Schemes (all reserve the same 4 corner pilots: TL white, TR red, BL green, BR blue = finder + colour reference)
 | Scheme | Bits/frame (gross; net = −8 CRC per layer) | Avg power (drive units, pilots incl.) | Notes |
 |---|---|---|---|
 | **HNCSM v1** | 16 base + 64 enh = 80 | 53.9 | per 4×4 quadrant: constant-weight (8 of 15) binary texture from a 16-word max-distance codebook; lit LEDs ∈ {W,R,G,B} |
@@ -117,17 +125,16 @@ Metrics: see the evaluation protocol above.
 **v2-CS (current):** the leak is power-neutral. Variants are (1−δ)·p + δ·next, (1−δ)·p + δ·prev and
 (1−2δ)·p + δ·(next+prev), and the base decoder uses the leaked templates (joint ML; `joint=False` gives the old two-stage decoder).
 
-## Limitations
-- **Rolling shutter is not modelled** and there is **no real finder detector**: the receiver gets true corners plus 0.3 px jitter. Both are left for later.
-- No rolling-shutter or temporal effects (static frames, ideal frame sync); no motion blur; no real finder detection; no gamma/AWB/JPEG.
+## [Ideal channel] Limitations
+- (Ideal channel only; the physical channel models rolling shutter and a real corner detector, METHODS §8.) No rolling-shutter or temporal effects (static frames, ideal frame sync); no motion blur; no real finder detection; no gamma/AWB/JPEG.
 - The distance effect comes from the projected LED pitch: about 3.6 px at 2.25 m and 1.6 px at 5 m. Pixel-grid aliasing near 2 px pitch makes curves non-monotonic (e.g. HNCSM at 4.0 m).
 - Ambient up to 0.6 doesn't hurt at 1 m because there's no saturation of the dark level. A low-exposure or high-ambient regime still needs a sweep.
 - Codebooks and amplitudes haven't been optimized. The Gaussian PSF is not calibrated to a real lens.
 - Hard-decision decoding only, with no soft FEC.
 
-## Power-budget and graceful-degradation study
+## [Ideal channel] Power-budget and graceful-degradation study
 ```bash
-for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --pref $P --tag _P$P; done
+for P in 25 33 42; do .venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --pref $P --tag _P$P; done
 .venv/bin/python -m experiments.efficiency
 ```
 - Every scheme's drive, pilots included, is scaled to average power P. The scale can exceed 1 (LED overdrive up to 1.82× for v2 at P=60), and sensor saturation is modelled.
@@ -144,7 +151,7 @@ for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --swe
 - **Figures:** `results/fig_efficiency_vs_distance.{png,pdf}` and `results/fig_degradation_energy_P33.{png,pdf}`.
 - **Caveat:** in this channel model goodput hardly depends on P over 25–60 (AUC changes by less than 1.5 %). Failure with distance is set by resolution and blur, not SNR, so efficiency scales as ~1/P. The power axis therefore mainly reflects each scheme's mean drive.
 
-## Low-light (power-limited) channel
+## [Ideal channel] Low-light (power-limited) channel
 Preset `channel/presets.py::low_light(exposure_ms)`. The main results still use `presets.default()`.
 
 | Parameter | Low light | Default | Justification |
@@ -171,17 +178,17 @@ for P in 15 25 33 42; do .venv/bin/python -m experiments.run --frames 1000 --swe
 ```
 Outputs: `results/lowlight_*` (efficiency, winners, degradation metrics, energy per bit, figures in png and pdf) and `results/sweep_exposure_ms_LL_P33.csv`.
 
-## The v2-CS "dip" near 1.75 m
+## [Ideal channel] The v2-CS "dip" near 1.75 m
 `experiments/dip_probe.py` (`results/dip_probe.csv`) scans 1.40–2.20 m in 0.05 m steps, with 400 frames per point at P = 33.
 - **With Bayer on, enhancement-layer frame error rises steadily:** 0.025 at 1.4 m, 0.74 at 1.75 m, 0.99 at 1.9 m. Then it falls back sharply to **0.30 at exactly 2.00 m** and returns to 0.96 at 2.05 m. CSK-8 shows the same spike at 2.00 m.
 - **With Bayer off, the curve is monotonic and much lower:** 0.07 at 1.75 m, 0.17 at 2.0 m.
 - **Explanation:** 2.00 m gives an LED pitch of exactly 4 px, an integer multiple of the 2-px RGGB period. Every LED then sits on the same colour-filter phase, which favours the colour-shift layer. So the "dip" at 1.75 m is the normal decline, and 2.00 m is an aliasing *peak*. The enhancement layer is limited by demosaic colour moiré, not noise.
 - **Mitigation:** ±2 % distance jitter (now the default) cuts the 2.0 m spike (v2-CS at P=33: 2588 → 2093 bps, archive_prejitter/sweep_distance_m_P33.csv vs sweep_distance_m_P33.csv; the earlier "2579" could not be traced to any stored file and is withdrawn) but doesn't remove it. A wider receiver sampling window (6 px) lowers the 1.75 m frame error to 0.22, but makes it worse at 1.4–1.5 m. It has not been adopted, because it would need equal re-tuning for all schemes.
 
-## Revision runs (16 Oct 2026, all with ±2 % distance jitter, seed 20261015, 1000 frames/point)
+## [Ideal channel] Revision runs (16 Oct 2026, all with ±2 % distance jitter, seed 20261015, 1000 frames/point)
 Commands:
 ```bash
-for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --pref $P --tag _P$P; done
+for P in 25 33 42; do .venv/bin/python -m experiments.run --frames 1000 --sweeps distance_m --pref $P --tag _P$P; done
 .venv/bin/python -m experiments.efficiency          # regenerates degradation_metrics.csv, energy_per_bit.csv, efficiency_*.csv, fig_*_P33
 .venv/bin/python -m experiments.run --frames 1000 --pref 33 --sweeps yaw_deg,ambient,blur_sigma_px --tag _J_P33
 ```
@@ -193,11 +200,12 @@ for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --swe
 - New stress sweeps at P = 33 with jitter: `sweep_{yaw_deg,ambient,blur_sigma_px}_J_P33.csv` and `run_meta_J_P33.json`. The older `sweep_{yaw_deg,ambient,blur_sigma_px}.csv` are pre-jitter, at pref 33.011.
 - Run metadata: `run_meta_P*.json` and `run_meta_J_P33.json` record `distance_jitter_frac = 0.02` and git `392d057-dirty`.
 
-## Reproducibility check and run provenance (16 Oct 2026)
+## [Ideal channel] Reproducibility check and run provenance (16 Oct 2026)
 - Repro: `--frames 1000 --sweeps distance_m --pref 33 --tag _repro` (89 s) gives `sweep_distance_m_repro.csv` byte-identical to `sweep_distance_m_P33.csv` (`cmp` clean). That replaces the stale pre-jitter repro file. Its run_meta records `ddf7e7e-dirty`; the only dirty files were these untracked/modified result outputs, and the source matched ddf7e7e.
 - Commits per result set: 708204b = low-light preset, jitter, overdrive cap, dip probe; 392d057 = low-light study (`*_LL_*`, lowlight_*), dip analysis; 2140cd8 = audit fixes (equal power, CRN, per-layer CRC, Wilson CI, tuning, seeds); pre-jitter baseline code; ddf7e7e = jittered default power sweeps (`sweep_distance_m_P{25,33,42,60}.csv`) and stress sweeps (`*_J_P33.csv`). run_meta files that show `-dirty` were written before their results were committed.
 - Default channel (`cap: false`): the power scale can exceed 1 (overdrive up to 1.82× for v2 at P=60). Low light uses `cap: true`.
 
+# PHYSICAL channel (used by the claims)
 ## Physical channel (31 Oct 2026)
 This is a literature-sourced channel. It sits alongside the legacy one, which is unchanged. The full model, formulas and parameter table (each parameter has a DOI or is marked ASSUMED) are in METHODS.md §8.
 

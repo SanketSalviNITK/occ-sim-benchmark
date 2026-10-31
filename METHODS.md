@@ -305,8 +305,11 @@ fixed 1/1500 s it holds against 4-CSK (+335 [313, 355]) and OOK still wins (−3
 It also holds for radiant-equal power (`radiant_equal.csv`, 1/1500 s, 1/128: 3.0 m v2 397 [371, 422] vs QCD-style 242
 [216, 269]; 3.5 m v2 134 [112, 156] vs v1-base 101 [97, 105]; no paired diffs, no 3.25 m point) and for 48-bit-CRC
 baselines. The 48-bit-CRC check for C2 was not computed by the repo; the validator's independent computation
-(round-2 report, NB2) gives, at P33, v2 − best 48-bit baseline +148 [125, 171] / +116 [94, 138] / +61 [43, 80] at
-3.0 / 3.25 / 3.5 m (all 9 budget × distance points separated). It **reverses** at 3.0 m against QCD-style under
+(round-2 report, NB2) re-segments only the **non-HNCSM baselines** into 48-bit CRC-8 blocks (the HNCSM family — v1-base,
+v1, v2-CS — is excluded from that opponent set) and gives, at P33, v2 − best 48-bit baseline +148 [125, 171] vs
+QCD-style / +116 [94, 138] vs Overlay / +61 [43, 80] vs Overlay at 3.0 / 3.25 / 3.5 m (all 9 budget × distance points
+separated). The binding margin at 3.5 m is **not** +61 but the native margin over v1-base, +21 to +30 across
+P25/P33/P42 (+28.6 [13.9, 45.0] at P33, table above), to which the 48-bit variant does not apply. It **reverses** at 3.0 m against QCD-style under
 per-scheme tuned exposure (v2 425 vs 494 bps, −69 [−89, −48]) and at brightness 1/256 (−70 [−89, −49]); at 1/256 with
 tuned exposure it is a tie (−22 [−44, 1]) (`claims_paired.csv`, cond d3.0). **3.25 and 3.5 m were not perturbed**
 (no exposure or brightness runs), so C2 is not claimed there beyond the stated conditions.
@@ -370,7 +373,8 @@ the earlier "≤ 0.01 for all schemes" was not correct as stated. Saturation fra
 restricted to lit pixels in round 2, F4) for v2 / CSK802-4 / OOK: 0.006 / 0 / 0 at 1/1500 s, 0.43 / 0.13 / 0.14 at 1/500 s,
 0.94 / 0.42 / 0.50 at 1/250 s (0 at 1/4000). After the fix every `sat_ratio` in `claims_points.csv` lies in [0, 1] (max
 1.0, v2 at 70° yaw, 1/250 s, previously 1.08 — the only value that changed). Goodput, BER and RS-mixing outputs are
-bit-identical to round 1 (all 2304 non-saturation arrays in `claims.npz` compared). Longer exposure buys CSK SNR: CSK802-4 BER is 0.072 at 1/1500 s and 0.014 at 1/250 s (the exposure the tuned-exposure
+bit-identical to round 1 (`claims.npz`: 1536 err/mix arrays identical; only the v2 yaw70 1/250 1/128 sat
+arrays (eval and tune) changed). Longer exposure buys CSK SNR: CSK802-4 BER is 0.072 at 1/1500 s and 0.014 at 1/250 s (the exposure the tuned-exposure
 variant picks), while clipping v2's amplitude layers (v2 BER 0.068 → 0.338). t_row ∈ {0, 10, 27 µs} changes no scheme by more than 5 bps (`trow.csv`).
 
 ## 9.4 Low-light knife-edge (B2)
