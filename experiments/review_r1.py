@@ -16,7 +16,8 @@ detect_corners; RNG consumption is unchanged, so oracle runs are CRN-paired with
   or_sweep : IMX174 P33, oracle, distance 1..4 m step 0.5 (sweep indices 2..14 step 2), default exposure, eval 1000,
              seeds of run_phys -> paired with sweeps_PHYS_P33 (+ review_e1sweep for v2-base-only).
   or_claims: IMX174 P33, oracle, claims conds d2.5/d3.0/yaw70/blur4 x T_EXPS at 1/128, eval 1000 + tune 200 -> paired with claims.npz.
-  or_imx   : IMX219 P33, oracle, matched-px/LED points m2.5..m3.5 x T_EXPS, eval 1000 + tune 200 -> paired with review_e3claims.
+  <g>@<preset>: E3 group g re-run on IMX219 preset imx219f (scale-free finder, audit R1) or imx219cq (+ QE scaled to the
+             CQ sensitivity 3400 e/(lx s)); or_<g>@<preset> = same with oracle corners (the genie-corner row). Same seeds.
   seed{A,B}: replication with master seed SEEDS[x] (tune = master + 1_000_003): P33 d3.0/3.25/3.5 x T_EXPS x {1/128,1/256}
              (C2 points + E2 worst cases + E1 ablation incl. decomposition variants), and P25/P42 d3.0/3.25/3.5 at 1/1500, 1/128;
              eval 1000 + tune 200 everywhere.
@@ -48,6 +49,10 @@ def lineup_seed(): return lineup_r1() + [BaseOnly2LevelDecoder(), BaseOnlyLevel0
 
 def preset(name):
     if name == 'imx174': return dict(ph.P)
+    if name.startswith('imx219f') or name.startswith('imx219cq'):     # benchmark r0 (audit R1): scale-free finder [+ CQ-sensitivity QE]
+        b = None if name.endswith('raw') else json.load(open(os.path.join(RES, 'review_r1', 'e3_calibration.json')))['brightness']
+        if name.startswith('imx219cq'): return pp.imx219b(b)
+        p = pp.imx219(b); p.update(finder='scalefree', finder_k=pp.FINDER_K); return p
     b = json.load(open(os.path.join(RES, 'review_r1', 'e3_calibration.json')))['brightness'] if name == 'imx219' else None
     return pp.imx219(b)
 
@@ -64,6 +69,13 @@ def job(a):
 def _ijob(a): return a[0], job(a[1])
 
 def jobs_for(group):
+    if '@' in group or group.startswith('or_e3'):   # '<base>@<preset>' re-runs an E3 group on another IMX219 preset; 'or_' prefix = oracle corners
+        base, ps = group.split('@') if '@' in group else (group, 'imx219')
+        orc = base.startswith('or_'); base = base[3:] if orc else base; out = []
+        for key, c, pn, pm, pref, seed, n, only in jobs_for(base):
+            pn = ps + 'raw' if pn == 'imx219raw' else (ps if pn == 'imx219' else pn)
+            out.append((key, dict(c, genie_corners=True) if orc else c, pn, pm, pref, seed, n, only))
+        return out
     J = []
     if group == 'e1sweep':
         for b, pref in PREFS.items():
@@ -119,13 +131,6 @@ def jobs_for(group):
                 c = dict(cc, t_exp=t, genie_corners=True); k = f'{cn}|{tn}|1/128'
                 J.append((k + '|eval', c, 'imx174', dict(brightness=1 / 128), 33.011, config.cond_seed(cn, 0, config.SEED), 1000, None))
                 J.append((k + '|tune', c, 'imx174', dict(brightness=1 / 128), 33.011, config.cond_seed(cn, 0, config.TUNE_SEED), 200, None))
-    elif group == 'or_imx':
-        for d in (2.5, 3.0, 3.25, 3.5):
-            cn = f'm{d}'
-            for tn, t in T_EXPS.items():
-                c = dict(distance_m=round(d * FPX_RATIO, 3), t_exp=t, genie_corners=True); k = f'{cn}|{tn}'
-                J.append((k + '|eval', c, 'imx219', {}, 33.011, config.cond_seed('imx-' + cn, 0, config.SEED), 1000, None))
-                J.append((k + '|tune', c, 'imx219', {}, 33.011, config.cond_seed('imx-' + cn, 0, config.TUNE_SEED), 200, None))
     elif group.startswith('seed'):
         S = SEEDS[group[4:]]; TS = S + 1_000_003
         for b, pref in PREFS.items():

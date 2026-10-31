@@ -25,7 +25,7 @@ IMX219_OVR = dict(
     K12=0.177 * 4,                      # [CQ] conversion gain 0.177 DN/e at 10 bit (unity analog gain) -> K12 = 0.708
     sat_e=5800.0,                       # [CQ] saturation > 5800 e (lower bound; ADC clips at 1023/0.177 = 5780 e first)
     read_e=1.8,                         # [CQ] dark random noise 1.8 e
-    dark_e_s=4.2,                       # ASSUMED from [CQ] DCNU 4.2 e/s (a non-uniformity; mean dark current not given)
+    dark_e_s=4.2,                       # ASSUMED: [CQ] gives DCNU 4.2 e/s (dark-current NON-UNIFORMITY, an FPN); the mean dark current is not given, DCNU used as a stand-in
     dsnu_e=0.32,                        # [CQ] DSNU 0.32 e
     prnu=0.0105,                        # [CQ] PRNU G 1.05 % (R 0.76, B 0.99)
     qe=(0.492, 0.671, 0.709),           # ASSUMED: IMX174 values kept (absolute IMX219 QE unpublished); scale absorbed by brightness calibration
@@ -36,4 +36,20 @@ IMX219_BRIGHTNESS = None   # set by the E3 validation calibration (results/revie
 def imx219(brightness=None):
     p = dict(ph.P); p.update(IMX219_OVR)
     if brightness is not None: p['brightness'] = brightness
+    return p
+
+# ---- benchmark r0 IMX219 configuration (audit R1): sensitivity-anchored QE scale + scale-free finder ----
+# [CQ] Table 1 also gives a measured sensitivity S_G = 3400 e/(lx s) (G pixel, unity gain). ASSUMED: lx = sensor-plane
+# illuminance with the simulator's white model (equal split over the 3 LED bands, 555-nm-equivalent photons/lm).
+# The model's own G-pixel response to 1 lx s is computed below; QE is scaled uniformly so it equals S_G. The QE spectral
+# SHAPE stays the IMX174 one (ASSUMED). The transmitter (brightness 1/128) is NOT changed: brightness is a Tx property.
+CQ_SENS_G = 3400.0                      # [CQ] e/(lx s), G
+FINDER_K = 12                            # chosen in results/benchmark/finder_tuning.csv (disjoint cornertune seeds; k is not binding: border sigma < 1 DN, floor q = 1 DN binds)
+def model_sens_g(p):
+    import numpy as np
+    return (p['pixel_um'] * 1e-6) ** 2 * p['lm_to_photons'] * float((p['cfa'] @ (np.array(p['qe']) / 3.0))[1])
+def imx219b(brightness=None, finder_k=None):
+    p = imx219(brightness); s = CQ_SENS_G / model_sens_g(p)
+    p['qe'] = tuple(float(q * s) for q in p['qe']); p['qe_scale_from_cq'] = s
+    p['finder'] = 'scalefree'; p['finder_k'] = FINDER_K if finder_k is None else finder_k
     return p

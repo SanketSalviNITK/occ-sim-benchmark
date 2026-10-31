@@ -8,6 +8,7 @@ import numpy as np, config
 from channel import physical as ph
 from rx.sampler import rectify_and_sample
 from rx.refs import refs
+from rx.finder import find_corners
 
 MAX_BITS = 256
 
@@ -39,7 +40,7 @@ def decode_symbol(s, drives, cond, rng, p):
         if cond.get('sync'): w = np.zeros_like(w); w[:, 1] = 1.0
         e = sum(w[:, i, None, None] * es[i] for i in range(3))
         img = ph.capture(e, rng, p, t_exp)
-        c = ph.detect_corners(img) if not cond.get('genie_corners') else corners_true
+        c = find_corners(img, p) if not cond.get('genie_corners') else corners_true
         if c is None: continue
         smp, dk = rectify_and_sample(img, c)
         b = s.decode(smp, dk); r = residual(s, smp, dk, b)

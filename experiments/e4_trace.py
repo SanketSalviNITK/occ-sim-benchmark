@@ -45,13 +45,14 @@ def _corner_job(a):
     from channel import physical as ph, presets_phys as pp
     from experiments.common import power_scales
     from tx.schemes import HNCSMv2
+    from rx.finder import find_corners
     import json, config
     p = dict(ph.P) if pname == 'imx174' else pp.imx219(json.load(open(os.path.join(OUT, 'e3_calibration.json')))['brightness'])
     s = HNCSMv2(); sc = power_scales([s], 33.011, 'equal', False)[0][s.name]; out = []
     for f in range(f0, f0 + n):
         rng = np.random.RandomState(config.cond_seed(f'corner-{d}', f))
         es, ct, _ = ph.render_mean_e([s.encode(list(rng.randint(0, 2, s.nbits))) * sc], d, rng=rng, p=p)
-        c = ph.detect_corners(ph.capture(es[0], rng, p=p)); pitch = np.linalg.norm(ct[1] - ct[0]) / 8
+        c = find_corners(ph.capture(es[0], rng, p=p), p); pitch = np.linalg.norm(ct[1] - ct[0]) / 8
         out.append((pitch, np.nan if c is None else float(np.linalg.norm(c - ct, axis=1).mean() / pitch)))
     return pname, d, out
 

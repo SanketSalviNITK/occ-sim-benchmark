@@ -48,3 +48,9 @@ class BaseOnlyLevel075(HNCSMv2BaseOnly):
             cost = [sum(((v[j] - E[a[j]]) ** 2).sum() for j in range(4)) for a in self.arr]
             out += i2b(int(np.argmin(cost)), 4)
         return out
+
+class Level075TwoLevelDecoder(BaseOnlyLevel075):
+    """Factorial cell (audit R3): lit-0.75 transmitter + the 2-level ({0.5, 1.0}) joint-ML decoder of BaseOnly2LevelDecoder."""
+    name = 'HNCSM v2-base-only [lit 0.75, 2-level dec]'
+    decode = BaseOnly2LevelDecoder.decode
+    ALPHA = 0.5
