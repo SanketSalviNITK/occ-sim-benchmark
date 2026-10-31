@@ -9,6 +9,7 @@ Groups:
   e3valid : IMX219 preset, QCD-OCC paper frame (2 m, 27 lux, 25 fps, unscaled), brightness grid, validate_qcd seeds.
   e3claims: IMX219, P33, C1/C2 geometry at the same metres (2.5,3.0,3.25,3.5) and at matched px/LED (x f_px ratio),
             t_exp grid, eval 1000 + tune 200.
+  e3bracket: IMX219 brightness 1/64 and 1/256 at 1/1500 (eval only) for d2.5 and the matched-px/LED points.
   e3sweep : IMX219, P33, distance 1.0..4.0 step 0.25 plus 5..10 m, eval 1000 + tune 200 (genie chosen on tune)."""
 import os, sys, json, time, datetime, numpy as np
 from multiprocessing import Pool
@@ -76,6 +77,12 @@ def jobs_for(group):
                 c = dict(distance_m=d, t_exp=t); k = f'{cn}|{tn}'
                 J.append((k + '|eval', c, 'imx219', {}, 33.011, config.cond_seed('imx-' + cn, 0, config.SEED), 1000, None))
                 J.append((k + '|tune', c, 'imx219', {}, 33.011, config.cond_seed('imx-' + cn, 0, config.TUNE_SEED), 200, None))
+    elif group == 'e3bracket':
+        conds = {'d2.5': 2.5}; conds.update({f'm{d}': round(d * FPX_RATIO, 3) for d in (2.5, 3.0, 3.25, 3.5)})
+        for bn, br in (('1/64', 1 / 64), ('1/256', 1 / 256)):
+            for cn, d in conds.items():
+                J.append((f'{cn}|1/1500|{bn}|eval', dict(distance_m=d, t_exp=1 / 1500), 'imx219', dict(brightness=br), 33.011,
+                          config.cond_seed('imx-' + cn, 0, config.SEED), 1000, None))
     elif group == 'e3sweep':
         ds = list(np.round(np.arange(1.0, 4.01, 0.25), 2)) + [5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
         for i, d in enumerate(ds):

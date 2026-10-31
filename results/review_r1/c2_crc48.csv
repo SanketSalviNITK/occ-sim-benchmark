@@ -1,0 +1,10 @@
+budget,distance_m,v2,native_best,native_margin,native_lo,native_hi,crc48_best_nonHNCSM,crc48_margin,crc48_lo,crc48_hi,note
+25,3.0,417.6,QCD-style-inspired (Vasantha22),141.0,118.8,163.2,QCD-style-inspired (Vasantha22),141.0,118.8,163.2,identical to native: opponent is natively a 48-bit scheme
+25,3.25,247.8,QR/Aztec-style,114.6,94.8,134.1,Overlay-inspired (Nishimoto12),94.92,73.26,116.11,
+25,3.5,130.8,HNCSM base-only,21.36,7.32,37.21,QCD-style-inspired (Vasantha22),53.4,33.6,73.2,
+33,3.0,412.8,QCD-style-inspired (Vasantha22),148.2,126.6,171.6,QCD-style-inspired (Vasantha22),148.2,126.6,171.6,identical to native: opponent is natively a 48-bit scheme
+33,3.25,242.4,HNCSM base-only,126.12,107.28,144.84,Overlay-inspired (Nishimoto12),116.4,94.38,139.2,
+33,3.5,133.2,HNCSM base-only,28.56,13.92,45.0,Overlay-inspired (Nishimoto12),61.38,42.96,79.14,
+42,3.0,412.8,QCD-style-inspired (Vasantha22),157.8,136.2,180.6,QCD-style-inspired (Vasantha22),157.8,136.2,180.6,identical to native: opponent is natively a 48-bit scheme
+42,3.25,234.0,HNCSM base-only,117.72,99.48,134.64,QCD-style-inspired (Vasantha22),128.4,106.19,150.0,
+42,3.5,128.4,HNCSM base-only,29.76,15.0,46.08,QCD-style-inspired (Vasantha22),63.0,44.4,82.8,

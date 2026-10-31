@@ -1,0 +1,3 @@
+seed_set,seed_expr,symbols,v2,qcd,margin,lo,hi
+sweep (EWP),"cond_seed('distance_m',10,SEED)",1000,412.8,264.6,148.2,126.6,171.6
+claims (CP),"cond_seed('d3.0',0,SEED)",1000,402.0,252.0,150.0,127.2,174.0
