@@ -10,8 +10,8 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PROCS=${PROCS:
 MODE=${1:-tables}
 if [ "$MODE" = full ]; then
   export CKPT=${CKPT:-$PWD/.ckpt}
-  for g in idcheck e1sweep e2_P33 e2_P25 e2_P42 e3valid e3valid@imx219f e3valid@imx219cq \
-           e3claims@imx219f or_e3claims@imx219f e3claims@imx219cq or_e3claims@imx219cq \
+  for g in idcheck e1sweep e2_P33 e2_P25 e2_P42 e3valid e3valid@imx219f \
+           e3claims@imx219f or_e3claims@imx219f \
            or_sweep or_claims seedA seedB; do
     $PY -m experiments.review_r1 $g
   done

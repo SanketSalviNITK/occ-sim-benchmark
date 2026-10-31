@@ -21,7 +21,7 @@ detect_corners; RNG consumption is unchanged, so oracle runs are CRN-paired with
   seed{A,B}: replication with master seed SEEDS[x] (tune = master + 1_000_003): P33 d3.0/3.25/3.5 x T_EXPS x {1/128,1/256}
              (C2 points + E2 worst cases + E1 ablation incl. decomposition variants), and P25/P42 d3.0/3.25/3.5 at 1/1500, 1/128;
              eval 1000 + tune 200 everywhere.
-Chunks are checkpointed in $CKPT (default /workspace/r2_work/ckpt/<group>/); a re-run skips finished chunks."""
+Chunks are checkpointed in $CKPT (default <repo>/.ckpt/<group>/), keyed by git hash + work tuple; a re-run of the same code skips finished chunks."""
 import os, sys, json, time, datetime, numpy as np
 from multiprocessing import Pool
 import config
@@ -149,8 +149,10 @@ def run(group, procs):
     t = time.time(); J = jobs_for(group); work = []
     for key, cond, ps, pm, pref, seed, N, only in J:
         for c0 in range(0, N, CHUNK): work.append((key, cond, ps, pm, pref, seed, c0, min(CHUNK, N - c0), only))
-    ck = os.path.join(os.environ.get('CKPT', '/workspace/r2_work/ckpt'), group); os.makedirs(ck, exist_ok=True)
-    fn = lambda w: os.path.join(ck, hashlib.sha1(repr(w).encode()).hexdigest() + '.pkl')
+    ck = os.path.join(os.environ.get('CKPT', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.ckpt')), group); os.makedirs(ck, exist_ok=True)
+    from experiments.run import git_hash
+    gh = git_hash()   # code version is part of the chunk key: a re-run after a code change never reuses stale chunks
+    fn = lambda w: os.path.join(ck, hashlib.sha1((gh + repr(w)).encode()).hexdigest() + '.pkl')
     todo = [w for w in work if not os.path.exists(fn(w))]
     print(group, len(work), 'chunks,', len(work) - len(todo), 'already checkpointed', flush=True)
     with Pool(procs) as pl:
