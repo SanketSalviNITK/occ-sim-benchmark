@@ -24,3 +24,9 @@ Source keys: [RPI] Raspberry Pi camera hardware spec page; [LNX] Linux `drivers/
 | corner finder | `imx219b`: scale-free, min_dn = max(k·1.4826·MAD(border), 1 DN), k = 12 | benchmark design choice (results/benchmark/finder_tuning.csv, disjoint seeds; k not binding) |
 
 Corner gross-error rate (results/review_r1/corner_error_bench.csv, 200 frames/distance): IMX219 old finder 0.60–0.83; `imx219f`/`imx219cq` 0.000 at 0.5–5 m (median error 0.02–0.04 pitch). IMX174 default path unchanged (byte-identical).
+
+**Scope (N1).** Every IMX219 claim uses `imx219f` = the current preset, photometrically uncalibrated (sourced geometry and noise),
+QE ×1 (IMX174 values). Matching the CQ sensitivity would require effective QE 1.5–2.16 (impossible as QE); the ×3-QE (`imx219b`/`imx219cq`)
+claims/validation runs are not shipped (the preset stays in code; `imx219cq` appears only in the corner-finder check). The published
+QCD-OCC BER 1.13e-2 is matched by `imx219f` near Tx brightness 1/2048 (BER 0.017 at 1/2048, 6.3e-4 at 1/1024; e3_validation.csv),
+not at the 1/128 used in E3. Photometric scale uncertainty ≈ ×1–×3 plus this Tx-brightness fit mismatch.

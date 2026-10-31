@@ -1,5 +1,19 @@
 > **benchmark-r0:** this document describes the simulator; the benchmark protocol (fairness, binding margins, oracle corners, seed replication, power normalisation) is in `docs/BENCHMARK_PROTOCOL.md`, IMX219 parameters in `docs/IMX219_PARAMETERS.md`. Attribution of the v2 gain is worded as **"power/level allocation under equal-summed drive + decoder"**.
 
+## Claims (benchmark-r2; supersedes §9.0 C1/C2)
+**C2 (IMX174), safe wording (benchmark-r2):**
+> "At the fixed operating point (P33, brightness 1/128, exposure 1/1500) and with the benchmark's shared corner finder, v2 exceeds every comparison scheme (binding margin over all schemes × {native, 48-bit}) at 3.0 m (+148.2 [126.6, 171.6] bps) and 3.25 m (+116.4 [94.4, 139.2]). This holds on three disjoint seed sets and at P25–P42. At 3.5 m the binding margin over HNCSM v1-base is not significant at P33 (+4.3 [−10.1, 19.3]) and only narrowly positive at P25/P42. The advantage does not survive tuned exposure or 1/256 brightness at any power budget. With oracle corners, v2 ranks 4th at 3.0 m (−121 [−149, −94] bps vs OOK), so the 3.0 m advantage comes from how reliably the shared finder locates v2 frames, not from demodulation. At 3.5 m v2 also leads with oracle corners (+44 [24, 65] vs QCD-style-inspired). 3.25 m was not tested with oracle corners."
+
+**C1/C2 on IMX219, safe wording (benchmark-r2):**
+> "On an IMX219 preset with sourced geometry and noise but an uncalibrated photometric scale, neither C1 nor C2 transfers. At the same distances, v2 is below the binding baseline at every point (e.g. 3.0 m: −999.6 [−1009.9, −985.3] bps vs QCD-OCC), largely because the higher-rate schemes approach their error-free rate. At matched pixels-per-LED it is below at 2.5–3.25 m. Both hold with the scale-free finder and with oracle corners. At matched 3.5 m the result is not significant, except v2 > all with oracle corners and tuned exposure (+23.4 [1.2, 45.6])."
+
+IMX219 scope: all IMX219 results use the current preset (`imx219f`), photometrically uncalibrated (sourced geometry and noise). Matching the measured CQ sensitivity would need an effective QE of 1.5–2.16 (impossible as QE); those ×3-QE runs are not shipped. The published QCD-OCC BER is matched by this preset near Tx brightness 1/2048, not the 1/128 used in E3.
+
+**Ablation (R3/N4):** lit0.75 recovers 75.6 / 42.6 / 33.8 % and lit0.75 + 2-level decoder 88.6 / 72.7 / 82.4 % of the v2 − base-only gap (3.0 / 3.25 / 3.5 m). A significant residual of +35.4 [13.2, 58.2] bps remains at 3.25 m; the decoder gain is larger on the 0.75-level Tx (interaction), so the shares are not additive. Radiant-equal power: same within 1.2 bps (scales equal to 3e-4).
+
+Not claimed: that v2's modulation outperforms at 3.0 m; any robust or unqualified C2; that C1/C2 fail on real or calibrated IMX219 hardware.
+
+
 # occ_sim: methods (written from the code only)
 
 Sources read: `channel/{geometry,optics,render,sensor,ambient,presets}.py`, `rx/{sampler,refs}.py`, `tx/schemes.py`,
@@ -294,7 +308,7 @@ QCD-style (0 [−17, 18]); at 4 px blur (1 m) QCD-style wins (HNCSM v1 119 vs 39
 under per-scheme tuned exposure (CSK802-4 at 1/250 s: 648 bps, v2 − CSK802-4 −57 [−109, −5]); with 48-bit-CRC baselines at
 fixed 1/1500 s it holds against 4-CSK (+335 [313, 355]) and OOK still wins (−34 [−45, −24]).
 
-**C2 (conditional).** v2 has the highest goodput at 3.0–3.5 m at budgets P25/P33/P42 (paired CIs exclude 0; absolute
+**[SUPERSEDED by the benchmark-r2 claims at the top of this file — kept for history, NOT a current claim]** **C2 (conditional, round 2).** v2 has the highest goodput at 3.0–3.5 m at budgets P25/P33/P42 (paired CIs exclude 0; absolute
 128–418 bps) under t_exp 1/1500 s, LED brightness 1/128 and equal summed drive. Repo numbers, v2 − runner-up
 (`efficiency_winners_paired.csv`, runner-up named):
 
