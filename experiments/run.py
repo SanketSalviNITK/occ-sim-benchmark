@@ -40,8 +40,9 @@ def job(a):
     return rows + [gen]
 
 def git_hash():
+    """HEAD hash; '-dirty' if any tracked/untracked file OUTSIDE results/ differs (outputs do not dirty the code)."""
     try: return subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=os.path.dirname(RES), text=True).strip() + \
-        ('-dirty' if subprocess.check_output(['git', 'status', '--porcelain'], cwd=os.path.dirname(RES), text=True).strip() else '')
+        ('-dirty' if subprocess.check_output(['git', 'status', '--porcelain', '--', '.', ':!results'], cwd=os.path.dirname(RES), text=True).strip() else '')
     except Exception: return 'unknown'
 
 def main():

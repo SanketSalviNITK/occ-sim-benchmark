@@ -37,10 +37,22 @@ def decode_symbol(s, drives, cond, rng, p):
         if c is None: continue
         smp, dk = rectify_and_sample(img, c)
         b = s.decode(smp, dk); r = residual(s, smp, dk, b)
-        if best is None or r < best[0]: best = (r, b)
+        if best is None or r < best[0]:
+            ys = slice(int(max(corners_true[:, 1].min(), 0)), int(corners_true[:, 1].max()) + 1)
+            xs = slice(int(max(corners_true[:, 0].min(), 0)), int(corners_true[:, 0].max()) + 1)
+            roi = e[ys, xs].max(-1); lit = roi > 0.15 * max(roi.max(), 1e-9)
+            sat = float((roi >= p['sat_e']).sum() / max(lit.sum(), 1))          # lit panel pixels whose mean e- >= full well
+            mix = float(1 - w[ys, 1].mean())                                      # RS mixing: share of other symbols
+            best = (r, b, sat, mix)
+    if DIAG is not None: DIAG.append((np.nan, np.nan) if best is None else best[2:])
     return (None if best is None else best[1]), len(cands)
 
-def eval_point_phys(schemes, scales, cond, frames, seed, p=None, f0=0):
+DIAG = None   # set to a list to collect (saturated-pixel fraction, RS mixing weight) of the selected frame per symbol
+
+def eval_point_phys(schemes, scales, cond, frames, seed, p=None, f0=0, rec=None):
+    """rec: optional dict, filled with rec[name] = dict(err=(frames x nbits) uint8 bit-error matrix, sat=, mix=) for
+    per-symbol (cluster / paired-CRN bootstrap) statistics."""
+    global DIAG
     p = p or ph.P
     res = {s.name: {l: [0, 0] for l, _ in s.layers} for s in schemes}
     stats = {s.name: dict(lost=0, frames_per_symbol=0) for s in schemes}
@@ -51,11 +63,18 @@ def eval_point_phys(schemes, scales, cond, frames, seed, p=None, f0=0):
             b = pay[1][:s.nbits]
             drives = [s.encode(list(x[:s.nbits])) * scales[s.name] for x in pay]
             rng = np.random.RandomState(cs)
+            DIAG = [] if rec is not None else None
             o, nc = decode_symbol(s, drives, cond, rng, p)
             stats[s.name]['frames_per_symbol'] += nc
             if o is None:
                 o = rng.randint(0, 2, s.nbits); stats[s.name]['lost'] += 1
             o = np.asarray(o); i = 0
+            if rec is not None:
+                R = rec.setdefault(s.name, dict(err=[], sat=[], mix=[]))
+                R['err'].append((o != b).astype(np.uint8)); R['sat'].append(DIAG[0][0]); R['mix'].append(DIAG[0][1])
             for l, n in s.layers:
                 e = int((o[i:i+n] != b[i:i+n]).sum()); res[s.name][l][0] += e; res[s.name][l][1] += e > 0; i += n
+    DIAG = None
+    if rec is not None:
+        for k in rec: rec[k] = {kk: np.array(v) for kk, v in rec[k].items()}
     return res, stats

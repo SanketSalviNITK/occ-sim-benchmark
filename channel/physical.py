@@ -129,7 +129,9 @@ def capture(e_rgb, rng=np.random, p=P, t_exp=None, raw=False):
     e = np.minimum(rng.poisson(mu), p['sat_e']) + dsnu + rng.normal(0, p['read_e'], mos.shape)
     dn = np.clip(np.round(e * sensor_K(p)), 0, 2 ** p['bits'] - 1)
     if raw: return dn
-    return np.clip(np.round(malvar_demosaic(dn)), 0, 255).astype(np.uint8)
+    if p['bits'] == 8: return np.clip(np.round(malvar_demosaic(dn)), 0, 255).astype(np.uint8)
+    # >8-bit ADC: keep the finer quantisation, expressed on the 8-bit scale (downstream code divides by 255)
+    return (np.clip(malvar_demosaic(dn), 0, 2 ** p['bits'] - 1) / 2 ** (p['bits'] - 8)).astype(np.float32)
 
 # Malvar, He & Cutler (ICASSP 2004, doi:10.1109/ICASSP.2004.1326587) 5x5 gradient-corrected bilinear filters (x 1/8)
 _G_AT_RB = np.array([[0, 0, -1, 0, 0], [0, 0, 2, 0, 0], [-1, 2, 4, 2, -1], [0, 0, 2, 0, 0], [0, 0, -1, 0, 0]]) / 8.0

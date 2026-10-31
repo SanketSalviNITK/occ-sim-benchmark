@@ -57,3 +57,22 @@ def test_physical_roundtrip_close_range():
 def test_phys_lineup():
     names = [s.name for s in all_schemes_phys()]
     assert 'CSK802-8' in names and 'CSK802-4' in names and not any(n.startswith('CSK-') for n in names)
+
+def test_high_bit_adc_on_8bit_scale():
+    import numpy as np
+    from channel import physical as ph
+    e = np.full((8, 8, 3), 3000.0)
+    out = {}
+    for b in (8, 12):
+        p = dict(ph.P); p['bits'] = b
+        out[b] = ph.capture(e, np.random.RandomState(0), p).astype(float).mean()
+    assert abs(out[8] - out[12]) < 1.0           # same 8-bit-equivalent level, finer steps at 12 bit
+
+def test_eval_point_records_per_symbol_errors():
+    import numpy as np
+    from tx.schemes import OOK
+    from experiments.phys_eval import eval_point_phys
+    s = OOK(); rec = {}
+    res, _ = eval_point_phys([s], {s.name: 0.34}, dict(distance_m=1.0), 3, 7, rec=rec)
+    assert rec[s.name]['err'].shape == (3, s.nbits) and rec[s.name]['err'].sum() == res[s.name]['all'][0]
+    assert rec[s.name]['sat'].shape == (3,)

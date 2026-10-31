@@ -34,8 +34,9 @@ def job(a):
     if genie: sch = [s for s in sch if s.name in GENIE_SET]; seed = config.GENIE_SEED + seed - config.SEED
     pt_seed = config.cond_seed(sw, i, seed)
     # frames c0..c0+n of this point: per-frame seeds are cond_seed(..., f, pt_seed) so chunking does not change results
-    res, st = eval_point_phys(sch, sc, cond, n, pt_seed, params(lowlight), f0=c0)
-    return (sw, i, genie), res, st
+    rec = {}
+    res, st = eval_point_phys(sch, sc, cond, n, pt_seed, params(lowlight), f0=c0, rec=rec)
+    return (sw, i, genie), res, st, c0, rec
 
 def main():
     ap = argparse.ArgumentParser()
@@ -51,8 +52,10 @@ def main():
             for c0 in range(0, GENIE_FRAMES, CHUNK): jobs.append((sw, i, v, c0, min(CHUNK, GENIE_FRAMES - c0), a.seed, pref, a.cap, a.lowlight, True))
     t = time.time()
     with Pool(os.cpu_count()) as p: out = p.map(job, jobs, chunksize=1)
-    agg, stats = {}, {}
-    for key, res, st in out:
+    agg, stats, sym = {}, {}, {}
+    for key, res, st, c0, rec in sorted(out, key=lambda x: (x[0], x[3])):
+        for s, d in rec.items():
+            for f, v in d.items(): sym.setdefault(f'{key[0]}|{key[1]}|{"genie" if key[2] else "eval"}|{s}|{f}', []).append(v)
         A = agg.setdefault(key, {k: {l: [0, 0] for l in v} for k, v in res.items()})
         for k, v in res.items():
             for l, (be, fe) in v.items(): A[k][l][0] += be; A[k][l][1] += fe
@@ -74,6 +77,8 @@ def main():
             gen = dict([x for x in r if x['scheme'] == pick and x['layer'] == 'TOTAL'][0]); gen.update(scheme='Adaptive-CSK genie', layer=f'TOTAL({pick})')
             rows += r + [gen]
     df = pd.DataFrame(rows); os.makedirs(RES, exist_ok=True)
+    os.makedirs(os.path.join(RES, 'phys_sym'), exist_ok=True)   # per-symbol bit errors for cluster/paired bootstraps
+    np.savez_compressed(os.path.join(RES, 'phys_sym', f'sweeps{a.tag}.npz'), **{k: np.concatenate(v) for k, v in sym.items()})
     for sw in sws: df[df.sweep == sw].to_csv(os.path.join(RES, f'sweep_{sw}{a.tag}.csv'), index=False)
     meta = dict(channel='physical', lowlight=a.lowlight, brightness=params(a.lowlight)['brightness'], cap=a.cap, seed=a.seed,
                 frames=a.frames, genie_frames=GENIE_FRAMES, genie_seed_base=config.GENIE_SEED, power_mode='equal', pref_power=pref,
