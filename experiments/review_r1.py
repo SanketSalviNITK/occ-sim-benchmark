@@ -18,7 +18,8 @@ detect_corners; RNG consumption is unchanged, so oracle runs are CRN-paired with
   or_claims: IMX174 P33, oracle, claims conds d2.5/d3.0/yaw70/blur4 x T_EXPS at 1/128, eval 1000 + tune 200 -> paired with claims.npz.
   or_imx   : IMX219 P33, oracle, matched-px/LED points m2.5..m3.5 x T_EXPS, eval 1000 + tune 200 -> paired with review_e3claims.
   seed{A,B}: replication with master seed SEEDS[x] (tune = master + 1_000_003): P33 d3.0/3.25/3.5 x T_EXPS x {1/128,1/256}
-             (C2 points + E2 worst cases + E1 ablation incl. decomposition variants), and P25/P42 d3.0/3.25/3.5 at 1/1500, 1/128.
+             (C2 points + E2 worst cases + E1 ablation incl. decomposition variants), and P25/P42 d3.0/3.25/3.5 at 1/1500, 1/128;
+             eval 1000 + tune 200 everywhere.
 Chunks are checkpointed in $CKPT (default /workspace/r2_work/ckpt/<group>/); a re-run skips finished chunks."""
 import os, sys, json, time, datetime, numpy as np
 from multiprocessing import Pool
@@ -136,7 +137,7 @@ def jobs_for(group):
                     for tn, t in tes.items():
                         k = f'P{b}|{cn}|{tn}|{bn}'; c = dict(distance_m=d, t_exp=t)
                         J.append((k + '|eval', c, 'imx174', dict(brightness=br), pref, config.cond_seed(cn, 0, S), 1000, 'SEEDLINE'))
-                        if b == '33': J.append((k + '|tune', c, 'imx174', dict(brightness=br), pref, config.cond_seed(cn, 0, TS), 200, 'SEEDLINE'))
+                        J.append((k + '|tune', c, 'imx174', dict(brightness=br), pref, config.cond_seed(cn, 0, TS), 200, 'SEEDLINE'))
     return J
 
 def run(group, procs):
