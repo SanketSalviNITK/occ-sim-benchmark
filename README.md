@@ -173,3 +173,9 @@ Key differences from the legacy channel:
 - A real corner detector replaces the true corners + jitter.
 
 Validation: QCD-OCC at 200 cm, 3600 bps gives a simulated BER of 6.0e-3 (95 % CI 5.4–6.7e-3) against the measured 1.13e-2.
+
+## Audit round 1 fixes (31 Oct 2026)
+See METHODS §9. New: `experiments/stats.py` (cluster/paired bootstrap), `experiments/audit_r1.py` (runs),
+`experiments/audit_r1_report.py` (tables → `results/audit_r1/`), per-symbol data `results/phys_sym/`,
+`results/MANIFEST.sha256`. Claims are conditional on t_exp = 1/1500 s; brightness is an unidentified nuisance parameter
+(validation = order of magnitude only); the blue channel clips at the default brightness 1/128.

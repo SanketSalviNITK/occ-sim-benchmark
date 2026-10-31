@@ -273,3 +273,83 @@ Code: `channel/physical.py`, `experiments/phys_eval.py`, `experiments/run_phys.p
 - Detector accuracy < 0.25 pitch at 1 m.
 - Close-range physical round trip with zero errors.
 - Physical line-up.
+
+# 9. Research-Validator round 1 fixes (31 Oct 2026)
+Driver `experiments/audit_r1.py`, analysis `experiments/audit_r1_report.py`, statistics `experiments/stats.py`
+(tests `tests/test_stats.py`). Per-symbol bit-error matrices: `results/phys_sym/*.npz`; tables: `results/audit_r1/*.csv`.
+
+## 9.1 Statistics (B5)
+- BER: symbol(frame)-cluster bootstrap (2000 resamples of symbols), not per-bit Wilson.
+- Goodput per point: symbol bootstrap. Every A − B: **paired CRN bootstrap** (same symbol indices for both schemes).
+- AUC differences: symbols resampled independently per distance (independent seeds), jointly for A and B; trapezoid AUC per replicate.
+- Winners `separated` flag = paired CI of (winner − runner-up) excludes 0 (`efficiency_winners_paired.csv`). The old
+  Wilson-envelope AUC "CIs" are superseded. (The genie-vs-CSK802-4 `auc_hi` mismatch, 469.6 vs 458.0 at LL P15, was an
+  envelope artefact: beyond 1.75 m the genie picks CSK802-8 at 0 bps, whose 0/1000 Wilson upper bound is 9.87 bps vs 6.43.)
+
+## 9.2 Brightness is an unidentified nuisance parameter; validation = order-of-magnitude calibration only (B3)
+QCD-OCC paper frame, 2 m, 27 lux, 3600 bps, 400 symbols, validate_qcd.py seeds (`validation_bracket.csv`):
+
+| brightness | BER | 95 % symbol-cluster CI | errored symbols |
+|---|---|---|---|
+| 1/64 | 3.96e-3 | [3.19e-3, 4.81e-3] | 123/400 |
+| 1/128 (default) | 6.01e-3 | [4.51e-3, 7.52e-3] | 90/400 |
+| 1/256 | 1.42e-2 | [1.20e-2, 1.66e-2] | 176/400 |
+
+The published 1.13e-2 lies between 1/128 and 1/256: one unidentified constant brackets the target. There is no second
+independent anchor, so the channel is **calibrated to order of magnitude only**.
+
+Peak own-channel electrons per fully covered pixel at full drive, 1/1500 s (`electrons_per_channel.csv`; radiance-invariant
+beyond focus), against µe,sat = 7863 e⁻:
+
+| brightness | R | G | B | clips | 8-bit DN (R/G/B) |
+|---|---|---|---|---|---|
+| 1/64 | 8195 | 6741 | 18541 | R, B | 246/211/246 |
+| 1/128 | 4098 | 3371 | **9270** | **B** | 128/106/246 |
+| 1/256 | 2049 | 1685 | 4635 | – | 64/53/145 |
+| 1/1024 | 512 | 421 | 1159 | – | 16/13/36 |
+
+**Disclosure:** at the default 1/128 the blue LED clips at full drive. v2 runs unscaled (P33 = v2's own mean power) and
+clips; CSK runs at scale 0.5 and does not. The old "full drive would saturate" rationale does not describe the operating
+point. 1/256 (no clipping) is reported as a sensitivity case for every claim (§9.3). K8 = 0.0313 DN/e⁻ (1 DN ≈ 32 e⁻).
+EMVA 1288 values come from the **mono** IMX174 sheet at 250 µs exposure; the CFA (colour filter array) is ASSUMED.
+
+## 9.3 Claims vs the best baseline, paired CIs, exposure (B1, B4)
+Conditions 2.5 m, 3.0 m, 70° yaw (1 m), 4 px blur (1 m) × t_exp {1/4000, 1/1500, 1/500, 1/250} × brightness
+{1/128, 1/256}; 1000 eval symbols; per-scheme exposure and the genie chosen on 200 held-out symbols (TUNE_SEED); seeds
+shared across exposures (CRN), so tuned comparisons are paired. Full table: `claims_paired.csv`, points incl. BER,
+48-bit-CRC baseline goodput, saturation ratio and RS-mixing weight: `claims_points.csv`.
+**All claims are conditional on t_exp = 1/1500 s unless stated**: e.g. at 2.5 m CSK802-4 goes 25 → 648 bps from 1/1500 to
+1/250 s while v2 goes 592 → 263.
+Mechanism diagnostic (1/128, 2.5 m): RS mixing weight of the selected frame is ≤ 0.01 for all schemes at all exposures,
+so the rolling shutter does not drive the asymmetry. Saturation ratio (saturated px / px above 15 % of panel peak) at
+1/250: v2 0.94, CSK802-4 0.42, OOK 0.50 (0 at 1/4000). Longer exposure buys CSK SNR (BER 0.072 → 0.014) while clipping
+v2's amplitude layers (BER 0.068 → 0.338). t_row ∈ {0, 10, 27 µs} changes no scheme by more than 5 bps (`trow.csv`).
+
+## 9.4 Low-light knife-edge (B2)
+P15 with cap, 0.5–3.0 m, 250 symbols/point, brightness × ADC grid (`lowlight_grid.csv`). AUC v1 − genie [paired 95 % CI],
+bps·m; G photo-electrons per LED per exposure in brackets:
+
+| brightness (G e⁻/LED) | 8 bit | 10 bit | 12 bit |
+|---|---|---|---|
+| 1/256 (32 978) | −2024 [−2061, −1986] | −2252 [−2282, −2222] | −2250 [−2280, −2220] |
+| 1/512 (16 489) | −409 [−456, −359] | −695 [−744, −644] | −682 [−729, −633] |
+| 1/1024 (8 244) | **+715 [670, 758]** | −238 [−291, −184] | −257 [−310, −205] |
+| 1/2048 (4 122) | 0 (all schemes 0) | 0 | 0 |
+
+v1 beats the genie (and the best fixed baseline, QCD-style, by +418 [383, 450]) **only** at ≈8.2 ke⁻ (G) per LED with
+the 8-bit ADC; the result is a quantisation artefact and **claim 3 is dropped** as a general statement.
+
+## 9.5 Other disclosures
+- Equal power is equal *summed drive*; radiant intensities at full drive are R 1.66, G 1.30, B 3.61 mW/sr. P33 = v2's
+  natural power (only v2 runs unscaled). The radiant-equal rerun (`radiant_equal.csv`) gives the same ordering at
+  2.5–3.5 m (OOK 743 at 2.5 m; v2 397/134 at 3.0/3.5 m, best).
+- 48-bit CRC-block baselines: `claims_paired.csv` (baseline_crc = '48-bit blocks').
+- 20000 lux: every scheme is 0 bps, because the ambient background (10–13.5 ke⁻) exceeds µe,sat with reflectance 0.5
+  applied to every pixel (no dark surround is modelled).
+- Tuning: held-out seeds, **same conditions** (tuning distances overlap the evaluation grid); only v2-CS, QCD-style and
+  overlay are tuned.
+- The QCD-OCC 3600-bps paper frame is now in the claim line-up ("QCD-paper", power-equalised); the 48-bit QCD-style
+  variant stays because it is the HNCSM-comparable layered design. The paper frame is 0 bps at 2.5–3.0 m at 1/1500 s.
+- Provenance (B6): code commit e1a2904 (clean; `git_hash` now ignores results/). Audit runs and the P25/P33/P42 distance
+  sweeps were regenerated from clean commits, and the CSVs are bit-identical to the committed ones. Hashes are in
+  `results/MANIFEST.sha256`.
