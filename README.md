@@ -154,3 +154,22 @@ for P in 25 33 42 60; do .venv/bin/python -m experiments.run --frames 1000 --swe
 - Repro: `--frames 1000 --sweeps distance_m --pref 33 --tag _repro` (89 s) gives `sweep_distance_m_repro.csv` byte-identical to `sweep_distance_m_P33.csv` (`cmp` clean). That replaces the stale pre-jitter repro file. Its run_meta records `ddf7e7e-dirty`; the only dirty files were these untracked/modified result outputs, and the source matched ddf7e7e.
 - Commits per result set: 708204b = low-light preset, jitter, overdrive cap, dip probe; 392d057 = low-light study (`*_LL_*`, lowlight_*), dip analysis; 2140cd8 = audit fixes (equal power, CRN, per-layer CRC, Wilson CI, tuning, seeds); pre-jitter baseline code; ddf7e7e = jittered default power sweeps (`sweep_distance_m_P{25,33,42,60}.csv`) and stress sweeps (`*_J_P33.csv`). run_meta files that show `-dirty` were written before their results were committed.
 - Default channel (`cap: false`): the power scale can exceed 1 (overdrive up to 1.82× for v2 at P=60). Low light uses `cap: true`.
+
+## Physical channel (31 Oct 2026)
+This is a literature-sourced channel. It sits alongside the legacy one, which is unchanged. The full model, formulas and parameter table (each parameter has a DOI or is marked ASSUMED) are in METHODS.md §8.
+
+```
+.venv/bin/python -m experiments.tune --channel physical       # held-out retune -> results/tuned_params_phys.json
+./run_phys_all.sh                                             # all PHYS sweeps (1000 symbols/point, ~90 min on 8 cores)
+.venv/bin/python -m experiments.validate_qcd                  # QCD-OCC reproduction -> results/validation_qcd.csv
+.venv/bin/python -m experiments.efficiency --pattern 'sweep_distance_m_PHYS_P*.csv' --prefix phys_
+.venv/bin/python -m experiments.efficiency --pattern 'sweep_distance_m_PHYS_LL_P*.csv' --prefix phys_lowlight_
+.venv/bin/python -m experiments.plots_phys                    # results/phys_*.png/.pdf
+```
+
+Key differences from the legacy channel:
+- Goodput uses f_tx = 15 symbols/s (rolling-shutter, asynchronous camera), not 30 fps.
+- The CSK baselines are IEEE 802.15.7 CIE-xy 4/8-CSK.
+- A real corner detector replaces the true corners + jitter.
+
+Validation: QCD-OCC at 200 cm, 3600 bps gives a simulated BER of 6.0e-3 (95 % CI 5.4–6.7e-3) against the measured 1.13e-2.
