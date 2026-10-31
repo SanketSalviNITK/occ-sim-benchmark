@@ -1,0 +1,63 @@
+sensor,exposure,scheme,n_points,mean_R_max,mean_detector,mean_oracle,mean_det_loss,mean_mod_loss,det_share_of_total_loss
+IMX174,default 1/1500,CSK802-4,7,1680.0,657.1,656.2,-1.0,1023.8,-0.0
+IMX174,default 1/1500,CSK802-8,7,2580.0,704.7,709.5,4.8,1870.5,0.0
+IMX174,default 1/1500,HNCSM,7,960.0,465.5,472.7,7.2,487.3,0.0
+IMX174,default 1/1500,HNCSM base-only,7,120.0,112.9,115.0,2.1,5.0,0.3
+IMX174,default 1/1500,HNCSM v2,7,1020.0,554.2,596.7,42.5,423.3,0.1
+IMX174,default 1/1500,HNCSM v2-CS,7,1560.0,537.3,544.1,6.8,1015.9,0.0
+IMX174,default 1/1500,HNCSM v2-base-only,7,600.0,387.7,500.9,113.2,99.1,0.5
+IMX174,default 1/1500,NestedTexture-inspired (Salvi22),7,240.0,165.7,185.0,19.3,55.0,0.3
+IMX174,default 1/1500,OOK-8x8,7,780.0,464.9,522.4,57.5,257.6,0.2
+IMX174,default 1/1500,Overlay-inspired (Nishimoto12),7,300.0,195.1,238.1,43.0,61.9,0.4
+IMX174,default 1/1500,QCD-style-inspired (Vasantha22),7,600.0,393.0,506.0,113.0,94.0,0.5
+IMX174,default 1/1500,QR/Aztec-style,7,300.0,202.6,210.9,8.3,89.1,0.1
+IMX174,fixed 1/1500,CSK802-4,4,1680.0,10.5,12.2,1.7,1667.8,0.0
+IMX174,fixed 1/1500,CSK802-8,4,2580.0,0.0,0.0,0.0,2580.0,0.0
+IMX174,fixed 1/1500,HNCSM,4,960.0,154.2,314.6,160.5,645.4,0.2
+IMX174,fixed 1/1500,HNCSM base-only,4,120.0,117.7,120.0,2.3,0.0,1.0
+IMX174,fixed 1/1500,HNCSM v2,4,1020.0,460.2,559.5,99.2,460.5,0.2
+IMX174,fixed 1/1500,HNCSM v2-CS,4,1560.0,78.3,172.0,93.8,1388.0,0.1
+IMX174,fixed 1/1500,NestedTexture-inspired (Salvi22),4,240.0,170.2,227.4,57.2,12.6,0.8
+IMX174,fixed 1/1500,OOK-8x8,4,780.0,328.4,643.7,315.3,136.3,0.7
+IMX174,fixed 1/1500,Overlay-inspired (Nishimoto12),4,300.0,139.4,212.3,72.8,87.7,0.5
+IMX174,fixed 1/1500,QCD-OCC (paper frame),4,2040.0,0.5,0.0,-0.5,2040.0,-0.0
+IMX174,fixed 1/1500,QCD-style-inspired (Vasantha22),4,600.0,423.8,578.6,154.8,21.4,0.9
+IMX174,fixed 1/1500,QR/Aztec-style,4,300.0,204.8,287.8,83.0,12.2,0.9
+IMX174,tuned,CSK802-4,4,1680.0,216.3,311.2,94.9,1368.8,0.1
+IMX174,tuned,CSK802-8,4,2580.0,0.0,0.0,0.0,2580.0,0.0
+IMX174,tuned,HNCSM,4,960.0,407.0,664.9,257.9,295.1,0.5
+IMX174,tuned,HNCSM base-only,4,120.0,118.7,119.8,1.1,0.2,0.8
+IMX174,tuned,HNCSM v2,4,1020.0,477.2,607.1,129.9,412.9,0.2
+IMX174,tuned,HNCSM v2-CS,4,1560.0,117.3,168.0,50.7,1392.0,0.0
+IMX174,tuned,NestedTexture-inspired (Salvi22),4,240.0,178.4,230.4,52.0,9.6,0.8
+IMX174,tuned,OOK-8x8,4,780.0,442.5,668.1,225.6,111.9,0.7
+IMX174,tuned,Overlay-inspired (Nishimoto12),4,300.0,139.1,254.2,115.0,45.8,0.7
+IMX174,tuned,QCD-OCC (paper frame),4,2040.0,65.8,92.8,27.0,1947.2,0.0
+IMX174,tuned,QCD-style-inspired (Vasantha22),4,600.0,527.4,597.3,69.9,2.7,1.0
+IMX174,tuned,QR/Aztec-style,4,300.0,254.4,291.4,37.0,8.6,0.8
+IMX219 (imx219f),fixed 1/1500,CSK802-4,8,1680.0,841.0,840.4,-0.6,839.6,-0.0
+IMX219 (imx219f),fixed 1/1500,CSK802-8,8,2580.0,826.6,818.2,-8.4,1761.8,-0.0
+IMX219 (imx219f),fixed 1/1500,HNCSM,8,960.0,546.8,551.4,4.5,408.6,0.0
+IMX219 (imx219f),fixed 1/1500,HNCSM base-only,8,120.0,116.2,119.2,3.0,0.8,0.8
+IMX219 (imx219f),fixed 1/1500,HNCSM v2,8,1020.0,697.0,714.2,17.2,305.8,0.1
+IMX219 (imx219f),fixed 1/1500,HNCSM v2-CS,8,1560.0,747.5,743.8,-3.8,816.2,-0.0
+IMX219 (imx219f),fixed 1/1500,HNCSM v2-base-only,8,600.0,494.8,510.8,16.0,89.2,0.2
+IMX219 (imx219f),fixed 1/1500,NestedTexture-inspired (Salvi22),8,240.0,194.0,205.3,11.3,34.7,0.2
+IMX219 (imx219f),fixed 1/1500,OOK-8x8,8,780.0,515.8,546.7,30.9,233.3,0.1
+IMX219 (imx219f),fixed 1/1500,Overlay-inspired (Nishimoto12),8,300.0,184.7,213.0,28.3,87.0,0.2
+IMX219 (imx219f),fixed 1/1500,QCD-OCC (paper frame),8,2040.0,987.4,989.1,1.8,1050.9,0.0
+IMX219 (imx219f),fixed 1/1500,QCD-style-inspired (Vasantha22),8,600.0,503.9,521.1,17.2,78.9,0.2
+IMX219 (imx219f),fixed 1/1500,QR/Aztec-style,8,300.0,232.5,239.7,7.2,60.3,0.1
+IMX219 (imx219f),tuned,CSK802-4,8,1680.0,850.3,846.1,-4.2,833.9,-0.0
+IMX219 (imx219f),tuned,CSK802-8,8,2580.0,1280.0,1281.9,1.9,1298.1,0.0
+IMX219 (imx219f),tuned,HNCSM,8,960.0,551.7,553.7,2.0,406.3,0.0
+IMX219 (imx219f),tuned,HNCSM base-only,8,120.0,117.0,119.4,2.4,0.6,0.8
+IMX219 (imx219f),tuned,HNCSM v2,8,1020.0,696.9,728.7,31.8,291.3,0.1
+IMX219 (imx219f),tuned,HNCSM v2-CS,8,1560.0,774.6,781.8,7.2,778.2,0.0
+IMX219 (imx219f),tuned,HNCSM v2-base-only,8,600.0,494.4,525.4,31.0,74.6,0.3
+IMX219 (imx219f),tuned,NestedTexture-inspired (Salvi22),8,240.0,195.4,211.0,15.5,29.0,0.3
+IMX219 (imx219f),tuned,OOK-8x8,8,780.0,526.6,591.0,64.4,189.0,0.3
+IMX219 (imx219f),tuned,Overlay-inspired (Nishimoto12),8,300.0,196.4,225.0,28.6,75.0,0.3
+IMX219 (imx219f),tuned,QCD-OCC (paper frame),8,2040.0,1018.0,1018.7,0.8,1021.3,0.0
+IMX219 (imx219f),tuned,QCD-style-inspired (Vasantha22),8,600.0,503.6,535.5,31.9,64.5,0.3
+IMX219 (imx219f),tuned,QR/Aztec-style,8,300.0,237.3,249.3,12.0,50.7,0.2

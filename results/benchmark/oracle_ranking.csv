@@ -1,0 +1,32 @@
+sensor,cond,exposure,best_detector,best_oracle,v2_rank_det,v2_rank_orc
+IMX174,1.0 m,default 1/1500,CSK802-8,CSK802-8,4,4
+IMX174,1.5 m,default 1/1500,CSK802-8,CSK802-8,4,4
+IMX174,2.0 m,default 1/1500,CSK802-4,CSK802-4,5,5
+IMX174,2.5 m,default 1/1500,OOK-8x8,OOK-8x8,2,4
+IMX174,3.0 m,default 1/1500,HNCSM v2,OOK-8x8,1,4
+IMX174,3.5 m,default 1/1500,HNCSM v2,HNCSM v2,1,1
+IMX174,4.0 m,default 1/1500,HNCSM base-only,QCD-style-inspired (Vasantha22),6,3
+IMX174,blur4,fixed 1/1500,QCD-style-inspired (Vasantha22),HNCSM,2,2
+IMX174,blur4,tuned,QCD-style-inspired (Vasantha22),HNCSM,3,2
+IMX174,d2.5,fixed 1/1500,OOK-8x8,OOK-8x8,2,3
+IMX174,d2.5,tuned,OOK-8x8,CSK802-4,5,4
+IMX174,d3.0,fixed 1/1500,HNCSM v2,OOK-8x8,1,3
+IMX174,d3.0,tuned,QCD-style-inspired (Vasantha22),HNCSM v2,2,1
+IMX174,yaw70,fixed 1/1500,HNCSM v2,OOK-8x8,1,2
+IMX174,yaw70,tuned,QCD-style-inspired (Vasantha22),OOK-8x8,3,3
+IMX219 (imx219f),d2.5,fixed 1/1500,CSK802-8,CSK802-8,5,5
+IMX219 (imx219f),d2.5,tuned,CSK802-8,CSK802-8,5,5
+IMX219 (imx219f),d3.0,fixed 1/1500,QCD-OCC (paper frame),QCD-OCC (paper frame),5,5
+IMX219 (imx219f),d3.0,tuned,CSK802-8,CSK802-8,5,5
+IMX219 (imx219f),d3.25,fixed 1/1500,QCD-OCC (paper frame),QCD-OCC (paper frame),5,5
+IMX219 (imx219f),d3.25,tuned,CSK802-8,CSK802-8,5,5
+IMX219 (imx219f),d3.5,fixed 1/1500,QCD-OCC (paper frame),QCD-OCC (paper frame),5,5
+IMX219 (imx219f),d3.5,tuned,CSK802-8,CSK802-8,5,5
+IMX219 (imx219f),m2.5,fixed 1/1500,OOK-8x8,OOK-8x8,3,4
+IMX219 (imx219f),m2.5,tuned,OOK-8x8,OOK-8x8,4,3
+IMX219 (imx219f),m3.0,fixed 1/1500,QCD-style-inspired (Vasantha22),QCD-style-inspired (Vasantha22),3,3
+IMX219 (imx219f),m3.0,tuned,QCD-style-inspired (Vasantha22),OOK-8x8,3,4
+IMX219 (imx219f),m3.25,fixed 1/1500,QCD-style-inspired (Vasantha22),QCD-style-inspired (Vasantha22),3,3
+IMX219 (imx219f),m3.25,tuned,QCD-style-inspired (Vasantha22),QCD-style-inspired (Vasantha22),3,3
+IMX219 (imx219f),m3.5,fixed 1/1500,HNCSM v2,HNCSM v2,1,1
+IMX219 (imx219f),m3.5,tuned,HNCSM v2,HNCSM v2,1,1

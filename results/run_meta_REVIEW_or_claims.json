@@ -1,0 +1,521 @@
+{
+"group": "or_claims",
+"git": "83b67a741354068a5f39f0068a7a25f607c2f875",
+"utc": "2026-10-31T17:25:34.225503+00:00",
+"elapsed_s": 292,
+"procs": 8,
+"jobs": [
+{
+"key": "d2.5|1/4000|1/128|eval",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.00025,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1888513105,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d2.5|1/4000|1/128|tune",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.00025,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1889513108,
+"symbols": 200,
+"only": null
+},
+{
+"key": "d2.5|1/1500|1/128|eval",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.0006666666666666666,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1888513105,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d2.5|1/1500|1/128|tune",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.0006666666666666666,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1889513108,
+"symbols": 200,
+"only": null
+},
+{
+"key": "d2.5|1/500|1/128|eval",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.002,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1888513105,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d2.5|1/500|1/128|tune",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.002,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1889513108,
+"symbols": 200,
+"only": null
+},
+{
+"key": "d2.5|1/250|1/128|eval",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.004,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1888513105,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d2.5|1/250|1/128|tune",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.004,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1889513108,
+"symbols": 200,
+"only": null
+},
+{
+"key": "d3.0|1/4000|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.00025,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d3.0|1/4000|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.00025,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null
+},
+{
+"key": "d3.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d3.0|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null
+},
+{
+"key": "d3.0|1/500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.002,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d3.0|1/500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.002,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null
+},
+{
+"key": "d3.0|1/250|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.004,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d3.0|1/250|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.004,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null
+},
+{
+"key": "yaw70|1/4000|1/128|eval",
+"cond": {
+"yaw_deg": 70.0,
+"t_exp": 0.00025,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1464808479,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "yaw70|1/4000|1/128|tune",
+"cond": {
+"yaw_deg": 70.0,
+"t_exp": 0.00025,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1465808482,
+"symbols": 200,
+"only": null
+},
+{
+"key": "yaw70|1/1500|1/128|eval",
+"cond": {
+"yaw_deg": 70.0,
+"t_exp": 0.0006666666666666666,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1464808479,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "yaw70|1/1500|1/128|tune",
+"cond": {
+"yaw_deg": 70.0,
+"t_exp": 0.0006666666666666666,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1465808482,
+"symbols": 200,
+"only": null
+},
+{
+"key": "yaw70|1/500|1/128|eval",
+"cond": {
+"yaw_deg": 70.0,
+"t_exp": 0.002,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1464808479,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "yaw70|1/500|1/128|tune",
+"cond": {
+"yaw_deg": 70.0,
+"t_exp": 0.002,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1465808482,
+"symbols": 200,
+"only": null
+},
+{
+"key": "yaw70|1/250|1/128|eval",
+"cond": {
+"yaw_deg": 70.0,
+"t_exp": 0.004,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1464808479,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "yaw70|1/250|1/128|tune",
+"cond": {
+"yaw_deg": 70.0,
+"t_exp": 0.004,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1465808482,
+"symbols": 200,
+"only": null
+},
+{
+"key": "blur4|1/4000|1/128|eval",
+"cond": {
+"blur_sigma_px": 4.0,
+"t_exp": 0.00025,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1004341128,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "blur4|1/4000|1/128|tune",
+"cond": {
+"blur_sigma_px": 4.0,
+"t_exp": 0.00025,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1005341131,
+"symbols": 200,
+"only": null
+},
+{
+"key": "blur4|1/1500|1/128|eval",
+"cond": {
+"blur_sigma_px": 4.0,
+"t_exp": 0.0006666666666666666,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1004341128,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "blur4|1/1500|1/128|tune",
+"cond": {
+"blur_sigma_px": 4.0,
+"t_exp": 0.0006666666666666666,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1005341131,
+"symbols": 200,
+"only": null
+},
+{
+"key": "blur4|1/500|1/128|eval",
+"cond": {
+"blur_sigma_px": 4.0,
+"t_exp": 0.002,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1004341128,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "blur4|1/500|1/128|tune",
+"cond": {
+"blur_sigma_px": 4.0,
+"t_exp": 0.002,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1005341131,
+"symbols": 200,
+"only": null
+},
+{
+"key": "blur4|1/250|1/128|eval",
+"cond": {
+"blur_sigma_px": 4.0,
+"t_exp": 0.004,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1004341128,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "blur4|1/250|1/128|tune",
+"cond": {
+"blur_sigma_px": 4.0,
+"t_exp": 0.004,
+"genie_corners": true
+},
+"preset": "imx174",
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1005341131,
+"symbols": 200,
+"only": null
+}
+]
+}
