@@ -1,0 +1,7 @@
+budget,distance_m,baseline_crc,cases,min_lo_tunebest,min_lo_evalbest,survives_all_tunebest,survives_all_evalbest
+33,3.0,48-bit blocks,6,-89.4,-89.4,False,False
+33,3.0,native,6,-89.4,-89.4,False,False
+33,3.25,48-bit blocks,6,-116.4,-116.4,False,False
+33,3.25,native,6,-116.4,-116.4,False,False
+33,3.5,48-bit blocks,6,-35.4,-35.4,False,False
+33,3.5,native,6,-35.4,-35.4,False,False
