@@ -11,6 +11,12 @@ from rx.refs import refs
 
 MAX_BITS = 256
 
+def sat_fraction(roi, sat_e, lit_frac=0.15):
+    """Fraction of LIT ROI pixels (mean e- > lit_frac * ROI peak) whose mean e- >= full well; always in [0, 1].
+    (Audit r2 F4: the numerator used to count saturated pixels over the whole ROI while dividing by the lit count.)"""
+    lit = roi > lit_frac * max(float(roi.max()), 1e-9)
+    return float((lit & (roi >= sat_e)).sum() / max(int(lit.sum()), 1))
+
 def residual(s, samples, dark, bits):
     M, dk = refs(samples, dark)
     exp = dk + s.encode(list(bits)) @ M.T
@@ -40,8 +46,8 @@ def decode_symbol(s, drives, cond, rng, p):
         if best is None or r < best[0]:
             ys = slice(int(max(corners_true[:, 1].min(), 0)), int(corners_true[:, 1].max()) + 1)
             xs = slice(int(max(corners_true[:, 0].min(), 0)), int(corners_true[:, 0].max()) + 1)
-            roi = e[ys, xs].max(-1); lit = roi > 0.15 * max(roi.max(), 1e-9)
-            sat = float((roi >= p['sat_e']).sum() / max(lit.sum(), 1))          # lit panel pixels whose mean e- >= full well
+            roi = e[ys, xs].max(-1)
+            sat = sat_fraction(roi, p['sat_e'])                                   # share of lit panel pixels whose mean e- >= full well
             mix = float(1 - w[ys, 1].mean())                                      # RS mixing: share of other symbols
             best = (r, b, sat, mix)
     if DIAG is not None: DIAG.append((np.nan, np.nan) if best is None else best[2:])
