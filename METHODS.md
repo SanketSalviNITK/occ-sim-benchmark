@@ -366,8 +366,11 @@ shared across exposures (CRN), so tuned comparisons are paired. Full table: `cla
 Mechanism diagnostic (1/128, 2.5 m): RS mixing weight of the selected frame (`claims_points.csv`, `rs_mix`, verified in round 2) is ≤ 0.009 for v2,
 CSK802-4 and OOK at every exposure (max 0.0085, v2 at 1/250 s), so the rolling shutter does not drive the asymmetry.
 Over all 12 schemes at this condition the max is 0.015, and over all claim conditions 0.033 (OOK, 4 px blur, 1/250 s);
-the earlier "≤ 0.01 for all schemes" was not correct as stated. Saturation ratio (saturated px / px above 15 % of panel peak) at
-1/250: v2 0.94, CSK802-4 0.42, OOK 0.50 (0 at 1/4000). Longer exposure buys CSK SNR: CSK802-4 BER is 0.072 at 1/1500 s and 0.014 at 1/250 s (the exposure the tuned-exposure
+the earlier "≤ 0.01 for all schemes" was not correct as stated. Saturation fraction (share of lit pixels, i.e. pixels above 15 % of panel peak, whose mean e⁻ ≥ full well; numerator
+restricted to lit pixels in round 2, F4) for v2 / CSK802-4 / OOK: 0.006 / 0 / 0 at 1/1500 s, 0.43 / 0.13 / 0.14 at 1/500 s,
+0.94 / 0.42 / 0.50 at 1/250 s (0 at 1/4000). After the fix every `sat_ratio` in `claims_points.csv` lies in [0, 1] (max
+1.0, v2 at 70° yaw, 1/250 s, previously 1.08 — the only value that changed). Goodput, BER and RS-mixing outputs are
+bit-identical to round 1 (all 2304 non-saturation arrays in `claims.npz` compared). Longer exposure buys CSK SNR: CSK802-4 BER is 0.072 at 1/1500 s and 0.014 at 1/250 s (the exposure the tuned-exposure
 variant picks), while clipping v2's amplitude layers (v2 BER 0.068 → 0.338). t_row ∈ {0, 10, 27 µs} changes no scheme by more than 5 bps (`trow.csv`).
 
 ## 9.4 Low-light knife-edge (B2)
