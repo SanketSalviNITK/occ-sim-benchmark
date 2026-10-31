@@ -28,7 +28,11 @@ every d-point (e.g. d3.0 fixed: −999.6 [−1009.9, −985.3] vs QCD-OCC paper 
 ## E2 robustness (R4) — `results/review_r1/e2_survival.csv`, `e2_robust.csv`
 No C2 point survives the grid at P25 or P33. P25 min lower bounds: −103.2 (3.0 m), −81.6 (3.25 m), −12.0 (3.5 m).
 3.0/3.25 m reverse significantly (1/256; 3.0 m also tuned 1/128: −61.8 [−82.8, −40.2]). **3.5 m: "not significant", not reversed**
-(P25 worst +10.8 [−12.0, 36.0]; P33 worst n.s.). P42: NOT RUN (see remaining).
+(P25 worst +10.8 [−12.0, 36.0]; P33 worst n.s.).
+P42 (run): no point survives either; min lower bounds −78.6 (3.0 m), −84.6 (3.25 m), −19.8 (3.5 m). Significant reversals only with
+tuned exposure (3.0 m tuned 1/128 −60.0 [−78.6, −39.6], tuned 1/256 −42.0 [−63.6, −19.8]; 3.25 m tuned 1/128 −58.8 [−84.6, −34.2]);
+3.5 m worst cases n.s. (tuned 1/128 +4.2 [−19.8, 27.6]; fixed 1/256 +7.8 [−14.4, 28.8]).
+P42 binding margins (fixed 1/1500, 1/128): claims seeds +156.6 / +119.6 / +15.0 [0.6, 29.9]; sweep seeds +157.8 / +117.7 / +29.8 [15.0, 46.1].
 
 ## Ablation (R3, R8) — `ablation_factorial.csv`
 P33, equal summed drive: share of v2−base-only gap recovered by lit0.75: 75.6 / 42.6 / 33.8 % (3.0/3.25/3.5 m);
@@ -41,5 +45,8 @@ Attribution: "power/level allocation under equal-summed drive + decoder". Radian
 ## Runtimes — `runtime.csv`, `runtime_hw.json` (n = 40 symbols, single process, OMP=1, **machine load ≈ 64 on 8 vCPU: inflated**)
 IMX174 mean 20.7 ms/symbol (10.4–29.5), IMX219 28.7 (19.9–57.5); the corner finder is the largest stage for v2 (≈7 ms).
 
-## R9 — e3valid regenerated at clean 83b67a7: all 30 arrays np.array_equal → original npz kept, meta updated.
-e1sweep, e1dec, e2_P33 not regenerated (remaining).
+## R9 — run metas
+Only e3valid was regenerated from a clean commit (83b67a7): all 30 arrays np.array_equal → original npz kept, meta updated.
+e1sweep, e1dec (review_r1_dec) and e2_P33 were NOT regenerated here (time budget); their metas still carry the -dirty hash.
+The Research Validator independently confirmed those arrays from the clean tag (validator's own check, not re-run by us).
+Command to close it: in a clean checkout, `OMP_NUM_THREADS=1 python -m experiments.review_r1_dec; python -m experiments.review_r1 e1sweep; python -m experiments.review_r1 e2_P33`, then compare arrays.
