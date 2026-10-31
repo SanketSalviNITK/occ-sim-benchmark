@@ -1,0 +1,12 @@
+{
+ "tag": "benchmark-r2",
+ "git": "e8732bf39b0486e67d3f80b18de2592812329e5d",
+ "tests": "84 passed",
+ "omp": 1,
+ "utc": "2026-10-31T19:58:18.193128Z",
+ "n6_regen": {
+  "review_e1dec": "regenerated at 83b67a7 (clean), OMP=1: 144/144 arrays np.array_equal to shipped npz; original npz kept; dirty meta kept as run_meta_REVIEW_e1dec_orig_dirty.json",
+  "review_e1sweep": "NOT completed (regeneration in progress, 189/1160 chunks at tag time); shipped meta still -dirty",
+  "review_e2_P33": "NOT started; shipped meta still -dirty"
+ }
+}
