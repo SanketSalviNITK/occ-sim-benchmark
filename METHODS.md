@@ -294,14 +294,16 @@ Code: `channel/physical.py`, `experiments/phys_eval.py`, `experiments/run_phys.p
 Driver `experiments/audit_r1.py`, analysis `experiments/audit_r1_report.py`, statistics `experiments/stats.py`
 (tests `tests/test_stats.py`). Per-symbol bit-error matrices: `results/phys_sym/*.npz`; tables: `results/audit_r1/*.csv`.
 
-## 9.0 Claims (Research-Validator round 2, audit-r2)
-Only the two statements below are claimed. All numbers come from `results/audit_r1/claims_paired.csv` (C1, C2
+## 9.0 [SUPERSEDED] Claims (Research-Validator round 2, audit-r2) — historical only
+> **SUPERSEDED by "Claims (benchmark-r2)" at the top of this file. C1 and C2 below are historical, not current claims.**
+
+Round-2 text: only the two statements below were claimed. All numbers come from `results/audit_r1/claims_paired.csv` (C1, C2
 reversals) and `results/audit_r1/efficiency_winners_paired.csv` (C2), per-symbol data `results/phys_sym/{claims,sweeps_PHYS_P25,sweeps_PHYS_P33,sweeps_PHYS_P42}.npz`;
 differences are paired CRN symbol-bootstrap 95 % CIs (METHODS §9.1). Physical channel, equal summed drive, P33 unless stated.
 Former claim 3 (low-light v1 advantage) is **dropped** (METHODS §9.4). Nothing in `results/legacy/` is used.
 (The submission's C1/C2 wording was not stored in the repo; the text below is restated from the round-2 report and the CSVs.)
 
-**C1 (conditional).** At t_exp = 1/1500 s, LED brightness 1/128 and 2.5 m, HNCSM v2 delivers 592 bps [586, 596] against
+**C1 (historical, superseded by the benchmark wording).** At t_exp = 1/1500 s, LED brightness 1/128 and 2.5 m, HNCSM v2 delivers 592 bps [586, 596] against
 25 bps [13, 39] for IEEE 802.15.7 4-CSK (paired diff +566 [552, 579]; 8-CSK 0 bps). The comparison is against the IEEE
 802.15.7 CSK baselines only: at the same point OOK is higher (v2 − OOK −147 [−159, −135]); at 70° yaw (1 m) v2 ties
 QCD-style (0 [−17, 18]); at 4 px blur (1 m) QCD-style wins (HNCSM v1 119 vs 395 bps, −276 [−293, −258]). C1 does not hold

@@ -55,26 +55,29 @@ zlib.crc32 (the old runs used Python's salted `hash()` and were NOT reproducible
 - **Confidence intervals:** Wilson 95% intervals on each layer's frame error rate, giving `goodput_lo/hi`. 1000 frames per point on all sweeps.
 - **Adaptive-CSK genie:** picks the best of {OOK, CSK-4, CSK-8} per point using 300 frames on separate seeds
   (GENIE_SEED), then is reported with the evaluation-seed result of that choice.
-- **Tuning:** an equal budget of 6 configs each for v2-CS (δ∈{0.1,0.2,0.3}×{1,2} bits), QCD-style (permutation subset)
-  and overlay (a1/a2 split). Run on TUNE_SEED over 7 distances × 200 frames. Chosen: v2-CS δ=0.2, 2 bits;
+- **Tuning (see docs/BENCHMARK_PROTOCOL.md item 4):** exposure is tuned over T_EXPS for all schemes; `tune.py` additionally
+  tries 6 configs for each of v2-CS (δ∈{0.1,0.2,0.3}×{1,2} bits), QCD-style (permutation subset) and overlay (a1/a2 split);
+  the other schemes get no scheme-parameter tuning, so no equal-tuning-effort claim is made. Run on TUNE_SEED over 7 distances × 200 frames. Chosen: v2-CS δ=0.2, 2 bits;
   QCD subset `last16`; overlay a1=a2=0.25 (at the edge of the grid).
 - **Ambient sweep:** at 2.5 m with non-uniform light (random linear gradient 0.4–1.6× plus a Gaussian hotspot).
 
-## Claims (Research-Validator round 2, audit-r2)
-Only the two statements below are claimed. All numbers come from `results/audit_r1/claims_paired.csv` (C1, C2
+## [SUPERSEDED] Claims (Research-Validator round 2, audit-r2) — historical only
+> **SUPERSEDED by the benchmark-r2 claims at the top of this README. Nothing in this section (C1, C2, table, limitations) is a current claim; kept for history.**
+
+Round-2 text: only the two statements below were claimed. All numbers come from `results/audit_r1/claims_paired.csv` (C1, C2
 reversals) and `results/audit_r1/efficiency_winners_paired.csv` (C2), per-symbol data `results/phys_sym/{claims,sweeps_PHYS_P25,sweeps_PHYS_P33,sweeps_PHYS_P42}.npz`;
 differences are paired CRN symbol-bootstrap 95 % CIs (METHODS §9.1). Physical channel, equal summed drive, P33 unless stated.
 Former claim 3 (low-light v1 advantage) is **dropped** (METHODS §9.4). Nothing in `results/legacy/` is used.
 (The submission's C1/C2 wording was not stored in the repo; the text below is restated from the round-2 report and the CSVs.)
 
-**C1 (conditional).** At t_exp = 1/1500 s, LED brightness 1/128 and 2.5 m, HNCSM v2 delivers 592 bps [586, 596] against
+**C1 (historical, superseded by the benchmark wording).** At t_exp = 1/1500 s, LED brightness 1/128 and 2.5 m, HNCSM v2 delivers 592 bps [586, 596] against
 25 bps [13, 39] for IEEE 802.15.7 4-CSK (paired diff +566 [552, 579]; 8-CSK 0 bps). The comparison is against the IEEE
 802.15.7 CSK baselines only: at the same point OOK is higher (v2 − OOK −147 [−159, −135]); at 70° yaw (1 m) v2 ties
 QCD-style (0 [−17, 18]); at 4 px blur (1 m) QCD-style wins (HNCSM v1 119 vs 395 bps, −276 [−293, −258]). C1 does not hold
 under per-scheme tuned exposure (CSK802-4 at 1/250 s: 648 bps, v2 − CSK802-4 −57 [−109, −5]); with 48-bit-CRC baselines at
 fixed 1/1500 s it holds against 4-CSK (+335 [313, 355]) and OOK still wins (−34 [−45, −24]).
 
-**C2 (conditional).** v2 has the highest goodput at 3.0–3.5 m at budgets P25/P33/P42 (paired CIs exclude 0; absolute
+**C2 (historical, superseded by the benchmark wording).** v2 has the highest goodput at 3.0–3.5 m at budgets P25/P33/P42 (paired CIs exclude 0; absolute
 128–418 bps) under t_exp 1/1500 s, LED brightness 1/128 and equal summed drive. Repo numbers, v2 − runner-up
 (`efficiency_winners_paired.csv`, runner-up named):
 

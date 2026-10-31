@@ -21,3 +21,14 @@ def test_ablation_variants_roundtrip_ideal():
     for s in (HNCSMv2BaseOnly(), BaseOnly2LevelDecoder(), BaseOnlyLevel075()):
         b = list(rng.randint(0, 2, 48)); d = s.encode(b).astype(float)
         assert s.decode(d, np.zeros(3)) == b
+
+
+def test_code_key_fallback(tmp_path):
+    from experiments.review_r1 import code_key
+    assert code_key(gh='abc123') == 'abc123'
+    for d in ('tx', 'rx', 'channel', 'experiments', 'occbench'):
+        (tmp_path / d).mkdir(); (tmp_path / d / 'm.py').write_text('x=1\n')
+    k1 = code_key(root=str(tmp_path), gh='unknown')
+    assert k1.startswith('src-') and k1 == code_key(root=str(tmp_path), gh='unknown')
+    (tmp_path / 'rx' / 'm.py').write_text('x=2\n')
+    assert code_key(root=str(tmp_path), gh='unknown') != k1
