@@ -25,7 +25,7 @@ Chunks are checkpointed in $CKPT (default /workspace/r2_work/ckpt/<group>/); a r
 import os, sys, json, time, datetime, numpy as np
 from multiprocessing import Pool
 import config
-from tx.ablation import HNCSMv2BaseOnly, BaseOnly2LevelDecoder, BaseOnlyLevel075
+from tx.ablation import HNCSMv2BaseOnly, BaseOnly2LevelDecoder, BaseOnlyLevel075, Level075TwoLevelDecoder
 import pickle, hashlib
 from experiments.audit_r1 import lineup, BASE, T_EXPS
 from experiments.common import power_scales
@@ -45,7 +45,7 @@ E3_BR = None   # filled from results/review_r1/e3_calibration.json
 
 def lineup_r1(): return lineup() + [HNCSMv2BaseOnly()]
 SEEDS = {'A': 31415926, 'B': 27182818}   # benchmark r0 replication master seeds (chosen a priori, independent of SEED)
-def lineup_seed(): return lineup_r1() + [BaseOnly2LevelDecoder(), BaseOnlyLevel075()]
+def lineup_seed(): return lineup_r1() + [BaseOnly2LevelDecoder(), BaseOnlyLevel075(), Level075TwoLevelDecoder()]
 
 def preset(name):
     if name == 'imx174': return dict(ph.P)
