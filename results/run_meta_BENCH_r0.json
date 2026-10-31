@@ -1,0 +1,36 @@
+{
+ "tag": "benchmark-r0",
+ "parent_commit": "98d2105ad868d7c621cd066e552949fca2c33dad",
+ "dirty_outside_results": false,
+ "tests": "84 passed",
+ "python": "3.13.5",
+ "numpy": "2.5.4",
+ "created_ist": "2026-10-31 (see git)",
+ "done": [
+  "idcheck",
+  "fact",
+  "radiant",
+  "corners_bench",
+  "e3valid@imx219f",
+  "e3valid@imx219cq",
+  "e3claims@imx219f",
+  "or_e3claims@imx219f",
+  "or_sweep",
+  "or_claims",
+  "e2_P25",
+  "e3valid(R9)",
+  "runtime n=40"
+ ],
+ "not_run": [
+  "e2_P42",
+  "seedA",
+  "seedB",
+  "e1sweep(R9)",
+  "e1dec(R9)",
+  "e2_P33(R9)",
+  "e3claims@imx219cq",
+  "or_e3claims@imx219cq",
+  "e3sweep@imx219f"
+ ],
+ "notes": "e3claims@imx219f meta records 83b67a7, started at 8d579f2 (diff = seed lineup only). Worker runs used OMP_NUM_THREADS=1 after 22:18 IST (verified byte-identical on idcheck)."
+}
