@@ -1,3 +1,5 @@
+> **benchmark-r0:** this document describes the simulator; the benchmark protocol (fairness, binding margins, oracle corners, seed replication, power normalisation) is in `docs/BENCHMARK_PROTOCOL.md`, IMX219 parameters in `docs/IMX219_PARAMETERS.md`. Attribution of the v2 gain is worded as **"power/level allocation under equal-summed drive + decoder"**.
+
 # occ_sim: methods (written from the code only)
 
 Sources read: `channel/{geometry,optics,render,sensor,ambient,presets}.py`, `rx/{sampler,refs}.py`, `tx/schemes.py`,

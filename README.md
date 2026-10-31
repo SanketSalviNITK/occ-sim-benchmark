@@ -1,3 +1,21 @@
+# occ_sim — open, physics-grounded benchmark of LED-matrix OCC schemes (benchmark-r0, simulation only)
+
+**Quick start**
+```
+python3.13 -m venv .venv && .venv/bin/pip install -r requirements.lock
+make test          # unit tests
+make tables        # verify shipped results (MANIFEST.sha256) and regenerate every table from the npz arrays
+make full          # re-simulate all benchmark groups (many CPU-hours; resumable via CKPT checkpoints)
+.venv/bin/python -m experiments.bench_run --list   # registered schemes; add your own: docs/ADDING_A_SCHEME.md
+```
+Protocol, fairness rules, release statement, 802.15.7 OCC-PHY rationale and limitations: `docs/BENCHMARK_PROTOCOL.md`.
+IMX219 parameters with sources: `docs/IMX219_PARAMETERS.md`. External anchors: `docs/ANCHORS.md`.
+Results: `results/benchmark/SUMMARY.md`; reviewer response table: `docs/RESPONSE_TABLE.md`.
+Release status: local only (not pushed, no DOI); licence undecided (`LICENSE_TODO`); citation metadata `CITATION.cff` (authors TODO).
+Re-implemented schemes are labelled **-inspired** (abstract-based re-implementations).
+
+---
+
 # occ_sim — HNCSM vs baselines on a simulated 8x8 RGB LED-matrix OCC link (simulation only)
 
 ## Reproduce (exact)

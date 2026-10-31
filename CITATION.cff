@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below. (TODO: authors and DOI before release.)"
+title: "occ_sim: an open, physics-grounded benchmark of LED-matrix optical camera communication schemes"
+version: "benchmark-r0"
+date-released: "TODO"
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+license: "TODO (see LICENSE_TODO)"
+repository-code: "TODO"
