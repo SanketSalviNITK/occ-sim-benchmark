@@ -66,7 +66,7 @@ def corners(procs=6, n=200):
     for (pn, d), o in sorted(acc.items()):
         pit = np.array([x[0] for x in o]); e = np.array([x[1] for x in o]); ok = ~np.isnan(e)
         rows.append(dict(sensor=pn, distance_m=d, frames=len(o), px_per_led=round(pit.mean(), 3), detect_fail_frac=round(1 - ok.mean(), 4),
-                         median_err_pitch=round(np.median(e[ok]), 4) if ok.any() else np.nan, p90_err_pitch=round(np.percentile(e[ok], 90), 4) if ok.any() else np.nan))
+                         gross_err_frac_gt0p5pitch=round(float((e[ok] > 0.5).mean()), 4) if ok.any() else np.nan, median_err_pitch=round(np.median(e[ok]), 4) if ok.any() else np.nan, p90_err_pitch=round(np.percentile(e[ok], 90), 4) if ok.any() else np.nan))
     pd.DataFrame(rows).to_csv(os.path.join(OUT, 'corner_error.csv'), index=False); return rows
 
 if __name__ == '__main__':
