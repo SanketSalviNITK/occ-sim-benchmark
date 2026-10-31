@@ -12,6 +12,7 @@ Protocol, fairness rules, release statement, 802.15.7 OCC-PHY rationale and limi
 IMX219 parameters with sources: `docs/IMX219_PARAMETERS.md`. External anchors: `docs/ANCHORS.md`.
 Results: `results/benchmark/SUMMARY.md`; reviewer response table: `docs/RESPONSE_TABLE.md`.
 Release status: local only (not pushed, no DOI); licence undecided (`LICENSE_TODO`); citation metadata `CITATION.cff` (authors TODO).
+Headline (see SUMMARY): v2 beats every baseline at 3.0–3.25 m only at the fixed operating point (1/1500, 1/128); not robust to tuned exposure or 1/256 at any P; 3.5 m is n.s. at P33. With oracle corners the 3.0 m lead disappears (detector-driven). No transfer to IMX219.
 Re-implemented schemes are labelled **-inspired** (abstract-based re-implementations).
 
 ---

@@ -40,7 +40,15 @@ lit0.75 + 2-level decoder: 88.6 / 72.7 / 82.4 %. Residual v2 − (lit0.75+2lv): 
 +14.4 [−4.2, 34.8] n.s. Decoder effect on lit0.75 Tx: +21.0/+39.0/+39.6 (sig.); on lit1.0 Tx: +15.6/+29.4/+17.4.
 Attribution: "power/level allocation under equal-summed drive + decoder". Radiant-equal: same numbers (colour-balanced schemes) → invariant.
 
-## Seed replication (R5): NOT RUN (seedA/seedB). Only the sweep-vs-claims seed comparison above exists.
+## Seed replication (R5) — `seed_replication.csv`, `seed_spread.csv`
+Three disjoint seed sets (claims/E2 + A = 31415926 + B = 27182818, each with own tuning seeds; E1 lit0.75 cells on A, B only).
+C2 binding margin (fixed 1/1500, 1/128), mean [min, max] over sets: P25 151.0 [133.2, 165.6] / 83.4 [71.5, 98.2] / 24.8 [16.6, 35.5];
+P33 160.2 [150.0, 166.2] / 116.1 [107.6, 123.2] / 22.3 [4.3, 34.3]; P42 170.2 [156.6, 177.0] / 125.2 [119.6, 131.8] / 19.8 [15.0, 24.0]
+(3.0 / 3.25 / 3.5 m). Max spread 32.4 bps. All E1 decomposition contrasts at P33 are positive on every set (v2 − base-only 175/133/75).
+**Downgraded (CI not of one sign across sets):** (1) P33 3.5 m C2 margin (lo −10.1 on the claims set) → "not significant at P33";
+(2) P33 3.0 m E2 tuned 1/256 reversal (hi +1.2 on one set) → "not robust", not "reverses"; (3) all P33 3.5 m E2 cells stay "n.s.".
+Robust across sets: C2 at 3.0/3.25 m (all P), 3.5 m at P25/P42 (narrowly, min lo 1.2 / 0.6); P33 reversals at 3.0 m
+(fixed 1/256, tuned 1/128) and at 3.25 m (all three E2 cells).
 
 ## Runtimes — `runtime.csv`, `runtime_hw.json` (n = 40 symbols, single process, OMP=1, **machine load ≈ 64 on 8 vCPU: inflated**)
 IMX174 mean 20.7 ms/symbol (10.4–29.5), IMX219 28.7 (19.9–57.5); the corner finder is the largest stage for v2 (≈7 ms).

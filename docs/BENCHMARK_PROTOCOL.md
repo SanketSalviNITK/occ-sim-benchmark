@@ -51,3 +51,7 @@ the 802.15.7 CIE-xy CSK constellations (CSK802-4/8) as the standard reference, a
 - **M7 (parameter uncertainty):** no Latin-hypercube / sensitivity study over sensor and optics parameters was run;
   results are conditional on the presets. Many comparisons are reported without multiplicity correction; CIs are per comparison.
 - Single matrix geometry (8×8, P = pixels/LED set by distance); one LED spectrum model.
+
+## Run-meta provenance (R9)
+Of the four -dirty run metas, only e3valid was regenerated from a clean commit (83b67a7; all arrays np.array_equal to the shipped npz).
+e1sweep, e1dec and e2_P33 were not regenerated (time budget); the Research Validator independently confirmed their arrays from the clean tag.
