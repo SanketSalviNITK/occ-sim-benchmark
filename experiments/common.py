@@ -42,13 +42,14 @@ def eval_point(schemes, scales, cond, frames, seed):
                 e = int((o[i:i+n] != b[i:i+n]).sum()); res[s.name][l][0] += e; res[s.name][l][1] += e > 0; i += n
     return res
 
-def rows_from(res, schemes, frames, power, extra):
+def rows_from(res, schemes, frames, power, extra, rate=None):
+    rate = FPS if rate is None else rate   # decoded symbols per second (physical channel: Tx symbol rate)
     rows = []
     for s in schemes:
         tot_g = tot_lo = tot_hi = 0.0; tot_e = 0
         for l, n in s.layers:
             be, fe = res[s.name][l]; lo, hi = wilson(fe, frames); net = max(n - CRC_BITS, 0)
-            g = net * FPS * (1 - fe / frames); glo = net * FPS * (1 - hi); ghi = net * FPS * (1 - lo)
+            g = net * rate * (1 - fe / frames); glo = net * rate * (1 - hi); ghi = net * rate * (1 - lo)
             tot_g += g; tot_lo += glo; tot_hi += ghi; tot_e += be
             rows.append(dict(extra, scheme=s.name, layer=l, bits_per_frame=n, net_bits=net, frames=frames,
                              ber=be / (n * frames), fer=fe / frames, fer_lo=lo, fer_hi=hi,

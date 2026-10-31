@@ -1,0 +1,26 @@
+{
+ "channel": "physical",
+ "lowlight": true,
+ "brightness": 0.0009765625,
+ "cap": true,
+ "seed": 20261015,
+ "frames": 1000,
+ "genie_frames": 300,
+ "genie_seed_base": 22261044,
+ "power_mode": "equal",
+ "pref_power": 33.0,
+ "f_tx": 15.0,
+ "defaults": {
+  "distance_m": 1.0,
+  "yaw_deg": 0.0,
+  "blur_sigma_px": 0.0,
+  "lux": 27.0,
+  "jitter": 0.02
+ },
+ "git": "11b1072b0ad3f303d58712c8cd11c2f154825bed-dirty",
+ "sweeps": [
+  "distance_m"
+ ],
+ "utc": "2026-10-31T05:00:52.146483+00:00",
+ "elapsed_s": 626
+}

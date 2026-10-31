@@ -318,3 +318,75 @@ def all_schemes(tuned=None):
     v = HNCSMv2CS(t['v2cs']['delta'], t['v2cs']['bpl']); v.name = 'HNCSM v2-CS'
     return [v, HNCSMv2(), HNCSM(), HNCSM(base_only=True), CSK(8), CSK(4), OOK(), QRStyle(), NestedTexture(),
             QCDStyle(**t['qcd']), Nishimoto(**t['overlay'])]
+
+
+# ---------------------------------------------------------------- IEEE 802.15.7 CSK (physical channel)
+# Design-rule constellations of IEEE Std 802.15.7 (CSK, clause 'CSK constellation design rules'), taken from the TG7
+# example for band combination 110-010-000: I=(0.730,0.270), J=(0.190,0.780), K=(0.180,0.010); 4-CSK = {J, centroid,
+# K, I}; 8-CSK points as listed (P802.15 contribution by Son/Bae/Rajagopal/Yokoi/Won, May 2010). The rule is affine, so
+# the barycentric coordinates of each point in triangle IJK are transferred to the triangle of our LEDs (I->R, J->G, K->B).
+_I, _J, _K = (0.730, 0.270), (0.190, 0.780), (0.180, 0.010)
+CSK802_PTS = {4: [(0.190, 0.780), (0.367, 0.353), (0.180, 0.010), (0.730, 0.270)],
+              8: [(0.190, 0.780), (0.187, 0.523), (0.370, 0.610), (0.519, 0.383), (0.180, 0.010), (0.244, 0.253),
+                  (0.455, 0.140), (0.730, 0.270)]}
+
+def _bary(pt, a, b, c):
+    T = np.array([[a[0] - c[0], b[0] - c[0]], [a[1] - c[1], b[1] - c[1]]])
+    l1, l2 = np.linalg.solve(T, np.array(pt) - np.array(c)); return np.array([l1, l2, 1 - l1 - l2])
+
+def csk802_drives(order, xy_led, Iv):
+    """Return per-symbol RGB drive (sum of drive = 1: constant total drive, the CSK constant-power constraint).
+    Chromaticity mixing: weight in xy of LED j is proportional to its X+Y+Z = Y_j / y_j = a_j Iv_j / y_j."""
+    out = []
+    for pt in CSK802_PTS[order]:
+        wI, wJ, wK = np.clip(_bary(pt, _I, _J, _K), 0, None)
+        w = np.array([wI, wJ, wK])                                   # weights for R, G, B LEDs
+        S = np.array([Iv[j] / xy_led[j][1] for j in range(3)])       # X+Y+Z per unit drive
+        a = w / S; a = a / a.sum(); out.append(tuple(a))
+    return out
+
+class CSK802(Scheme):
+    """IEEE 802.15.7 CIE-xy CSK (4 or 8) on each of the 60 data LEDs; ML decoding in sensor RGB space using
+    pilot-referenced templates b + M a (M from the R/G/B pilots)."""
+    def __init__(self, order=8):
+        from channel.physical import P as PP
+        self.order = order; self.bps = int(np.log2(order)); self.name = f'CSK802-{order}'
+        self.palette = csk802_drives(order, PP['xy'], PP['Iv_cd'])
+        self.layers = [('all', self.bps * len(DATA_POS))]
+    def encode(self, bits):
+        d = base_drive()
+        for i, p in enumerate(DATA_POS): d[p] = self.palette[b2i(bits[i*self.bps:(i+1)*self.bps])]
+        return d
+    def decode(self, s, dark):
+        M, dk = refs(s, dark)
+        idx = classify(np.array([s[p] for p in DATA_POS]), self.palette, M, dk)
+        return sum((i2b(i, self.bps) for i in idx), [])
+
+class QCDOCC(Scheme):
+    """Validation-only re-implementation of the QCD-OCC prototype frame (Vasantha & Salvi 2022, Table 1 + Sec. 3.1):
+    48 data LEDs x 3 bits (RGB on/off = baryon colour model), the four corner 2x2 blocks are anchors (here: the shared
+    corner pilots + the other 12 anchor LEDs white; anchor values are ASSUMED). Decoder: nearest colour."""
+    name = 'QCD-OCC (paper frame)'
+    PAL = [K, B, G, C, R, Mg, Y, W]   # bits b2 b1 b0 = R G B presence (Table 1)
+    def __init__(self):
+        anc = {(r, c) for r0, c0 in [(0, 0), (0, 6), (6, 0), (6, 6)] for r in (r0, r0 + 1) for c in (c0, c0 + 1)}
+        self.anchor = anc - PILOT_SET; self.pos = [p for p in DATA_POS if p not in anc]
+        assert len(self.pos) == 48
+        self.layers = [('all', 144)]
+    def encode(self, bits):
+        d = base_drive()
+        for p in self.anchor: d[p] = W
+        for i, p in enumerate(self.pos): d[p] = self.PAL[b2i(bits[3*i:3*i+3])]
+        return d
+    def decode(self, s, dark):
+        M, dk = refs(s, dark)
+        idx = classify(np.array([s[p] for p in self.pos]), self.PAL, M, dk)
+        return sum((i2b(i, 3) for i in idx), [])
+
+def all_schemes_phys(tuned=None):
+    """Same line-up as all_schemes(), with the RGB-keying CSK baselines replaced by IEEE 802.15.7 CIE-xy CSK."""
+    if tuned is None:
+        f = _TUNED.replace('tuned_params.json', 'tuned_params_phys.json')
+        tuned = json.load(open(f)) if os.path.exists(f) else None    # physical-channel held-out tuning (tune.py --channel physical)
+    s = [x for x in all_schemes(tuned) if not x.name.startswith('CSK-')]
+    return s[:4] + [CSK802(8), CSK802(4)] + s[4:]

@@ -8,8 +8,9 @@ MAIN = ['HNCSM v2-CS', 'HNCSM v2', 'HNCSM', 'QCD-style-inspired (Vasantha22)', '
 SHORT = {'HNCSM v2-CS': 'HNCSM v2-CS', 'HNCSM v2': 'HNCSM v2', 'HNCSM': 'HNCSM v1', 'HNCSM base-only': 'HNCSM v1 base-only',
          'QCD-style-inspired (Vasantha22)': 'QCD-inspired', 'Overlay-inspired (Nishimoto12)': 'Overlay-inspired',
          'NestedTexture-inspired (Salvi22)': 'Nested-inspired', 'QR/Aztec-style': 'QR/Aztec-style', 'CSK-8': 'CSK-8',
-         'CSK-4': 'CSK-4', 'OOK-8x8': 'OOK 8x8', 'Adaptive-CSK genie': 'Adaptive-CSK genie'}
+         'CSK-4': 'CSK-4', 'CSK802-8': '802.15.7 8-CSK', 'CSK802-4': '802.15.7 4-CSK', 'OOK-8x8': 'OOK 8x8', 'Adaptive-CSK genie': 'Adaptive-CSK genie'}
 COL = dict(zip(MAIN, ['#d62728', '#ff7f0e', '#bcbd22', '#1f77b4', '#2ca02c', '#9467bd', '#8c564b', '#7f7f7f']))
+COL['CSK802-8'] = COL['CSK-8']
 plt.rcParams.update({'font.size': 10, 'axes.titlesize': 11, 'axes.labelsize': 10, 'legend.fontsize': 8, 'font.family': 'DejaVu Sans'})
 
 def load(pattern):
@@ -43,7 +44,10 @@ def degradation(x, y):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--pattern', default='sweep_distance_m_P*.csv'); ap.add_argument('--prefix', default='')
     a = ap.parse_args(); pre = a.prefix
-    t = load(a.pattern); t.to_csv(os.path.join(RES, f'{pre}efficiency_all_budgets.csv'), index=False)
+    global MAIN
+    t = load(a.pattern)
+    if 'CSK-8' not in set(t.scheme): MAIN = [('CSK802-8' if s == 'CSK-8' else s) for s in MAIN]   # physical channel line-up
+    t.to_csv(os.path.join(RES, f'{pre}efficiency_all_budgets.csv'), index=False)
     budgets = sorted(t.budget.unique())
     # (1) most-efficient band per budget (genie excluded from winners; reported separately)
     wrows = []
