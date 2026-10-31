@@ -1,0 +1,21 @@
+{
+ "tag": "benchmark-r1",
+ "parent_commit": "37197d8328d057f7ad0c55e8081bf4a92941bd17",
+ "dirty_outside_results": false,
+ "tests": "84 passed",
+ "python": "3.13.5",
+ "numpy": "2.5.4",
+ "added_since_r0": [
+  "e2_P42",
+  "seedA",
+  "seedB",
+  "seed/binding/e2 reports"
+ ],
+ "not_run": [
+  "R9 regen of e1sweep, e1dec, e2_P33 (validator confirmed arrays from clean tag)",
+  "e3claims@imx219cq",
+  "or_e3claims@imx219cq",
+  "e3sweep@imx219f"
+ ],
+ "notes": "OMP_NUM_THREADS=1 for all r1 runs; worktree clean at 83b67a7."
+}
