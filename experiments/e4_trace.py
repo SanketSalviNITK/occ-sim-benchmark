@@ -47,7 +47,11 @@ def _corner_job(a):
     from tx.schemes import HNCSMv2
     from rx.finder import find_corners
     import json, config
-    p = dict(ph.P) if pname == 'imx174' else pp.imx219(json.load(open(os.path.join(OUT, 'e3_calibration.json')))['brightness'])
+    br = json.load(open(os.path.join(OUT, 'e3_calibration.json')))['brightness']
+    if pname == 'imx174': p = dict(ph.P)
+    elif pname == 'imx219': p = pp.imx219(br)                       # review-r1 preset (fixed min_dn = 8 finder)
+    elif pname == 'imx219cq': p = pp.imx219b(br)                    # benchmark r0: CQ-sensitivity QE + scale-free finder
+    else: p = pp.imx219(br); p.update(finder='scalefree', finder_k=pp.FINDER_K)   # 'imx219f': scale-free finder
     s = HNCSMv2(); sc = power_scales([s], 33.011, 'equal', False)[0][s.name]; out = []
     for f in range(f0, f0 + n):
         rng = np.random.RandomState(config.cond_seed(f'corner-{d}', f))
@@ -56,10 +60,10 @@ def _corner_job(a):
         out.append((pitch, np.nan if c is None else float(np.linalg.norm(c - ct, axis=1).mean() / pitch)))
     return pname, d, out
 
-def corners(procs=6, n=200):
+def corners(procs=6, n=200, sensors=('imx174', 'imx219'), fname='corner_error.csv'):
     from multiprocessing import Pool
     ds = [0.5, 0.75, 1.0, 1.5, 2.0, 2.5, 3.0, 3.25, 3.5, 4.0, 5.0]
-    work = [(pn, d, f0, 50) for pn in ('imx174', 'imx219') for d in ds for f0 in range(0, n, 50)]
+    work = [(pn, d, f0, 50) for pn in sensors for d in ds for f0 in range(0, n, 50)]
     with Pool(procs) as pl: res = pl.map(_corner_job, work)
     acc = {}
     for pn, d, o in res: acc.setdefault((pn, d), []).extend(o)
@@ -68,11 +72,13 @@ def corners(procs=6, n=200):
         pit = np.array([x[0] for x in o]); e = np.array([x[1] for x in o]); ok = ~np.isnan(e)
         rows.append(dict(sensor=pn, distance_m=d, frames=len(o), px_per_led=round(pit.mean(), 3), detect_fail_frac=round(1 - ok.mean(), 4),
                          gross_err_frac_gt0p5pitch=round(float((e[ok] > 0.5).mean()), 4) if ok.any() else np.nan, median_err_pitch=round(np.median(e[ok]), 4) if ok.any() else np.nan, p90_err_pitch=round(np.percentile(e[ok], 90), 4) if ok.any() else np.nan))
-    pd.DataFrame(rows).to_csv(os.path.join(OUT, 'corner_error.csv'), index=False); return rows
+    pd.DataFrame(rows).to_csv(os.path.join(OUT, fname), index=False); return rows
 
 if __name__ == '__main__':
     os.makedirs(OUT, exist_ok=True)
-    if 'corners' in sys.argv[1:]: print(pd.DataFrame(corners(int(os.environ.get('PROCS', '6')))).to_string())
+    if 'corners_bench' in sys.argv[1:]:   # audit R1 acceptance: same corner seeds, old vs scale-free finder, both IMX219 presets
+        print(pd.DataFrame(corners(int(os.environ.get('PROCS', '6')), sensors=('imx174', 'imx219', 'imx219f', 'imx219cq'), fname='corner_error_bench.csv')).to_string())
+    elif 'corners' in sys.argv[1:]: print(pd.DataFrame(corners(int(os.environ.get('PROCS', '6')))).to_string())
     else:
         print(pd.DataFrame(c2_crc48()).to_string()); r = trow_range(); print(r.sort_values('range_bps').tail(3).to_string(), 'max', r.range_bps.max())
         print(pd.DataFrame(seed_sets()).to_string())
