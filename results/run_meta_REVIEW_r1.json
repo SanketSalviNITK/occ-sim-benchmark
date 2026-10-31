@@ -1,0 +1,18 @@
+{
+ "tag": "review-r1-exp",
+ "git": "e5f4f2cbcfe3889c606f8d72fc2a582a7a33942f",
+ "dirty": false,
+ "groups_run": [
+  "e1sweep",
+  "e1dec",
+  "e2_P33",
+  "e3valid",
+  "e3claims",
+  "e3bracket",
+  "e3sweep"
+ ],
+ "not_run": [
+  "e2_P25",
+  "e2_P42"
+ ]
+}
