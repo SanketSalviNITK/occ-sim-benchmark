@@ -1,0 +1,159 @@
+{
+"group": "e3bracket",
+"git": "f79cd86511c54655615506c3ba7ecaf762b2e52b",
+"utc": "2026-10-31T12:08:28.132701+00:00",
+"elapsed_s": 167,
+"procs": 7,
+"jobs": [
+{
+"key": "d2.5|1/1500|1/64|eval",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.015625
+},
+"pref": 33.011,
+"seed": 1376639479,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "m2.5|1/1500|1/64|eval",
+"cond": {
+"distance_m": 6.627,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.015625
+},
+"pref": 33.011,
+"seed": 788932481,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "m3.0|1/1500|1/64|eval",
+"cond": {
+"distance_m": 7.953,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.015625
+},
+"pref": 33.011,
+"seed": 1571653865,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "m3.25|1/1500|1/64|eval",
+"cond": {
+"distance_m": 8.616,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.015625
+},
+"pref": 33.011,
+"seed": 888351275,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "m3.5|1/1500|1/64|eval",
+"cond": {
+"distance_m": 9.278,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.015625
+},
+"pref": 33.011,
+"seed": 759676276,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "d2.5|1/1500|1/256|eval",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.00390625
+},
+"pref": 33.011,
+"seed": 1376639479,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "m2.5|1/1500|1/256|eval",
+"cond": {
+"distance_m": 6.627,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.00390625
+},
+"pref": 33.011,
+"seed": 788932481,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "m3.0|1/1500|1/256|eval",
+"cond": {
+"distance_m": 7.953,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.00390625
+},
+"pref": 33.011,
+"seed": 1571653865,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "m3.25|1/1500|1/256|eval",
+"cond": {
+"distance_m": 8.616,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.00390625
+},
+"pref": 33.011,
+"seed": 888351275,
+"symbols": 1000,
+"only": null
+},
+{
+"key": "m3.5|1/1500|1/256|eval",
+"cond": {
+"distance_m": 9.278,
+"t_exp": 0.0006666666666666666
+},
+"preset": "imx219",
+"pmod": {
+"brightness": 0.00390625
+},
+"pref": 33.011,
+"seed": 759676276,
+"symbols": 1000,
+"only": null
+}
+]
+}
