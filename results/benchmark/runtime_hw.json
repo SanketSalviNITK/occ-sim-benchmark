@@ -6,9 +6,9 @@
  "numpy": "2.5.4",
  "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
  "loadavg_at_end": [
-  51.77099609375,
-  34.1982421875,
-  22.8701171875
+  67.37890625,
+  64.005859375,
+  59.46875
  ],
  "process": "single process; numpy default threads",
  "note": "load average shows concurrent jobs, if any; timings are wall-clock"
