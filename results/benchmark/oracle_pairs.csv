@@ -1,0 +1,217 @@
+sensor,budget,corners,exposure,brightness,seeds,distance_m,crc,baseline,v2_bps,baseline_bps,diff,lo,hi,verdict
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,HNCSM v2-CS,1020.0,1560.0,-540.0,-540.0,-540.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,HNCSM,1020.0,960.0,60.0,60.0,60.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,HNCSM base-only,1020.0,120.0,900.0,900.0,900.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,CSK802-8,1020.0,2580.0,-1560.0,-1560.0,-1560.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,CSK802-4,1020.0,1680.0,-660.0,-660.0,-660.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,OOK-8x8,1020.0,780.0,240.0,240.0,240.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,QR/Aztec-style,1020.0,300.0,720.0,720.0,720.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,NestedTexture-inspired (Salvi22),1020.0,240.0,780.0,780.0,780.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,QCD-style-inspired (Vasantha22),1020.0,600.0,420.0,420.0,420.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,Overlay-inspired (Nishimoto12),1020.0,300.0,720.0,720.0,720.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,QCD-OCC (paper frame),1020.0,2040.0,-1020.0,-1020.0,-1020.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,native,HNCSM v2-base-only,1020.0,600.0,420.0,420.0,420.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,HNCSM v2-CS,1020.0,1440.0,-420.0,-420.0,-420.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,HNCSM,1020.0,960.0,60.0,60.0,60.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,HNCSM base-only,1020.0,120.0,900.0,900.0,900.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,CSK802-8,1020.0,2220.0,-1200.0,-1200.0,-1200.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,CSK802-4,1020.0,1440.0,-420.0,-420.0,-420.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,OOK-8x8,1020.0,660.0,360.0,360.0,360.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,QR/Aztec-style,1020.0,300.0,720.0,720.0,720.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,NestedTexture-inspired (Salvi22),1020.0,360.0,660.0,660.0,660.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,QCD-style-inspired (Vasantha22),1020.0,600.0,420.0,420.0,420.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,Overlay-inspired (Nishimoto12),1020.0,420.0,600.0,600.0,600.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,QCD-OCC (paper frame),1020.0,1800.0,-780.0,-780.0,-780.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.0,48-bit,HNCSM v2-base-only,1020.0,600.0,420.0,420.0,420.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,HNCSM v2-CS,996.1,1255.1,-259.0,-286.7,-230.9,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,HNCSM,996.1,960.0,36.1,29.8,41.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,HNCSM base-only,996.1,120.0,876.1,869.8,881.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,CSK802-8,996.1,2082.1,-1086.0,-1151.4,-1024.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,CSK802-4,996.1,1678.3,-682.3,-689.0,-675.5,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,OOK-8x8,996.1,780.0,216.1,209.8,221.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,QR/Aztec-style,996.1,300.0,696.1,689.8,701.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,NestedTexture-inspired (Salvi22),996.1,240.0,756.1,749.8,761.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,QCD-style-inspired (Vasantha22),996.1,600.0,396.1,389.8,401.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,Overlay-inspired (Nishimoto12),996.1,300.0,696.1,689.8,701.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,QCD-OCC (paper frame),996.1,2040.0,-1043.9,-1050.2,-1038.1,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,native,HNCSM v2-base-only,996.1,600.0,396.1,389.8,401.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,HNCSM v2-CS,996.1,1264.0,-267.9,-285.7,-249.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,HNCSM,996.1,960.0,36.1,29.8,41.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,HNCSM base-only,996.1,120.0,876.1,869.8,881.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,CSK802-8,996.1,2091.2,-1095.2,-1114.5,-1076.9,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,CSK802-4,996.1,1439.8,-443.7,-449.8,-437.8,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,OOK-8x8,996.1,660.0,336.1,329.8,341.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,QR/Aztec-style,996.1,300.0,696.1,689.8,701.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,NestedTexture-inspired (Salvi22),996.1,360.0,636.1,629.8,641.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,QCD-style-inspired (Vasantha22),996.1,600.0,396.1,389.8,401.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,Overlay-inspired (Nishimoto12),996.1,420.0,576.1,569.8,581.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,QCD-OCC (paper frame),996.1,1800.0,-803.9,-810.2,-798.1,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),1.5,48-bit,HNCSM v2-base-only,996.1,600.0,396.1,389.8,401.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,HNCSM v2-CS,694.9,704.5,-9.6,-30.8,11.2,n.s.
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,HNCSM,694.9,865.1,-170.2,-188.6,-152.1,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,HNCSM base-only,694.9,120.0,574.9,564.4,585.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,CSK802-8,694.9,304.4,390.5,339.8,440.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,CSK802-4,694.9,1209.6,-514.7,-560.5,-469.3,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,OOK-8x8,694.9,780.0,-85.1,-95.6,-74.2,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,QR/Aztec-style,694.9,300.0,394.9,384.4,405.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,NestedTexture-inspired (Salvi22),694.9,240.0,454.9,444.4,465.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,QCD-style-inspired (Vasantha22),694.9,599.4,95.5,84.8,106.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,Overlay-inspired (Nishimoto12),694.9,300.0,394.9,384.4,405.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,QCD-OCC (paper frame),694.9,1034.3,-339.4,-401.2,-275.4,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,native,HNCSM v2-base-only,694.9,600.0,94.9,84.4,105.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,HNCSM v2-CS,694.9,822.7,-127.8,-148.3,-107.5,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,HNCSM,694.9,890.3,-195.4,-210.8,-180.1,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,HNCSM base-only,694.9,120.0,574.9,564.4,585.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,CSK802-8,694.9,1168.3,-473.4,-511.9,-434.8,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,CSK802-4,694.9,1251.8,-556.9,-579.4,-535.1,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,OOK-8x8,694.9,660.0,34.9,24.4,45.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,QR/Aztec-style,694.9,300.0,394.9,384.4,405.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,NestedTexture-inspired (Salvi22),694.9,360.0,334.9,324.4,345.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,QCD-style-inspired (Vasantha22),694.9,599.4,95.5,84.8,106.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,Overlay-inspired (Nishimoto12),694.9,420.0,274.9,264.4,285.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,QCD-OCC (paper frame),694.9,1231.2,-536.3,-575.9,-495.1,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.0,48-bit,HNCSM v2-base-only,694.9,600.0,94.9,84.4,105.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,HNCSM v2-CS,587.5,184.2,403.3,385.7,420.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,HNCSM,587.5,190.6,397.0,381.1,412.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,HNCSM base-only,587.5,120.0,467.5,461.2,473.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,CSK802-8,587.5,0.0,587.5,581.2,593.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,CSK802-4,587.5,25.2,562.3,547.8,575.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,OOK-8x8,587.5,780.0,-192.5,-198.8,-186.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,QR/Aztec-style,587.5,300.0,287.5,281.2,293.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,NestedTexture-inspired (Salvi22),587.5,240.0,347.5,341.2,353.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,QCD-style-inspired (Vasantha22),587.5,600.0,-12.5,-18.8,-6.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,Overlay-inspired (Nishimoto12),587.5,266.2,321.4,313.9,328.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,QCD-OCC (paper frame),587.5,0.0,587.5,581.2,593.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,native,HNCSM v2-base-only,587.5,600.0,-12.5,-18.8,-6.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,HNCSM v2-CS,587.5,189.8,397.7,379.7,415.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,HNCSM,587.5,222.7,364.8,345.2,384.5,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,HNCSM base-only,587.5,120.0,467.5,461.2,473.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,CSK802-8,587.5,77.8,509.8,494.6,523.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,CSK802-4,587.5,235.8,351.7,330.8,372.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,OOK-8x8,587.5,660.0,-72.5,-78.8,-66.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,QR/Aztec-style,587.5,300.0,287.5,281.2,293.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,NestedTexture-inspired (Salvi22),587.5,360.0,227.5,221.2,233.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,QCD-style-inspired (Vasantha22),587.5,600.0,-12.5,-18.8,-6.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,Overlay-inspired (Nishimoto12),587.5,360.8,226.7,216.6,236.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,QCD-OCC (paper frame),587.5,63.0,524.5,511.3,537.5,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),2.5,48-bit,HNCSM v2-base-only,587.5,600.0,-12.5,-18.8,-6.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,HNCSM v2-CS,406.8,44.4,362.4,342.6,380.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,HNCSM,406.8,126.6,280.2,261.4,298.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,HNCSM base-only,406.8,119.5,287.3,268.8,305.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,CSK802-8,406.8,0.0,406.8,388.2,424.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,CSK802-4,406.8,0.0,406.8,388.2,424.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,OOK-8x8,406.8,528.1,-121.3,-148.6,-94.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,QR/Aztec-style,406.8,248.1,158.7,139.8,177.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,NestedTexture-inspired (Salvi22),406.8,211.1,195.7,177.4,213.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,QCD-style-inspired (Vasantha22),406.8,502.2,-95.4,-117.6,-73.8,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,Overlay-inspired (Nishimoto12),406.8,163.7,243.1,223.2,261.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,QCD-OCC (paper frame),406.8,0.0,406.8,388.2,424.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,native,HNCSM v2-base-only,406.8,493.2,-86.4,-105.6,-67.8,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,HNCSM v2-CS,406.8,45.1,361.7,342.1,379.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,HNCSM,406.8,55.2,351.6,331.2,368.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,HNCSM base-only,406.8,119.5,287.3,268.8,305.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,CSK802-8,406.8,2.5,404.3,385.5,421.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,CSK802-4,406.8,26.0,380.8,361.8,398.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,OOK-8x8,406.8,470.2,-63.4,-86.8,-40.2,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,QR/Aztec-style,406.8,248.1,158.7,139.8,177.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,NestedTexture-inspired (Salvi22),406.8,285.5,121.3,102.1,140.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,QCD-style-inspired (Vasantha22),406.8,502.2,-95.4,-117.6,-73.8,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,Overlay-inspired (Nishimoto12),406.8,181.4,225.4,203.3,246.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,QCD-OCC (paper frame),406.8,4.2,402.6,384.6,420.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.0,48-bit,HNCSM v2-base-only,406.8,493.2,-86.4,-105.6,-67.8,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,HNCSM v2-CS,317.4,21.6,295.8,275.4,315.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,HNCSM,317.4,118.9,198.5,179.3,217.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,HNCSM base-only,317.4,117.1,200.3,180.7,219.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,CSK802-8,317.4,0.0,317.4,297.6,336.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,CSK802-4,317.4,0.0,317.4,297.6,336.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,OOK-8x8,317.4,5.5,311.9,292.6,331.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,QR/Aztec-style,317.4,26.4,291.0,270.9,310.5,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,NestedTexture-inspired (Salvi22),317.4,96.2,221.2,202.0,240.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,QCD-style-inspired (Vasantha22),317.4,273.0,44.4,24.6,64.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,Overlay-inspired (Nishimoto12),317.4,220.1,97.3,76.2,118.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,QCD-OCC (paper frame),317.4,0.0,317.4,297.6,336.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,native,HNCSM v2-base-only,317.4,263.4,54.0,36.0,72.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,HNCSM v2-CS,317.4,21.6,295.8,275.4,315.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,HNCSM,317.4,50.3,267.1,244.6,287.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,HNCSM base-only,317.4,117.1,200.3,180.7,219.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,CSK802-8,317.4,0.0,317.4,297.6,336.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,CSK802-4,317.4,4.1,313.3,293.9,332.5,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,OOK-8x8,317.4,22.6,294.8,275.6,313.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,QR/Aztec-style,317.4,26.4,291.0,270.9,310.5,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,NestedTexture-inspired (Salvi22),317.4,50.0,267.4,246.2,288.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,QCD-style-inspired (Vasantha22),317.4,273.0,44.4,24.6,64.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,Overlay-inspired (Nishimoto12),317.4,280.6,36.8,12.8,60.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,QCD-OCC (paper frame),317.4,0.6,316.8,297.0,336.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),3.5,48-bit,HNCSM v2-base-only,317.4,263.4,54.0,36.0,72.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,HNCSM v2-CS,154.2,39.0,115.2,98.4,132.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,HNCSM,154.2,87.4,66.8,50.3,83.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,HNCSM base-only,154.2,88.6,65.6,49.1,82.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,CSK802-8,154.2,0.0,154.2,138.6,169.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,CSK802-4,154.2,0.0,154.2,138.6,169.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,OOK-8x8,154.2,3.1,151.1,135.4,167.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,QR/Aztec-style,154.2,1.8,152.4,136.8,168.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,NestedTexture-inspired (Salvi22),154.2,27.5,126.7,110.3,143.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,QCD-style-inspired (Vasantha22),154.2,367.2,-213.0,-235.8,-190.8,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,Overlay-inspired (Nishimoto12),154.2,116.9,37.3,20.5,54.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,QCD-OCC (paper frame),154.2,0.0,154.2,138.6,169.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,native,HNCSM v2-base-only,154.2,349.8,-195.6,-215.4,-174.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,HNCSM v2-CS,154.2,39.0,115.2,98.4,132.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,HNCSM,154.2,34.6,119.6,102.1,136.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,HNCSM base-only,154.2,88.6,65.6,49.1,82.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,CSK802-8,154.2,0.0,154.2,138.6,169.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,CSK802-4,154.2,3.5,150.7,135.0,166.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,OOK-8x8,154.2,7.1,147.1,131.2,163.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,QR/Aztec-style,154.2,1.8,152.4,136.8,168.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,NestedTexture-inspired (Salvi22),154.2,2.2,152.0,136.2,167.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,QCD-style-inspired (Vasantha22),154.2,367.2,-213.0,-235.8,-190.8,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,Overlay-inspired (Nishimoto12),154.2,106.3,47.9,29.0,66.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,QCD-OCC (paper frame),154.2,0.0,154.2,138.6,169.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,sweep (run_phys),4.0,48-bit,HNCSM v2-base-only,154.2,349.8,-195.6,-215.4,-174.0,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,HNCSM v2-CS,592.9,187.2,405.7,387.3,423.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,HNCSM,592.9,201.5,391.4,375.6,406.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,HNCSM base-only,592.9,120.0,472.9,468.1,477.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,CSK802-8,592.9,0.0,592.9,588.1,597.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,CSK802-4,592.9,18.5,574.4,562.1,584.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,OOK-8x8,592.9,780.0,-187.1,-191.9,-182.9,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,QR/Aztec-style,592.9,300.0,292.9,288.1,297.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,NestedTexture-inspired (Salvi22),592.9,240.0,352.9,348.1,357.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,QCD-style-inspired (Vasantha22),592.9,597.6,-4.7,-9.5,-0.4,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,Overlay-inspired (Nishimoto12),592.9,266.2,326.7,319.9,333.5,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,QCD-OCC (paper frame),592.9,0.0,592.9,588.1,597.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,native,HNCSM v2-base-only,592.9,598.8,-5.9,-10.9,-1.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,HNCSM v2-CS,592.9,193.0,399.9,381.7,418.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,HNCSM,592.9,224.8,368.1,347.5,387.8,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,HNCSM base-only,592.9,120.0,472.9,468.1,477.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,CSK802-8,592.9,79.1,513.8,500.1,527.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,CSK802-4,592.9,226.1,366.8,344.8,386.9,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,OOK-8x8,592.9,660.0,-67.1,-71.9,-62.9,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,QR/Aztec-style,592.9,300.0,292.9,288.1,297.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,NestedTexture-inspired (Salvi22),592.9,360.0,232.9,228.1,237.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,QCD-style-inspired (Vasantha22),592.9,597.6,-4.7,-9.5,-0.4,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,Overlay-inspired (Nishimoto12),592.9,361.2,231.7,221.9,241.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,QCD-OCC (paper frame),592.9,60.6,532.3,519.4,544.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,2.5,48-bit,HNCSM v2-base-only,592.9,598.8,-5.9,-10.9,-1.7,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,HNCSM v2-CS,421.8,37.8,384.0,365.4,403.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,HNCSM,421.8,128.3,293.5,276.1,310.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,HNCSM base-only,421.8,120.0,301.8,285.0,318.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,CSK802-8,421.8,0.0,421.8,405.0,438.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,CSK802-4,421.8,0.0,421.8,405.0,438.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,OOK-8x8,421.8,535.9,-114.1,-141.8,-87.2,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,QR/Aztec-style,421.8,252.6,169.2,151.8,186.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,NestedTexture-inspired (Salvi22),421.8,214.1,207.7,190.9,223.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,QCD-style-inspired (Vasantha22),421.8,523.2,-101.4,-121.8,-80.4,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,Overlay-inspired (Nishimoto12),421.8,156.7,265.1,246.4,282.7,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,QCD-OCC (paper frame),421.8,0.0,421.8,405.0,438.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,native,HNCSM v2-base-only,421.8,495.6,-73.8,-92.4,-54.6,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,HNCSM v2-CS,421.8,38.5,383.3,364.6,402.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,HNCSM,421.8,70.6,351.2,331.0,370.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,HNCSM base-only,421.8,120.0,301.8,285.0,318.0,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,CSK802-8,421.8,2.1,419.7,402.9,436.1,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,CSK802-4,421.8,21.7,400.1,383.3,416.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,OOK-8x8,421.8,476.3,-54.5,-78.7,-31.2,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,QR/Aztec-style,421.8,252.6,169.2,151.8,186.3,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,NestedTexture-inspired (Salvi22),421.8,290.5,131.3,112.9,148.6,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,QCD-style-inspired (Vasantha22),421.8,523.2,-101.4,-121.8,-80.4,v2 < X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,Overlay-inspired (Nishimoto12),421.8,168.8,253.0,231.9,273.2,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,QCD-OCC (paper frame),421.8,3.6,418.2,401.4,434.4,v2 > X
+IMX174,P33,oracle,fixed 1/1500,1/128,claims/E2,3.0,48-bit,HNCSM v2-base-only,421.8,495.6,-73.8,-92.4,-54.6,v2 < X

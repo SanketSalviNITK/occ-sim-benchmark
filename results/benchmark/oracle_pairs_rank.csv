@@ -1,0 +1,8 @@
+seeds,distance_m,v2_oracle_bps,v2_rank_native,best,best_bps
+sweep (run_phys),1.0,1020.0,5,CSK802-8,2580.0
+sweep (run_phys),1.5,996.1,5,CSK802-8,2082.1
+sweep (run_phys),2.0,694.9,6,CSK802-4,1209.6
+sweep (run_phys),2.5,587.5,4,OOK-8x8,780.0
+sweep (run_phys),3.0,406.8,4,OOK-8x8,528.1
+sweep (run_phys),3.5,317.4,1,QCD-style-inspired (Vasantha22),273.0
+sweep (run_phys),4.0,154.2,3,QCD-style-inspired (Vasantha22),367.2
