@@ -31,4 +31,8 @@ def test_code_key_fallback(tmp_path):
     k1 = code_key(root=str(tmp_path), gh='unknown')
     assert k1.startswith('src-') and k1 == code_key(root=str(tmp_path), gh='unknown')
     (tmp_path / 'rx' / 'm.py').write_text('x=2\n')
-    assert code_key(root=str(tmp_path), gh='unknown') != k1
+    k2 = code_key(root=str(tmp_path), gh='unknown'); assert k2 != k1
+    (tmp_path / 'config.py').write_text('SEED = 1\n')          # benchmark-r5: root config.py is part of the key
+    k3 = code_key(root=str(tmp_path), gh='unknown'); assert k3 != k2
+    (tmp_path / 'config.py').write_text('SEED = 2\n')
+    assert code_key(root=str(tmp_path), gh='unknown') != k3

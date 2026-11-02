@@ -21,14 +21,16 @@ detect_corners; RNG consumption is unchanged, so oracle runs are CRN-paired with
   seed{A,B}: replication with master seed SEEDS[x] (tune = master + 1_000_003): P33 d3.0/3.25/3.5 x T_EXPS x {1/128,1/256}
              (C2 points + E2 worst cases + E1 ablation incl. decomposition variants), and P25/P42 d3.0/3.25/3.5 at 1/1500, 1/128;
              eval 1000 + tune 200 everywhere.
-Chunks are checkpointed in $CKPT (default <repo>/.ckpt/<group>/), keyed by git hash (or sha256 of tx/rx/channel/experiments/occbench sources if git is unavailable) + work tuple; a re-run of the same code skips finished chunks."""
+Chunks are checkpointed in $CKPT (default <repo>/.ckpt/<group>/), keyed by git hash (or sha256 of config.py + tx/rx/channel/experiments/occbench sources if git is unavailable) + work tuple; a re-run of the same code skips finished chunks."""
 def code_key(root=None, gh=None):
-    """Checkpoint code key: git hash, or (if git_hash() is 'unknown') sha256 over tx/, rx/, channel/, experiments/, occbench/ .py sources."""
+    """Checkpoint code key: git hash, or (if git_hash() is 'unknown') sha256 over root config.py + tx/, rx/, channel/, experiments/, occbench/ .py sources."""
     from experiments.run import git_hash
     gh = git_hash() if gh is None else gh
     if gh != 'unknown': return gh
     root = root or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     h = hashlib.sha256()
+    fp = os.path.join(root, 'config.py')   # root config.py (seeds) is imported by review_r1 -> part of the key (benchmark-r5)
+    if os.path.exists(fp): h.update(b'config.py'); h.update(open(fp, 'rb').read())
     for d in ('tx', 'rx', 'channel', 'experiments', 'occbench'):
         for dp, dn, fs in sorted(os.walk(os.path.join(root, d))):
             dn.sort()
