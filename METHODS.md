@@ -99,12 +99,12 @@ All schemes reserve 4 corner pilots: TL = W, TR = R, BL = G, BR = B. That leaves
 | CSK-$M$ | palette {K,R,G,B,Y,C,M,W} (M=8) or {K,R,G,B} (M=4), RGB on/off keying | $60\log_2M$ = 180 / 120 |
 | QR/Aztec-style | 2×2 finders in 3 corners; 49 modules; Hamming(7,4) | $7\times4=28$ |
 | NestedTexture-inspired | per quadrant: 11-LED ring, 16-word codebook (greedy max-min Hamming, seed 1) + inner 2×2 (all 16 words) | $4(4+4)=32$ |
-| QCD-style-inspired | 12 non-pilot 2×2 cells, each a permutation of (R,G,B,K), 16 of the 24 used (`last16` after tuning) | $12\times4=48$ |
+| QCD-style-inspired | 12 non-pilot 2×2 cells, each a permutation of (R,G,B,K), 16 of the 24 used (`last16` after ideal-channel tuning; physical channel/benchmark: `maxdist-0`, §8.1) | $12\times4=48$ |
 | Overlay-inspired | 12 cells, monochrome $v=0.5+a_1 s_1+a_2 \mathbf s_2$, $s_1=\pm1$ (1 bit), $\mathbf s_2\in$ 4 zero-mean ±1 patterns (2 bits); tuned $a_1=a_2=0.25$ | $12+24=36$ |
 | HNCSM v1 | per quadrant: constant-weight-8 word over 15 LEDs (16-word codebook, seed 2); each lit LED ∈ {W,R,G,B} | $16+4\cdot8\cdot2=80$ |
 | HNCSM base-only | v1 textures, all white | 16 |
 | HNCSM v2 | QCD base; each lit LED at intensity 1 or $\alpha=0.5$ | $48+36=84$ |
-| HNCSM v2-CS | QCD base; each lit primary $c$ takes one of $c$, $(1-\delta)c+\delta\,\text{next}$, $(1-\delta)c+\delta\,\text{prev}$, $(1-2\delta)c+\delta(\text{next}+\text{prev})$; $\delta=0.2$, 2 bits | $48+36b=120$ |
+| HNCSM v2-CS | QCD base; each lit primary $c$ takes one of $c$, $(1-\delta)c+\delta\,\text{next}$, $(1-\delta)c+\delta\,\text{prev}$, $(1-2\delta)c+\delta(\text{next}+\text{prev})$; $\delta=0.2$, 2 bits (ideal channel; physical channel/benchmark: $\delta=0.3$, §8.1) | $48+36b=120$ |
 
 Power-neutrality: every v2-CS variant has channel sum 1, which `test_v2cs_leak_is_power_neutral` checks. The class docstring still describes the older non-neutral leak ("primary kept at FULL drive"); the code is the power-neutral version.
 

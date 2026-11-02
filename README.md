@@ -58,8 +58,9 @@ zlib.crc32 (the old runs used Python's salted `hash()` and were NOT reproducible
   (GENIE_SEED), then is reported with the evaluation-seed result of that choice.
 - **Tuning (see docs/BENCHMARK_PROTOCOL.md item 4):** exposure is tuned over T_EXPS for all schemes; `tune.py` additionally
   tries 6 configs for each of v2-CS (δ∈{0.1,0.2,0.3}×{1,2} bits), QCD-style (permutation subset) and overlay (a1/a2 split);
-  the other schemes get no scheme-parameter tuning, so no equal-tuning-effort claim is made. Run on TUNE_SEED over 7 distances × 200 frames. Chosen: v2-CS δ=0.2, 2 bits;
-  QCD subset `last16`; overlay a1=a2=0.25 (at the edge of the grid).
+  the other schemes get no scheme-parameter tuning, so no equal-tuning-effort claim is made. Run on TUNE_SEED over 7 distances × 200 frames. Chosen on the **ideal channel**
+  (`results/tuned_params.json`, used only by `all_schemes()`): v2-CS δ=0.2, 2 bits; QCD subset `last16`; overlay a1=a2=0.25 (at the edge of the grid).
+  **Physical channel / all benchmark runs** (`results/tuned_params_phys.json`, loaded by `all_schemes_phys()`): v2-CS δ=0.3, 2 bits; QCD subset `maxdist-0`; overlay (0.35, 0.15).
 - **Ambient sweep:** at 2.5 m with non-uniform light (random linear gradient 0.4–1.6× plus a Gaussian hotspot).
 
 ## [SUPERSEDED] Claims (Research-Validator round 2, audit-r2) — historical only
