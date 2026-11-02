@@ -25,4 +25,5 @@ else echo "usage: $0 tables|full"; exit 2; fi
 $PY -m pytest -q tests
 $PY -m experiments.review_r1_report e1 e2 e3 e1_decomp
 $PY -m experiments.bench_report oracle ablation seeds e3 c2_binding > /dev/null
+$PY -m experiments.bench_oracle_pairs > /dev/null
 echo "tables written to results/review_r1/ and results/benchmark/"
