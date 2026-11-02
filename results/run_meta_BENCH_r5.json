@@ -1,0 +1,18 @@
+{
+ "tag": "benchmark-r5",
+ "base": "benchmark-r4 a532cff",
+ "git": "fe561e3aff46876b5770fc91b50a99a60466122d",
+ "utc": "2026-11-02T03:30:50.330006+00:00",
+ "tests": "85 passed (OMP_NUM_THREADS=1)",
+ "new_files": [
+  "results/benchmark/oracle_pairs.csv",
+  "results/benchmark/oracle_pairs_rank.csv",
+  "results/benchmark/CLAIMS_r5.md",
+  "results/run_meta_REVIEW_idcheck_orig_dirty.json"
+ ],
+ "regenerated": [
+  "run_meta_REVIEW_idcheck.json at clean 231abcb; review_idcheck.npz byte-identical"
+ ],
+ "verified_unchanged": "bench_report c2_binding seeds re-run: c2_binding_margins.csv, seed_replication.csv, seed_spread.csv byte-identical",
+ "physics_decoder_changes": "none (tx/ rx/ channel/ occbench/ config.py untouched)"
+}
