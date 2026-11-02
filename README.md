@@ -152,7 +152,7 @@ Metrics: see the evaluation protocol above.
 | OOK-8x8 (MIMO-OOK / LiCamIoT-like) | 60 | 96.0 | white on/off per LED |
 | QR/Aztec-style | 28 | 106.3 | 2×2 finders in 3 corners, Hamming(7,4) on 49 modules |
 | NestedTexture-inspired (Salvi & Geetha, IEEE Access 2022) | 16 outer + 16 inner | 93.8 | **assumption** (abstract only): per quadrant 11-LED outer ring (16-word codebook) + 2×2 inner pattern; independent template matching |
-| QCD-style-inspired (Vasantha & Salvi, Appl. Sci. 2022) | 48 | 42.0 | **assumption** (abstract only): colour-neutral 2×2 cells (one R, G, B, dark LED); **tuned subset = `last16`** of the 24 permutations; 12 cells; ML decoding |
+| QCD-style-inspired (Vasantha & Salvi, Appl. Sci. 2022) | 48 | 42.0 | **assumption** (abstract only): colour-neutral 2×2 cells (one R, G, B, dark LED); **tuned subset = `last16`** (ideal channel; physical channel/benchmark: `maxdist-0`, `results/tuned_params_phys.json`) of the 24 permutations; 12 cells; ML decoding |
 | Overlay-inspired (Nishimoto et al. 2012, doi:10.1109/GLOCOMW.2012.6477757) | 12 L1 + 24 L2 | 78.2 | **assumption** (abstract only): monochrome; L1 = 2×2 block mean, L2 = zero-mean ± pattern; intensity 0.5 + a1·s1 + a2·s2 with **tuned a1 = a2 = 0.25** (edge of tuning grid) |
 | Adaptive-CSK genie (Onodera 2021-style bound) | – | as chosen | per point, best of {OOK, CSK-4, CSK-8} chosen on separate seeds, reported on evaluation seeds |
 
