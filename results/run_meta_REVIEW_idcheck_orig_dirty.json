@@ -1,0 +1,23 @@
+{
+"group": "idcheck",
+"git": "cee4082a8feb80facbc5fe9b264a51426eb088f2-dirty",
+"utc": "2026-10-31T16:38:23.008063+00:00",
+"elapsed_s": 14,
+"procs": 4,
+"jobs": [
+{
+"key": "P33|distance_m|10|eval|check",
+"cond": {
+"distance_m": 3.0
+},
+"preset": "imx174",
+"pmod": {},
+"pref": 33.011,
+"seed": 2129780528,
+"symbols": 1000,
+"only": [
+"HNCSM v2"
+]
+}
+]
+}
