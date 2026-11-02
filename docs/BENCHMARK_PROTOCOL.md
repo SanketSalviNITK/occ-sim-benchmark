@@ -20,10 +20,12 @@ figure must carry the "-inspired" label. CSK802-4/8 are IEEE 802.15.7 CIE-xy CSK
 3. **Disjoint tuning seeds.** Any per-scheme choice (exposure from T_EXPS = {1/4000, 1/1500, 1/500, 1/250}; QCD subset;
    Overlay amplitudes; genie line-up from GENIE_SET; finder k) is made on tune seeds (SEED + 1 000 003), evaluated on eval seeds.
 4. **Tuning grids (as run; NOT equal effort).** Exposure: every scheme gets the same 4-value grid T_EXPS (tuned rows only).
-   Scheme-internal parameters (`experiments/tune.py`, 6 configs each, tune seeds, 200 frames × distances {0.75,1,1.5,2,2.5,3} m physical):
-   - HNCSM v2-CS: delta ∈ {0.1, 0.2, 0.3} × bits/lit LED ∈ {1, 2} (plus the earlier `tune_cs.py` sweep on the ideal channel);
-   - QCD-style-inspired: subset ∈ {first16, last16, maxdist-0..3} → last16;
-   - Overlay-inspired: (a1, a2) ∈ {(0.4,0.1), (0.35,0.15), (0.3,0.2), (0.25,0.25), (0.25,0.15), (0.35,0.1)} → (0.25, 0.25).
+   Scheme-internal parameters (`experiments/tune.py --channel physical`, 6 configs each, tune seeds, 200 frames × distances {0.75,1,1.5,2,2.5,3} m physical;
+   result `results/tuned_params_phys.json`, loaded by `tx.schemes.all_schemes_phys()` → `experiments.audit_r1.lineup()` for every benchmark group):
+   - HNCSM v2-CS: delta ∈ {0.1, 0.2, 0.3} × bits/lit LED ∈ {1, 2} → δ = 0.3, 2 bits/LED (plus the earlier `tune_cs.py` sweep on the ideal channel);
+   - QCD-style-inspired: subset ∈ {first16, last16, maxdist-0..3} → maxdist-0;
+   - Overlay-inspired: (a1, a2) ∈ {(0.4,0.1), (0.35,0.15), (0.3,0.2), (0.25,0.25), (0.25,0.15), (0.35,0.1)} → (0.35, 0.15).
+   - (benchmark-r5 correction: r0–r4 listed last16 / (0.25, 0.25), which are the ideal-channel values in `results/tuned_params.json`, used only by `all_schemes()`.)
    - Not tuned on any recorded grid: HNCSM v1/v1-base, HNCSM v2 and its levels (author design), NestedTexture-inspired,
      CSK802-4/8, OOK, QR/Aztec-style, QCD-OCC (paper frame).
    Tuning effort is therefore not demonstrably equal across schemes; no equal-effort claim is made.
@@ -40,6 +42,12 @@ figure must carry the "-inspired" label. CSK802-4/8 are IEEE 802.15.7 CIE-xy CSK
    positions. Detector loss = oracle − detector; modulation loss = what remains (`oracle_vs_detector*.csv`).
 8. **Seed replication.** Two further disjoint master seeds (A = 31415926, B = 27182818, each with its own tuning seeds).
    A claim whose CI changes sign across seed sets is downgraded (`seed_spread.csv`).
+9. **Canonical seed set for C2 (benchmark-r5).** Headline C2 numbers (3.0, 3.25, 3.5 m) are all taken from one set: the **claims/E2** seeds
+   (`config.cond_seed('d<d>', 0, SEED)`, eval 1000 + held-out tune 200; the seeds of the audit_r1 `claims` group, i.e. the confirmatory set
+   built for the claim conditions; `c2_binding_margins.csv` rows `claims/E2`). The run_phys sweep seeds (the exploratory distance sweep on which
+   C2 was first observed) and the replication sets A, B are reported only as robustness ranges with their CIs (`c2_binding_margins.csv`,
+   `seed_replication.csv`). Note: this choice was made at r5, after all sets had been run; it is not a pre-registration. Oracle-corner
+   margins: `oracle_pairs.csv` (claims/E2 seeds at 2.5/3.0 m; sweep seeds at 1.0–4.0 m step 0.5; 3.25 m not run).
 
 ## IEEE 802.15.7 OCC PHY modes
 Not implemented. The 802.15.7-2018 OCC PHYs (e.g. UFSOOK, Twinkle-VPPM, S2-PSK, HS-PSK, offset-VPPM, MIMO/A-QL, HA-QL,
