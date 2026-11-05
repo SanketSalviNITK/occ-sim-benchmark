@@ -7,7 +7,7 @@ means with 95 % CIs. Unless stated: IMX174, P33, brightness 1/128, exposure 1/15
 
 ## C2 (IMX174) — qualitative claims unchanged; Holm softens two narrow 3.5 m positives
 
-The r5 C2 wording (CLAIMS_r5.md) remains the claim text. Binding margins on claims/E2 at P33 are reproduced by the
+**[r7] Superseded:** the r5 C2 wording is no longer the claim text; the claim text is the r7 C2 wording in `CLAIMS_r7.md` (audit §3), also in README/METHODS/SUMMARY. Binding margins on claims/E2 at P33 are reproduced by the
 r6 sensitivity default rows and by the PhyCom lineup run (same CRN seeds):
 
 | # | Number | File | Line | Notes |
@@ -24,10 +24,12 @@ Source: `results/benchmark/r6/sensitivity_tornado.csv` (+ `.png`/`.pdf`).
 
 | Factor levels that **keep** C2 positive at both 3.0 and 3.25 m | Levels that **flip** C2 to negative (or n.s.) |
 |---|---|
-| lambert_m 0.65/1.56; f_number f/1.8; bits 10/12; cfa×0.5; t_row 0/10 µs; f_tx 10/20; reflectance 0.2/0.8; jitter 0/±5 %; brightness 1/64 | f_mm 4/8 mm; f_number f/2.8; focus_m 0.5/2.0 m; brightness 1/256; cfa×2 (n.s. at 3.0 m, negative at 3.25 m) |
+| f_number f/1.8; bits 10/12; cfa×0.5; t_row 0/10 µs; f_tx 10/20; reflectance 0.2/0.8; jitter 0/±5 %; brightness 1/64 | f_mm 4/8 mm; f_number f/2.8; focus_m 0.5/2.0 m; brightness 1/256; cfa×2 (n.s. at 3.0 m, negative at 3.25 m) |
+
+**[r7]** lambert_m 0.65/1.56 is listed in neither column: on axis (yaw 0, every C2 run) it has **no effect by construction** (cos^m 0 = 1; arrays identical to default). At 30° yaw it changes no verdict (`r7/lambert_yaw30.csv`).
 
 Largest |Δ| (tornado): f_mm=8 mm (Δ −878.6 at 3.0 m; −378.2 at 3.25 m); focus_m=0.5 m; brightness 1/256; f_number f/2.8.
-Optics (focal length, f-number, focus) and deep dimming dominate; Lambertian order, ADC bits, t_row, reflectance and
+Optics (focal length, f-number, focus), CFA crosstalk ×2 and deep dimming dominate; ADC bits, t_row, reflectance and
 jitter within the stated brackets do not overturn C2.
 
 ## Second geometries
@@ -93,7 +95,7 @@ Qualitative claim unchanged (C1/C2 do not transfer on `imx219f`). The sole r5 ex
 | Multiplicity | none | Holm over 56-claim family |
 | QCD-OCC | one point (BER 6.0e-3 vs 1.13e-2) | 15-cell lux×brightness grid + DataPort/E-VLC attempt |
 | PhyCom baselines | — | CSK-16-inspired (Singh 2018), SM-PAM-inspired (Leblebici 2026) |
-| C2 3.0/3.25 m claim | positive | positive (unchanged); survives ASSUMED brackets except optics/focus/1/256 |
+| C2 3.0/3.25 m claim | positive | positive (unchanged); survives ASSUMED brackets except optics (f_mm, f/2.8, focus), cfa×2 and 1/256 (lambert_m untested on axis: no effect by construction) [r7-corrected] |
 | IMX219 m3.5 oracle+tuned | +23.4 positive (unadj.) | n.s. after Holm |
 | Tests | 85 | see SUMMARY |
 | Tag | benchmark-r5 (8886c77a) | benchmark-r6 |
