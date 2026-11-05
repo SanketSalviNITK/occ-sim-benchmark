@@ -42,7 +42,7 @@ def decode_symbol(s, drives, cond, rng, p):
         img = ph.capture(e, rng, p, t_exp)
         c = find_corners(img, p) if not cond.get('genie_corners') else corners_true
         if c is None: continue
-        smp, dk = rectify_and_sample(img, c)
+        smp, dk = rectify_and_sample(img, c, win=getattr(s, 'sample_win', None))   # None -> WIN (unchanged default)
         b = s.decode(smp, dk); r = residual(s, smp, dk, b)
         if best is None or r < best[0]:
             ys = slice(int(max(corners_true[:, 1].min(), 0)), int(corners_true[:, 1].max()) + 1)

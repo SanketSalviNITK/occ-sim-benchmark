@@ -383,6 +383,17 @@ class QCDOCC(Scheme):
         idx = classify(np.array([s[p] for p in self.pos]), self.PAL, M, dk)
         return sum((i2b(i, 3) for i in idx), [])
 
+class QCDOCCWin6(QCDOCC):
+    """benchmark-r9 OPT-IN corrected QCD-OCC receiver (reviewer must-fix 2). Identical frame, encoder and nearest-colour
+    decision; only the per-LED sampling window is 6x6 instead of 4x4 canonical px (G = 8 px per LED). Root cause of the
+    r7/r8 ~1.5e-2 floor: at 2 m the LED pitch is ~4.2 sensor px and the lit disc ~2.5 px, so a 4x4 canonical window
+    covers only ~2x2 sensor px, i.e. ~1 R and ~1 B Bayer site; Malvar-He-Cutler interpolation of the sparse R/B planes
+    then gives a phase-dependent colour error that is proportional to signal (brightness-independent). R is worst
+    (lowest QE x CFA response). Noise-free (no shot/read noise, no clipping) it alone gives 1.88e-2 BER, 77 % R-bit.
+    The default QCDOCC is unchanged so all earlier numbers stay reproducible."""
+    name = 'QCD-OCC (paper frame, win6 rx)'
+    sample_win = 6
+
 def all_schemes_phys(tuned=None):
     """Same line-up as all_schemes(), with the RGB-keying CSK baselines replaced by IEEE 802.15.7 CIE-xy CSK."""
     if tuned is None:

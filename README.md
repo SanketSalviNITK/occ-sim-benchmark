@@ -11,7 +11,28 @@ make full          # re-simulate all benchmark groups (many CPU-hours; resumable
 Protocol, fairness rules, release statement, 802.15.7 OCC-PHY rationale and limitations: `docs/BENCHMARK_PROTOCOL.md`.
 IMX219 parameters with sources: `docs/IMX219_PARAMETERS.md`. External anchors: `docs/ANCHORS.md`.
 Results: `results/benchmark/SUMMARY.md`; reviewer response table: `docs/RESPONSE_TABLE.md`.
-Release status: local only (not pushed, no DOI); licence undecided (`LICENSE_TODO`); citation metadata `CITATION.cff` (authors TODO).
+Release status: benchmark-r9 release candidate, local only (not yet pushed, DOI pending). Licence: MIT (`LICENSE`). Citation: `CITATION.cff` / `.zenodo.json`.
+## Install
+Requires Python 3.13 (tested 3.13.5) on Linux/macOS; ~130 MB disk for the repository incl. shipped results.
+```bash
+git clone https://github.com/SanketSalviNITK/occ-sim-benchmark.git && cd occ-sim-benchmark
+python3.13 -m venv .venv && .venv/bin/pip install -r requirements.lock
+make test                      # 111 unit tests
+```
+## Reproduce
+```bash
+./reproduce.sh tables          # minutes: sha256-verify shipped data (results/MANIFEST.sha256), run tests, regenerate tables from npz
+./reproduce.sh full            # many CPU-hours: re-simulate every benchmark group (resumable, CKPT=.ckpt), then tables
+OMP_NUM_THREADS=1 PROCS=8 .venv/bin/python -m experiments.r9_qcd_fix   # benchmark-r9 QCD-OCC floor analysis (minutes)
+```
+Additive revision runners (r6–r9) are listed at the end of `reproduce.sh`. All seeds are fixed in `config.py`; every run writes a `run_meta*.json`.
+## Citation
+If you use this benchmark please cite it via `CITATION.cff` (GitHub "Cite this repository") or the Zenodo DOI
+`10.5281/zenodo.XXXXXXX` (placeholder until the first release). Re-implemented third-party schemes are labelled
+"-inspired"; please also cite the original papers given in their docstrings.
+## License
+Code and shipped results: MIT (`LICENSE`), © 2026 Sanket Salvi. Python dependencies (not vendored) are under permissive licences (BSD/MIT/Apache-2.0/PSF/MIT-CMU).
+
 ## Claims (C2: benchmark-r8; IMX219: benchmark-r5)
 > **Claims status r8:** the C2 (IMX174) wording below is the strictly scoped wording of the r7 audit (§3): 1/36 factorial cells, relative only, with the R-V1 σ_mult results filled in; change log `results/benchmark/CLAIMS_r7.md` (r8 section).
 > **Claims status r3→r5:** the benchmark-r2 claims were unchanged through benchmark-r3 and benchmark-r4 (only metas, manifest and wording tidy-ups). In **benchmark-r5** the C2 numbers were re-stated on one canonical seed set (claims/E2) and the oracle-corner numbers were re-sourced (`oracle_pairs.csv`); the qualitative claims are unchanged. Old→new numbers: `results/benchmark/CLAIMS_r5.md`.
@@ -31,6 +52,8 @@ IMX219 scope: all IMX219 results use the current preset (`imx219f`), photometric
 
 Not claimed: that v2's modulation outperforms at 3.0 m; any robust or unqualified C2; that C1/C2 fail on real or calibrated IMX219 hardware.
 
+**QCD-OCC error floor (benchmark-r9):** the ≈1.5e-2 QCD-OCC BER floor is a Bayer under-sampling artefact of the 4×4 sampling window; an opt-in `QCDOCCWin6` receiver removes it (≈1e-3 at 1/160–1/1024) and C2/rankings are unchanged. Details: `results/benchmark/CLAIMS_r7.md` (R9).
+
 Re-implemented schemes are labelled **-inspired** (abstract-based re-implementations).
 
 ---
@@ -39,7 +62,7 @@ Re-implemented schemes are labelled **-inspired** (abstract-based re-implementat
 
 ## Reproduce (exact)
 ```bash
-cd /workspace/occ_sim
+cd occ-sim-benchmark   # repository root
 python3 -m venv .venv && .venv/bin/pip install numpy opencv-python-headless matplotlib pandas pytest
 .venv/bin/python -m pytest -q tests                                   # 78 tests
 .venv/bin/python -m experiments.tune                                  # held-out-seed tuning -> results/tuned_params.json

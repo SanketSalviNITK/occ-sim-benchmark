@@ -1,10 +1,23 @@
 cff-version: 1.2.0
-message: "If you use this benchmark, please cite it as below. (TODO: authors and DOI before release.)"
+message: "If you use this benchmark, please cite it as below."
 title: "occ_sim: an open, physics-grounded benchmark of LED-matrix optical camera communication schemes"
-version: "benchmark-r8"
-date-released: "TODO"
+version: "benchmark-r9"
+date-released: "2026-11-05"   # RELEASE: update to the GitHub release date
+license: MIT
 authors:
-  - family-names: "TODO"
-    given-names: "TODO"
-license: "TODO (see LICENSE_TODO)"
-repository-code: "TODO"
+  - family-names: "Salvi"
+    given-names: "Sanket"
+    affiliation: "MIT World Peace University (MIT-WPU), Pune, India"
+    orcid: "https://orcid.org/0000-0000-0000-0000"   # RELEASE: replace with the real ORCID iD
+repository-code: "https://github.com/SanketSalviNITK/occ-sim-benchmark"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.XXXXXXX"   # RELEASE: Zenodo concept DOI (minted on first GitHub release)
+    description: "Zenodo concept DOI (all versions)"
+keywords:
+  - optical camera communication
+  - visible light communication
+  - LED matrix
+  - benchmark
+  - simulation
+abstract: "Simulation-only, physics-grounded benchmark (EMVA 1288 sensor model, rolling shutter, Bayer CFA + demosaic, real corner finder) comparing LED-matrix OCC modulation schemes under equal optical power with common random numbers, bootstrap CIs and Holm-corrected claims. Includes shipped per-symbol error arrays, a sha256 manifest and a one-command reproduction script."

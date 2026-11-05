@@ -1,0 +1,19 @@
+{
+"group": "R9 qcd win6",
+"base_commit": "2b1c293",
+"runners": [
+"experiments.r9_qcd_fix",
+"experiments.r9_qcd_c2"
+],
+"procs": 8,
+"omp_threads": 1,
+"outputs": [
+"results/phys_sym/r9_qcdfix.npz",
+"results/phys_sym/r9_qcdc2.npz",
+"results/benchmark/r9/qcd_win6_crn.csv",
+"results/benchmark/r9/qcd_win6_c2.csv",
+"results/benchmark/r9/qcd_floor_noisefree.csv"
+],
+"note": "run from working tree = 2b1c293 + r9 code changes committed as benchmark-r9; no other code change",
+"utc": "2026-11-05T06:52:55.821898+00:00"
+}

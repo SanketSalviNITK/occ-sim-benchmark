@@ -4,7 +4,7 @@
 All code, configuration, seeds, raw per-symbol error arrays (`results/**/*.npz`), run metadata (`run_meta_*.json`, git hash +
 environment) and table generators are contained in this repository, together with a pinned environment (`requirements.lock`)
 and `reproduce.sh` (`tables` / `full`). **benchmark-r0 is a local release candidate: nothing has been pushed or archived
-(no GitHub repo, no Zenodo DOI). No licence has been chosen yet (see `LICENSE_TODO`); authors in `CITATION.cff` are TODO.**
+(no GitHub repo, no Zenodo DOI). benchmark-r9: licence MIT (`LICENSE`, © 2026 Sanket Salvi); author in `CITATION.cff` / `.zenodo.json`; ORCID and DOI are placeholders until release.**
 
 ## Scope and labels
 Simulation only (no hardware). The schemes "NestedTexture-inspired", "QCD-style-inspired" and "Overlay-inspired" are

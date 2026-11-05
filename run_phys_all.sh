@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-cd /workspace/occ_sim
+cd "$(dirname "$0")"
 PY=.venv/bin/python
 $PY -m experiments.run_phys --pref 33.011 --tag _PHYS_P33
 for P in 25 42 60; do $PY -m experiments.run_phys --pref $P --sweeps distance_m --tag _PHYS_P$P; done
