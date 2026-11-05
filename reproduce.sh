@@ -1,5 +1,5 @@
 #!/bin/bash
-# Reproduce benchmark-r6.  Usage: ./reproduce.sh tables   (minutes: verify shipped data, regenerate all tables from npz)
+# Reproduce benchmark-r7.  Usage: ./reproduce.sh tables   (minutes: verify shipped data, regenerate all tables from npz)
 #                                 ./reproduce.sh full     (many CPU-hours: re-simulate every benchmark group, then tables)
 # Runs from this script's directory (never a hard-coded path). Requires Python 3.13 + requirements.lock.
 set -euo pipefail
@@ -31,3 +31,8 @@ echo "tables written to results/review_r1/ and results/benchmark/"
 # --- benchmark-r6 (additive; does not regenerate r5 npz) ---
 # OMP_NUM_THREADS=1 PROCS=7 python -m experiments.revision_r6 sens geo80 geoyaw30 finder valid6 phycom
 # OMP_NUM_THREADS=1 python -m experiments.r6_report boot_stab holm sens geo finder valid6 phycom
+# --- benchmark-r7 (additive; does not regenerate r5/r6 npz) ---
+# OMP_NUM_THREADS=1 PROCS=7 python -m experiments.revision_r7 lamb30 fact
+# OMP_NUM_THREADS=1 python -m experiments.r7_report lamb30 fact plugins
+# OMP_NUM_THREADS=1 PROCS=7 python -m experiments.r7_qcd_plateau      # QCD-OCC BER plateau diagnostic (R8)
+# OMP_NUM_THREADS=1 python -m experiments.r7_spot                       # provenance spot re-run of r6 dirty-meta groups (R6)
