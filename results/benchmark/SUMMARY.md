@@ -1,10 +1,10 @@
-# benchmark-r6 summary (simulation only; local release candidate, not published)
+# benchmark-r7 summary (simulation only; local release candidate, not published)
 
-> **Claims status:** qualitative C2 (IMX174) and IMX219 claims are unchanged from r5. r6 adds a Table-2 ASSUMED
-> sensitivity study, a second panel geometry + yaw geometry, finder failure attribution (incl. 3.25 m oracle),
-> ablation bootstrap-seed stability, Holm–Bonferroni over the claim family, a QCD-OCC validation grid, and two
-> PhyCom-inspired plugin baselines. Holmed IMX219 m3.5 oracle+tuned is n.s. Sourced numbers and change log:
-> `CLAIMS_r6.md` (r5 artefact kept as `CLAIMS_r5.md`).
+> **Claims status (r7):** the C2 (IMX174) wording was rewritten (validator audit of r6, §3): it now carries the optics,
+> geometry, CFA and Holm conditionality, the four-seed-set minimum, the canonical 3.25/3.5 m oracle points, and B = 10000
+> CIs. r7 also re-runs lambert_m at 30° yaw, adds a 36-cell optics × brightness factorial at the C2 points, a QCD-OCC BER
+> plateau diagnostic, the Holm scope statement and a provenance note. IMX219 claims unchanged (m3.5 oracle+tuned n.s. after
+> Holm). Sourced numbers and change log: `CLAIMS_r7.md` (`CLAIMS_r6.md`, `CLAIMS_r5.md` kept as artefacts).
 
 Branch `benchmark`. Tests: 91 pass. Default IMX174 path kept byte-identical (plugins and r6 groups are additive;
 `lineup_r1` unchanged). r6 bootstrap B = 10000, seed 0; 1000 eval + 200 tune symbols per point.
@@ -16,8 +16,8 @@ Claims conditions (d2.5/d3.0/yaw70/blur4), fixed: v2 460 → 560; QCD-style-insp
 Oracle-corner paired margins (`oracle_pairs.csv`, v2 − X, both with oracle corners, P33, 1/1500, 1/128): at 3.0 m v2 is below OOK-8x8
 (claims/E2 seeds −114.1 [−141.8, −87.2]; sweep seeds −121.3 [−148.6, −94.7]) and QCD-style-inspired (claims −101.4 [−121.8, −80.4]; sweep −95.4 [−117.6, −73.8]),
 i.e. 3rd among comparison schemes (4th if the v2-base-only ablation is counted), so the 3.0 m advantage comes from how reliably the shared
-finder locates v2 frames, not from demodulation. At 3.5 m (sweep seeds only) v2 leads every comparison scheme with oracle corners: binding
-+36.8 [12.8, 60.7] vs Overlay-inspired (48-bit); +44.4 [24.6, 64.8] vs QCD-style-inspired (native).
+finder locates v2 frames, not from demodulation. At 3.5 m v2 leads every comparison scheme with oracle corners: sweep seeds binding
++36.8 [12.8, 60.7] vs Overlay-inspired (48-bit), +44.4 [24.6, 64.8] vs QCD-style-inspired (native); canonical claims/E2 seeds (r6) +46.1 [23.9, 68.2] vs Overlay-inspired (48-bit).
 **3.25 m oracle on claims/E2 is now in `r6/oracle_binding_canonical.csv` (r6):** detector +107.6 / oracle −24.0 vs QCD-style (rank 2). The finder is shared across schemes; a bias toward schemes whose edge LEDs are always lit is suspected, not shown.
 IMX219 (current preset imx219f, photometrically uncalibrated; scale-free finder): detector ≈ oracle (v2 697 vs 714; CSK802-8 827 vs 818): detector loss is small after R1.
 
@@ -81,11 +81,27 @@ idcheck at 231abcb (r5, arrays identical). The dirty originals are kept as `run_
 (The r2 text here said e1sweep/e1dec/e2_P33 still carried -dirty hashes; that was superseded at r2/r4.)
 
 ## benchmark-r6 additions — `results/benchmark/r6/`
-- Sensitivity tornado (`sensitivity_tornado.*`): C2 survives Lambertian/bits/t_row/f_tx/reflectance/jitter/1/64;
-  flips negative under f_mm 4–8, f/2.8, focus 0.5/2.0 m, brightness 1/256.
+- Sensitivity tornado (`sensitivity_tornado.*`): C2 stays positive under f/1.8, bits 10/12, cfa×0.5, t_row, f_tx 10/20, reflectance, jitter, brightness 1/64;
+  flips (negative or n.s.) under f_mm 4–8, f/2.8, focus 0.5/2.0 m, brightness 1/256 and **cfa×2** (binding margin +7.0 [−14.3, 28.2] n.s. at 3.0 m, −34.1 [−52.7, −15.5] at 3.25 m; `sensitivity_tornado.csv` lines 14/37; r7 R3).
+  lambert_m is **not** a "keep" factor: on axis (yaw 0, all C2 runs) cos^m(0) = 1, so lambert_m has no effect by construction (r6 arrays identical to default).
+  r7 re-ran it at 30° yaw (`r7/lambert_yaw30.csv`): no verdict changes (3.0 m stays positive, 3.25 m stays negative).
 - Geometry (`geometry_binding.csv`): 80 mm panel loses C2 at 3.0/3.25 m (OOK binds); 30° yaw keeps only 3.0 m positive.
 - Finder (`finder_failure.*`): zero detection failures; gross-error rates drive finder loss; attribution holds at 3.25 m.
 - Stats: ablation n.s. stable on 25 seeds; Holm flips 3 unadjusted positives (incl. IMX219 m3.5 oracle+tuned).
 - QCD-OCC grid (`qcd_validation_grid.csv`): no cell CI contains published 1.13e-2; brightness unidentified + camera mismatch.
-- PhyCom plugins (`phycom_margins.csv`): CSK-16-inspired (Singh 2018) and SM-PAM-inspired (Leblebici 2026) are both well
-  below v2 at C2; binding baseline unchanged.
+- PhyCom plugins (`phycom_margins.csv`, `r7/phycom_plugin_goodput.csv`): CSK-16-inspired (Singh 2018) and SM-PAM-inspired (Leblebici 2026,
+  analytic midpoint thresholds, M = 4 fixed, not tuned) deliver ≈0 bps at 3.0–3.5 m (CSK-16 0.0; SM-PAM 1.56 / 0.0 / 0.0), i.e. they are
+  non-functional at the C2 distances in this harness; "v2 − plugin" there equals v2's own goodput. Binding baseline unchanged.
+
+## benchmark-r7 additions — `results/benchmark/r7/`, `CLAIMS_r7.md`
+- **Provenance note (r6 run metas, audit R6).** `run_meta_R6_geoyaw30.json` and `run_meta_R6_valid6.json` record
+  `05a1e0bf…-dirty` and `run_meta_R6_finder.json` records `b0d6806c…-dirty` (uncommitted files outside results/ at run
+  time); `run_meta_R6_sens.json` records 2e641161 (the later Holm commit) although the sens outputs were committed at
+  05a1e0b (the sens npz was assembled from checkpoints after that commit). Regeneration evidence: the validator's
+  192/192 spot re-runs at 962ba5fc matched, and the r7 spot re-run at a clean r7 commit (`r7/provenance_spot.csv`,
+  `experiments/r7_spot.py`, first 20 symbols of 7 jobs) gives 240/240 identical arrays for geoyaw30, valid6, finder and
+  sens. The dirty trees therefore did not affect the sampled arrays. The metas are kept unchanged (as in r2).
+  r7 metas `run_meta_R7_lamb30.json`/`run_meta_R7_fact.json` record `06ef6143…-dirty` (r7 report/diagnostic scripts and
+  docs were uncommitted; no physics/decoder file differed); the default factorial cell is array-identical to
+  `review_e2_P33.npz` (`r7/factorial_default_identity.csv`).
+
