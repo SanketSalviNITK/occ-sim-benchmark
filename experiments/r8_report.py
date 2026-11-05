@@ -49,8 +49,9 @@ def mult():
             PO = [(n, crc, vo - sym_goodput(zz[f'{kf}|{n}|err_orc'], SCH[n].layers, 15.0, blk)) for blk, crc in ((None, 'native'), (48, '48-bit')) for n in names if n not in (V2, BO)]
             bo = binding_p(PO); rows[-1].update(oracle_margin=bo['margin'], oracle_lo=bo['lo'], oracle_hi=bo['hi'], oracle_baseline=bo['baseline'], oracle_crc=bo['crc'])
     df = pd.DataFrame(rows); df['B'] = B_R6; df['boot_seed'] = BSEED
-    df.round(2).to_csv(os.path.join(OUT, 'mult_binding.csv'), index=False)
-    g = pd.DataFrame(gp); g['B'] = B_R6; g.round(2).to_csv(os.path.join(OUT, 'mult_goodput.csv'), index=False)
+    _r2 = lambda d: d.round({c: 2 for c in d.columns if c != 'sigma_mult'})  # keep sigma 0.024 unrounded
+    _r2(df).to_csv(os.path.join(OUT, 'mult_binding.csv'), index=False)
+    g = pd.DataFrame(gp); g['B'] = B_R6; _r2(g).to_csv(os.path.join(OUT, 'mult_goodput.csv'), index=False)
     pd.DataFrame(chk).to_csv(os.path.join(OUT, 'mult_sigma0_identity.csv'), index=False)
     pd.DataFrame(fin).round(4).to_csv(os.path.join(OUT, 'mult_finder.csv'), index=False)
     return df.drop(columns=['ranking_native'])

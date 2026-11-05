@@ -60,6 +60,19 @@ def test_claim_text_r8():
         assert 'interactions were not studied' not in s and 'validator' not in s.lower(), f
         assert '1/36' in s and 'relative only' in s, f
         assert 'In one assumed configuration — IMX174 model, P33, brightness 1/128' in s and '+100.8 [76.8, 124.8]' in s, f
+        assert 'at 3.25 m this attribution holds only without added noise' in s and 'shrinks by 36–49 bps' in s, f
+        assert 'With oracle corners v2 is not first at 3.0 or 3.25 m' not in s and 'significant only' not in s, f
+        assert 'per-LED correlated noise' in s and 'one-point fits' in s, f
+
+def test_r8_1_dither_and_sigma_label():
+    import pandas as pd
+    for f in ('METHODS.md', 'results/benchmark/SUMMARY.md', 'results/benchmark/CLAIMS_r7.md'):
+        s = open(R(f)).read()
+        assert 'consistent with C2 being a finder property' not in s and 'mult_finder.csv' in s and '0.5725 → 0.515' in s and '523 → 494' in s, f
+        assert '+17.6 [1.4, 34.3]' in s and 'unclaimed' in s, f
+    for f in ('mult_binding.csv', 'mult_goodput.csv'):
+        v = set(pd.read_csv(R('results/benchmark/r8/' + f)).sigma_mult)
+        assert 0.024 in v and 0.02 not in v, f
 
 def test_r8_plateau_text():
     for f in ('results/benchmark/SUMMARY.md', 'results/benchmark/CLAIMS_r7.md'):
