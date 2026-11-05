@@ -29,12 +29,17 @@ def _builtins():
     from experiments.review_r1 import lineup_r1
     for s in lineup_r1(): _REG.setdefault(s.name, (lambda s=s: s))
 
+_LOADED_PLUGINS = set()
+
 def load_plugins(path=None):
     path = path or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'schemes_contrib')
     for f in sorted(os.listdir(path)) if os.path.isdir(path) else []:
         if f.endswith('.py') and not f.startswith('_'):
-            sp = importlib.util.spec_from_file_location(f'schemes_contrib.{f[:-3]}', os.path.join(path, f))
+            key = os.path.join(path, f)
+            if key in _LOADED_PLUGINS: continue
+            sp = importlib.util.spec_from_file_location(f'schemes_contrib.{f[:-3]}', key)
             m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
+            _LOADED_PLUGINS.add(key)
 
 def available(builtins=True, plugins=True):
     if builtins: _builtins()

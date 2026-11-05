@@ -27,3 +27,29 @@ def test_sens_levels_do_not_touch_defaults():
 def test_bootstrap_p_floor():
     from experiments.r6_report import boot
     m, lo, hi, p = boot(np.ones(50), B=1000); assert m == 1 and p == 1e-3
+
+def test_phycom_plugins_roundtrip_and_not_in_paper_lineup():
+    from occbench import create, check_scheme, available
+    from experiments.review_r1 import lineup_r1
+    names = [
+        'CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)',
+        'SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)',
+    ]
+    for n in names:
+        assert n in available() and check_scheme(create(n), trials=30)
+    paper = {s.name for s in lineup_r1()}
+    for n in names: assert n not in paper
+
+def test_phycom_plugins_physical_smoke():
+    from occbench import create
+    from experiments.common import power_scales
+    from experiments.phys_eval import eval_point_phys
+    from channel import physical as ph
+    sch = [create(n) for n in (
+        'CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)',
+        'SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)')]
+    sc = power_scales(sch, 33.011, 'equal', False)[0]; rec = {}
+    eval_point_phys(sch, sc, dict(distance_m=1.5, yaw_deg=0.0, blur_sigma_px=0.0, lux=27.0, jitter=0.02, genie_corners=True),
+                    4, 7, dict(ph.P), rec=rec)
+    for s in sch:
+        assert rec[s.name]['err'].shape[0] == 4 and rec[s.name]['err'].mean() < 0.25

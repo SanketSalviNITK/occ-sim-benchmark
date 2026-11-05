@@ -15,7 +15,9 @@ Groups:
            (= claims/E2 seeds at 2.5/3.0/3.25/3.5 m). Detector arrays must equal review_e2_P33 / claims.npz (checked by
            experiments.r6_report).
   valid6 : QCD-OCC paper frame at 2 m, 25 fps, lux {27,149,304} x brightness VAL_BR, 2000 symbols, new seeds.
-Usage: OMP_NUM_THREADS=1 PROCS=7 python -m experiments.revision_r6 sens geo80 geoyaw30 finder valid6"""
+  phycom : PhyCom baselines as plugins (CSK-16-inspired Singh 2018; SM-PAM-inspired Leblebici 2026) + paper line-up,
+           C2 points and distance sweep on canonical seeds (PHYCOM_D). Plugins only; lineup_r1 defaults untouched.
+Usage: OMP_NUM_THREADS=1 PROCS=7 python -m experiments.revision_r6 sens geo80 geoyaw30 finder valid6 phycom"""
 import os, sys, json, time, datetime, pickle, hashlib, numpy as np
 from multiprocessing import Pool
 import config
@@ -63,13 +65,23 @@ SENS = {
 GEO_D = [2.0, 2.5, 3.0, 3.25, 3.5, 4.0, 4.5]
 FIN_D = [2.0, 2.5, 3.0, 3.25, 3.5, 4.0]
 VAL_BR = {'1/96': 1 / 96, '1/128': 1 / 128, '1/160': 1 / 160, '1/192': 1 / 192, '1/256': 1 / 256}
+PHYCOM_D = [2.0, 2.5, 3.0, 3.25, 3.5, 4.0]
+PHYCOM_NAMES = [
+    'CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)',
+    'SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)',
+]
 
 def job(a):
     key, cond, pmod, pref, seed, c0, n, only, mode = a
     if mode == 'unit':
         s = QCDOCC(); p = dict(ph.P); p.update(pmod); c = dict(BASE); c.update(cond); rec = {}
         eval_point_phys([s], {s.name: 1.0}, c, n, seed, p, f0=c0, rec=rec); return key, c0, rec
-    sch = lineup_r1(); sc = power_scales(sch, pref, 'equal', False)[0]
+    sch = lineup_r1()
+    if mode == 'phycom':
+        from occbench import create, available; available()
+        sch = sch + [create(n) for n in PHYCOM_NAMES]
+    if only: sch = [s for s in sch if s.name in only]
+    sc = power_scales(sch, pref, 'equal', False)[0]
     p = preset('imx174'); p.update(pmod); c = dict(BASE); c.update(cond); rec = {}
     if mode == 'dual': eval_point_dual(sch, sc, c, n, seed, p, f0=c0, rec=rec)
     else: eval_point_phys(sch, sc, c, n, seed, p, f0=c0, rec=rec)
@@ -101,6 +113,11 @@ def jobs_for(group):
             for bn, br in VAL_BR.items():
                 J.append((f'{lux}|{bn}|eval', dict(distance_m=2.0, lux=lux), dict(brightness=br, f_tx=25.0), None,
                           config.cond_seed(f'val6-2.0-{lux}-{bn}', 0, config.SEED), 2000, None, 'unit'))
+    elif group == 'phycom':
+        for d in PHYCOM_D:
+            cn = f'd{d}'; c = dict(distance_m=d, t_exp=1 / 1500); k = f'{cn}|1/1500|1/128'
+            J.append((k + '|eval', c, dict(brightness=1 / 128), 33.011, config.cond_seed(cn, 0, config.SEED), 1000, None, 'phycom'))
+            J.append((k + '|tune', c, dict(brightness=1 / 128), 33.011, config.cond_seed(cn, 0, config.TUNE_SEED), 200, None, 'phycom'))
     return J
 
 # ------------------------------------------------------------------ dual receiver (finder diagnostics), additive copy of phys_eval.decode_symbol

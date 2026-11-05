@@ -8,7 +8,8 @@ seed stated in every output. Two-sided bootstrap p = 2 min(P*(d<=0), P*(d>=0)) (
   geo       : C2-style binding margins on the second geometries (r6_geo80.npz, r6_geoyaw30.npz)
   finder    : per-scheme finder failure / gross-error rates and detector vs demodulation loss (r6_finder.npz)
   valid6    : QCD-OCC validation grid (r6_valid6.npz)
-Usage: python -m experiments.r6_report boot_stab holm sens geo finder valid6"""
+  phycom    : margins of PhyCom plugin baselines vs v2 at C2 and across distance (r6_phycom.npz)
+Usage: python -m experiments.r6_report boot_stab holm sens geo finder valid6 phycom"""
 import os, sys, json, numpy as np, pandas as pd
 from experiments.stats import sym_goodput, cluster_ber
 from experiments.bench_report import SCH, V2, BO, L72, COMP, VARS, ld, pick_tuned, OUT as BOUT, DIST, PREFS, E2_D
@@ -18,9 +19,13 @@ from experiments.run_phys import GENIE_SET
 OUT = os.path.join(BOUT, 'r6'); os.makedirs(OUT, exist_ok=True)
 B_R6 = 10000; BSEED = 0
 
+def _layers(n):
+    if n in SCH: return SCH[n].layers
+    from occbench import create; return create(n).layers
+
 def Gr(z, key, n, block=None, rate=15.0):
     k = f'{key}|{n}|err'
-    return None if z is None or k not in z else sym_goodput(z[k], SCH[n].layers, rate, block)
+    return None if z is None or k not in z else sym_goodput(z[k], _layers(n), rate, block)
 
 def boot(d, B=B_R6, seed=BSEED, idx=None):
     d = np.asarray(d, float); r = np.random.RandomState(seed)
@@ -239,6 +244,28 @@ def finder():
     fig.suptitle('Shared corner finder per scheme (IMX174, P33, 1/1500, 1/128, claims/E2 seeds, 1000 symbols/point)', fontsize=9)
     fig.tight_layout(); [fig.savefig(os.path.join(OUT, f'finder_failure.{e}'), dpi=150) for e in ('png', 'pdf')]; plt.close(fig)
     return df
+
+
+# ------------------------------------------------------------------ 8 PhyCom baselines (plugin schemes)
+def phycom():
+    """v2 vs each PhyCom-inspired plugin and the paper COMP set; binding including the plugins."""
+    from experiments.revision_r6 import PHYCOM_NAMES, PHYCOM_D
+    z = ld('r6_phycom.npz'); rows = []
+    for d in PHYCOM_D:
+        cn = f'd{d}'; pre = lambda t, s, cn=cn: f'{cn}|{t}|1/128|{s}'
+        # per-plugin margins (v2 - plugin) native + 48-bit
+        for n in PHYCOM_NAMES:
+            for blk, crc in ((None, 'native'), (48, '48-bit')):
+                dv = Gr(z, pre('1/1500', 'eval'), V2) - Gr(z, pre('1/1500', 'eval'), n, blk)
+                m, lo, hi, p = boot(dv); rows.append(dict(distance_m=d, vs=n, crc=crc, margin=m, lo=lo, hi=hi, p=p,
+                                                          verdict=verdict(lo, hi), kind='vs_plugin'))
+        # binding over COMP + plugins
+        P = pairs(z, pre, names=list(COMP) + PHYCOM_NAMES)
+        r = binding_p(P); rows.append(dict(distance_m=d, vs=r['baseline'], crc=r['crc'], margin=r['margin'], lo=r['lo'], hi=r['hi'],
+                                           p=r['p_iut'], verdict=verdict(r['lo'], r['hi']), kind='binding_with_plugins',
+                                           p_binding_pair=r['p_binding_pair']))
+    df = pd.DataFrame(rows); df['B'] = B_R6; df['boot_seed'] = BSEED
+    df.round(4).to_csv(os.path.join(OUT, 'phycom_margins.csv'), index=False); return df
 
 # ------------------------------------------------------------------ 5 QCD-OCC validation grid
 def valid6():
