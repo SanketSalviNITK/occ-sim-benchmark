@@ -22,7 +22,7 @@ VAR = {'base': {}, 't_row=0': dict(t_row=0.0), 'f_tx=15': dict(f_tx=15.0)}
 
 def peak_e(br, pm):
     """Peak mean electrons per colour channel for an all-white panel (pre-noise), r6 valid6 settings."""
-    p = dict(ph.P); p.update(brightness=br, f_tx=25.0, **pm); s = QCDOCC()
+    p = dict(ph.P); p.update(dict(dict(brightness=br, f_tx=25.0), **pm)); s = QCDOCC()
     d = s.encode([1] * 144)   # all data LEDs white (palette W)
     es, ct, row0 = ph.render_mean_e([d, d, d], 2.0, 0.0, 0.0, 27.0, np.random.RandomState(0), p, None, 0.0)
     return es[0].reshape(-1, 3).max(0)
@@ -35,7 +35,11 @@ def cell(a):
 
 def main():
     os.makedirs(OUT, exist_ok=True); W = [(v, b) for v in VAR for b in BR]
-    with Pool(int(os.environ.get('PROCS', '1'))) as pl: res = pl.map(cell, W, chunksize=1)
+    fz = os.path.join(OUT, '.qcd_plateau_err.npz')   # local cache of the raw error arrays (not shipped)
+    if os.path.exists(fz): zz = np.load(fz); res = [(v, b, zz[f'{v}|{b}']) for v, b in W]
+    else:
+        with Pool(int(os.environ.get('PROCS', '1'))) as pl: res = pl.map(cell, W, chunksize=1)
+        np.savez_compressed(fz, **{f'{v}|{b}': e for v, b, e in res})
     rows = []
     for v, bn, e in res:
         b, lo, hi = cluster_ber(e, B=2000, seed=0); tot = max(e.sum(), 1); pe = peak_e(BR[bn], VAR[v])
