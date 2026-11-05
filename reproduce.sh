@@ -1,5 +1,5 @@
 #!/bin/bash
-# Reproduce benchmark-r0.  Usage: ./reproduce.sh tables   (minutes: verify shipped data, regenerate all tables from npz)
+# Reproduce benchmark-r6.  Usage: ./reproduce.sh tables   (minutes: verify shipped data, regenerate all tables from npz)
 #                                 ./reproduce.sh full     (many CPU-hours: re-simulate every benchmark group, then tables)
 # Runs from this script's directory (never a hard-coded path). Requires Python 3.13 + requirements.lock.
 set -euo pipefail

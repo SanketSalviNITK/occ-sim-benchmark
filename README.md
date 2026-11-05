@@ -18,7 +18,7 @@ Release status: local only (not pushed, no DOI); licence undecided (`LICENSE_TOD
 > "At the fixed operating point (IMX174, P33, brightness 1/128, exposure 1/1500) and with the benchmark's shared corner finder, on the canonical claims/E2 seed set the binding margin of v2 over every comparison scheme × {native, 48-bit} is +150.0 [127.2, 174.0] bps at 3.0 m (vs QCD-style-inspired, native) and +107.6 [85.2, 128.8] bps at 3.25 m (vs Overlay-inspired, 48-bit). At 3.5 m it is not significant (+4.3 [−10.1, 19.3] bps vs HNCSM v1-base). On three further disjoint seed sets (run_phys sweep, A, B) the margins are 148.2–166.2 bps at 3.0 m and 116.4–123.2 bps at 3.25 m, with every CI above 0 (lowest lower bounds 126.6 and 94.4). At 3.5 m they are 28.2–34.3 bps (lower bounds 13.1–19.0), so the 3.5 m result depends on the seed set and is not claimed. At P25 and P42 (claims/E2 seeds) the 3.0 and 3.25 m margins are positive, and the 3.5 m margin is only narrowly positive (+16.6 [1.2, 32.6] and +15.0 [0.6, 29.9]). No C2 point survives the E2 grid (per-scheme tuned exposure, brightness 1/64–1/256) at P25, P33 or P42. With oracle corners on the same claims/E2 seeds, v2 is significantly below OOK-8x8 at 3.0 m (−114.1 [−141.8, −87.2] bps) and below QCD-style-inspired (−101.4 [−121.8, −80.4]); it is 3rd among the comparison schemes. The 3.0 m advantage therefore comes from how reliably the shared finder locates v2 frames, not from demodulation. Oracle corners at 3.5 m were run only on the sweep seeds. There v2 exceeds every comparison scheme, with a binding margin of +36.8 [12.8, 60.7] bps vs Overlay-inspired (48-bit) and +44.4 [24.6, 64.8] bps vs QCD-style-inspired (native). 3.25 m was not run with oracle corners."
 
 **C1/C2 on IMX219, safe wording (benchmark-r5; sources: `results/benchmark/CLAIMS_r5.md`):**
-> "C1 here means the round-2 claim that at 2.5 m (1/1500 s, brightness 1/128) v2 exceeds the IEEE 802.15.7 CSK baselines; C2 means the IMX174 binding-margin claim at 3.0–3.5 m above. On the IMX219 preset `imx219f` (sourced geometry and noise, uncalibrated photometric scale), neither transfers. At the same distances (2.5, 3.0, 3.25 and 3.5 m), v2 is significantly below the binding baseline at every point, with fixed or tuned exposure and with the scale-free finder or oracle corners. Examples: 2.5 m, −1273.6 [−1322.6, −1222.0] bps vs genie(CSK802-8); 3.0 m, −999.6 [−1009.9, −985.3] bps vs QCD-OCC (paper frame), and −991.4 [−1005.7, −977.2] with oracle corners. At matched pixels-per-LED v2 is significantly below at 2.5–3.25 m with both finders (e.g. matched 3.0 m: −57.0 [−75.6, −38.4] vs QCD-style-inspired). At matched 3.5 m the result is not significant (+13.2 [−11.4, 36.0] with the scale-free finder; +0.6 [−23.4, 24.6] with oracle corners at fixed exposure). The one exception is oracle corners with tuned exposure (+23.4 [1.2, 45.6]). These are simulation results on an uncalibrated preset and say nothing about real IMX219 hardware."
+> "C1 here means the audit-2 claim that at 2.5 m (1/1500 s, brightness 1/128) v2 exceeds the IEEE 802.15.7 CSK baselines; C2 means the IMX174 binding-margin claim at 3.0–3.5 m above. On the IMX219 preset `imx219f` (sourced geometry and noise, uncalibrated photometric scale), neither transfers. At the same distances (2.5, 3.0, 3.25 and 3.5 m), v2 is significantly below the binding baseline at every point, with fixed or tuned exposure and with the scale-free finder or oracle corners. Examples: 2.5 m, −1273.6 [−1322.6, −1222.0] bps vs genie(CSK802-8); 3.0 m, −999.6 [−1009.9, −985.3] bps vs QCD-OCC (paper frame), and −991.4 [−1005.7, −977.2] with oracle corners. At matched pixels-per-LED v2 is significantly below at 2.5–3.25 m with both finders (e.g. matched 3.0 m: −57.0 [−75.6, −38.4] vs QCD-style-inspired). At matched 3.5 m the result is not significant (+13.2 [−11.4, 36.0] with the scale-free finder; +0.6 [−23.4, 24.6] with oracle corners at fixed exposure). The one exception is oracle corners with tuned exposure (+23.4 [1.2, 45.6]). These are simulation results on an uncalibrated preset and say nothing about real IMX219 hardware."
 
 IMX219 scope: all IMX219 results use the current preset (`imx219f`), photometrically uncalibrated (sourced geometry and noise). Matching the measured CQ sensitivity would need an effective QE of 1.5–2.16 (impossible as QE); those ×3-QE runs are not shipped. The published QCD-OCC BER is matched by this preset near Tx brightness 1/2048, not the 1/128 used in E3.
 
@@ -63,14 +63,14 @@ zlib.crc32 (the old runs used Python's salted `hash()` and were NOT reproducible
   **Physical channel / all benchmark runs** (`results/tuned_params_phys.json`, loaded by `all_schemes_phys()`): v2-CS δ=0.3, 2 bits; QCD subset `maxdist-0`; overlay (0.35, 0.15).
 - **Ambient sweep:** at 2.5 m with non-uniform light (random linear gradient 0.4–1.6× plus a Gaussian hotspot).
 
-## [SUPERSEDED] Claims (Research-Validator round 2, audit-r2) — historical only
+## [SUPERSEDED] Claims (internal reproducibility audit 2, audit-r2) — historical only
 > **SUPERSEDED by the benchmark claims (now benchmark-r5) at the top of this README. Nothing in this section (C1, C2, table, limitations) is a current claim; kept for history.**
 
-Round-2 text: only the two statements below were claimed. All numbers come from `results/audit_r1/claims_paired.csv` (C1, C2
+Audit-2 text: only the two statements below were claimed. All numbers come from `results/audit_r1/claims_paired.csv` (C1, C2
 reversals) and `results/audit_r1/efficiency_winners_paired.csv` (C2), per-symbol data `results/phys_sym/{claims,sweeps_PHYS_P25,sweeps_PHYS_P33,sweeps_PHYS_P42}.npz`;
 differences are paired CRN symbol-bootstrap 95 % CIs (METHODS §9.1). Physical channel, equal summed drive, P33 unless stated.
 Former claim 3 (low-light v1 advantage) is **dropped** (METHODS §9.4). Nothing in `results/legacy/` is used.
-(The submission's C1/C2 wording was not stored in the repo; the text below is restated from the round-2 report and the CSVs.)
+(The submission's C1/C2 wording was not stored in the repo; the text below is restated from the audit-2 report and the CSVs.)
 
 **C1 (historical, superseded by the benchmark wording).** At t_exp = 1/1500 s, LED brightness 1/128 and 2.5 m, HNCSM v2 delivers 592 bps [586, 596] against
 25 bps [13, 39] for IEEE 802.15.7 4-CSK (paired diff +566 [552, 579]; 8-CSK 0 bps). The comparison is against the IEEE
@@ -91,8 +91,8 @@ fixed 1/1500 s it holds against 4-CSK (+335 [313, 355]) and OOK still wins (−3
 
 It also holds for radiant-equal power (`radiant_equal.csv`, 1/1500 s, 1/128: 3.0 m v2 397 [371, 422] vs QCD-style 242
 [216, 269]; 3.5 m v2 134 [112, 156] vs v1-base 101 [97, 105]; no paired diffs, no 3.25 m point) and for 48-bit-CRC
-baselines. The 48-bit-CRC check for C2 was not computed by the repo; the validator's independent computation
-(round-2 report, NB2) re-segments only the **non-HNCSM baselines** into 48-bit CRC-8 blocks (the HNCSM family — v1-base,
+baselines. The 48-bit-CRC check for C2 was not computed by the repo; an internal audit computation
+(audit-2 report, NB2) re-segments only the **non-HNCSM baselines** into 48-bit CRC-8 blocks (the HNCSM family — v1-base,
 v1, v2-CS — is excluded from that opponent set) and gives, at P33, v2 − best 48-bit baseline +148 [125, 171] vs
 QCD-style / +116 [94, 138] vs Overlay / +61 [43, 80] vs Overlay at 3.0 / 3.25 / 3.5 m (all 9 budget × distance points
 separated). The binding margin at 3.5 m is **not** +61 but the native margin over v1-base, +21 to +30 across
@@ -101,7 +101,7 @@ per-scheme tuned exposure (v2 425 vs 494 bps, −69 [−89, −48]) and at brigh
 tuned exposure it is a tie (−22 [−44, 1]) (`claims_paired.csv`, cond d3.0). **3.25 and 3.5 m were not perturbed**
 (no exposure or brightness runs), so C2 is not claimed there beyond the stated conditions.
 
-**Limitations of the claims (round 2).** (i) There is no second validation anchor: the channel is calibrated to the
+**Limitations of the claims (audit 2).** (i) There is no second validation anchor: the channel is calibrated to the
 QCD-OCC 200 cm point only, to order of magnitude, through one unidentified brightness constant (METHODS §9.2).
 (ii) Tuning (v2-CS, QCD-style, overlay, per-scheme exposure and the genie) used held-out seeds but the **same
 distances/geometry** as the evaluation; there was no tuning on disjoint distances. (iii) In
@@ -261,7 +261,7 @@ Key differences from the legacy channel:
 
 Validation: QCD-OCC at 200 cm, 3600 bps gives a simulated BER of 6.0e-3 (symbol-cluster 95 % CI 4.5–7.5e-3, METHODS §9.2) against the measured 1.13e-2; order-of-magnitude calibration only.
 
-## Audit round 1 fixes (31 Oct 2026)
+## Internal audit 1 fixes (31 Oct 2026)
 See METHODS §9. New: `experiments/stats.py` (cluster/paired bootstrap), `experiments/audit_r1.py` (runs),
 `experiments/audit_r1_report.py` (tables → `results/audit_r1/`), per-symbol data `results/phys_sym/`,
 `results/MANIFEST.sha256`. The claims are stated only in the "Claims" section above; brightness is an unidentified nuisance parameter

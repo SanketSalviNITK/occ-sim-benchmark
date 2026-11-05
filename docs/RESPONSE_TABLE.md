@@ -12,7 +12,7 @@
 | M8 | Novelty | Paper re-framed as an open benchmark; HNCSM is one entry. |
 | m1 | TODOs / authorship | CITATION.cff authors TODO (for the authors to fill); LICENSE_TODO. |
 | m2 | 5.16 bps value | Check against regenerated tables before camera-ready (author action). |
-| m3 | One value for +148 | Single headline: +148.2 [126.6, 171.6] bps at 3.0 m (validator safe C2 wording, README), qualified by the oracle-corner result (v2 4th at 3.0 m). **r5 update:** headline now from the canonical claims/E2 seed set, +150.0 [127.2, 174.0] bps at 3.0 m (`c2_binding_margins.csv` row 8); +148.2 is the sweep-seed robustness value. Oracle: v2 3rd among comparison schemes at 3.0 m (4th incl. the v2-base-only ablation), −114.1 [−141.8, −87.2] vs OOK-8x8 (`oracle_pairs.csv`). See `results/benchmark/CLAIMS_r5.md`. |
+| m3 | One value for +148 | Single headline: +148.2 [126.6, 171.6] bps at 3.0 m (audited C2 wording, README), qualified by the oracle-corner result (v2 4th at 3.0 m). **r5 update:** headline now from the canonical claims/E2 seed set, +150.0 [127.2, 174.0] bps at 3.0 m (`c2_binding_margins.csv` row 8); +148.2 is the sweep-seed robustness value. Oracle: v2 3rd among comparison schemes at 3.0 m (4th incl. the v2-base-only ablation), −114.1 [−141.8, −87.2] vs OOK-8x8 (`oracle_pairs.csv`). See `results/benchmark/CLAIMS_r5.md`. |
 | m4 | Corner CSV | `results/review_r1/corner_error_bench.csv` shipped. |
 | m5 | Fig. 3 naming | Use "-inspired" labels (author action in the figure). |
 | m6 | Table II single column | Author action (layout). |
