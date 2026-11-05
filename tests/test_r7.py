@@ -14,10 +14,14 @@ def test_claim_text_r7():
         assert 'all Holm-significant (56-claim family)' in s and 'CFA crosstalk ×2' in s, f
 
 def test_smpam_analytic_thresholds_m4():
-    import schemes_contrib.sm_pam_leblebici as m
-    s = m.SMPAMLeblebici()
+    # use the registry-loaded plugin class (a second import would re-register a distinct class and raise)
+    import ast
+    from occbench import registry
+    registry.load_plugins()
+    s = next(o() if isinstance(o, type) else o() for o in registry._REG.values() if type(o() if isinstance(o, type) else o()).__name__ == 'SMPAMLeblebici')
     assert s.M == 4 and np.allclose(s.thresholds, [2 / 7, 4 / 7, 6 / 7])
-    assert 'tuned on TUNE_SEED' not in m.__doc__ and 'ANALYTIC midpoints' in m.__doc__
+    doc = ast.get_docstring(ast.parse(open(R('schemes_contrib/sm_pam_leblebici.py')).read()))
+    assert 'tuned on TUNE_SEED' not in doc and 'ANALYTIC midpoints' in doc
 
 def test_phycom_margins_no_duplicates():
     d = pd.read_csv(R('results/benchmark/r6/phycom_margins.csv'))

@@ -99,3 +99,5 @@ Qualitative claim unchanged (C1/C2 do not transfer on `imx219f`). The sole r5 ex
 | IMX219 m3.5 oracle+tuned | +23.4 positive (unadj.) | n.s. after Holm |
 | Tests | 85 | see SUMMARY |
 | Tag | benchmark-r5 (8886c77a) | benchmark-r6 |
+
+**Holm scope (r7, R4).** The Holm–Bonferroni correction covers only the 56-claim family in `r6/holm_claims.csv`. The following r6/r7 results are **outside the family and are reported unadjusted**: the canonical-seed oracle points at 3.25 and 3.5 m (`oracle_binding_canonical.csv`; in particular the 3.25 m oracle margin −24.0 [−45.0, −3.6] vs QCD-style is **unadjusted**), the geometry runs (`geometry_binding.csv`), the OAT sensitivity runs (`sensitivity_tornado.csv`), the PhyCom plugin margins (`phycom_margins.csv`), the E2 grid cells, and the r7 lambert_m 30° yaw and factorial runs.

@@ -1,0 +1,157 @@
+distance,key,identical
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2-CS|err,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2-CS|sat,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2-CS|mix,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2|err,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2|sat,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2|mix,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM|err,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM|sat,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM|mix,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM base-only|err,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM base-only|sat,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM base-only|mix,True
+d3.0,d3.0|1/1500|1/128|eval|CSK802-8|err,True
+d3.0,d3.0|1/1500|1/128|eval|CSK802-8|sat,True
+d3.0,d3.0|1/1500|1/128|eval|CSK802-8|mix,True
+d3.0,d3.0|1/1500|1/128|eval|CSK802-4|err,True
+d3.0,d3.0|1/1500|1/128|eval|CSK802-4|sat,True
+d3.0,d3.0|1/1500|1/128|eval|CSK802-4|mix,True
+d3.0,d3.0|1/1500|1/128|eval|OOK-8x8|err,True
+d3.0,d3.0|1/1500|1/128|eval|OOK-8x8|sat,True
+d3.0,d3.0|1/1500|1/128|eval|OOK-8x8|mix,True
+d3.0,d3.0|1/1500|1/128|eval|QR/Aztec-style|err,True
+d3.0,d3.0|1/1500|1/128|eval|QR/Aztec-style|sat,True
+d3.0,d3.0|1/1500|1/128|eval|QR/Aztec-style|mix,True
+d3.0,d3.0|1/1500|1/128|eval|NestedTexture-inspired (Salvi22)|err,True
+d3.0,d3.0|1/1500|1/128|eval|NestedTexture-inspired (Salvi22)|sat,True
+d3.0,d3.0|1/1500|1/128|eval|NestedTexture-inspired (Salvi22)|mix,True
+d3.0,d3.0|1/1500|1/128|eval|QCD-style-inspired (Vasantha22)|err,True
+d3.0,d3.0|1/1500|1/128|eval|QCD-style-inspired (Vasantha22)|sat,True
+d3.0,d3.0|1/1500|1/128|eval|QCD-style-inspired (Vasantha22)|mix,True
+d3.0,d3.0|1/1500|1/128|eval|Overlay-inspired (Nishimoto12)|err,True
+d3.0,d3.0|1/1500|1/128|eval|Overlay-inspired (Nishimoto12)|sat,True
+d3.0,d3.0|1/1500|1/128|eval|Overlay-inspired (Nishimoto12)|mix,True
+d3.0,d3.0|1/1500|1/128|eval|QCD-OCC (paper frame)|err,True
+d3.0,d3.0|1/1500|1/128|eval|QCD-OCC (paper frame)|sat,True
+d3.0,d3.0|1/1500|1/128|eval|QCD-OCC (paper frame)|mix,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2-base-only|err,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2-base-only|sat,True
+d3.0,d3.0|1/1500|1/128|eval|HNCSM v2-base-only|mix,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2-CS|err,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2-CS|sat,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2-CS|mix,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2|err,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2|sat,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2|mix,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM|err,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM|sat,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM|mix,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM base-only|err,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM base-only|sat,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM base-only|mix,True
+d3.0,d3.0|1/1500|1/128|tune|CSK802-8|err,True
+d3.0,d3.0|1/1500|1/128|tune|CSK802-8|sat,True
+d3.0,d3.0|1/1500|1/128|tune|CSK802-8|mix,True
+d3.0,d3.0|1/1500|1/128|tune|CSK802-4|err,True
+d3.0,d3.0|1/1500|1/128|tune|CSK802-4|sat,True
+d3.0,d3.0|1/1500|1/128|tune|CSK802-4|mix,True
+d3.0,d3.0|1/1500|1/128|tune|OOK-8x8|err,True
+d3.0,d3.0|1/1500|1/128|tune|OOK-8x8|sat,True
+d3.0,d3.0|1/1500|1/128|tune|OOK-8x8|mix,True
+d3.0,d3.0|1/1500|1/128|tune|QR/Aztec-style|err,True
+d3.0,d3.0|1/1500|1/128|tune|QR/Aztec-style|sat,True
+d3.0,d3.0|1/1500|1/128|tune|QR/Aztec-style|mix,True
+d3.0,d3.0|1/1500|1/128|tune|NestedTexture-inspired (Salvi22)|err,True
+d3.0,d3.0|1/1500|1/128|tune|NestedTexture-inspired (Salvi22)|sat,True
+d3.0,d3.0|1/1500|1/128|tune|NestedTexture-inspired (Salvi22)|mix,True
+d3.0,d3.0|1/1500|1/128|tune|QCD-style-inspired (Vasantha22)|err,True
+d3.0,d3.0|1/1500|1/128|tune|QCD-style-inspired (Vasantha22)|sat,True
+d3.0,d3.0|1/1500|1/128|tune|QCD-style-inspired (Vasantha22)|mix,True
+d3.0,d3.0|1/1500|1/128|tune|Overlay-inspired (Nishimoto12)|err,True
+d3.0,d3.0|1/1500|1/128|tune|Overlay-inspired (Nishimoto12)|sat,True
+d3.0,d3.0|1/1500|1/128|tune|Overlay-inspired (Nishimoto12)|mix,True
+d3.0,d3.0|1/1500|1/128|tune|QCD-OCC (paper frame)|err,True
+d3.0,d3.0|1/1500|1/128|tune|QCD-OCC (paper frame)|sat,True
+d3.0,d3.0|1/1500|1/128|tune|QCD-OCC (paper frame)|mix,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2-base-only|err,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2-base-only|sat,True
+d3.0,d3.0|1/1500|1/128|tune|HNCSM v2-base-only|mix,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2-CS|err,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2-CS|sat,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2-CS|mix,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2|err,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2|sat,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2|mix,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM|err,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM|sat,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM|mix,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM base-only|err,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM base-only|sat,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM base-only|mix,True
+d3.25,d3.25|1/1500|1/128|eval|CSK802-8|err,True
+d3.25,d3.25|1/1500|1/128|eval|CSK802-8|sat,True
+d3.25,d3.25|1/1500|1/128|eval|CSK802-8|mix,True
+d3.25,d3.25|1/1500|1/128|eval|CSK802-4|err,True
+d3.25,d3.25|1/1500|1/128|eval|CSK802-4|sat,True
+d3.25,d3.25|1/1500|1/128|eval|CSK802-4|mix,True
+d3.25,d3.25|1/1500|1/128|eval|OOK-8x8|err,True
+d3.25,d3.25|1/1500|1/128|eval|OOK-8x8|sat,True
+d3.25,d3.25|1/1500|1/128|eval|OOK-8x8|mix,True
+d3.25,d3.25|1/1500|1/128|eval|QR/Aztec-style|err,True
+d3.25,d3.25|1/1500|1/128|eval|QR/Aztec-style|sat,True
+d3.25,d3.25|1/1500|1/128|eval|QR/Aztec-style|mix,True
+d3.25,d3.25|1/1500|1/128|eval|NestedTexture-inspired (Salvi22)|err,True
+d3.25,d3.25|1/1500|1/128|eval|NestedTexture-inspired (Salvi22)|sat,True
+d3.25,d3.25|1/1500|1/128|eval|NestedTexture-inspired (Salvi22)|mix,True
+d3.25,d3.25|1/1500|1/128|eval|QCD-style-inspired (Vasantha22)|err,True
+d3.25,d3.25|1/1500|1/128|eval|QCD-style-inspired (Vasantha22)|sat,True
+d3.25,d3.25|1/1500|1/128|eval|QCD-style-inspired (Vasantha22)|mix,True
+d3.25,d3.25|1/1500|1/128|eval|Overlay-inspired (Nishimoto12)|err,True
+d3.25,d3.25|1/1500|1/128|eval|Overlay-inspired (Nishimoto12)|sat,True
+d3.25,d3.25|1/1500|1/128|eval|Overlay-inspired (Nishimoto12)|mix,True
+d3.25,d3.25|1/1500|1/128|eval|QCD-OCC (paper frame)|err,True
+d3.25,d3.25|1/1500|1/128|eval|QCD-OCC (paper frame)|sat,True
+d3.25,d3.25|1/1500|1/128|eval|QCD-OCC (paper frame)|mix,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2-base-only|err,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2-base-only|sat,True
+d3.25,d3.25|1/1500|1/128|eval|HNCSM v2-base-only|mix,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2-CS|err,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2-CS|sat,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2-CS|mix,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2|err,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2|sat,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2|mix,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM|err,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM|sat,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM|mix,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM base-only|err,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM base-only|sat,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM base-only|mix,True
+d3.25,d3.25|1/1500|1/128|tune|CSK802-8|err,True
+d3.25,d3.25|1/1500|1/128|tune|CSK802-8|sat,True
+d3.25,d3.25|1/1500|1/128|tune|CSK802-8|mix,True
+d3.25,d3.25|1/1500|1/128|tune|CSK802-4|err,True
+d3.25,d3.25|1/1500|1/128|tune|CSK802-4|sat,True
+d3.25,d3.25|1/1500|1/128|tune|CSK802-4|mix,True
+d3.25,d3.25|1/1500|1/128|tune|OOK-8x8|err,True
+d3.25,d3.25|1/1500|1/128|tune|OOK-8x8|sat,True
+d3.25,d3.25|1/1500|1/128|tune|OOK-8x8|mix,True
+d3.25,d3.25|1/1500|1/128|tune|QR/Aztec-style|err,True
+d3.25,d3.25|1/1500|1/128|tune|QR/Aztec-style|sat,True
+d3.25,d3.25|1/1500|1/128|tune|QR/Aztec-style|mix,True
+d3.25,d3.25|1/1500|1/128|tune|NestedTexture-inspired (Salvi22)|err,True
+d3.25,d3.25|1/1500|1/128|tune|NestedTexture-inspired (Salvi22)|sat,True
+d3.25,d3.25|1/1500|1/128|tune|NestedTexture-inspired (Salvi22)|mix,True
+d3.25,d3.25|1/1500|1/128|tune|QCD-style-inspired (Vasantha22)|err,True
+d3.25,d3.25|1/1500|1/128|tune|QCD-style-inspired (Vasantha22)|sat,True
+d3.25,d3.25|1/1500|1/128|tune|QCD-style-inspired (Vasantha22)|mix,True
+d3.25,d3.25|1/1500|1/128|tune|Overlay-inspired (Nishimoto12)|err,True
+d3.25,d3.25|1/1500|1/128|tune|Overlay-inspired (Nishimoto12)|sat,True
+d3.25,d3.25|1/1500|1/128|tune|Overlay-inspired (Nishimoto12)|mix,True
+d3.25,d3.25|1/1500|1/128|tune|QCD-OCC (paper frame)|err,True
+d3.25,d3.25|1/1500|1/128|tune|QCD-OCC (paper frame)|sat,True
+d3.25,d3.25|1/1500|1/128|tune|QCD-OCC (paper frame)|mix,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2-base-only|err,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2-base-only|sat,True
+d3.25,d3.25|1/1500|1/128|tune|HNCSM v2-base-only|mix,True

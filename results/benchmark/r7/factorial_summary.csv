@@ -1,0 +1,24 @@
+scope,factor,level,distance,cells,frac_positive,frac_negative,mean_margin
+all cells,-,-,d3.0,36,0.028,0.944,-141.76
+main effect,focus_m,0.5,d3.0,12,0.0,0.917,-112.84
+main effect,focus_m,1.0,d3.0,12,0.083,0.917,-224.39
+main effect,focus_m,2.0,d3.0,12,0.0,1.0,-88.05
+main effect,f_mm,4,d3.0,12,0.0,1.0,-26.77
+main effect,f_mm,6,d3.0,12,0.083,0.833,-57.89
+main effect,f_mm,8,d3.0,12,0.0,1.0,-340.62
+main effect,f_number,2.0,d3.0,18,0.056,0.944,-141.833
+main effect,f_number,2.8,d3.0,18,0.0,0.944,-141.687
+main effect,brightness,1/128,d3.0,18,0.056,0.889,-128.407
+main effect,brightness,1/256,d3.0,18,0.0,1.0,-155.113
+all cells,-,-,d3.25,36,0.028,0.972,-96.883
+main effect,focus_m,0.5,d3.25,12,0.0,1.0,-106.55
+main effect,focus_m,1.0,d3.25,12,0.083,0.917,-83.12
+main effect,focus_m,2.0,d3.25,12,0.0,1.0,-100.98
+main effect,f_mm,4,d3.25,12,0.0,1.0,-23.415
+main effect,f_mm,6,d3.25,12,0.083,0.917,-85.96
+main effect,f_mm,8,d3.25,12,0.0,1.0,-181.275
+main effect,f_number,2.0,d3.25,18,0.056,0.944,-84.7
+main effect,f_number,2.8,d3.25,18,0.0,1.0,-109.067
+main effect,brightness,1/128,d3.25,18,0.056,0.944,-95.127
+main effect,brightness,1/256,d3.25,18,0.0,1.0,-98.64
+both distances positive,-,-,d3.0&d3.25,36,0.028,,

@@ -6,7 +6,7 @@
 > plateau diagnostic, the Holm scope statement and a provenance note. IMX219 claims unchanged (m3.5 oracle+tuned n.s. after
 > Holm). Sourced numbers and change log: `CLAIMS_r7.md` (`CLAIMS_r6.md`, `CLAIMS_r5.md` kept as artefacts).
 
-Branch `benchmark`. Tests: 91 pass. Default IMX174 path kept byte-identical (plugins and r6 groups are additive;
+Branch `benchmark`. Tests: 97 pass. Default IMX174 path kept byte-identical (plugins and r6 groups are additive;
 `lineup_r1` unchanged). r6 bootstrap B = 10000, seed 0; 1000 eval + 200 tune symbols per point.
 
 ## Oracle (genie) corners vs detector — `oracle_vs_detector*.csv`, `oracle_ranking.csv`
@@ -85,6 +85,8 @@ idcheck at 231abcb (r5, arrays identical). The dirty originals are kept as `run_
   flips (negative or n.s.) under f_mm 4–8, f/2.8, focus 0.5/2.0 m, brightness 1/256 and **cfa×2** (binding margin +7.0 [−14.3, 28.2] n.s. at 3.0 m, −34.1 [−52.7, −15.5] at 3.25 m; `sensitivity_tornado.csv` lines 14/37; r7 R3).
   lambert_m is **not** a "keep" factor: on axis (yaw 0, all C2 runs) cos^m(0) = 1, so lambert_m has no effect by construction (r6 arrays identical to default).
   r7 re-ran it at 30° yaw (`r7/lambert_yaw30.csv`): no verdict changes (3.0 m stays positive, 3.25 m stays negative).
+- Factorial (r7, R7; `r7/factorial_binding.csv`, `r7/factorial_summary.csv`): 36 cells focus × f_mm × f_number × brightness at 3.0/3.25 m; C2 positive in 1/36 cells (2.8 %) at each distance — only the default cell. Not an LHS/Sobol analysis.
+- Holm scope (r7, R4): outside the 56-claim family and unadjusted: canonical oracle 3.25/3.5 m (3.25 m −24.0 is unadjusted), geometry, OAT sensitivity, PhyCom plugins, E2 cells, r7 lambert yaw30 and factorial.
 - Geometry (`geometry_binding.csv`): 80 mm panel loses C2 at 3.0/3.25 m (OOK binds); 30° yaw keeps only 3.0 m positive.
 - Finder (`finder_failure.*`): zero detection failures; gross-error rates drive finder loss; attribution holds at 3.25 m.
 - Stats: ablation n.s. stable on 25 seeds; Holm flips 3 unadjusted positives (incl. IMX219 m3.5 oracle+tuned).
