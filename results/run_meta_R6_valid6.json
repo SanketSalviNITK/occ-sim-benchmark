@@ -1,0 +1,235 @@
+{
+"group": "valid6",
+"git": "05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty",
+"code_key": "r6-0fe3d44",
+"utc": "2026-11-05T03:57:33.023443+00:00",
+"elapsed_s": 31,
+"procs": 7,
+"jobs": [
+{
+"key": "27|1/96|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"pmod": {
+"brightness": 0.010416666666666666,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 1431210465,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "27|1/128|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"pmod": {
+"brightness": 0.0078125,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 551570578,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "27|1/160|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"pmod": {
+"brightness": 0.00625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 1985058660,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "27|1/192|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"pmod": {
+"brightness": 0.005208333333333333,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 499071943,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "27|1/256|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 27
+},
+"pmod": {
+"brightness": 0.00390625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 910774010,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "149|1/96|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 149
+},
+"pmod": {
+"brightness": 0.010416666666666666,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 1088325416,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "149|1/128|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 149
+},
+"pmod": {
+"brightness": 0.0078125,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 1644503628,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "149|1/160|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 149
+},
+"pmod": {
+"brightness": 0.00625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 195943706,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "149|1/192|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 149
+},
+"pmod": {
+"brightness": 0.005208333333333333,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 1696854519,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "149|1/256|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 149
+},
+"pmod": {
+"brightness": 0.00390625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 1269179588,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "304|1/96|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 304
+},
+"pmod": {
+"brightness": 0.010416666666666666,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 915576504,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "304|1/128|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 304
+},
+"pmod": {
+"brightness": 0.0078125,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 752477857,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "304|1/160|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 304
+},
+"pmod": {
+"brightness": 0.00625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 1112087511,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "304|1/192|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 304
+},
+"pmod": {
+"brightness": 0.005208333333333333,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 700102516,
+"symbols": 2000,
+"mode": "unit"
+},
+{
+"key": "304|1/256|eval",
+"cond": {
+"distance_m": 2.0,
+"lux": 304
+},
+"pmod": {
+"brightness": 0.00390625,
+"f_tx": 25.0
+},
+"pref": null,
+"seed": 38855719,
+"symbols": 2000,
+"mode": "unit"
+}
+]
+}

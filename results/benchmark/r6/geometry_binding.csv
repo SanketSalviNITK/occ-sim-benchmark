@@ -1,0 +1,15 @@
+geometry,distance_m,baseline,crc,margin,lo,hi,p_binding_pair,p_iut,verdict,B,boot_seed
+80 mm panel (10 mm pitch),2.0,QCD-OCC (paper frame),native,-1018.38,-1021.26,-1013.88,0.0,0.0,negative,10000,0
+80 mm panel (10 mm pitch),2.5,QCD-OCC (paper frame),native,-955.86,-999.06,-911.88,0.0,0.0,negative,10000,0
+80 mm panel (10 mm pitch),3.0,OOK-8x8,native,-140.46,-152.4,-128.1,0.0,0.0,negative,10000,0
+80 mm panel (10 mm pitch),3.25,OOK-8x8,native,-107.58,-126.54,-88.32,0.0,0.0,negative,10000,0
+80 mm panel (10 mm pitch),3.5,OOK-8x8,native,84.36,58.5,110.76,0.0,0.0,positive,10000,0
+80 mm panel (10 mm pitch),4.0,QR/Aztec-style,native,115.2,94.8,135.6,0.0,0.0,positive,10000,0
+80 mm panel (10 mm pitch),4.5,HNCSM base-only,native,-5.76,-19.92,8.64,0.42,0.42,n.s.,10000,0
+"65 mm panel, 30 deg yaw",2.0,CSK802-4,48-bit,-296.1,-324.72,-267.18,0.0,0.83,negative,10000,0
+"65 mm panel, 30 deg yaw",2.5,OOK-8x8,native,-26.52,-49.98,-2.4,0.03,0.08,negative,10000,0
+"65 mm panel, 30 deg yaw",3.0,QCD-style-inspired (Vasantha22),native,71.4,48.6,93.6,0.0,0.0,positive,10000,0
+"65 mm panel, 30 deg yaw",3.25,HNCSM base-only,native,-41.04,-52.44,-28.92,0.0,0.01,negative,10000,0
+"65 mm panel, 30 deg yaw",3.5,HNCSM base-only,native,-46.32,-56.88,-35.16,0.0,0.99,negative,10000,0
+"65 mm panel, 30 deg yaw",4.0,HNCSM base-only,native,-64.56,-71.04,-57.84,0.0,0.45,negative,10000,0
+"65 mm panel, 30 deg yaw",4.5,HNCSM base-only,native,-27.36,-30.72,-23.88,0.0,0.97,negative,10000,0
