@@ -10,8 +10,12 @@ Not a reproduction. Adaptations for this 8x8 RGB-LED camera-OCC harness:
     (log2(M) bits). Inactive LEDs in the group are off. Corner pilots kept.
   - Optical intensity levels are the positive PAM set {1,3,...,2M-1}/(2M-1) on white drive
     (paper uses bipolar electrical PAM + DC bias; here the camera sees intensity only).
-  - Detection thresholds (and optionally M in {2,4,8}) are tuned on TUNE_SEED; equal average
+  - Detection thresholds are the ANALYTIC midpoints between consecutive levels (for M=4: 2/7, 4/7, 6/7)
+    and M is FIXED at 4 in every shipped run. Neither is tuned: nothing in the harness calls set_thresholds
+    and no M sweep is run (TUNE_SEED symbols are evaluated but not used to adapt this plugin). Equal average
     power across schemes is applied by the harness (experiments.common.power_scales), not here.
+  - Result in this harness (r6 phycom_margins.csv): about 0 bps at the C2 distances 3.0-3.5 m, i.e.
+    non-functional there (v2 - plugin equals v2's own goodput).
   - Positioning / radical-axis / dimming-coefficient estimation from the paper are out of scope;
     this plugin is the SM-PAM communication mapping only.
 """
@@ -60,7 +64,7 @@ class SMPAMLeblebici(Scheme):
         for pos in self.groups:
             soft = np.array([x[p] for p in pos], float)
             idx = int(np.argmax(soft)); amp = float(soft[idx])
-            # quantise amplitude against tuned thresholds
+            # quantise amplitude against the analytic midpoint thresholds (not tuned)
             lev = int(np.searchsorted(self.thresholds, amp))
             lev = max(0, min(self.M - 1, lev))
             out.extend(i2b(idx, self.b_idx)); out.extend(i2b(lev, self.b_pam))
