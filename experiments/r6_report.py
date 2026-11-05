@@ -108,8 +108,10 @@ def holm():
                 rows.append(dict(claim=f'IMX219 binding, {corners}', seeds='imx-', budget='33', cond=f'{cn} {"tuned" if tu else "fixed"}',
                                  **binding_p(pairs(z, lambda t, s, cn=cn: f'{cn}|{t}|{s}', tu))))
     df = pd.DataFrame(rows)
-    df['p_holm'] = holm_adjust(df.p_iut.values)
     df['verdict_unadj'] = [verdict(a, b) for a, b in zip(df.lo, df.hi)]
+    # claim p: 'v2 > every comparison' -> IUT p (max over comparisons); 'v2 < X' or n.s. -> p of that comparison
+    df['p_claim'] = np.where(df.verdict_unadj == 'positive', df.p_iut, df.p_binding_pair)
+    df['p_holm'] = holm_adjust(df.p_claim.values)
     df['verdict_holm'] = np.where(df.p_holm < 0.05, df.verdict_unadj, 'n.s. (Holm)')
     df['changed'] = df.verdict_unadj != df.verdict_holm
     df['B'] = B_R6; df['boot_seed'] = BSEED; df['family_size'] = len(df)
