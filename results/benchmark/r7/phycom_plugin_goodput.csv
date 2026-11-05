@@ -1,0 +1,19 @@
+distance_m,scheme,goodput,lo,hi,B,boot_seed
+2.0,HNCSM v2,691.14,680.64,702.06,10000,0
+2.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",145.2,117.15,174.9,10000,0
+2.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",121.68,103.74,139.62,10000,0
+2.5,HNCSM v2,591.66,586.44,596.28,10000,0
+2.5,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",0.0,0.0,0.0,10000,0
+2.5,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",225.42,203.58,247.26,10000,0
+3.0,HNCSM v2,402.0,384.0,419.4,10000,0
+3.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",0.0,0.0,0.0,10000,0
+3.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",1.56,0.0,3.9,10000,0
+3.25,HNCSM v2,234.0,216.0,252.0,10000,0
+3.25,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",0.0,0.0,0.0,10000,0
+3.25,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",0.0,0.0,0.0,10000,0
+3.5,HNCSM v2,109.8,95.4,124.2,10000,0
+3.5,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",0.0,0.0,0.0,10000,0
+3.5,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",0.0,0.0,0.0,10000,0
+4.0,HNCSM v2,31.2,23.4,39.6,10000,0
+4.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",0.0,0.0,0.0,10000,0
+4.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",0.0,0.0,0.0,10000,0

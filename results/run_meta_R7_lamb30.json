@@ -1,0 +1,138 @@
+{
+"group": "lamb30",
+"git": "06ef614319041e641692ee35a29d483aa8278871-dirty",
+"code_key": "06ef614319041e641692ee35a29d483aa8278871",
+"utc": "2026-11-05T04:21:01.768224+00:00",
+"elapsed_s": 121,
+"procs": 7,
+"jobs": [
+{
+"key": "lambert_m=0.65|d3.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666,
+"yaw_deg": 30.0
+},
+"pmod": {
+"brightness": 0.0078125,
+"lambert_m": 0.65
+},
+"pref": 33.011,
+"seed": 1314860208,
+"symbols": 1000,
+"mode": "std"
+},
+{
+"key": "lambert_m=0.65|d3.0|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666,
+"yaw_deg": 30.0
+},
+"pmod": {
+"brightness": 0.0078125,
+"lambert_m": 0.65
+},
+"pref": 33.011,
+"seed": 1315860211,
+"symbols": 200,
+"mode": "std"
+},
+{
+"key": "lambert_m=0.65|d3.25|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666,
+"yaw_deg": 30.0
+},
+"pmod": {
+"brightness": 0.0078125,
+"lambert_m": 0.65
+},
+"pref": 33.011,
+"seed": 643572758,
+"symbols": 1000,
+"mode": "std"
+},
+{
+"key": "lambert_m=0.65|d3.25|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666,
+"yaw_deg": 30.0
+},
+"pmod": {
+"brightness": 0.0078125,
+"lambert_m": 0.65
+},
+"pref": 33.011,
+"seed": 644572761,
+"symbols": 200,
+"mode": "std"
+},
+{
+"key": "lambert_m=1.56|d3.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666,
+"yaw_deg": 30.0
+},
+"pmod": {
+"brightness": 0.0078125,
+"lambert_m": 1.56
+},
+"pref": 33.011,
+"seed": 1314860208,
+"symbols": 1000,
+"mode": "std"
+},
+{
+"key": "lambert_m=1.56|d3.0|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666,
+"yaw_deg": 30.0
+},
+"pmod": {
+"brightness": 0.0078125,
+"lambert_m": 1.56
+},
+"pref": 33.011,
+"seed": 1315860211,
+"symbols": 200,
+"mode": "std"
+},
+{
+"key": "lambert_m=1.56|d3.25|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666,
+"yaw_deg": 30.0
+},
+"pmod": {
+"brightness": 0.0078125,
+"lambert_m": 1.56
+},
+"pref": 33.011,
+"seed": 643572758,
+"symbols": 1000,
+"mode": "std"
+},
+{
+"key": "lambert_m=1.56|d3.25|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666,
+"yaw_deg": 30.0
+},
+"pmod": {
+"brightness": 0.0078125,
+"lambert_m": 1.56
+},
+"pref": 33.011,
+"seed": 644572761,
+"symbols": 200,
+"mode": "std"
+}
+]
+}
