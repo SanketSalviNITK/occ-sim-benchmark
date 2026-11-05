@@ -1,0 +1,31 @@
+distance_m,vs,crc,margin,lo,hi,p,verdict,kind,p_binding_pair,B,boot_seed
+2.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",native,545.94,516.12,574.44,0.0001,positive,vs_plugin,,10000,0
+2.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",48-bit,234.33,206.4,262.2,0.0001,positive,vs_plugin,,10000,0
+2.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",native,569.46,548.9385,589.74,0.0001,positive,vs_plugin,,10000,0
+2.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",48-bit,521.82,503.1,540.48,0.0001,positive,vs_plugin,,10000,0
+2.0,QCD-OCC (paper frame),48-bit,-645.66,-682.8,-608.34,0.1732,negative,binding_with_plugins,0.0001,10000,0
+2.5,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",native,591.66,586.44,596.28,0.0001,positive,vs_plugin,,10000,0
+2.5,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",48-bit,569.07,561.8392,575.85,0.0001,positive,vs_plugin,,10000,0
+2.5,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",native,366.24,343.8585,389.0415,0.0001,positive,vs_plugin,,10000,0
+2.5,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",48-bit,348.36,329.64,367.2,0.0001,positive,vs_plugin,,10000,0
+2.5,OOK-8x8,native,-147.0,-158.88,-135.12,0.0001,negative,binding_with_plugins,0.0001,10000,0
+3.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",native,402.0,384.0,419.4,0.0001,positive,vs_plugin,,10000,0
+3.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",48-bit,400.11,382.1093,417.72,0.0001,positive,vs_plugin,,10000,0
+3.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",native,400.44,382.62,418.02,0.0001,positive,vs_plugin,,10000,0
+3.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",48-bit,395.16,377.4,412.68,0.0001,positive,vs_plugin,,10000,0
+3.0,QCD-style-inspired (Vasantha22),native,150.0,126.6,173.4,0.0001,positive,binding_with_plugins,0.0001,10000,0
+3.25,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",native,234.0,216.0,252.0,0.0001,positive,vs_plugin,,10000,0
+3.25,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",48-bit,233.16,214.77,251.16,0.0001,positive,vs_plugin,,10000,0
+3.25,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",native,234.0,216.0,252.0,0.0001,positive,vs_plugin,,10000,0
+3.25,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",48-bit,230.82,212.6385,248.8815,0.0001,positive,vs_plugin,,10000,0
+3.25,Overlay-inspired (Nishimoto12),48-bit,107.58,86.34,129.0015,0.0001,positive,binding_with_plugins,0.0001,10000,0
+3.5,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",native,109.8,95.4,124.2,0.0001,positive,vs_plugin,,10000,0
+3.5,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",48-bit,109.8,95.4,124.2,0.0001,positive,vs_plugin,,10000,0
+3.5,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",native,109.8,95.4,124.2,0.0001,positive,vs_plugin,,10000,0
+3.5,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",48-bit,109.14,94.8,123.7815,0.0001,positive,vs_plugin,,10000,0
+3.5,HNCSM base-only,native,4.32,-10.08,19.08,0.5796,n.s.,binding_with_plugins,0.5796,10000,0
+4.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",native,31.2,23.4,39.6,0.0001,positive,vs_plugin,,10000,0
+4.0,"CSK-16-inspired (Singh et al., PhyCom 2018, doi:10.1016/j.phycom.2018.04.026)",48-bit,31.2,23.4,39.6,0.0001,positive,vs_plugin,,10000,0
+4.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",native,31.2,23.4,39.6,0.0001,positive,vs_plugin,,10000,0
+4.0,"SM-PAM-inspired (Leblebici et al., PhyCom 2026, doi:10.1016/j.phycom.2026.103205)",48-bit,30.84,22.8,39.36,0.0001,positive,vs_plugin,,10000,0
+4.0,HNCSM base-only,native,-62.4,-71.28,-53.28,0.4464,negative,binding_with_plugins,0.0001,10000,0

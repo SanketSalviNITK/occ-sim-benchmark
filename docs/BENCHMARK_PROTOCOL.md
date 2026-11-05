@@ -68,12 +68,28 @@ the 802.15.7 CIE-xy CSK constellations (CSK802-4/8) as the standard reference, a
 - e3claims@imx219f run meta records worktree commit 83b67a7 although the group started at 8d579f2; the only diff between
   those commits is the seed line-up (`lineup_seed`), which this group does not use.
 
+
+## Symbols per point and bootstrap (benchmark-r6)
+Canonical C2 / E2 / sensitivity / geometry / PhyCom points use **1000 eval symbols** on
+`config.cond_seed(<tag>, 0, SEED)` plus **200 tune symbols** on `TUNE_SEED` (resampling unit = one Tx symbol /
+selected frame). Paired CRN symbol bootstrap: B = 10000, bootstrap seed 0 in r6 reports
+(`experiments.r6_report`); r5 used B = 2000. Two-sided bootstrap p with floor 1/B; binding-margin
+intersection-union p = max over comparisons; Holm–Bonferroni across the CLAIMS_r5 claim family
+(`results/benchmark/r6/holm_claims.csv`).
+
 ## Limitations
-- **M4 (hardware):** no hardware validation. The only external anchors considered are listed in `docs/ANCHORS.md`; none was
-  reproduced.
-- **M7 (parameter uncertainty):** no Latin-hypercube / sensitivity study over sensor and optics parameters was run;
-  results are conditional on the presets. Many comparisons are reported without multiplicity correction; CIs are per comparison.
-- Single matrix geometry (8×8, P = pixels/LED set by distance); one LED spectrum model.
+- **M4 (hardware):** no hardware validation of an LED-matrix BER curve. External anchors considered are in `docs/ANCHORS.md`
+  (including the DataPort / E-VLC attempts at r6); none was used as a quantitative matrix anchor. QCD-OCC paper-frame
+  validation (`results/benchmark/r6/qcd_validation_grid.csv`) brackets the published BER 1.13e-2 by Tx brightness but no
+  single (lux, brightness) cell's Monte-Carlo CI contains it — brightness is unidentified, the camera differs (C310 vs
+  IMX174), and the CIs cover Monte Carlo noise only.
+- **M7 (parameter uncertainty):** a one-at-a-time sensitivity study over the Table-2 ASSUMED parameters at the C2 points
+  is in `results/benchmark/r6/sensitivity_tornado.*` (benchmark-r6). It is not a Latin-hypercube. Holm–Bonferroni over the
+  CLAIMS_r5 claim family is in `holm_claims.csv`; per-comparison CIs remain the primary report.
+- Matrix geometry: default 65 mm panel; r6 also reports an 80 mm panel (Nguyen 2021, doi:10.3390/s21093023) and a 30° yaw
+  geometry (`geometry_binding.csv`). One LED spectrum model.
+- Oracle corners at 3.25 m and 3.5 m on claims/E2 seeds: now run (`oracle_binding_canonical.csv`); previously only 3.0 m
+  (claims) and 3.5 m (sweep) were available.
 
 ## Run-meta provenance (R9)
 Of the four -dirty run metas, only e3valid was regenerated from a clean commit (83b67a7; all arrays np.array_equal to the shipped npz).

@@ -1,0 +1,178 @@
+{
+"group": "phycom",
+"git": "3f233c7b558b9830c4d8b22e018b9fdc51b9bc0b",
+"code_key": "r6-0fe3d44",
+"utc": "2026-11-05T04:01:56.023054+00:00",
+"elapsed_s": 208,
+"procs": 7,
+"jobs": [
+{
+"key": "d2.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 2.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 543612878,
+"symbols": 1000,
+"mode": "phycom"
+},
+{
+"key": "d2.0|1/1500|1/128|tune",
+"cond": {
+"distance_m": 2.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 544612881,
+"symbols": 200,
+"mode": "phycom"
+},
+{
+"key": "d2.5|1/1500|1/128|eval",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1888513105,
+"symbols": 1000,
+"mode": "phycom"
+},
+{
+"key": "d2.5|1/1500|1/128|tune",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1889513108,
+"symbols": 200,
+"mode": "phycom"
+},
+{
+"key": "d3.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"mode": "phycom"
+},
+{
+"key": "d3.0|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"mode": "phycom"
+},
+{
+"key": "d3.25|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"mode": "phycom"
+},
+{
+"key": "d3.25|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"mode": "phycom"
+},
+{
+"key": "d3.5|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.5,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1875792422,
+"symbols": 1000,
+"mode": "phycom"
+},
+{
+"key": "d3.5|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.5,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1876792425,
+"symbols": 200,
+"mode": "phycom"
+},
+{
+"key": "d4.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 4.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 485618716,
+"symbols": 1000,
+"mode": "phycom"
+},
+{
+"key": "d4.0|1/1500|1/128|tune",
+"cond": {
+"distance_m": 4.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 486618719,
+"symbols": 200,
+"mode": "phycom"
+}
+]
+}

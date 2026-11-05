@@ -1,9 +1,13 @@
-# benchmark-r5 summary (simulation only; local release candidate, not published)
+# benchmark-r6 summary (simulation only; local release candidate, not published)
 
-> **Claims status:** the benchmark-r2 claims were unchanged through benchmark-r3 and -r4. In **benchmark-r5** the C2 numbers were re-stated on one canonical seed set (claims/E2, protocol item 9) and the oracle-corner numbers were re-sourced (`oracle_pairs.csv`). The qualitative claims are unchanged. Every number with its file and row, plus the old→new change log: `CLAIMS_r5.md`.
+> **Claims status:** qualitative C2 (IMX174) and IMX219 claims are unchanged from r5. r6 adds a Table-2 ASSUMED
+> sensitivity study, a second panel geometry + yaw geometry, finder failure attribution (incl. 3.25 m oracle),
+> ablation bootstrap-seed stability, Holm–Bonferroni over the claim family, a QCD-OCC validation grid, and two
+> PhyCom-inspired plugin baselines. Holmed IMX219 m3.5 oracle+tuned is n.s. Sourced numbers and change log:
+> `CLAIMS_r6.md` (r5 artefact kept as `CLAIMS_r5.md`).
 
-Branch `benchmark` (from review-r1-exp cee4082). Tests: 85 pass. Default IMX174 path byte-identical (idcheck: v2 P33 3.0 m
-err/sat/mix arrays equal to sweeps_PHYS_P33, fresh checkpoints; also equal with OMP_NUM_THREADS=1; r5: meta regenerated at clean commit 231abcb, npz byte-identical, 3/3 arrays equal; dirty original kept as `run_meta_REVIEW_idcheck_orig_dirty.json`).
+Branch `benchmark`. Tests: 91 pass. Default IMX174 path kept byte-identical (plugins and r6 groups are additive;
+`lineup_r1` unchanged). r6 bootstrap B = 10000, seed 0; 1000 eval + 200 tune symbols per point.
 
 ## Oracle (genie) corners vs detector — `oracle_vs_detector*.csv`, `oracle_ranking.csv`
 IMX174 P33, 1–4 m (default 1/1500), mean over 7 points: v2 detector 554 → oracle 597 bps (detector loss 42, modulation loss 423);
@@ -14,7 +18,7 @@ Oracle-corner paired margins (`oracle_pairs.csv`, v2 − X, both with oracle cor
 i.e. 3rd among comparison schemes (4th if the v2-base-only ablation is counted), so the 3.0 m advantage comes from how reliably the shared
 finder locates v2 frames, not from demodulation. At 3.5 m (sweep seeds only) v2 leads every comparison scheme with oracle corners: binding
 +36.8 [12.8, 60.7] vs Overlay-inspired (48-bit); +44.4 [24.6, 64.8] vs QCD-style-inspired (native).
-**3.25 m was not tested with oracle corners.** The finder is shared across schemes; a bias toward schemes whose edge LEDs are always lit is suspected, not shown.
+**3.25 m oracle on claims/E2 is now in `r6/oracle_binding_canonical.csv` (r6):** detector +107.6 / oracle −24.0 vs QCD-style (rank 2). The finder is shared across schemes; a bias toward schemes whose edge LEDs are always lit is suspected, not shown.
 IMX219 (current preset imx219f, photometrically uncalibrated; scale-free finder): detector ≈ oracle (v2 697 vs 714; CSK802-8 827 vs 818): detector loss is small after R1.
 
 ## Claims wording (benchmark-r5; sources and change log: `CLAIMS_r5.md`)
@@ -75,3 +79,13 @@ IMX174 mean 20.7 ms/symbol (10.4–29.5), IMX219 28.7 (19.9–57.5); the corner 
 All claim-backing REVIEW metas are now from clean commits: e3valid, e1dec, e1sweep, e2_P33 at 83b67a7 (r2/r4, arrays identical),
 idcheck at 231abcb (r5, arrays identical). The dirty originals are kept as `run_meta_REVIEW_*_orig_dirty.json`.
 (The r2 text here said e1sweep/e1dec/e2_P33 still carried -dirty hashes; that was superseded at r2/r4.)
+
+## benchmark-r6 additions — `results/benchmark/r6/`
+- Sensitivity tornado (`sensitivity_tornado.*`): C2 survives Lambertian/bits/t_row/f_tx/reflectance/jitter/1/64;
+  flips negative under f_mm 4–8, f/2.8, focus 0.5/2.0 m, brightness 1/256.
+- Geometry (`geometry_binding.csv`): 80 mm panel loses C2 at 3.0/3.25 m (OOK binds); 30° yaw keeps only 3.0 m positive.
+- Finder (`finder_failure.*`): zero detection failures; gross-error rates drive finder loss; attribution holds at 3.25 m.
+- Stats: ablation n.s. stable on 25 seeds; Holm flips 3 unadjusted positives (incl. IMX219 m3.5 oracle+tuned).
+- QCD-OCC grid (`qcd_validation_grid.csv`): no cell CI contains published 1.13e-2; brightness unidentified + camera mismatch.
+- PhyCom plugins (`phycom_margins.csv`): CSK-16-inspired (Singh 2018) and SM-PAM-inspired (Leblebici 2026) are both well
+  below v2 at C2; binding baseline unchanged.

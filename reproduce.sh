@@ -27,3 +27,7 @@ $PY -m experiments.review_r1_report e1 e2 e3 e1_decomp
 $PY -m experiments.bench_report oracle ablation seeds e3 c2_binding > /dev/null
 $PY -m experiments.bench_oracle_pairs > /dev/null
 echo "tables written to results/review_r1/ and results/benchmark/"
+
+# --- benchmark-r6 (additive; does not regenerate r5 npz) ---
+# OMP_NUM_THREADS=1 PROCS=7 python -m experiments.revision_r6 sens geo80 geoyaw30 finder valid6 phycom
+# OMP_NUM_THREADS=1 python -m experiments.r6_report boot_stab holm sens geo finder valid6 phycom

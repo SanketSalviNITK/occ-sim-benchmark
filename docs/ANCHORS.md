@@ -8,3 +8,10 @@
 
 Conclusion: none of the three provides an LED-matrix BER-vs-distance curve with enough setup detail for a quantitative anchor;
 hardware validation (M4) remains open.
+
+| Dataset | Access | BER/success vs distance? | Setup detail enough to anchor our LED-matrix simulator? | Verdict |
+|---|---|---|---|---|
+| IEEE DataPort "V2V Visible Light Communication using Headlights and Taillights" (doi:10.21227/j0zd-gq12) | Requires IEEE DataPort subscription; 8 RAR archives (~3.4–4.3 GB each) listed on the landing page | ON/OFF annotations for 8×8 LED arrays (V2V tail lights) imaged by a smartphone (4000×3000); no published BER curve in the landing-page description | LED-array geometry is closer than single-LED OCC, but files were not downloaded (subscription wall) and no BER labels are described | Not used. Subscription-gated; no BER-vs-distance labels confirmed from the public page. |
+| E-VLC event-camera VLC dataset (Dropbox distribution; academic use, no redistribution) | Available on request / Dropbox link in the associated paper materials | Event and frame captures of single OSPG5111A bullet LEDs with Prophesee EVK-4 and Basler acA1300-200um at 40 fps | Single bullet LEDs, not an LED matrix; event-camera front-end differs from the rolling/global-shutter RGB model here | Not used as an anchor (wrong emitter geometry and sensor class). |
+
+r6 addendum: the DataPort landing page states "This dataset requires an IEEE DataPort Subscription to access." E-VLC was inspected from public descriptions only; the files were not redistributed.
