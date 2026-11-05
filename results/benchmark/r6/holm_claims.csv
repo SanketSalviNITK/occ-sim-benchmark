@@ -1,57 +1,57 @@
-claim,seeds,budget,cond,baseline,crc,margin,lo,hi,p_binding_pair,p_iut,p_holm,verdict_unadj,verdict_holm,changed,B,boot_seed,family_size
-C2 binding,claims/E2,25,d3.0,QCD-style-inspired (Vasantha22),native,133.2,109.8,156.6,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,claims/E2,25,d3.25,Overlay-inspired (Nishimoto12),48-bit,80.46,58.92,102.3,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,claims/E2,25,d3.5,HNCSM base-only,native,16.56,1.44,32.4,0.0316,0.0316,0.4424,positive,n.s. (Holm),True,10000,0,56
-C2 binding,claims/E2,33,d3.0,QCD-style-inspired (Vasantha22),native,150.0,126.6,173.4,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,claims/E2,33,d3.25,Overlay-inspired (Nishimoto12),48-bit,107.58,86.34,129.0015,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,claims/E2,33,d3.5,HNCSM base-only,native,4.32,-10.08,19.08,0.5796,0.5796,1.0,n.s.,n.s. (Holm),True,10000,0,56
-C2 binding,claims/E2,42,d3.0,QCD-style-inspired (Vasantha22),native,156.6,134.4,179.4,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,claims/E2,42,d3.25,HNCSM base-only,native,119.64,101.64,137.88,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,claims/E2,42,d3.5,HNCSM base-only,native,15.0,0.6,29.76,0.0426,0.0426,0.5408,positive,n.s. (Holm),True,10000,0,56
-C2 binding,sweep (run_phys),33,d3.0,QCD-style-inspired (Vasantha22),native,148.2,125.4,171.6,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,sweep (run_phys),33,d3.25,Overlay-inspired (Nishimoto12),48-bit,116.4,94.8585,138.42,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,sweep (run_phys),33,d3.5,HNCSM base-only,native,28.56,13.2,44.28,0.0006,0.0006,0.0114,positive,positive,False,10000,0,56
-C2 binding,A,33,d3.0,QCD-style-inspired (Vasantha22),native,164.4,141.6,187.2,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,A,33,d3.25,Overlay-inspired (Nishimoto12),48-bit,123.24,102.0,144.9,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,A,33,d3.5,HNCSM base-only,native,28.2,12.84,44.04,0.0008,0.0008,0.0136,positive,positive,False,10000,0,56
-C2 binding,B,33,d3.0,QCD-style-inspired (Vasantha22),native,166.2,141.6,190.2,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,B,33,d3.25,Overlay-inspired (Nishimoto12),48-bit,117.54,95.34,139.8,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-C2 binding,B,33,d3.5,HNCSM base-only,native,34.32,18.72,50.28,0.0001,0.0001,0.0056,positive,positive,False,10000,0,56
-oracle v2 - OOK-8x8,claims/E2,33,d3.0,OOK-8x8,native,-114.06,-141.9015,-86.64,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-oracle v2 - QCD-style-inspired (Vasantha22),claims/E2,33,d3.0,QCD-style-inspired (Vasantha22),native,-101.4,-121.8,-81.0,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-oracle binding,sweep (run_phys),33,d3.5,Overlay-inspired (Nishimoto12),48-bit,36.84,14.52,59.7615,0.0006,0.0006,0.0114,positive,positive,False,10000,0,56
-ablation residual v2 - (lit0.75+2lv),sweep (run_phys),33,d3.0,"HNCSM v2-base-only [lit 0.75, 2-level dec]",native,18.6,-1.2,38.4,0.07,0.07,0.77,n.s.,n.s. (Holm),True,10000,0,56
-ablation residual v2 - (lit0.75+2lv),sweep (run_phys),33,d3.25,"HNCSM v2-base-only [lit 0.75, 2-level dec]",native,35.4,13.2,58.2,0.002,0.002,0.03,positive,positive,False,10000,0,56
-ablation residual v2 - (lit0.75+2lv),sweep (run_phys),33,d3.5,"HNCSM v2-base-only [lit 0.75, 2-level dec]",native,14.4,-4.2,33.6,0.1384,0.1384,1.0,n.s.,n.s. (Holm),True,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,d2.5 fixed,CSK802-8,native,-1273.62,-1322.64,-1222.02,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,d2.5 tuned,CSK802-8,native,-1562.16,-1567.98,-1555.02,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,d3.0 fixed,QCD-OCC (paper frame),native,-999.6,-1011.84,-985.32,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,d3.0 tuned,CSK802-8,native,-1549.68,-1557.42,-1539.36,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,d3.25 fixed,QCD-OCC (paper frame),native,-925.8,-951.12,-898.851,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,d3.25 tuned,CSK802-8,native,-1517.82,-1537.14,-1496.28,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,d3.5 fixed,QCD-OCC (paper frame),native,-882.66,-913.68,-849.24,0.0001,0.3738,1.0,negative,n.s. (Holm),True,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,d3.5 tuned,CSK802-8,native,-1537.62,-1551.36,-1521.72,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,m2.5 fixed,OOK-8x8,native,-165.36,-173.22,-157.02,0.0001,0.3344,1.0,negative,n.s. (Holm),True,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,m2.5 tuned,OOK-8x8,native,-166.5,-175.08,-157.44,0.0001,0.2202,1.0,negative,n.s. (Holm),True,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,m3.0 fixed,QCD-style-inspired (Vasantha22),native,-57.0,-75.6,-38.4,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,m3.0 tuned,QCD-style-inspired (Vasantha22),native,-57.0,-75.6,-38.4,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,m3.25 fixed,QCD-style-inspired (Vasantha22),native,-82.2,-107.4,-57.0,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,m3.25 tuned,QCD-style-inspired (Vasantha22),native,-82.2,-108.0,-56.4,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,m3.5 fixed,QCD-style-inspired (Vasantha22),native,13.2,-10.8,36.6,0.2948,0.2948,1.0,n.s.,n.s. (Holm),True,10000,0,56
-"IMX219 binding, real finder (scale-free)",imx-,33,m3.5 tuned,QCD-style-inspired (Vasantha22),native,13.2,-10.8,36.6,0.2948,0.2948,1.0,n.s.,n.s. (Holm),True,10000,0,56
-"IMX219 binding, genie corners",imx-,33,d2.5 fixed,CSK802-8,native,-1240.08,-1291.68,-1185.9,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,d2.5 tuned,CSK802-8,native,-1562.16,-1567.98,-1555.02,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,d3.0 fixed,QCD-OCC (paper frame),native,-991.44,-1005.72,-975.12,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,d3.0 tuned,CSK802-8,native,-1547.1,-1557.42,-1534.2,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,d3.25 fixed,QCD-OCC (paper frame),native,-945.0,-968.28,-919.68,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,d3.25 tuned,CSK802-8,native,-1552.2,-1561.2,-1540.62,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,d3.5 fixed,QCD-OCC (paper frame),native,-885.54,-916.5,-852.06,0.0001,0.199,1.0,negative,n.s. (Holm),True,10000,0,56
-"IMX219 binding, genie corners",imx-,33,d3.5 tuned,CSK802-8,native,-1521.72,-1539.78,-1501.08,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,m2.5 fixed,OOK-8x8,native,-174.48,-181.32,-167.4,0.0001,0.0012,0.0192,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,m2.5 tuned,OOK-8x8,native,-181.68,-185.52,-178.2,0.0001,0.5878,1.0,negative,n.s. (Holm),True,10000,0,56
-"IMX219 binding, genie corners",imx-,33,m3.0 fixed,QCD-style-inspired (Vasantha22),native,-76.8,-97.2,-55.8,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,m3.0 tuned,OOK-8x8,native,-137.28,-163.5,-110.8185,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,m3.25 fixed,QCD-style-inspired (Vasantha22),native,-44.4,-67.2,-21.0,0.0002,0.0002,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,m3.25 tuned,QCD-style-inspired (Vasantha22),native,-58.8,-80.4,-37.2,0.0001,0.0001,0.0056,negative,negative,False,10000,0,56
-"IMX219 binding, genie corners",imx-,33,m3.5 fixed,QCD-style-inspired (Vasantha22),native,0.6,-22.8,24.6,0.9762,0.9762,1.0,n.s.,n.s. (Holm),True,10000,0,56
-"IMX219 binding, genie corners",imx-,33,m3.5 tuned,QCD-style-inspired (Vasantha22),native,23.4,1.2,45.6,0.0416,0.0416,0.5408,positive,n.s. (Holm),True,10000,0,56
+claim,seeds,budget,cond,baseline,crc,margin,lo,hi,p_binding_pair,p_iut,verdict_unadj,p_claim,p_holm,verdict_holm,changed,B,boot_seed,family_size
+C2 binding,claims/E2,25,d3.0,QCD-style-inspired (Vasantha22),native,133.2,109.8,156.6,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,claims/E2,25,d3.25,Overlay-inspired (Nishimoto12),48-bit,80.46,58.92,102.3,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,claims/E2,25,d3.5,HNCSM base-only,native,16.56,1.44,32.4,0.0316,0.0316,positive,0.0316,0.2844,n.s. (Holm),True,10000,0,56
+C2 binding,claims/E2,33,d3.0,QCD-style-inspired (Vasantha22),native,150.0,126.6,173.4,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,claims/E2,33,d3.25,Overlay-inspired (Nishimoto12),48-bit,107.58,86.34,129.0015,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,claims/E2,33,d3.5,HNCSM base-only,native,4.32,-10.08,19.08,0.5796,0.5796,n.s.,0.5796,1.0,n.s. (Holm),True,10000,0,56
+C2 binding,claims/E2,42,d3.0,QCD-style-inspired (Vasantha22),native,156.6,134.4,179.4,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,claims/E2,42,d3.25,HNCSM base-only,native,119.64,101.64,137.88,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,claims/E2,42,d3.5,HNCSM base-only,native,15.0,0.6,29.76,0.0426,0.0426,positive,0.0426,0.3328,n.s. (Holm),True,10000,0,56
+C2 binding,sweep (run_phys),33,d3.0,QCD-style-inspired (Vasantha22),native,148.2,125.4,171.6,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,sweep (run_phys),33,d3.25,Overlay-inspired (Nishimoto12),48-bit,116.4,94.8585,138.42,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,sweep (run_phys),33,d3.5,HNCSM base-only,native,28.56,13.2,44.28,0.0006,0.0006,positive,0.0006,0.0078,positive,False,10000,0,56
+C2 binding,A,33,d3.0,QCD-style-inspired (Vasantha22),native,164.4,141.6,187.2,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,A,33,d3.25,Overlay-inspired (Nishimoto12),48-bit,123.24,102.0,144.9,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,A,33,d3.5,HNCSM base-only,native,28.2,12.84,44.04,0.0008,0.0008,positive,0.0008,0.0088,positive,False,10000,0,56
+C2 binding,B,33,d3.0,QCD-style-inspired (Vasantha22),native,166.2,141.6,190.2,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,B,33,d3.25,Overlay-inspired (Nishimoto12),48-bit,117.54,95.34,139.8,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+C2 binding,B,33,d3.5,HNCSM base-only,native,34.32,18.72,50.28,0.0001,0.0001,positive,0.0001,0.0056,positive,False,10000,0,56
+oracle v2 - OOK-8x8,claims/E2,33,d3.0,OOK-8x8,native,-114.06,-141.9015,-86.64,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+oracle v2 - QCD-style-inspired (Vasantha22),claims/E2,33,d3.0,QCD-style-inspired (Vasantha22),native,-101.4,-121.8,-81.0,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+oracle binding,sweep (run_phys),33,d3.5,Overlay-inspired (Nishimoto12),48-bit,36.84,14.52,59.7615,0.0006,0.0006,positive,0.0006,0.0078,positive,False,10000,0,56
+ablation residual v2 - (lit0.75+2lv),sweep (run_phys),33,d3.0,"HNCSM v2-base-only [lit 0.75, 2-level dec]",native,18.6,-1.2,38.4,0.07,0.07,n.s.,0.07,0.42,n.s. (Holm),True,10000,0,56
+ablation residual v2 - (lit0.75+2lv),sweep (run_phys),33,d3.25,"HNCSM v2-base-only [lit 0.75, 2-level dec]",native,35.4,13.2,58.2,0.002,0.002,positive,0.002,0.02,positive,False,10000,0,56
+ablation residual v2 - (lit0.75+2lv),sweep (run_phys),33,d3.5,"HNCSM v2-base-only [lit 0.75, 2-level dec]",native,14.4,-4.2,33.6,0.1384,0.1384,n.s.,0.1384,0.692,n.s. (Holm),True,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,d2.5 fixed,CSK802-8,native,-1273.62,-1322.64,-1222.02,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,d2.5 tuned,CSK802-8,native,-1562.16,-1567.98,-1555.02,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,d3.0 fixed,QCD-OCC (paper frame),native,-999.6,-1011.84,-985.32,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,d3.0 tuned,CSK802-8,native,-1549.68,-1557.42,-1539.36,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,d3.25 fixed,QCD-OCC (paper frame),native,-925.8,-951.12,-898.851,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,d3.25 tuned,CSK802-8,native,-1517.82,-1537.14,-1496.28,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,d3.5 fixed,QCD-OCC (paper frame),native,-882.66,-913.68,-849.24,0.0001,0.3738,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,d3.5 tuned,CSK802-8,native,-1537.62,-1551.36,-1521.72,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,m2.5 fixed,OOK-8x8,native,-165.36,-173.22,-157.02,0.0001,0.3344,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,m2.5 tuned,OOK-8x8,native,-166.5,-175.08,-157.44,0.0001,0.2202,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,m3.0 fixed,QCD-style-inspired (Vasantha22),native,-57.0,-75.6,-38.4,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,m3.0 tuned,QCD-style-inspired (Vasantha22),native,-57.0,-75.6,-38.4,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,m3.25 fixed,QCD-style-inspired (Vasantha22),native,-82.2,-107.4,-57.0,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,m3.25 tuned,QCD-style-inspired (Vasantha22),native,-82.2,-108.0,-56.4,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,m3.5 fixed,QCD-style-inspired (Vasantha22),native,13.2,-10.8,36.6,0.2948,0.2948,n.s.,0.2948,1.0,n.s. (Holm),True,10000,0,56
+"IMX219 binding, real finder (scale-free)",imx-,33,m3.5 tuned,QCD-style-inspired (Vasantha22),native,13.2,-10.8,36.6,0.2948,0.2948,n.s.,0.2948,1.0,n.s. (Holm),True,10000,0,56
+"IMX219 binding, genie corners",imx-,33,d2.5 fixed,CSK802-8,native,-1240.08,-1291.68,-1185.9,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,d2.5 tuned,CSK802-8,native,-1562.16,-1567.98,-1555.02,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,d3.0 fixed,QCD-OCC (paper frame),native,-991.44,-1005.72,-975.12,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,d3.0 tuned,CSK802-8,native,-1547.1,-1557.42,-1534.2,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,d3.25 fixed,QCD-OCC (paper frame),native,-945.0,-968.28,-919.68,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,d3.25 tuned,CSK802-8,native,-1552.2,-1561.2,-1540.62,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,d3.5 fixed,QCD-OCC (paper frame),native,-885.54,-916.5,-852.06,0.0001,0.199,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,d3.5 tuned,CSK802-8,native,-1521.72,-1539.78,-1501.08,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,m2.5 fixed,OOK-8x8,native,-174.48,-181.32,-167.4,0.0001,0.0012,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,m2.5 tuned,OOK-8x8,native,-181.68,-185.52,-178.2,0.0001,0.5878,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,m3.0 fixed,QCD-style-inspired (Vasantha22),native,-76.8,-97.2,-55.8,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,m3.0 tuned,OOK-8x8,native,-137.28,-163.5,-110.8185,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,m3.25 fixed,QCD-style-inspired (Vasantha22),native,-44.4,-67.2,-21.0,0.0002,0.0002,negative,0.0002,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,m3.25 tuned,QCD-style-inspired (Vasantha22),native,-58.8,-80.4,-37.2,0.0001,0.0001,negative,0.0001,0.0056,negative,False,10000,0,56
+"IMX219 binding, genie corners",imx-,33,m3.5 fixed,QCD-style-inspired (Vasantha22),native,0.6,-22.8,24.6,0.9762,0.9762,n.s.,0.9762,1.0,n.s. (Holm),True,10000,0,56
+"IMX219 binding, genie corners",imx-,33,m3.5 tuned,QCD-style-inspired (Vasantha22),native,23.4,1.2,45.6,0.0416,0.0416,positive,0.0416,0.3328,n.s. (Holm),True,10000,0,56
