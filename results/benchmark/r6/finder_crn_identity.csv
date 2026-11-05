@@ -1,0 +1,90 @@
+distance_m,scheme,reference,array,identical
+2.5,HNCSM v2-CS,claims,err,True
+2.5,HNCSM v2-CS,review_or_claims,err_orc,True
+2.5,HNCSM v2,claims,err,True
+2.5,HNCSM v2,review_or_claims,err_orc,True
+2.5,HNCSM,claims,err,True
+2.5,HNCSM,review_or_claims,err_orc,True
+2.5,HNCSM base-only,claims,err,True
+2.5,HNCSM base-only,review_or_claims,err_orc,True
+2.5,CSK802-8,claims,err,True
+2.5,CSK802-8,review_or_claims,err_orc,True
+2.5,CSK802-4,claims,err,True
+2.5,CSK802-4,review_or_claims,err_orc,True
+2.5,OOK-8x8,claims,err,True
+2.5,OOK-8x8,review_or_claims,err_orc,True
+2.5,QR/Aztec-style,claims,err,True
+2.5,QR/Aztec-style,review_or_claims,err_orc,True
+2.5,NestedTexture-inspired (Salvi22),claims,err,True
+2.5,NestedTexture-inspired (Salvi22),review_or_claims,err_orc,True
+2.5,QCD-style-inspired (Vasantha22),claims,err,True
+2.5,QCD-style-inspired (Vasantha22),review_or_claims,err_orc,True
+2.5,Overlay-inspired (Nishimoto12),claims,err,True
+2.5,Overlay-inspired (Nishimoto12),review_or_claims,err_orc,True
+2.5,QCD-OCC (paper frame),claims,err,True
+2.5,QCD-OCC (paper frame),review_or_claims,err_orc,True
+2.5,HNCSM v2-base-only,review_or_claims,err_orc,True
+3.0,HNCSM v2-CS,review_e2_P33,err,True
+3.0,HNCSM v2-CS,claims,err,True
+3.0,HNCSM v2-CS,review_or_claims,err_orc,True
+3.0,HNCSM v2,review_e2_P33,err,True
+3.0,HNCSM v2,claims,err,True
+3.0,HNCSM v2,review_or_claims,err_orc,True
+3.0,HNCSM,review_e2_P33,err,True
+3.0,HNCSM,claims,err,True
+3.0,HNCSM,review_or_claims,err_orc,True
+3.0,HNCSM base-only,review_e2_P33,err,True
+3.0,HNCSM base-only,claims,err,True
+3.0,HNCSM base-only,review_or_claims,err_orc,True
+3.0,CSK802-8,review_e2_P33,err,True
+3.0,CSK802-8,claims,err,True
+3.0,CSK802-8,review_or_claims,err_orc,True
+3.0,CSK802-4,review_e2_P33,err,True
+3.0,CSK802-4,claims,err,True
+3.0,CSK802-4,review_or_claims,err_orc,True
+3.0,OOK-8x8,review_e2_P33,err,True
+3.0,OOK-8x8,claims,err,True
+3.0,OOK-8x8,review_or_claims,err_orc,True
+3.0,QR/Aztec-style,review_e2_P33,err,True
+3.0,QR/Aztec-style,claims,err,True
+3.0,QR/Aztec-style,review_or_claims,err_orc,True
+3.0,NestedTexture-inspired (Salvi22),review_e2_P33,err,True
+3.0,NestedTexture-inspired (Salvi22),claims,err,True
+3.0,NestedTexture-inspired (Salvi22),review_or_claims,err_orc,True
+3.0,QCD-style-inspired (Vasantha22),review_e2_P33,err,True
+3.0,QCD-style-inspired (Vasantha22),claims,err,True
+3.0,QCD-style-inspired (Vasantha22),review_or_claims,err_orc,True
+3.0,Overlay-inspired (Nishimoto12),review_e2_P33,err,True
+3.0,Overlay-inspired (Nishimoto12),claims,err,True
+3.0,Overlay-inspired (Nishimoto12),review_or_claims,err_orc,True
+3.0,QCD-OCC (paper frame),review_e2_P33,err,True
+3.0,QCD-OCC (paper frame),claims,err,True
+3.0,QCD-OCC (paper frame),review_or_claims,err_orc,True
+3.0,HNCSM v2-base-only,review_e2_P33,err,True
+3.0,HNCSM v2-base-only,review_or_claims,err_orc,True
+3.25,HNCSM v2-CS,review_e2_P33,err,True
+3.25,HNCSM v2,review_e2_P33,err,True
+3.25,HNCSM,review_e2_P33,err,True
+3.25,HNCSM base-only,review_e2_P33,err,True
+3.25,CSK802-8,review_e2_P33,err,True
+3.25,CSK802-4,review_e2_P33,err,True
+3.25,OOK-8x8,review_e2_P33,err,True
+3.25,QR/Aztec-style,review_e2_P33,err,True
+3.25,NestedTexture-inspired (Salvi22),review_e2_P33,err,True
+3.25,QCD-style-inspired (Vasantha22),review_e2_P33,err,True
+3.25,Overlay-inspired (Nishimoto12),review_e2_P33,err,True
+3.25,QCD-OCC (paper frame),review_e2_P33,err,True
+3.25,HNCSM v2-base-only,review_e2_P33,err,True
+3.5,HNCSM v2-CS,review_e2_P33,err,True
+3.5,HNCSM v2,review_e2_P33,err,True
+3.5,HNCSM,review_e2_P33,err,True
+3.5,HNCSM base-only,review_e2_P33,err,True
+3.5,CSK802-8,review_e2_P33,err,True
+3.5,CSK802-4,review_e2_P33,err,True
+3.5,OOK-8x8,review_e2_P33,err,True
+3.5,QR/Aztec-style,review_e2_P33,err,True
+3.5,NestedTexture-inspired (Salvi22),review_e2_P33,err,True
+3.5,QCD-style-inspired (Vasantha22),review_e2_P33,err,True
+3.5,Overlay-inspired (Nishimoto12),review_e2_P33,err,True
+3.5,QCD-OCC (paper frame),review_e2_P33,err,True
+3.5,HNCSM v2-base-only,review_e2_P33,err,True

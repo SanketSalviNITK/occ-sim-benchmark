@@ -1,0 +1,94 @@
+{
+"group": "finder",
+"git": "b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty",
+"code_key": "r6-0fe3d44",
+"utc": "2026-11-05T03:29:13.387423+00:00",
+"elapsed_s": 181,
+"procs": 7,
+"jobs": [
+{
+"key": "d2.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 2.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 543612878,
+"symbols": 1000,
+"mode": "dual"
+},
+{
+"key": "d2.5|1/1500|1/128|eval",
+"cond": {
+"distance_m": 2.5,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1888513105,
+"symbols": 1000,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"mode": "dual"
+},
+{
+"key": "d3.5|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.5,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1875792422,
+"symbols": 1000,
+"mode": "dual"
+},
+{
+"key": "d4.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 4.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 485618716,
+"symbols": 1000,
+"mode": "dual"
+}
+]
+}
