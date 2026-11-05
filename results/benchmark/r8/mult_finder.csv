@@ -1,0 +1,274 @@
+sigma_mult,corr,distance,scheme,gross_frame,det_fail_frame,detector_bps,oracle_bps,finder_loss,std_vs_dual_err_identical
+0.0,-,d3.0,HNCSM v2-CS,0.634,0.0,24.0,37.8,13.8,True
+0.0,-,d3.0,HNCSM v2,0.071,0.0,402.0,421.8,19.8,True
+0.0,-,d3.0,HNCSM,0.0155,0.0,125.28,128.28,3.0,True
+0.0,-,d3.0,HNCSM base-only,0.009,0.0,118.2,120.0,1.8,True
+0.0,-,d3.0,CSK802-8,0.0,0.0,0.0,0.0,0.0,True
+0.0,-,d3.0,CSK802-4,0.0,0.0,0.0,0.0,0.0,True
+0.0,-,d3.0,OOK-8x8,0.04,0.0,169.26,535.86,366.6,True
+0.0,-,d3.0,QR/Aztec-style,0.0005,0.0,210.9,252.6,41.7,True
+0.0,-,d3.0,NestedTexture-inspired (Salvi22),0.0335,0.0,153.84,214.08,60.24,True
+0.0,-,d3.0,QCD-style-inspired (Vasantha22),0.5725,0.0,252.0,523.2,271.2,True
+0.0,-,d3.0,Overlay-inspired (Nishimoto12),0.4385,0.0,112.74,156.66,43.92,True
+0.0,-,d3.0,QCD-OCC (paper frame),0.0,0.0,0.0,0.0,0.0,True
+0.0,-,d3.0,HNCSM v2-base-only,0.5625,0.0,246.6,495.6,249.0,True
+0.024,pixel,d3.0,HNCSM v2-CS,0.6375,0.0,25.2,37.2,12.0,True
+0.024,pixel,d3.0,HNCSM v2,0.0695,0.0,414.0,425.4,11.4,True
+0.024,pixel,d3.0,HNCSM,0.015,0.0,125.52,129.24,3.72,True
+0.024,pixel,d3.0,HNCSM base-only,0.008,0.0,118.56,119.76,1.2,True
+0.024,pixel,d3.0,CSK802-8,0.0,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.0,CSK802-4,0.0,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.0,OOK-8x8,0.04,0.0,184.08,530.4,346.32,True
+0.024,pixel,d3.0,QR/Aztec-style,0.0005,0.0,208.8,253.8,45.0,True
+0.024,pixel,d3.0,NestedTexture-inspired (Salvi22),0.0345,0.0,149.4,213.72,64.32,True
+0.024,pixel,d3.0,QCD-style-inspired (Vasantha22),0.5735,0.0,261.0,522.0,261.0,True
+0.024,pixel,d3.0,Overlay-inspired (Nishimoto12),0.4485,0.0,112.08,157.14,45.06,True
+0.024,pixel,d3.0,QCD-OCC (paper frame),0.001,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.0,HNCSM v2-base-only,0.571,0.0,252.0,490.8,238.8,True
+0.024,frame,d3.0,HNCSM v2-CS,0.648,0.0,26.4,39.0,12.6,True
+0.024,frame,d3.0,HNCSM v2,0.0765,0.0,405.0,418.8,13.8,True
+0.024,frame,d3.0,HNCSM,0.018,0.0,125.88,125.76,-0.12,True
+0.024,frame,d3.0,HNCSM base-only,0.0095,0.0,118.56,119.76,1.2,True
+0.024,frame,d3.0,CSK802-8,0.0,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.0,CSK802-4,0.0,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.0,OOK-8x8,0.0385,0.0,179.4,532.74,353.34,True
+0.024,frame,d3.0,QR/Aztec-style,0.001,0.0,210.3,250.5,40.2,True
+0.024,frame,d3.0,NestedTexture-inspired (Salvi22),0.0375,0.0,149.52,214.08,64.56,True
+0.024,frame,d3.0,QCD-style-inspired (Vasantha22),0.57,0.0,259.8,527.4,267.6,True
+0.024,frame,d3.0,Overlay-inspired (Nishimoto12),0.4385,0.0,118.92,156.96,38.04,True
+0.024,frame,d3.0,QCD-OCC (paper frame),0.001,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.0,HNCSM v2-base-only,0.5675,0.0,249.6,498.0,248.4,True
+0.05,pixel,d3.0,HNCSM v2-CS,0.65,0.0,28.8,34.2,5.4,True
+0.05,pixel,d3.0,HNCSM v2,0.074,0.0,406.2,420.0,13.8,True
+0.05,pixel,d3.0,HNCSM,0.02,0.0,124.56,127.44,2.88,True
+0.05,pixel,d3.0,HNCSM base-only,0.0085,0.0,118.2,120.0,1.8,True
+0.05,pixel,d3.0,CSK802-8,0.0,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.0,CSK802-4,0.0,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.0,OOK-8x8,0.0385,0.0,179.4,521.82,342.42,True
+0.05,pixel,d3.0,QR/Aztec-style,0.0005,0.0,211.5,252.0,40.5,True
+0.05,pixel,d3.0,NestedTexture-inspired (Salvi22),0.034,0.0,150.48,212.88,62.4,True
+0.05,pixel,d3.0,QCD-style-inspired (Vasantha22),0.5715,0.0,268.8,519.0,250.2,True
+0.05,pixel,d3.0,Overlay-inspired (Nishimoto12),0.4425,0.0,107.46,151.74,44.28,True
+0.05,pixel,d3.0,QCD-OCC (paper frame),0.001,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.0,HNCSM v2-base-only,0.568,0.0,259.8,491.4,231.6,True
+0.05,frame,d3.0,HNCSM v2-CS,0.6415,0.0,25.2,40.8,15.6,True
+0.05,frame,d3.0,HNCSM v2,0.0765,0.0,412.8,418.8,6.0,True
+0.05,frame,d3.0,HNCSM,0.018,0.0,123.12,127.08,3.96,True
+0.05,frame,d3.0,HNCSM base-only,0.0105,0.0,118.2,119.76,1.56,True
+0.05,frame,d3.0,CSK802-8,0.0,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.0,CSK802-4,0.0005,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.0,OOK-8x8,0.038,0.0,184.08,536.64,352.56,True
+0.05,frame,d3.0,QR/Aztec-style,0.0005,0.0,213.6,251.7,38.1,True
+0.05,frame,d3.0,NestedTexture-inspired (Salvi22),0.0335,0.0,153.6,214.08,60.48,True
+0.05,frame,d3.0,QCD-style-inspired (Vasantha22),0.5765,0.0,262.8,516.0,253.2,True
+0.05,frame,d3.0,Overlay-inspired (Nishimoto12),0.4395,0.0,120.6,175.5,54.9,True
+0.05,frame,d3.0,QCD-OCC (paper frame),0.0005,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.0,HNCSM v2-base-only,0.573,0.0,256.8,490.8,234.0,True
+0.15,pixel,d3.0,HNCSM v2-CS,0.6165,0.0,25.2,31.8,6.6,True
+0.15,pixel,d3.0,HNCSM v2,0.062,0.0,414.6,427.8,13.2,True
+0.15,pixel,d3.0,HNCSM,0.0175,0.0,120.6,132.12,11.52,True
+0.15,pixel,d3.0,HNCSM base-only,0.0095,0.0,117.96,119.76,1.8,True
+0.15,pixel,d3.0,CSK802-8,0.0,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.0,CSK802-4,0.0,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.0,OOK-8x8,0.0385,0.0,177.84,472.68,294.84,True
+0.15,pixel,d3.0,QR/Aztec-style,0.0005,0.0,210.3,250.8,40.5,True
+0.15,pixel,d3.0,NestedTexture-inspired (Salvi22),0.038,0.0,151.68,211.08,59.4,True
+0.15,pixel,d3.0,QCD-style-inspired (Vasantha22),0.515,0.0,313.8,494.4,180.6,True
+0.15,pixel,d3.0,Overlay-inspired (Nishimoto12),0.4045,0.0,96.18,134.34,38.16,True
+0.15,pixel,d3.0,QCD-OCC (paper frame),0.0,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.0,HNCSM v2-base-only,0.5155,0.0,291.6,459.0,167.4,True
+0.15,frame,d3.0,HNCSM v2-CS,0.6305,0.0,30.0,43.8,13.8,True
+0.15,frame,d3.0,HNCSM v2,0.09,0.0,415.2,421.8,6.6,True
+0.15,frame,d3.0,HNCSM,0.0175,0.0,126.96,130.92,3.96,True
+0.15,frame,d3.0,HNCSM base-only,0.0155,0.0,117.36,119.88,2.52,True
+0.15,frame,d3.0,CSK802-8,0.0,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.0,CSK802-4,0.0005,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.0,OOK-8x8,0.0455,0.0,198.12,543.66,345.54,True
+0.15,frame,d3.0,QR/Aztec-style,0.001,0.0,218.4,256.5,38.1,True
+0.15,frame,d3.0,NestedTexture-inspired (Salvi22),0.0375,0.0,156.0,215.16,59.16,True
+0.15,frame,d3.0,QCD-style-inspired (Vasantha22),0.5155,0.0,301.2,499.8,198.6,True
+0.15,frame,d3.0,Overlay-inspired (Nishimoto12),0.4495,0.0,116.58,214.44,97.86,True
+0.15,frame,d3.0,QCD-OCC (paper frame),0.001,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.0,HNCSM v2-base-only,0.5345,0.0,285.0,480.6,195.6,True
+0.0,-,d3.25,HNCSM v2-CS,0.7355,0.0,15.6,31.8,16.2,True
+0.0,-,d3.25,HNCSM v2,0.166,0.0,234.0,319.8,85.8,True
+0.0,-,d3.25,HNCSM,0.047,0.0,111.6,123.6,12.0,True
+0.0,-,d3.25,HNCSM base-only,0.017,0.0,117.0,117.72,0.72,True
+0.0,-,d3.25,CSK802-8,0.033,0.0,0.0,0.0,0.0,True
+0.0,-,d3.25,CSK802-4,0.036,0.0,0.0,0.0,0.0,True
+0.0,-,d3.25,OOK-8x8,0.0415,0.0,33.54,151.32,117.78,True
+0.0,-,d3.25,QR/Aztec-style,0.009,0.0,97.8,176.1,78.3,True
+0.0,-,d3.25,NestedTexture-inspired (Salvi22),0.0465,0.0,114.0,161.64,47.64,True
+0.0,-,d3.25,QCD-style-inspired (Vasantha22),0.7065,0.0,121.2,343.8,222.6,True
+0.0,-,d3.25,Overlay-inspired (Nishimoto12),0.471,0.0,108.0,210.18,102.18,True
+0.0,-,d3.25,QCD-OCC (paper frame),0.01,0.0,0.0,0.0,0.0,True
+0.0,-,d3.25,HNCSM v2-base-only,0.7125,0.0,102.6,320.4,217.8,True
+0.024,pixel,d3.25,HNCSM v2-CS,0.7335,0.0,15.0,28.2,13.2,True
+0.024,pixel,d3.25,HNCSM v2,0.18,0.0,234.0,318.0,84.0,True
+0.024,pixel,d3.25,HNCSM,0.053,0.0,109.08,120.84,11.76,True
+0.024,pixel,d3.25,HNCSM base-only,0.0155,0.0,117.6,117.72,0.12,True
+0.024,pixel,d3.25,CSK802-8,0.029,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.25,CSK802-4,0.036,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.25,OOK-8x8,0.0365,0.0,29.64,155.22,125.58,True
+0.024,pixel,d3.25,QR/Aztec-style,0.0115,0.0,99.6,180.0,80.4,True
+0.024,pixel,d3.25,NestedTexture-inspired (Salvi22),0.045,0.0,114.96,160.32,45.36,True
+0.024,pixel,d3.25,QCD-style-inspired (Vasantha22),0.714,0.0,115.8,341.4,225.6,True
+0.024,pixel,d3.25,Overlay-inspired (Nishimoto12),0.4655,0.0,105.24,208.98,103.74,True
+0.024,pixel,d3.25,QCD-OCC (paper frame),0.0105,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.25,HNCSM v2-base-only,0.7025,0.0,104.4,318.0,213.6,True
+0.024,frame,d3.25,HNCSM v2-CS,0.741,0.0,14.4,34.8,20.4,True
+0.024,frame,d3.25,HNCSM v2,0.176,0.0,238.2,315.0,76.8,True
+0.024,frame,d3.25,HNCSM,0.0495,0.0,111.48,124.92,13.44,True
+0.024,frame,d3.25,HNCSM base-only,0.0185,0.0,117.36,118.44,1.08,True
+0.024,frame,d3.25,CSK802-8,0.0315,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.25,CSK802-4,0.038,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.25,OOK-8x8,0.0405,0.0,34.32,158.34,124.02,True
+0.024,frame,d3.25,QR/Aztec-style,0.0105,0.0,101.1,179.4,78.3,True
+0.024,frame,d3.25,NestedTexture-inspired (Salvi22),0.043,0.0,115.8,161.76,45.96,True
+0.024,frame,d3.25,QCD-style-inspired (Vasantha22),0.7165,0.0,115.8,333.0,217.2,True
+0.024,frame,d3.25,Overlay-inspired (Nishimoto12),0.465,0.0,108.06,206.1,98.04,True
+0.024,frame,d3.25,QCD-OCC (paper frame),0.0105,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.25,HNCSM v2-base-only,0.698,0.0,106.8,319.2,212.4,True
+0.05,pixel,d3.25,HNCSM v2-CS,0.7235,0.0,15.0,27.6,12.6,True
+0.05,pixel,d3.25,HNCSM v2,0.1645,0.0,244.8,315.6,70.8,True
+0.05,pixel,d3.25,HNCSM,0.052,0.0,112.44,123.12,10.68,True
+0.05,pixel,d3.25,HNCSM base-only,0.0185,0.0,116.88,118.2,1.32,True
+0.05,pixel,d3.25,CSK802-8,0.031,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.25,CSK802-4,0.039,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.25,OOK-8x8,0.0385,0.0,31.98,156.78,124.8,True
+0.05,pixel,d3.25,QR/Aztec-style,0.011,0.0,100.5,179.1,78.6,True
+0.05,pixel,d3.25,NestedTexture-inspired (Salvi22),0.0425,0.0,114.72,163.56,48.84,True
+0.05,pixel,d3.25,QCD-style-inspired (Vasantha22),0.7045,0.0,123.0,336.6,213.6,True
+0.05,pixel,d3.25,Overlay-inspired (Nishimoto12),0.471,0.0,101.88,192.9,91.02,True
+0.05,pixel,d3.25,QCD-OCC (paper frame),0.009,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.25,HNCSM v2-base-only,0.7015,0.0,111.0,315.6,204.6,True
+0.05,frame,d3.25,HNCSM v2-CS,0.7425,0.0,19.2,33.0,13.8,True
+0.05,frame,d3.25,HNCSM v2,0.1815,0.0,237.6,324.0,86.4,True
+0.05,frame,d3.25,HNCSM,0.049,0.0,112.8,123.12,10.32,True
+0.05,frame,d3.25,HNCSM base-only,0.02,0.0,117.24,118.56,1.32,True
+0.05,frame,d3.25,CSK802-8,0.0275,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.25,CSK802-4,0.0355,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.25,OOK-8x8,0.038,0.0,35.88,165.36,129.48,True
+0.05,frame,d3.25,QR/Aztec-style,0.0085,0.0,107.1,181.2,74.1,True
+0.05,frame,d3.25,NestedTexture-inspired (Salvi22),0.043,0.0,116.76,163.2,46.44,True
+0.05,frame,d3.25,QCD-style-inspired (Vasantha22),0.721,0.0,119.4,331.8,212.4,True
+0.05,frame,d3.25,Overlay-inspired (Nishimoto12),0.4795,0.0,107.7,222.12,114.42,True
+0.05,frame,d3.25,QCD-OCC (paper frame),0.01,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.25,HNCSM v2-base-only,0.695,0.0,119.4,314.4,195.0,True
+0.15,pixel,d3.25,HNCSM v2-CS,0.717,0.0,10.8,28.2,17.4,True
+0.15,pixel,d3.25,HNCSM v2,0.153,0.0,233.4,310.2,76.8,True
+0.15,pixel,d3.25,HNCSM,0.0545,0.0,110.04,123.12,13.08,True
+0.15,pixel,d3.25,HNCSM base-only,0.024,0.0,117.6,118.2,0.6,True
+0.15,pixel,d3.25,CSK802-8,0.027,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.25,CSK802-4,0.0435,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.25,OOK-8x8,0.043,0.0,28.08,156.0,127.92,True
+0.15,pixel,d3.25,QR/Aztec-style,0.018,0.0,99.3,182.1,82.8,True
+0.15,pixel,d3.25,NestedTexture-inspired (Salvi22),0.055,0.0,113.52,162.96,49.44,True
+0.15,pixel,d3.25,QCD-style-inspired (Vasantha22),0.674,0.0,135.6,319.8,184.2,True
+0.15,pixel,d3.25,Overlay-inspired (Nishimoto12),0.4715,0.0,90.36,153.6,63.24,True
+0.15,pixel,d3.25,QCD-OCC (paper frame),0.017,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.25,HNCSM v2-base-only,0.6755,0.0,129.6,303.6,174.0,True
+0.15,frame,d3.25,HNCSM v2-CS,0.715,0.0,15.6,30.6,15.0,True
+0.15,frame,d3.25,HNCSM v2,0.1905,0.0,243.0,327.0,84.0,True
+0.15,frame,d3.25,HNCSM,0.0585,0.0,114.48,126.48,12.0,True
+0.15,frame,d3.25,HNCSM base-only,0.017,0.0,117.72,117.96,0.24,True
+0.15,frame,d3.25,CSK802-8,0.0335,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.25,CSK802-4,0.0385,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.25,OOK-8x8,0.04,0.0,65.52,182.52,117.0,True
+0.15,frame,d3.25,QR/Aztec-style,0.009,0.0,118.2,180.0,61.8,True
+0.15,frame,d3.25,NestedTexture-inspired (Salvi22),0.0415,0.0,120.84,162.84,42.0,True
+0.15,frame,d3.25,QCD-style-inspired (Vasantha22),0.6525,0.0,147.0,324.0,177.0,True
+0.15,frame,d3.25,Overlay-inspired (Nishimoto12),0.479,0.0,112.14,225.84,113.7,True
+0.15,frame,d3.25,QCD-OCC (paper frame),0.0115,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.25,HNCSM v2-base-only,0.6525,0.0,135.6,304.8,169.2,True
+0.0,-,d3.5,HNCSM v2-CS,0.728,0.0,6.0,15.6,9.6,True
+0.0,-,d3.5,HNCSM v2,0.3275,0.0,109.8,321.6,211.8,True
+0.0,-,d3.5,HNCSM,0.0875,0.0,88.2,117.36,29.16,True
+0.0,-,d3.5,HNCSM base-only,0.0255,0.0,105.48,117.0,11.52,True
+0.0,-,d3.5,CSK802-8,0.0035,0.0,0.0,0.0,0.0,True
+0.0,-,d3.5,CSK802-4,0.0115,0.0,0.0,0.0,0.0,True
+0.0,-,d3.5,OOK-8x8,0.0535,0.0,0.78,3.12,2.34,True
+0.0,-,d3.5,QR/Aztec-style,0.015,0.0,9.3,24.9,15.6,True
+0.0,-,d3.5,NestedTexture-inspired (Salvi22),0.0535,0.0,45.0,92.64,47.64,True
+0.0,-,d3.5,QCD-style-inspired (Vasantha22),0.691,0.0,58.8,259.2,200.4,True
+0.0,-,d3.5,Overlay-inspired (Nishimoto12),0.5445,0.0,69.48,216.9,147.42,True
+0.0,-,d3.5,QCD-OCC (paper frame),0.0035,0.0,0.0,0.0,0.0,True
+0.0,-,d3.5,HNCSM v2-base-only,0.7245,0.0,49.8,243.6,193.8,True
+0.024,pixel,d3.5,HNCSM v2-CS,0.7345,0.0,1.8,16.2,14.4,True
+0.024,pixel,d3.5,HNCSM v2,0.3385,0.0,118.2,320.4,202.2,True
+0.024,pixel,d3.5,HNCSM,0.0895,0.0,87.12,116.64,29.52,True
+0.024,pixel,d3.5,HNCSM base-only,0.0285,0.0,103.2,116.88,13.68,True
+0.024,pixel,d3.5,CSK802-8,0.003,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.5,CSK802-4,0.012,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.5,OOK-8x8,0.05,0.0,0.0,3.12,3.12,True
+0.024,pixel,d3.5,QR/Aztec-style,0.016,0.0,9.0,23.7,14.7,True
+0.024,pixel,d3.5,NestedTexture-inspired (Salvi22),0.0485,0.0,47.28,91.92,44.64,True
+0.024,pixel,d3.5,QCD-style-inspired (Vasantha22),0.6845,0.0,58.2,264.0,205.8,True
+0.024,pixel,d3.5,Overlay-inspired (Nishimoto12),0.5545,0.0,67.74,218.04,150.3,True
+0.024,pixel,d3.5,QCD-OCC (paper frame),0.003,0.0,0.0,0.0,0.0,True
+0.024,pixel,d3.5,HNCSM v2-base-only,0.7215,0.0,58.2,243.6,185.4,True
+0.024,frame,d3.5,HNCSM v2-CS,0.7395,0.0,4.2,16.8,12.6,True
+0.024,frame,d3.5,HNCSM v2,0.3565,0.0,108.0,320.4,212.4,True
+0.024,frame,d3.5,HNCSM,0.089,0.0,87.72,115.56,27.84,True
+0.024,frame,d3.5,HNCSM base-only,0.0245,0.0,103.68,116.64,12.96,True
+0.024,frame,d3.5,CSK802-8,0.0045,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.5,CSK802-4,0.011,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.5,OOK-8x8,0.051,0.0,0.0,2.34,2.34,True
+0.024,frame,d3.5,QR/Aztec-style,0.0185,0.0,9.3,24.3,15.0,True
+0.024,frame,d3.5,NestedTexture-inspired (Salvi22),0.0515,0.0,45.12,92.76,47.64,True
+0.024,frame,d3.5,QCD-style-inspired (Vasantha22),0.6885,0.0,62.4,263.4,201.0,True
+0.024,frame,d3.5,Overlay-inspired (Nishimoto12),0.555,0.0,72.84,220.5,147.66,True
+0.024,frame,d3.5,QCD-OCC (paper frame),0.0045,0.0,0.0,0.0,0.0,True
+0.024,frame,d3.5,HNCSM v2-base-only,0.7275,0.0,52.8,245.4,192.6,True
+0.05,pixel,d3.5,HNCSM v2-CS,0.7325,0.0,3.0,14.4,11.4,True
+0.05,pixel,d3.5,HNCSM v2,0.334,0.0,116.4,318.6,202.2,True
+0.05,pixel,d3.5,HNCSM,0.0945,0.0,89.4,117.48,28.08,True
+0.05,pixel,d3.5,HNCSM base-only,0.029,0.0,103.44,117.24,13.8,True
+0.05,pixel,d3.5,CSK802-8,0.0025,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.5,CSK802-4,0.0145,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.5,OOK-8x8,0.0495,0.0,0.0,3.12,3.12,True
+0.05,pixel,d3.5,QR/Aztec-style,0.0175,0.0,9.3,26.4,17.1,True
+0.05,pixel,d3.5,NestedTexture-inspired (Salvi22),0.0515,0.0,45.12,93.48,48.36,True
+0.05,pixel,d3.5,QCD-style-inspired (Vasantha22),0.6845,0.0,58.2,270.0,211.8,True
+0.05,pixel,d3.5,Overlay-inspired (Nishimoto12),0.5475,0.0,70.32,213.6,143.28,True
+0.05,pixel,d3.5,QCD-OCC (paper frame),0.0045,0.0,0.0,0.0,0.0,True
+0.05,pixel,d3.5,HNCSM v2-base-only,0.717,0.0,51.6,245.4,193.8,True
+0.05,frame,d3.5,HNCSM v2-CS,0.7335,0.0,3.6,16.8,13.2,True
+0.05,frame,d3.5,HNCSM v2,0.349,0.0,115.8,313.8,198.0,True
+0.05,frame,d3.5,HNCSM,0.0855,0.0,87.48,115.68,28.2,True
+0.05,frame,d3.5,HNCSM base-only,0.0295,0.0,105.0,116.4,11.4,True
+0.05,frame,d3.5,CSK802-8,0.004,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.5,CSK802-4,0.0135,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.5,OOK-8x8,0.049,0.0,0.0,2.34,2.34,True
+0.05,frame,d3.5,QR/Aztec-style,0.018,0.0,11.1,26.1,15.0,True
+0.05,frame,d3.5,NestedTexture-inspired (Salvi22),0.0485,0.0,46.8,94.2,47.4,True
+0.05,frame,d3.5,QCD-style-inspired (Vasantha22),0.691,0.0,60.6,259.2,198.6,True
+0.05,frame,d3.5,Overlay-inspired (Nishimoto12),0.5525,0.0,73.5,225.06,151.56,True
+0.05,frame,d3.5,QCD-OCC (paper frame),0.005,0.0,0.0,0.0,0.0,True
+0.05,frame,d3.5,HNCSM v2-base-only,0.727,0.0,50.4,243.0,192.6,True
+0.15,pixel,d3.5,HNCSM v2-CS,0.725,0.0,0.6,15.0,14.4,True
+0.15,pixel,d3.5,HNCSM v2,0.305,0.0,126.0,303.6,177.6,True
+0.15,pixel,d3.5,HNCSM,0.0925,0.0,89.28,116.64,27.36,True
+0.15,pixel,d3.5,HNCSM base-only,0.0335,0.0,104.04,118.08,14.04,True
+0.15,pixel,d3.5,CSK802-8,0.0065,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.5,CSK802-4,0.013,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.5,OOK-8x8,0.059,0.0,0.78,3.12,2.34,True
+0.15,pixel,d3.5,QR/Aztec-style,0.0115,0.0,11.1,28.5,17.4,True
+0.15,pixel,d3.5,NestedTexture-inspired (Salvi22),0.058,0.0,46.2,93.96,47.76,True
+0.15,pixel,d3.5,QCD-style-inspired (Vasantha22),0.674,0.0,71.4,254.4,183.0,True
+0.15,pixel,d3.5,Overlay-inspired (Nishimoto12),0.5535,0.0,60.18,160.62,100.44,True
+0.15,pixel,d3.5,QCD-OCC (paper frame),0.0065,0.0,0.0,0.0,0.0,True
+0.15,pixel,d3.5,HNCSM v2-base-only,0.6945,0.0,63.0,244.8,181.8,True
+0.15,frame,d3.5,HNCSM v2-CS,0.719,0.0,3.6,15.0,11.4,True
+0.15,frame,d3.5,HNCSM v2,0.3405,0.0,106.8,303.0,196.2,True
+0.15,frame,d3.5,HNCSM,0.089,0.0,87.24,117.6,30.36,True
+0.15,frame,d3.5,HNCSM base-only,0.031,0.0,105.36,117.12,11.76,True
+0.15,frame,d3.5,CSK802-8,0.007,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.5,CSK802-4,0.0145,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.5,OOK-8x8,0.0535,0.0,0.0,5.46,5.46,True
+0.15,frame,d3.5,QR/Aztec-style,0.018,0.0,9.0,29.1,20.1,True
+0.15,frame,d3.5,NestedTexture-inspired (Salvi22),0.055,0.0,50.64,94.2,43.56,True
+0.15,frame,d3.5,QCD-style-inspired (Vasantha22),0.6555,0.0,63.0,250.2,187.2,True
+0.15,frame,d3.5,Overlay-inspired (Nishimoto12),0.5595,0.0,74.82,231.54,156.72,True
+0.15,frame,d3.5,QCD-OCC (paper frame),0.0035,0.0,0.0,0.0,0.0,True
+0.15,frame,d3.5,HNCSM v2-base-only,0.687,0.0,52.8,228.0,175.2,True

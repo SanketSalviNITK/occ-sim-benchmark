@@ -51,3 +51,27 @@ def test_r8_sigma0_identity_csv():
     f = R('results/benchmark/r8/mult_sigma0_identity.csv')
     if not os.path.exists(f): pytest.skip('r8 mult not run')
     import pandas as pd; d = pd.read_csv(f); assert len(d) > 0 and d.identical.all()
+
+DOCS = ('README.md', 'METHODS.md', 'results/benchmark/SUMMARY.md', 'results/benchmark/CLAIMS_r7.md')
+
+def test_claim_text_r8():
+    for f in DOCS:
+        s = open(R(f)).read()
+        assert 'interactions were not studied' not in s and 'validator' not in s.lower(), f
+        assert '1/36' in s and 'relative only' in s, f
+        assert 'In one assumed configuration — IMX174 model, P33, brightness 1/128' in s and '+100.8 [76.8, 124.8]' in s, f
+
+def test_r8_plateau_text():
+    for f in ('results/benchmark/SUMMARY.md', 'results/benchmark/CLAIMS_r7.md'):
+        s = open(R(f)).read()
+        assert 'deterministic error floor' in s and 'R bit' in s and 'saturation clipping' in s and 'not CFA crosstalk' in s, f
+
+def test_r7_fact_key_label_documented():
+    import json
+    s = open(R('METHODS.md')).read(); assert 'Factorial key label (R-K)' in s
+    m = json.load(open(R('results/run_meta_R7_fact.json')))
+    br = {j['key'].split('|')[0]: j['pmod']['brightness'] for j in m['jobs']}
+    assert any(abs(v - 1 / 256) < 1e-12 for v in br.values())
+    for j in m['jobs']:
+        assert j['key'].split('|')[2:4] == ['1/1500', '1/128']          # fixed slot, not the cell's brightness
+        assert abs(j['pmod']['brightness'] - (1 / 256 if 'brightness=1/256' in j['key'] else 1 / 128)) < 1e-12

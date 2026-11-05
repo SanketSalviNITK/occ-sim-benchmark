@@ -10,8 +10,9 @@ def test_claim_text_r7():
     for f in ('README.md', 'METHODS.md', 'results/benchmark/SUMMARY.md', 'results/benchmark/CLAIMS_r7.md'):
         s = open(R(f)).read()
         for st in STALE: assert st not in s, (f, st)
-        assert 'with the ASSUMED default optics (f = 6 mm, f/2.0, focus 1.0 m), the 65 mm 8×8 panel on axis' in s, f
-        assert 'all Holm-significant (56-claim family)' in s and 'CFA crosstalk ×2' in s, f
+        # r8: the r7 claim sentence was replaced by the audit-r7 §3 strictly scoped wording (checked in test_r8)
+        assert 'ASSUMED lens f = 6 mm, f/2.0 focused at 1.0 m, 65 mm 8×8 panel on axis' in s, f
+        assert 'Holm-significant in the 56-claim family' in s and 'CFA crosstalk ×2' in s, f
 
 def test_smpam_analytic_thresholds_m4():
     # use the registry-loaded plugin class (a second import would re-register a distinct class and raise)
