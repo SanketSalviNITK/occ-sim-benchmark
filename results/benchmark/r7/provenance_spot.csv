@@ -1,0 +1,241 @@
+group,meta_git,rerun_git,key,scheme,array,symbols,identical
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2-CS,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2-CS,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2-CS,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM base-only,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM base-only,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM base-only,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,CSK802-8,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,CSK802-8,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,CSK802-8,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,CSK802-4,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,CSK802-4,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,CSK802-4,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,OOK-8x8,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,OOK-8x8,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,OOK-8x8,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QR/Aztec-style,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QR/Aztec-style,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QR/Aztec-style,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2-base-only,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2-base-only,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.0|1/1500|1/128|eval,HNCSM v2-base-only,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),mix,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,err,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,sat,20,True
+geoyaw30,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,mix,20,True
+valid6,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,27|1/128|eval,QCD-OCC (paper frame),err,20,True
+valid6,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,27|1/128|eval,QCD-OCC (paper frame),sat,20,True
+valid6,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,27|1/128|eval,QCD-OCC (paper frame),mix,20,True
+valid6,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,304|1/256|eval,QCD-OCC (paper frame),err,20,True
+valid6,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,304|1/256|eval,QCD-OCC (paper frame),sat,20,True
+valid6,05a1e0bf5b50debbd408a0b2a0e4f894d4e1f2b4-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,304|1/256|eval,QCD-OCC (paper frame),mix,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-CS,sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2,sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM,sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM base-only,sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-8,sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,CSK802-4,sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,OOK-8x8,sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QR/Aztec-style,sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,QCD-OCC (paper frame),sel_cerr,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,err,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,err_orc,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,ncand,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,nfail,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,ngross,20,True
+finder,b0d6806c0581bcfdbc7f75911aef11aa8caa4c7e-dirty,26258cbbadd499fb8f8a8c441184bc64b5eed092,d3.25|1/1500|1/128|eval,HNCSM v2-base-only,sel_cerr,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2-CS,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2-CS,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2-CS,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM base-only,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM base-only,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM base-only,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,CSK802-8,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,CSK802-8,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,CSK802-8,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,CSK802-4,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,CSK802-4,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,CSK802-4,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,OOK-8x8,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,OOK-8x8,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,OOK-8x8,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QR/Aztec-style,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QR/Aztec-style,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QR/Aztec-style,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2-base-only,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2-base-only,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,lambert_m=1.56|d3.0|1/1500|1/128|eval,HNCSM v2-base-only,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2-CS,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2-CS,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2-CS,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM base-only,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM base-only,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM base-only,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,CSK802-8,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,CSK802-8,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,CSK802-8,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,CSK802-4,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,CSK802-4,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,CSK802-4,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,OOK-8x8,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,OOK-8x8,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,OOK-8x8,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QR/Aztec-style,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QR/Aztec-style,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QR/Aztec-style,mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,NestedTexture-inspired (Salvi22),mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QCD-style-inspired (Vasantha22),mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,Overlay-inspired (Nishimoto12),mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,QCD-OCC (paper frame),mix,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2-base-only,err,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2-base-only,sat,20,True
+sens,2e641161962a6e598dd81c5c6102ae329a80b26c,26258cbbadd499fb8f8a8c441184bc64b5eed092,cfa=x2|d3.0|1/1500|1/128|eval,HNCSM v2-base-only,mix,20,True
