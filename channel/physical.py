@@ -38,6 +38,16 @@ P = dict(
     reflectance=0.5,                         # ASSUMED background reflectance
     lm_to_photons=555e-9 / (H_PLANCK * C_LIGHT) / 683.0,   # 555-nm-equivalent photons per lumen (ASSUMED spectrum)
     corner_jitter_px=None,                   # real detector is used instead
+    # --- OPTIONAL signal-proportional (multiplicative) temporal noise, benchmark-r8 (R-V1). OFF by default (0.0): with
+    # sigma_mult == 0 capture() takes the unchanged code path and consumes no extra random numbers (byte-identical).
+    # ASSUMED form: mean electrons per mosaic site are scaled by g = max(0, 1 + sigma_mult * z), z ~ N(0, 1), before PRNU
+    # and Poisson, so the added std is sigma_mult * mu (signal-proportional, incl. ambient). Temporal correlation: z is
+    # redrawn for every captured frame (independent across frames/candidates). Spatial correlation (sigma_mult_corr):
+    #   'pixel' : z i.i.d. per mosaic pixel (spatially white; partially averaged by demosaic and by pixel sampling);
+    #   'frame' : one z per sensor colour channel per frame (R, G, B gain; fully correlated over the frame).
+    # z is drawn from a separate stream seeded from a hash of the capture rng state (rng itself is NOT advanced), so all
+    # other random numbers (Poisson, read noise, phase, payloads) are common random numbers across sigma_mult levels.
+    sigma_mult=0.0, sigma_mult_corr='pixel',  # ASSUMED (validation-r0 anchors suggest 0.024-0.15; one-point fits)
 )
 
 def sensor_K(p=P): return p['K12'] / 2 ** (12 - p['bits'])
@@ -116,6 +126,19 @@ def _fpn(shape, p):
         _FPN[key] = (r.normal(0, p['dsnu_e'], shape), 1 + r.normal(0, p['prnu'], shape))
     return _FPN[key]
 
+def _mult_gain(shape, rng, p):
+    """Optional multiplicative gain map (see P['sigma_mult']); drawn from a side stream so that rng is not advanced."""
+    import hashlib
+    st = rng.get_state()
+    seed = int.from_bytes(hashlib.sha256(np.asarray(st[1]).tobytes() + int(st[2]).to_bytes(4, 'little')).digest()[:4], 'little')
+    r = np.random.RandomState(seed); s = float(p['sigma_mult']); mode = p.get('sigma_mult_corr', 'pixel')
+    if mode == 'pixel': z = r.normal(size=shape)
+    elif mode == 'frame':
+        zc = r.normal(size=3); z = np.empty(shape)
+        z[0::2, 0::2] = zc[0]; z[0::2, 1::2] = zc[1]; z[1::2, 0::2] = zc[1]; z[1::2, 1::2] = zc[2]
+    else: raise ValueError(f'sigma_mult_corr={mode!r} (use pixel | frame)')
+    return np.clip(1.0 + s * z, 0.0, None)
+
 def capture(e_rgb, rng=np.random, p=P, t_exp=None, raw=False):
     """EMVA 1288 linear model on an RGGB mosaic: mu_e = PRNU*e_photo + mu_dark; e = Poisson(mu_e) clipped at mu_e.sat;
     y = K (e + DSNU + N(0, sigma_d^2)), rounded/clipped to the ADC range; then Malvar-He-Cutler demosaic."""
@@ -125,6 +148,7 @@ def capture(e_rgb, rng=np.random, p=P, t_exp=None, raw=False):
     mos[0::2, 0::2] = e_rgb[0::2, 0::2, 0]; mos[0::2, 1::2] = e_rgb[0::2, 1::2, 1]
     mos[1::2, 0::2] = e_rgb[1::2, 0::2, 1]; mos[1::2, 1::2] = e_rgb[1::2, 1::2, 2]
     dsnu, prnu = _fpn((Hh, Ww), p)
+    if p.get('sigma_mult', 0.0): mos = mos * _mult_gain((Hh, Ww), rng, p)
     mu = np.clip(mos, 0, None) * prnu + p['dark_e_s'] * t
     e = np.minimum(rng.poisson(mu), p['sat_e']) + dsnu + rng.normal(0, p['read_e'], mos.shape)
     dn = np.clip(np.round(e * sensor_K(p)), 0, 2 ** p['bits'] - 1)
