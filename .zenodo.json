@@ -3,13 +3,28 @@
   "upload_type": "software",
   "description": "<p>Simulation-only, physics-grounded benchmark of LED-matrix optical camera communication (OCC) schemes: EMVA 1288 sensor model, rolling shutter, Bayer CFA with Malvar-He-Cutler demosaicing, real corner finder, equal optical power, common random numbers, bootstrap CIs and Holm-corrected claims. Ships per-symbol error arrays (npz), a sha256 manifest and <code>reproduce.sh</code>. Results are simulation results only; no claim is made for real hardware.</p>",
   "creators": [
-    {"name": "Salvi, Sanket", "affiliation": "MIT World Peace University (MIT-WPU), Pune, India", "orcid": "0000-0000-0000-0000"}
+    {
+      "name": "Salvi, Sanket",
+      "affiliation": "MIT World Peace University (MIT-WPU), Pune, India",
+      "orcid": "0000-0002-0898-2059"
+    }
   ],
   "license": "MIT",
   "access_right": "open",
   "version": "benchmark-r9",
-  "keywords": ["optical camera communication", "visible light communication", "LED matrix", "benchmark", "simulation", "rolling shutter"],
+  "keywords": [
+    "optical camera communication",
+    "visible light communication",
+    "LED matrix",
+    "benchmark",
+    "simulation",
+    "rolling shutter"
+  ],
   "related_identifiers": [
-    {"identifier": "https://github.com/SanketSalviNITK/occ-sim-benchmark", "relation": "isSupplementTo", "scheme": "url"}
+    {
+      "identifier": "https://github.com/SanketSalviNITK/occ-sim-benchmark",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
   ]
 }

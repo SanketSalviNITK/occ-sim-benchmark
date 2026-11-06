@@ -2,18 +2,14 @@ cff-version: 1.2.0
 message: "If you use this benchmark, please cite it as below."
 title: "occ_sim: an open, physics-grounded benchmark of LED-matrix optical camera communication schemes"
 version: "benchmark-r9"
-date-released: "2026-11-05"   # RELEASE: update to the GitHub release date
+date-released: "2026-11-06"   # Asia/Calcutta release-prep date; bump again if GitHub release is later
 license: MIT
 authors:
   - family-names: "Salvi"
     given-names: "Sanket"
     affiliation: "MIT World Peace University (MIT-WPU), Pune, India"
-    orcid: "https://orcid.org/0000-0000-0000-0000"   # RELEASE: replace with the real ORCID iD
+    orcid: "https://orcid.org/0000-0002-0898-2059"
 repository-code: "https://github.com/SanketSalviNITK/occ-sim-benchmark"
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.XXXXXXX"   # RELEASE: Zenodo concept DOI (minted on first GitHub release)
-    description: "Zenodo concept DOI (all versions)"
 keywords:
   - optical camera communication
   - visible light communication

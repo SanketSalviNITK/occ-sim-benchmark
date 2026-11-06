@@ -28,7 +28,7 @@ OMP_NUM_THREADS=1 PROCS=8 .venv/bin/python -m experiments.r9_qcd_fix   # benchma
 Additive revision runners (r6–r9) are listed at the end of `reproduce.sh`. All seeds are fixed in `config.py`; every run writes a `run_meta*.json`.
 ## Citation
 If you use this benchmark please cite it via `CITATION.cff` (GitHub "Cite this repository") or the Zenodo DOI
-`10.5281/zenodo.XXXXXXX` (placeholder until the first release). Re-implemented third-party schemes are labelled
+the Zenodo concept DOI (minted automatically on the first GitHub release; not reserved yet). Re-implemented third-party schemes are labelled
 "-inspired"; please also cite the original papers given in their docstrings.
 ## License
 Code and shipped results: MIT (`LICENSE`), © 2026 Sanket Salvi. Python dependencies (not vendored) are under permissive licences (BSD/MIT/Apache-2.0/PSF/MIT-CMU).
