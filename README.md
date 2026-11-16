@@ -1,5 +1,7 @@
 # occ_sim — open, physics-grounded benchmark of LED-matrix OCC schemes (benchmark-r0, simulation only)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23996901.svg)](https://doi.org/10.5281/zenodo.23996901)
+
 **Quick start**
 ```
 python3.13 -m venv .venv && .venv/bin/pip install -r requirements.lock
@@ -11,7 +13,7 @@ make full          # re-simulate all benchmark groups (many CPU-hours; resumable
 Protocol, fairness rules, release statement, 802.15.7 OCC-PHY rationale and limitations: `docs/BENCHMARK_PROTOCOL.md`.
 IMX219 parameters with sources: `docs/IMX219_PARAMETERS.md`. External anchors: `docs/ANCHORS.md`.
 Results: `results/benchmark/SUMMARY.md`; reviewer response table: `docs/RESPONSE_TABLE.md`.
-Release status: benchmark-r9 release candidate, local only (not yet pushed, DOI pending). Licence: MIT (`LICENSE`). Citation: `CITATION.cff` / `.zenodo.json`.
+Release status: public, released ([benchmark-r9](https://github.com/SanketSalviNITK/occ-sim-benchmark/releases/tag/benchmark-r9) on GitHub and Zenodo). Licence: MIT (`LICENSE`). Citation: `CITATION.cff` / `.zenodo.json`.
 ## Install
 Requires Python 3.13 (tested 3.13.5) on Linux/macOS; ~130 MB disk for the repository incl. shipped results.
 ```bash
@@ -27,9 +29,11 @@ OMP_NUM_THREADS=1 PROCS=8 .venv/bin/python -m experiments.r9_qcd_fix   # benchma
 ```
 Additive revision runners (r6–r9) are listed at the end of `reproduce.sh`. All seeds are fixed in `config.py`; every run writes a `run_meta*.json`.
 ## Citation
-If you use this benchmark please cite it via `CITATION.cff` (GitHub "Cite this repository") or the Zenodo DOI
-the Zenodo concept DOI (minted automatically on the first GitHub release; not reserved yet). Re-implemented third-party schemes are labelled
-"-inspired"; please also cite the original papers given in their docstrings.
+If you use this benchmark please cite it via `CITATION.cff` (GitHub "Cite this repository") or Zenodo:
+- Concept DOI (all versions): [10.5281/zenodo.23996901](https://doi.org/10.5281/zenodo.23996901)
+- Version DOI (benchmark-r9): [10.5281/zenodo.23996902](https://doi.org/10.5281/zenodo.23996902)
+
+Re-implemented third-party schemes are labelled "-inspired"; please also cite the original papers given in their docstrings.
 ## License
 Code and shipped results: MIT (`LICENSE`), © 2026 Sanket Salvi. Python dependencies (not vendored) are under permissive licences (BSD/MIT/Apache-2.0/PSF/MIT-CMU).
 

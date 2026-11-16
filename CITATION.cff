@@ -10,6 +10,11 @@ authors:
     affiliation: "MIT World Peace University (MIT-WPU), Pune, India"
     orcid: "https://orcid.org/0000-0002-0898-2059"
 repository-code: "https://github.com/SanketSalviNITK/occ-sim-benchmark"
+doi: "10.5281/zenodo.23996901"
+identifiers:
+  - description: "The version DOI of this release (benchmark-r9)."
+    type: doi
+    value: "10.5281/zenodo.23996902"
 keywords:
   - optical camera communication
   - visible light communication
