@@ -53,5 +53,18 @@ latched into the LED sets the on-fraction of each PWM period. At the benchmark o
   WS2812C/D (cpldcpu 2020) - if the V5 behaves the same, the 1/128 operating point would emit (almost) no light on 2 kHz parts.
 * LED-to-LED PWM frequency spread and drift; data-refresh latency (24 bit x 1.25 us per LED + reset).
 
-## Results
-See `results/r10/SUMMARY_r10.md` (C2 cell, all-entry sweeps, codes at P33).
+## Results (B = 10000, unadjusted; full tables in `results/r10/SUMMARY_r10.md`)
+* Codes at P33 (`results/r10/ws2812b_codes_at_P33.csv`): at brightness 1/128 the largest latched code is 2. With integer codes, 40-53 % of the lit channels of v2-CS, CSK802-8, CSK802-4 and Overlay round to 0. At 1/256, 7 of 11 entries emit no light. The maximum on-time per PWM period is 14.2 us at 432 Hz and 3.1 us at 2 kHz (QCD-style, v2-CS).
+* C2 cell, shared finder, 1/1500 s (`results/r10/c2_r10_binding.csv`). Each row gives the HNCSM v2 binding margin at 3.0 m / 3.25 m:
+
+  | Condition | 3.0 m | 3.25 m |
+  |---|---|---|
+  | DC | +150.0 [126.6, 173.4] | +107.58 [86.34, 129.0] |
+  | PWM 432 Hz | −0.54 [−0.90, −0.24] | −0.66 [−1.08, −0.30] |
+  | PWM 2 kHz | +31.8 [7.8, 56.4] | +34.2 [12.0, 55.8] |
+  | Integer codes | +28.8 [8.4, 49.2] | +47.4 [25.2, 69.0] |
+  | PWM 432 Hz + integer codes | −0.84 [−1.32, −0.42] | −0.90 [−1.38, −0.48] |
+
+  Under PWM 432 Hz every entry is ≈0 bps.
+* All-entry sweep 0.5-5 m (`results/r10/sweeps_r10_long.csv`, `sweep_table_PWM432Hz_detector.csv`, `sweep_table_PWM2kHz_detector.csv`). At 432 Hz all entries are ≤0.8 bps at every distance. At 2 kHz, v2 reaches 594 bps at 1 m (cap 1020) and CSK802-8 103 bps (cap 2580).
+* Caveat: because the code-to-duty map is ASSUMED linear and the measured map is darker at low codes (see above), these PWM results are, if anything, optimistic for the 1/128 operating point.
