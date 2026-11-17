@@ -48,7 +48,23 @@ P = dict(
     # z is drawn from a separate stream seeded from a hash of the capture rng state (rng itself is NOT advanced), so all
     # other random numbers (Poisson, read noise, phase, payloads) are common random numbers across sigma_mult levels.
     sigma_mult=0.0, sigma_mult_corr='pixel',  # ASSUMED (validation-r0 anchors suggest 0.024-0.15; one-point fits)
+    # --- OPTIONAL WS2812B temporal model, benchmark-r10 (channel/pwm.py, docs/PWM_MODEL.md). OFF by default: with
+    # pwm_hz None and ws_quant False every function takes the unchanged benchmark-r9 path (byte-identical).
+    #   pwm_hz  : PWM frame rate [Hz]; 432 (classic WS2812B, measured, cpldcpu WS2812Tester) or 2000 (WS2812C/D,
+    #             WS2812B-V5). Per-LED random phase per frame (ASSUMED), duty = code/255 (ASSUMED linear map).
+    #   ws_quant: integer 8-bit drive codes, code = round(255 * brightness * drive) (the WS2812B latches 8-bit codes).
+    pwm_hz=None, ws_quant=False,
 )
+
+def ws_codes(D, p):
+    """Integer WS2812B codes for drive D (after power scaling): round(255 * brightness * D), clipped to 0..255."""
+    return np.clip(np.round(255.0 * p['brightness'] * np.asarray(D, float)), 0, 255)
+
+def ws_drive(D, p):
+    """Opt-in integer quantisation (p['ws_quant']): the drive the LED really emits, expressed in drive units
+    (code / (255 brightness)). Returns D unchanged (same object) when the option is off."""
+    if not p.get('ws_quant'): return D
+    return ws_codes(D, p) / (255.0 * p['brightness'])
 
 def sensor_K(p=P): return p['K12'] / 2 ** (12 - p['bits'])
 
@@ -108,6 +124,7 @@ def render_mean_e(drives, distance_m, yaw_deg=0.0, extra_blur_px=0.0, lux=27.0, 
     M = p['cfa'] * np.array(p['qe'])[None, :]                                          # sensor k <- LED j electrons/photon
     out = []
     for D in drives:
+        if p.get('ws_quant'): D = ws_drive(np.asarray(D, float), p)     # opt-in (benchmark-r10); default path unchanged
         hi = cv2.warpPerspective(panel_texture(np.asarray(D, np.float32)), Hm, (int(size[0] * SS), int(size[1] * SS)), flags=cv2.INTER_LINEAR)
         rad = cv2.resize(hi, (int(size[0]), int(size[1])), interpolation=cv2.INTER_AREA).astype(np.float64)
         for j in range(3):

@@ -5,7 +5,7 @@ ROI mid-exposure time (equivalent to the sequence-number association of Nguyen e
 symbol it keeps the one with the smallest re-encoding residual sum ||y - b - M d_hat||^2 (a receiver-side rule).
 A symbol with no frame, or whose frames all fail detection, is decoded as random bits."""
 import numpy as np, config
-from channel import physical as ph
+from channel import physical as ph, pwm
 from rx.sampler import rectify_and_sample
 from rx.refs import refs
 from rx.finder import find_corners
@@ -26,9 +26,15 @@ def residual(s, samples, dark, bits):
 def decode_symbol(s, drives, cond, rng, p):
     """Return decoded bits for the current symbol (drives = [prev, cur, next], already power-scaled)."""
     t_exp = cond.get('t_exp'); t_exp = None if t_exp is None else float(t_exp); te = p['t_exp'] if t_exp is None else t_exp
-    es, corners_true, row0 = ph.render_mean_e(drives, cond['distance_m'], cond.get('yaw_deg', 0.0),
-                                             cond.get('blur_sigma_px', 0.0), cond.get('lux', 27.0), rng, p, t_exp,
-                                             cond.get('jitter', 0.02))
+    if p.get('pwm_hz'):   # opt-in WS2812B PWM (benchmark-r10, channel/pwm.py); same rng draws as render_mean_e
+        X = pwm.prepare(drives, cond['distance_m'], cond.get('yaw_deg', 0.0), cond.get('blur_sigma_px', 0.0),
+                        cond.get('lux', 27.0), rng, p, t_exp, cond.get('jitter', 0.02))
+        es, corners_true, row0 = [np.zeros(X.shape + (3,))], X.corners, X.row0
+    else:
+        X = None
+        es, corners_true, row0 = ph.render_mean_e(drives, cond['distance_m'], cond.get('yaw_deg', 0.0),
+                                                 cond.get('blur_sigma_px', 0.0), cond.get('lux', 27.0), rng, p, t_exp,
+                                                 cond.get('jitter', 0.02))
     nrows = es[0].shape[0]; T = 1.0 / p['f_tx']; Tf = 1.0 / p['fps']
     r_mid = row0 + nrows / 2
     t0 = rng.uniform(0, Tf)                       # asynchronous camera phase w.r.t. the symbol start
@@ -38,7 +44,7 @@ def decode_symbol(s, drives, cond, rng, p):
     for ts in cands:
         w = ph.row_weights(nrows, row0, ts, p, t_exp)
         if cond.get('sync'): w = np.zeros_like(w); w[:, 1] = 1.0
-        e = sum(w[:, i, None, None] * es[i] for i in range(3))
+        e = sum(w[:, i, None, None] * es[i] for i in range(3)) if X is None else pwm.frame_e(X, ts, rng)
         img = ph.capture(e, rng, p, t_exp)
         c = find_corners(img, p) if not cond.get('genie_corners') else corners_true
         if c is None: continue

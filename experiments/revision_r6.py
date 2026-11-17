@@ -123,8 +123,15 @@ def jobs_for(group):
 # ------------------------------------------------------------------ dual receiver (finder diagnostics), additive copy of phys_eval.decode_symbol
 def decode_symbol_dual(s, drives, cond, rng, p):
     t_exp = cond.get('t_exp'); t_exp = None if t_exp is None else float(t_exp); te = p['t_exp'] if t_exp is None else t_exp
-    es, ct, row0 = ph.render_mean_e(drives, cond['distance_m'], cond.get('yaw_deg', 0.0), cond.get('blur_sigma_px', 0.0),
-                                    cond.get('lux', 27.0), rng, p, t_exp, cond.get('jitter', 0.02))
+    if p.get('pwm_hz'):   # opt-in WS2812B PWM (benchmark-r10, channel/pwm.py); same rng draws as render_mean_e
+        from channel import pwm
+        X = pwm.prepare(drives, cond['distance_m'], cond.get('yaw_deg', 0.0), cond.get('blur_sigma_px', 0.0),
+                        cond.get('lux', 27.0), rng, p, t_exp, cond.get('jitter', 0.02))
+        es, ct, row0 = [np.zeros(X.shape + (3,))], X.corners, X.row0
+    else:
+        X = None
+        es, ct, row0 = ph.render_mean_e(drives, cond['distance_m'], cond.get('yaw_deg', 0.0), cond.get('blur_sigma_px', 0.0),
+                                        cond.get('lux', 27.0), rng, p, t_exp, cond.get('jitter', 0.02))
     nrows = es[0].shape[0]; T = 1.0 / p['f_tx']; Tf = 1.0 / p['fps']; r_mid = row0 + nrows / 2
     t0 = rng.uniform(0, Tf)
     starts = t0 + Tf * np.arange(-int(np.ceil((r_mid * p['t_row'] + te) / Tf)) - 1, int(np.ceil(T / Tf)) + 1)
@@ -133,7 +140,7 @@ def decode_symbol_dual(s, drives, cond, rng, p):
     bd = bo = None; nfail = ngross = 0; sel_err = np.nan
     for ts in cands:
         w = ph.row_weights(nrows, row0, ts, p, t_exp)
-        e = sum(w[:, i, None, None] * es[i] for i in range(3))
+        e = sum(w[:, i, None, None] * es[i] for i in range(3)) if X is None else pwm.frame_e(X, ts, rng)
         img = ph.capture(e, rng, p, t_exp)
         c = find_corners(img, p)
         smp, dk = rectify_and_sample(img, ct); b = s.decode(smp, dk); r = residual(s, smp, dk, b)
