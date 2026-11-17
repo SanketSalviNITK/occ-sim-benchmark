@@ -1,0 +1,14 @@
+entry,in_benchmark,bits_per_symbol,layers,crc_bits_per_unit,f_tx_sym_per_s,camera_fps,R_max_native_bps,R_max_48bit_bps
+HNCSM v2-CS,True,120,base:48 + enh:72,8,15.0,30.0,1560.0,1440.0
+HNCSM v2,True,84,base:48 + enh:36,8,15.0,30.0,1020.0,1020.0
+HNCSM,True,80,base:16 + enh:64,8,15.0,30.0,960.0,960.0
+HNCSM base-only,True,16,base:16,8,15.0,30.0,120.0,120.0
+CSK802-8,True,180,all:180,8,15.0,30.0,2580.0,2220.0
+CSK802-4,True,120,all:120,8,15.0,30.0,1680.0,1440.0
+OOK-8x8,True,60,all:60,8,15.0,30.0,780.0,660.0
+QR/Aztec-style,True,28,all:28,8,15.0,30.0,300.0,300.0
+NestedTexture-inspired (Salvi22),True,32,outer:16 + inner:16,8,15.0,30.0,240.0,360.0
+QCD-style-inspired (Vasantha22),True,48,all:48,8,15.0,30.0,600.0,600.0
+Overlay-inspired (Nishimoto12),True,36,L1:12 + L2:24,8,15.0,30.0,300.0,420.0
+HNCSM v2-base-only,False,48,base:48,8,15.0,30.0,600.0,600.0
+QCD-OCC (paper frame),False,144,all:144,8,15.0,30.0,2040.0,1800.0

@@ -1,0 +1,282 @@
+{
+"group": "c2pwm432q",
+"git": "f5e780a14deb9bb2d58a2703a6ac07358d898889-dirty",
+"code_key": "r10-2258050",
+"utc": "2026-11-17T04:35:37.303883+00:00",
+"elapsed_s": 324,
+"procs": 8,
+"jobs": [
+{
+"key": "d3.0|1/4000|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.00025
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/4000|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.00025
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.002
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.002
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/250|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.004
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/250|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.004
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/4000|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.00025
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/4000|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.00025
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.002
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/500|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.002
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/250|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.004
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/250|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.004
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 432.0,
+"ws_quant": true
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+}
+]
+}

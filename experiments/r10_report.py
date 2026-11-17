@@ -267,7 +267,7 @@ def codes():
 def sweeps():
     zs, zo = ld('sweeps_PHYS_P33.npz'), ld('review_or_sweep.npz'); zd = lr('r10_swdc.npz'); rows, br = [], []
     lab = {'swpwm432': 'PWM 432 Hz', 'swpwm2k': 'PWM 2 kHz', 'swfocus3': 'focus 3.0 m'}
-    for grp in [g for g in SW_GROUPS if g != 'swdc']:
+    for grp in [g for g in SW_GROUPS if g not in ('swdc', 'swgs')]:
         z = lr(f'r10_{grp}.npz')
         if z is None: print('missing', grp); continue
         for i, d in enumerate(DIST):
@@ -296,6 +296,40 @@ def sweeps():
             w = d[(d.option == o) & d.distance_m.isin(sel)].pivot(index='scheme', columns='distance_m', values=col).loc[ENTRIES].rename(index=SHORT)
             w.columns = [f'{c} m' for c in w.columns]; w.reset_index().round(1).to_csv(os.path.join(OUT, f'sweep_table_{o.replace(" ", "").replace(".", "p")}_{col.split("_")[0]}.csv'), index=False)
     return b
+
+# ---------------------------------------------------------------------------------------------------------- rolling shutter on/off
+def rs():
+    """Default rolling shutter (t_row 27.4 us) vs t_row = 0 on the 11-entry sweep, same CRN symbols (sweeps_PHYS_P33 vs r10_swgs)."""
+    zs, zg = ld('sweeps_PHYS_P33.npz'), lr('r10_swgs.npz'); rows, br = [], []
+    for i, d in enumerate(DIST):
+        k = f'distance_m|{i}|eval'
+        for n in ENTRIES:
+            a, g = Gr(zs, k, n), Gr(zg, k, n); m, lo, hi, p = boot(a - g)
+            rows.append(dict(distance_m=d, scheme=n, rs_bps=a.mean(), global_bps=g.mean(), rs_minus_global=m, lo=lo, hi=hi, p_unadj=p, verdict=verdict(lo, hi)))
+        for lab, zz in (('rolling (default)', zs), ('global (t_row=0)', zg)):
+            _, b = bind(zz, lambda t, s: f'distance_m|{i}|{s}'); br.append(dict(distance_m=d, shutter=lab, binding_baseline=b['baseline'], crc=b['crc'], margin=b['margin'], lo=b['lo'], hi=b['hi'], verdict=verdict(b['lo'], b['hi'])))
+    df = pd.DataFrame(rows); df['B'] = B_R6; save(df, 'rs_vs_global_sweep.csv')
+    save(pd.DataFrame(br), 'rs_vs_global_v2_binding.csv')
+    s = df.assign(absd=df.rs_minus_global.abs()).sort_values('absd', ascending=False)
+    summ = pd.DataFrame([dict(max_abs_diff_bps=s.absd.iloc[0], at_distance=s.distance_m.iloc[0], scheme=s.scheme.iloc[0], lo=s.lo.iloc[0], hi=s.hi.iloc[0],
+                              n_cells=len(df), n_significant_unadjusted=int((df.verdict != 'n.s.').sum()))])
+    save(summ, 'rs_vs_global_summary.csv'); return summ
+
+# ---------------------------------------------------------------------------------------------------------- radiant-equal at C2 (1000 symbols)
+def radiant_c2():
+    z, ze = lr('r10_c2radiant.npz'), ld('review_e2_P33.npz'); rows, gp = [], []
+    for cn in ('d3.0', 'd3.25'):
+        pre = lambda t, s: f'{cn}|{t}|1/128|{s}'; k = pre('1/1500', 'eval')
+        P, b = bind(z, pre); P0, b0 = bind(ze, pre); dl = _delta(P, P0)
+        g = {n: Gr(z, k, n) for n in ENTRIES}; rk = sorted(g, key=lambda n: -g[n].mean())
+        rows.append(dict(distance=cn, budget='radiant-equal (pref 33.011)', binding_baseline=b['baseline'], crc=b['crc'], margin=b['margin'], lo=b['lo'], hi=b['hi'], verdict=verdict(b['lo'], b['hi']),
+                         summed_drive_margin=b0['margin'], sd_lo=b0['lo'], sd_hi=b0['hi'], summed_drive_baseline=b0['baseline'], delta=dl[0], d_lo=dl[1], d_hi=dl[2],
+                         v2_rank=1 + rk.index(V2), ranking=' > '.join(f'{SHORT[n]} {g[n].mean():.0f}' for n in rk)))
+        for n in ENTRIES:
+            m, lo, hi, _ = boot(g[n]); x = boot(g[n] - Gr(ze, k, n))
+            gp.append(dict(distance=cn, scheme=n, radiant_bps=m, lo=lo, hi=hi, summed_drive_bps=Gr(ze, k, n).mean(), delta=x[0], d_lo=x[1], d_hi=x[2]))
+    df = pd.DataFrame(rows); df['B'] = B_R6; df['symbols'] = 1000; save(df, 'radiant_equal_c2_binding.csv')
+    save(pd.DataFrame(gp).assign(B=B_R6), 'radiant_equal_c2_goodput.csv'); return df
 
 if __name__ == '__main__':
     pd.set_option('display.width', 250); pd.set_option('display.max_columns', 40)

@@ -1,0 +1,64 @@
+{
+"group": "c2radiant",
+"git": "f5e780a14deb9bb2d58a2703a6ac07358d898889-dirty",
+"code_key": "r10-2258050",
+"utc": "2026-11-17T04:56:20.603018+00:00",
+"elapsed_s": 46,
+"procs": 8,
+"jobs": [
+{
+"key": "d3.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "radiant"
+},
+{
+"key": "d3.25|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "radiant"
+}
+]
+}

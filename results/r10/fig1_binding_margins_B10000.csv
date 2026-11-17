@@ -1,0 +1,19 @@
+seeds,budget,distance,binding_baseline,crc,margin,lo,hi,p_iut,verdict,same_binding_incl_QCDOCC,B2000_baseline,B2000_margin,B2000_lo,B2000_hi,B,boot_seed
+claims/E2,25,d3.0,QCD-style-inspired (Vasantha22),native,133.2,109.8,156.6,0.0,positive,True,QCD-style-inspired (Vasantha22),133.2,109.2,157.2,10000,0
+sweep (run_phys),25,d3.0,QCD-style-inspired (Vasantha22),native,141.0,118.2,165.0,0.0,positive,True,QCD-style-inspired (Vasantha22),141.0,118.8,163.2,10000,0
+claims/E2,25,d3.25,Overlay-inspired (Nishimoto12),48-bit,80.46,58.92,102.3,0.0,positive,True,Overlay-inspired (Nishimoto12),80.5,58.5,102.8,10000,0
+sweep (run_phys),25,d3.25,Overlay-inspired (Nishimoto12),48-bit,94.92,73.62,115.92,0.0,positive,True,Overlay-inspired (Nishimoto12),94.9,73.3,116.1,10000,0
+claims/E2,25,d3.5,HNCSM base-only,native,16.56,1.44,32.4,0.03,positive,True,HNCSM base-only,16.6,1.2,32.6,10000,0
+sweep (run_phys),25,d3.5,HNCSM base-only,native,21.36,6.36,36.96,0.01,positive,True,HNCSM base-only,21.4,7.3,37.2,10000,0
+claims/E2,33,d3.0,QCD-style-inspired (Vasantha22),native,150.0,126.6,173.4,0.0,positive,True,QCD-style-inspired (Vasantha22),150.0,127.2,174.0,10000,0
+sweep (run_phys),33,d3.0,QCD-style-inspired (Vasantha22),native,148.2,125.4,171.6,0.0,positive,True,QCD-style-inspired (Vasantha22),148.2,126.6,171.6,10000,0
+claims/E2,33,d3.25,Overlay-inspired (Nishimoto12),48-bit,107.58,86.34,129.0,0.0,positive,True,Overlay-inspired (Nishimoto12),107.6,85.2,128.8,10000,0
+sweep (run_phys),33,d3.25,Overlay-inspired (Nishimoto12),48-bit,116.4,94.86,138.42,0.0,positive,True,Overlay-inspired (Nishimoto12),116.4,94.4,139.2,10000,0
+claims/E2,33,d3.5,HNCSM base-only,native,4.32,-10.08,19.08,0.58,n.s.,True,HNCSM base-only,4.3,-10.1,19.3,10000,0
+sweep (run_phys),33,d3.5,HNCSM base-only,native,28.56,13.2,44.28,0.0,positive,True,HNCSM base-only,28.6,13.9,45.0,10000,0
+claims/E2,42,d3.0,QCD-style-inspired (Vasantha22),native,156.6,134.4,179.4,0.0,positive,True,QCD-style-inspired (Vasantha22),156.6,135.6,179.4,10000,0
+sweep (run_phys),42,d3.0,QCD-style-inspired (Vasantha22),native,157.8,135.0,180.6,0.0,positive,True,QCD-style-inspired (Vasantha22),157.8,136.2,180.6,10000,0
+claims/E2,42,d3.25,HNCSM base-only,native,119.64,101.64,137.88,0.0,positive,True,HNCSM base-only,119.6,101.5,138.0,10000,0
+sweep (run_phys),42,d3.25,HNCSM base-only,native,117.72,99.84,135.36,0.0,positive,True,HNCSM base-only,117.7,99.5,134.6,10000,0
+claims/E2,42,d3.5,HNCSM base-only,native,15.0,0.6,29.76,0.04,positive,True,HNCSM base-only,15.0,0.6,29.9,10000,0
+sweep (run_phys),42,d3.5,HNCSM base-only,native,29.76,14.52,45.6,0.0,positive,True,HNCSM base-only,29.8,15.0,46.1,10000,0

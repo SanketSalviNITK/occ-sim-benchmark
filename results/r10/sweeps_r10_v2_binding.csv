@@ -1,0 +1,115 @@
+option,distance_m,receiver,binding_baseline,crc,margin,lo,hi,verdict,dc_r9_margin,dc_r9_baseline,delta_vs_dc,d_lo,d_hi,B,holm
+PWM 432 Hz,0.5,shared finder,HNCSM,native,-1.2,-2.04,-0.48,negative,-1560.0,CSK802-8,1558.8,1557.96,1559.28,10000,unadjusted
+PWM 432 Hz,0.5,oracle corners,Overlay-inspired (Nishimoto12),native,-1.32,-1.92,-0.78,negative,-1560.0,CSK802-8,1558.68,1558.02,1559.04,10000,unadjusted
+PWM 432 Hz,0.75,shared finder,HNCSM base-only,native,-0.6,-1.2,-0.12,negative,-1560.0,CSK802-8,1559.4,1558.8,1559.76,10000,unadjusted
+PWM 432 Hz,0.75,oracle corners,Overlay-inspired (Nishimoto12),native,-1.26,-1.8,-0.78,negative,-1560.0,CSK802-8,1558.74,1558.2,1559.22,10000,unadjusted
+PWM 432 Hz,1.0,shared finder,HNCSM base-only,native,-0.24,-0.6,0.0,n.s.,-1560.0,CSK802-8,1559.76,1559.28,1559.88,10000,unadjusted
+PWM 432 Hz,1.0,oracle corners,Overlay-inspired (Nishimoto12),native,-1.08,-1.62,-0.6,negative,-1560.0,CSK802-8,1558.92,1558.38,1559.28,10000,unadjusted
+PWM 432 Hz,1.25,shared finder,HNCSM,native,-0.36,-0.84,0.0,n.s.,-1560.84,CSK802-8,1560.48,1559.4,1561.86,10000,unadjusted
+PWM 432 Hz,1.25,oracle corners,Overlay-inspired (Nishimoto12),native,-0.9,-1.38,-0.48,negative,-1557.84,CSK802-8,1556.94,1551.24,1560.24,10000,unadjusted
+PWM 432 Hz,1.5,shared finder,Overlay-inspired (Nishimoto12),native,-0.6,-1.02,-0.24,negative,-1086.42,CSK802-8,1085.82,1066.14,1132.68,10000,unadjusted
+PWM 432 Hz,1.5,oracle corners,Overlay-inspired (Nishimoto12),native,-1.2,-1.74,-0.72,negative,-1095.18,CSK802-8,1093.98,1075.68,1148.46,10000,unadjusted
+PWM 432 Hz,1.75,shared finder,Overlay-inspired (Nishimoto12),native,-0.3,-0.6,-0.06,negative,-662.94,CSK802-4,662.64,650.16,673.92,10000,unadjusted
+PWM 432 Hz,1.75,oracle corners,Overlay-inspired (Nishimoto12),native,-1.74,-2.4,-1.14,negative,-659.16,CSK802-4,657.42,644.82,668.88,10000,unadjusted
+PWM 432 Hz,2.0,shared finder,HNCSM base-only,native,-0.6,-1.2,-0.12,negative,-561.12,CSK802-4,560.52,537.84,582.66,10000,unadjusted
+PWM 432 Hz,2.0,oracle corners,Overlay-inspired (Nishimoto12),native,-1.92,-2.58,-1.26,negative,-556.92,CSK802-4,555.0,533.04,577.2,10000,unadjusted
+PWM 432 Hz,2.25,shared finder,Overlay-inspired (Nishimoto12),native,-0.54,-0.9,-0.24,negative,-157.44,OOK-8x8,156.9,147.66,171.96,10000,unadjusted
+PWM 432 Hz,2.25,oracle corners,Overlay-inspired (Nishimoto12),native,-1.98,-2.64,-1.32,negative,-175.74,OOK-8x8,173.76,169.98,177.6,10000,unadjusted
+PWM 432 Hz,2.5,shared finder,HNCSM base-only,native,-0.48,-0.96,-0.12,negative,-157.5,OOK-8x8,157.02,146.22,167.1,10000,unadjusted
+PWM 432 Hz,2.5,oracle corners,Overlay-inspired (Nishimoto12),native,-1.86,-2.52,-1.26,negative,-192.48,OOK-8x8,190.62,184.62,196.98,10000,unadjusted
+PWM 432 Hz,2.75,shared finder,HNCSM,native,-0.36,-0.84,0.0,n.s.,-132.78,OOK-8x8,132.42,111.66,153.36,10000,unadjusted
+PWM 432 Hz,2.75,oracle corners,Overlay-inspired (Nishimoto12),native,-1.5,-2.1,-0.96,negative,-234.84,OOK-8x8,233.34,217.02,249.72,10000,unadjusted
+PWM 432 Hz,3.0,shared finder,Overlay-inspired (Nishimoto12),native,-0.6,-1.02,-0.24,negative,148.2,QCD-style-inspired (Vasantha22),-148.8,-172.32,-125.88,10000,unadjusted
+PWM 432 Hz,3.0,oracle corners,Overlay-inspired (Nishimoto12),native,-1.74,-2.4,-1.14,negative,-121.26,OOK-8x8,119.52,93.54,146.64,10000,unadjusted
+PWM 432 Hz,3.25,shared finder,Overlay-inspired (Nishimoto12),native,-0.36,-0.66,-0.12,negative,116.4,Overlay-inspired (Nishimoto12),-116.76,-137.88,-95.28,10000,unadjusted
+PWM 432 Hz,3.25,oracle corners,Overlay-inspired (Nishimoto12),native,-1.26,-1.8,-0.78,negative,-10.8,QCD-style-inspired (Vasantha22),9.54,-11.76,30.06,10000,unadjusted
+PWM 432 Hz,3.5,shared finder,Overlay-inspired (Nishimoto12),native,-0.78,-1.26,-0.36,negative,28.56,HNCSM base-only,-29.34,-45.06,-13.92,10000,unadjusted
+PWM 432 Hz,3.5,oracle corners,Overlay-inspired (Nishimoto12),native,-1.8,-2.46,-1.2,negative,36.84,Overlay-inspired (Nishimoto12),-38.64,-57.12,-16.26,10000,unadjusted
+PWM 432 Hz,3.75,shared finder,Overlay-inspired (Nishimoto12),native,-0.3,-0.6,-0.06,negative,-67.08,HNCSM base-only,66.78,58.92,74.64,10000,unadjusted
+PWM 432 Hz,3.75,oracle corners,Overlay-inspired (Nishimoto12),native,-1.38,-1.98,-0.84,negative,-284.1,Overlay-inspired (Nishimoto12),282.72,268.32,296.94,10000,unadjusted
+PWM 432 Hz,4.0,shared finder,Overlay-inspired (Nishimoto12),native,-0.66,-1.08,-0.3,negative,-60.96,HNCSM base-only,60.3,51.24,68.82,10000,unadjusted
+PWM 432 Hz,4.0,oracle corners,Overlay-inspired (Nishimoto12),native,-1.74,-2.4,-1.14,negative,-213.0,QCD-style-inspired (Vasantha22),211.26,189.18,233.58,10000,unadjusted
+PWM 432 Hz,4.25,shared finder,Overlay-inspired (Nishimoto12),native,-0.6,-0.96,-0.24,negative,-63.84,HNCSM base-only,63.24,56.4,69.48,10000,unadjusted
+PWM 432 Hz,4.25,oracle corners,Overlay-inspired (Nishimoto12),native,-0.9,-1.38,-0.48,negative,-144.78,QCD-style-inspired (Vasantha22),143.88,124.14,163.74,10000,unadjusted
+PWM 432 Hz,4.5,shared finder,Overlay-inspired (Nishimoto12),native,-0.6,-1.02,-0.24,negative,-44.64,HNCSM base-only,44.04,39.18,48.72,10000,unadjusted
+PWM 432 Hz,4.5,oracle corners,Overlay-inspired (Nishimoto12),native,-1.5,-2.1,-0.96,negative,-44.64,HNCSM base-only,43.14,35.58,50.28,10000,unadjusted
+PWM 432 Hz,4.75,shared finder,Overlay-inspired (Nishimoto12),native,-0.42,-0.78,-0.12,negative,-63.84,HNCSM base-only,63.42,59.7,67.14,10000,unadjusted
+PWM 432 Hz,4.75,oracle corners,Overlay-inspired (Nishimoto12),native,-0.24,-0.48,-0.06,negative,-79.2,HNCSM base-only,78.96,75.12,82.56,10000,unadjusted
+PWM 432 Hz,5.0,shared finder,NestedTexture-inspired (Salvi22),native,-0.24,-0.6,0.0,n.s.,-28.92,HNCSM base-only,28.68,25.56,31.92,10000,unadjusted
+PWM 432 Hz,5.0,oracle corners,Overlay-inspired (Nishimoto12),native,-0.78,-1.2,-0.42,negative,-69.0,HNCSM base-only,68.22,64.62,71.94,10000,unadjusted
+PWM 2 kHz,0.5,shared finder,CSK802-4,native,-523.2,-571.56,-474.12,negative,-1560.0,CSK802-8,1036.8,988.44,1085.88,10000,unadjusted
+PWM 2 kHz,0.5,oracle corners,CSK802-4,native,-513.6,-562.44,-464.34,negative,-1560.0,CSK802-8,1046.4,997.56,1095.66,10000,unadjusted
+PWM 2 kHz,0.75,shared finder,CSK802-4,native,-249.18,-301.32,-196.8,negative,-1560.0,CSK802-8,1310.82,1258.68,1348.26,10000,unadjusted
+PWM 2 kHz,0.75,oracle corners,CSK802-4,native,-244.74,-297.48,-192.96,negative,-1560.0,CSK802-8,1315.26,1262.52,1336.2,10000,unadjusted
+PWM 2 kHz,1.0,shared finder,OOK-8x8,native,-168.06,-174.84,-160.92,negative,-1560.0,CSK802-8,1391.94,1385.1,1399.02,10000,unadjusted
+PWM 2 kHz,1.0,oracle corners,OOK-8x8,native,-166.68,-173.46,-159.42,negative,-1560.0,CSK802-8,1393.32,1386.48,1400.58,10000,unadjusted
+PWM 2 kHz,1.25,shared finder,OOK-8x8,native,-162.12,-169.2,-154.44,negative,-1560.84,CSK802-8,1398.72,1391.52,1406.52,10000,unadjusted
+PWM 2 kHz,1.25,oracle corners,OOK-8x8,native,-163.68,-170.76,-155.88,negative,-1557.84,CSK802-8,1394.16,1385.94,1402.38,10000,unadjusted
+PWM 2 kHz,1.5,shared finder,OOK-8x8,native,-167.4,-173.82,-160.38,negative,-1086.42,CSK802-8,919.02,898.26,966.48,10000,unadjusted
+PWM 2 kHz,1.5,oracle corners,OOK-8x8,native,-165.06,-171.9,-157.5,negative,-1095.18,CSK802-8,930.12,910.56,984.72,10000,unadjusted
+PWM 2 kHz,1.75,shared finder,OOK-8x8,native,-163.62,-170.64,-156.12,negative,-662.94,CSK802-4,499.32,484.8,512.88,10000,unadjusted
+PWM 2 kHz,1.75,oracle corners,OOK-8x8,native,-163.2,-170.22,-155.64,negative,-659.16,CSK802-4,495.96,481.26,509.76,10000,unadjusted
+PWM 2 kHz,2.0,shared finder,OOK-8x8,native,-168.18,-174.12,-161.7,negative,-561.12,CSK802-4,392.94,369.36,416.04,10000,unadjusted
+PWM 2 kHz,2.0,oracle corners,OOK-8x8,native,-169.92,-175.56,-163.86,negative,-556.92,CSK802-4,387.0,364.32,409.98,10000,unadjusted
+PWM 2 kHz,2.25,shared finder,OOK-8x8,native,-170.22,-180.6,-159.24,negative,-157.44,OOK-8x8,-12.78,-25.5,5.22,10000,unadjusted
+PWM 2 kHz,2.25,oracle corners,OOK-8x8,native,-181.14,-188.28,-173.82,negative,-175.74,OOK-8x8,-5.4,-13.44,3.18,10000,unadjusted
+PWM 2 kHz,2.5,shared finder,OOK-8x8,native,-170.58,-184.92,-156.0,negative,-157.5,OOK-8x8,-13.08,-29.7,3.3,10000,unadjusted
+PWM 2 kHz,2.5,oracle corners,OOK-8x8,native,-215.7,-227.88,-203.64,negative,-192.48,OOK-8x8,-23.22,-36.36,-10.2,10000,unadjusted
+PWM 2 kHz,2.75,shared finder,OOK-8x8,native,-120.48,-144.84,-96.36,negative,-132.78,OOK-8x8,12.3,-14.7,39.12,10000,unadjusted
+PWM 2 kHz,2.75,oracle corners,OOK-8x8,native,-270.42,-290.34,-250.62,negative,-234.84,OOK-8x8,-35.58,-56.28,-14.7,10000,unadjusted
+PWM 2 kHz,3.0,shared finder,QCD-style-inspired (Vasantha22),native,26.4,1.8,51.0,positive,148.2,QCD-style-inspired (Vasantha22),-121.8,-152.4,-91.2,10000,unadjusted
+PWM 2 kHz,3.0,oracle corners,OOK-8x8,native,-96.48,-124.14,-69.84,negative,-121.26,OOK-8x8,24.78,-3.3,53.22,10000,unadjusted
+PWM 2 kHz,3.25,shared finder,QCD-style-inspired (Vasantha22),native,46.8,24.6,69.6,positive,116.4,Overlay-inspired (Nishimoto12),-69.6,-97.56,-41.82,10000,unadjusted
+PWM 2 kHz,3.25,oracle corners,QCD-style-inspired (Vasantha22),native,28.2,6.6,49.81,positive,-10.8,QCD-style-inspired (Vasantha22),39.0,12.0,66.0,10000,unadjusted
+PWM 2 kHz,3.5,shared finder,HNCSM base-only,native,-44.4,-55.32,-33.0,negative,28.56,HNCSM base-only,-72.96,-90.84,-54.84,10000,unadjusted
+PWM 2 kHz,3.5,oracle corners,QCD-style-inspired (Vasantha22),native,43.2,21.6,64.8,positive,36.84,Overlay-inspired (Nishimoto12),6.36,-18.42,36.06,10000,unadjusted
+PWM 2 kHz,3.75,shared finder,HNCSM base-only,native,-75.24,-81.36,-68.64,negative,-67.08,HNCSM base-only,-8.16,-16.92,0.72,10000,unadjusted
+PWM 2 kHz,3.75,oracle corners,HNCSM base-only,native,-75.0,-82.92,-66.72,negative,-284.1,Overlay-inspired (Nishimoto12),209.1,194.04,223.5,10000,unadjusted
+PWM 2 kHz,4.0,shared finder,HNCSM base-only,native,-63.0,-70.2,-55.44,negative,-60.96,HNCSM base-only,-2.04,-12.84,8.64,10000,unadjusted
+PWM 2 kHz,4.0,oracle corners,QCD-style-inspired (Vasantha22),native,-39.6,-57.6,-21.6,negative,-213.0,QCD-style-inspired (Vasantha22),173.4,147.6,199.2,10000,unadjusted
+PWM 2 kHz,4.25,shared finder,HNCSM base-only,native,-61.2,-66.36,-55.92,negative,-63.84,HNCSM base-only,2.64,-5.04,10.2,10000,unadjusted
+PWM 2 kHz,4.25,oracle corners,HNCSM base-only,native,-63.84,-73.2,-54.12,negative,-144.78,QCD-style-inspired (Vasantha22),80.94,60.54,101.88,10000,unadjusted
+PWM 2 kHz,4.5,shared finder,HNCSM base-only,native,-38.52,-43.08,-33.96,negative,-44.64,HNCSM base-only,6.12,0.48,11.88,10000,unadjusted
+PWM 2 kHz,4.5,oracle corners,HNCSM base-only,native,-58.68,-63.48,-53.52,negative,-44.64,HNCSM base-only,-14.04,-21.96,-6.36,10000,unadjusted
+PWM 2 kHz,4.75,shared finder,HNCSM base-only,native,-48.72,-52.44,-45.12,negative,-63.84,HNCSM base-only,15.12,11.4,18.96,10000,unadjusted
+PWM 2 kHz,4.75,oracle corners,HNCSM base-only,native,-69.48,-73.44,-65.4,negative,-79.2,HNCSM base-only,9.72,5.64,13.8,10000,unadjusted
+PWM 2 kHz,5.0,shared finder,HNCSM base-only,native,-21.96,-24.96,-19.08,negative,-28.92,HNCSM base-only,6.96,3.36,10.56,10000,unadjusted
+PWM 2 kHz,5.0,oracle corners,HNCSM base-only,native,-55.44,-59.16,-51.84,negative,-69.0,HNCSM base-only,13.56,9.84,17.52,10000,unadjusted
+focus 3.0 m,0.5,shared finder,CSK802-8,native,-1560.0,-1560.0,-1560.0,negative,-1560.0,CSK802-8,0.0,0.0,0.0,10000,unadjusted
+focus 3.0 m,0.5,oracle corners,CSK802-8,native,-1560.0,-1560.0,-1560.0,negative,-1560.0,CSK802-8,0.0,0.0,0.0,10000,unadjusted
+focus 3.0 m,0.75,shared finder,CSK802-8,native,-1560.0,-1560.0,-1560.0,negative,-1560.0,CSK802-8,0.0,0.0,0.0,10000,unadjusted
+focus 3.0 m,0.75,oracle corners,CSK802-8,native,-1560.0,-1560.0,-1560.0,negative,-1560.0,CSK802-8,0.0,0.0,0.0,10000,unadjusted
+focus 3.0 m,1.0,shared finder,CSK802-8,native,-1560.0,-1560.0,-1560.0,negative,-1560.0,CSK802-8,0.0,0.0,0.0,10000,unadjusted
+focus 3.0 m,1.0,oracle corners,CSK802-8,native,-1560.0,-1560.0,-1560.0,negative,-1560.0,CSK802-8,0.0,0.0,0.0,10000,unadjusted
+focus 3.0 m,1.25,shared finder,CSK802-8,native,-1557.42,-1560.0,-1552.26,negative,-1560.84,CSK802-8,3.42,0.0,9.42,10000,unadjusted
+focus 3.0 m,1.25,oracle corners,CSK802-8,native,-1557.42,-1560.0,-1552.26,negative,-1557.84,CSK802-8,0.42,-7.32,8.16,10000,unadjusted
+focus 3.0 m,1.5,shared finder,CSK802-8,48-bit,-1071.3,-1091.82,-1050.36,negative,-1086.42,CSK802-8,15.12,-6.42,50.52,10000,unadjusted
+focus 3.0 m,1.5,oracle corners,CSK802-8,48-bit,-1081.68,-1101.18,-1061.88,negative,-1095.18,CSK802-8,13.5,-6.06,54.42,10000,unadjusted
+focus 3.0 m,1.75,shared finder,CSK802-4,native,-640.68,-659.16,-621.36,negative,-662.94,CSK802-4,22.26,5.88,39.48,10000,unadjusted
+focus 3.0 m,1.75,oracle corners,CSK802-4,native,-627.66,-647.4,-607.5,negative,-659.16,CSK802-4,31.5,13.86,49.98,10000,unadjusted
+focus 3.0 m,2.0,shared finder,CSK802-4,48-bit,-401.88,-428.88,-374.88,negative,-561.12,CSK802-4,159.24,138.78,180.0,10000,unadjusted
+focus 3.0 m,2.0,oracle corners,CSK802-4,48-bit,-391.08,-417.9,-363.72,negative,-556.92,CSK802-4,165.84,145.5,187.14,10000,unadjusted
+focus 3.0 m,2.25,shared finder,OOK-8x8,native,-167.22,-179.34,-155.22,negative,-157.44,OOK-8x8,-9.78,-21.54,8.22,10000,unadjusted
+focus 3.0 m,2.25,oracle corners,OOK-8x8,native,-177.48,-180.9,-174.0,negative,-175.74,OOK-8x8,-1.74,-4.98,1.62,10000,unadjusted
+focus 3.0 m,2.5,shared finder,OOK-8x8,native,-238.74,-255.78,-221.34,negative,-157.5,OOK-8x8,-81.24,-98.94,-63.84,10000,unadjusted
+focus 3.0 m,2.5,oracle corners,OOK-8x8,native,-299.16,-313.98,-284.7,negative,-192.48,OOK-8x8,-106.68,-120.9,-92.64,10000,unadjusted
+focus 3.0 m,2.75,shared finder,OOK-8x8,native,-284.52,-308.04,-261.06,negative,-132.78,OOK-8x8,-151.74,-176.34,-126.72,10000,unadjusted
+focus 3.0 m,2.75,oracle corners,OOK-8x8,native,-409.14,-430.68,-387.78,negative,-234.84,OOK-8x8,-174.3,-195.72,-152.88,10000,unadjusted
+focus 3.0 m,3.0,shared finder,QR/Aztec-style,native,-33.9,-50.7,-17.7,negative,148.2,QCD-style-inspired (Vasantha22),-182.1,-209.4,-155.1,10000,unadjusted
+focus 3.0 m,3.0,oracle corners,OOK-8x8,native,-223.92,-249.24,-199.32,negative,-121.26,OOK-8x8,-102.66,-128.88,-75.54,10000,unadjusted
+focus 3.0 m,3.25,shared finder,HNCSM base-only,native,-55.56,-65.88,-44.76,negative,116.4,Overlay-inspired (Nishimoto12),-171.96,-194.7,-148.74,10000,unadjusted
+focus 3.0 m,3.25,oracle corners,QR/Aztec-style,native,-51.9,-65.7,-37.8,negative,-10.8,QCD-style-inspired (Vasantha22),-41.1,-66.6,-16.8,10000,unadjusted
+focus 3.0 m,3.5,shared finder,HNCSM base-only,native,-60.36,-66.6,-53.76,negative,28.56,HNCSM base-only,-88.92,-105.48,-72.6,10000,unadjusted
+focus 3.0 m,3.5,oracle corners,Overlay-inspired (Nishimoto12),48-bit,-119.34,-134.34,-104.64,negative,36.84,Overlay-inspired (Nishimoto12),-156.18,-176.28,-132.9,10000,unadjusted
+focus 3.0 m,3.75,shared finder,Overlay-inspired (Nishimoto12),native,-83.04,-90.18,-75.9,negative,-67.08,HNCSM base-only,-15.96,-26.34,-5.46,10000,unadjusted
+focus 3.0 m,3.75,oracle corners,Overlay-inspired (Nishimoto12),native,-177.0,-184.56,-169.32,negative,-284.1,Overlay-inspired (Nishimoto12),107.1,92.64,121.44,10000,unadjusted
+focus 3.0 m,4.0,shared finder,Overlay-inspired (Nishimoto12),48-bit,-78.0,-88.98,-67.14,negative,-60.96,HNCSM base-only,-17.04,-30.78,-3.3,10000,unadjusted
+focus 3.0 m,4.0,oracle corners,Overlay-inspired (Nishimoto12),48-bit,-193.92,-207.96,-180.24,negative,-213.0,QCD-style-inspired (Vasantha22),19.08,-7.2,45.6,10000,unadjusted
+focus 3.0 m,4.25,shared finder,Overlay-inspired (Nishimoto12),48-bit,-46.98,-55.62,-38.46,negative,-63.84,HNCSM base-only,16.86,6.24,26.58,10000,unadjusted
+focus 3.0 m,4.25,oracle corners,Overlay-inspired (Nishimoto12),48-bit,-312.48,-324.84,-300.3,negative,-144.78,QCD-style-inspired (Vasantha22),-167.7,-190.5,-144.66,10000,unadjusted
+focus 3.0 m,4.5,shared finder,Overlay-inspired (Nishimoto12),native,-39.0,-44.28,-33.96,negative,-44.64,HNCSM base-only,5.64,-1.56,12.48,10000,unadjusted
+focus 3.0 m,4.5,oracle corners,Overlay-inspired (Nishimoto12),native,-115.26,-122.22,-108.42,negative,-44.64,HNCSM base-only,-70.62,-80.46,-61.08,10000,unadjusted
+focus 3.0 m,4.75,shared finder,Overlay-inspired (Nishimoto12),native,-34.08,-37.8,-30.6,negative,-63.84,HNCSM base-only,29.76,24.9,34.56,10000,unadjusted
+focus 3.0 m,4.75,oracle corners,Overlay-inspired (Nishimoto12),native,-61.68,-65.94,-57.48,negative,-79.2,HNCSM base-only,17.52,12.0,22.98,10000,unadjusted
+focus 3.0 m,5.0,shared finder,Overlay-inspired (Nishimoto12),native,-12.3,-14.04,-10.68,negative,-28.92,HNCSM base-only,16.62,13.26,20.16,10000,unadjusted
+focus 3.0 m,5.0,oracle corners,HNCSM base-only,native,-43.08,-46.56,-39.48,negative,-69.0,HNCSM base-only,25.92,21.12,30.72,10000,unadjusted

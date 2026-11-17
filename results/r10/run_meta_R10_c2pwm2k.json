@@ -1,0 +1,266 @@
+{
+"group": "c2pwm2k",
+"git": "2258050e6986225587808f3d45bab0a1308b7c83-dirty",
+"code_key": "r10-2258050",
+"utc": "2026-11-17T04:16:16.895283+00:00",
+"elapsed_s": 365,
+"procs": 8,
+"jobs": [
+{
+"key": "d3.0|1/4000|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.00025
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/4000|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.00025
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/500|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.002
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/500|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.002
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/250|1/128|eval",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.004
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 539559321,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.0|1/250|1/128|tune",
+"cond": {
+"distance_m": 3.0,
+"t_exp": 0.004
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 540559324,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/4000|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.00025
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/4000|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.00025
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/1500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/1500|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.0006666666666666666
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/500|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.002
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/500|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.002
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/250|1/128|eval",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.004
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 1112781567,
+"symbols": 1000,
+"only": null,
+"mode": "dual"
+},
+{
+"key": "d3.25|1/250|1/128|tune",
+"cond": {
+"distance_m": 3.25,
+"t_exp": 0.004
+},
+"pmod": {
+"brightness": 0.0078125,
+"pwm_hz": 2000.0
+},
+"pref": 33.011,
+"seed": 1113781570,
+"symbols": 200,
+"only": null,
+"mode": "dual"
+}
+]
+}

@@ -1,0 +1,466 @@
+{
+"group": "swdc",
+"git": "f5e780a14deb9bb2d58a2703a6ac07358d898889-dirty",
+"code_key": "r10-2258050",
+"utc": "2026-11-17T05:05:07.575495+00:00",
+"elapsed_s": 527,
+"procs": 8,
+"jobs": [
+{
+"key": "distance_m|0|eval",
+"cond": {
+"distance_m": 0.5
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129701338,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|1|eval",
+"cond": {
+"distance_m": 0.75
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129709257,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|2|eval",
+"cond": {
+"distance_m": 1.0
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129717176,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|3|eval",
+"cond": {
+"distance_m": 1.25
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129725095,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|4|eval",
+"cond": {
+"distance_m": 1.5
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129733014,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|5|eval",
+"cond": {
+"distance_m": 1.75
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129740933,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|6|eval",
+"cond": {
+"distance_m": 2.0
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129748852,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|7|eval",
+"cond": {
+"distance_m": 2.25
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129756771,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|8|eval",
+"cond": {
+"distance_m": 2.5
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129764690,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|9|eval",
+"cond": {
+"distance_m": 2.75
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129772609,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|10|eval",
+"cond": {
+"distance_m": 3.0
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129780528,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|11|eval",
+"cond": {
+"distance_m": 3.25
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129788447,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|12|eval",
+"cond": {
+"distance_m": 3.5
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129796366,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|13|eval",
+"cond": {
+"distance_m": 3.75
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129804285,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|14|eval",
+"cond": {
+"distance_m": 4.0
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129812204,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|15|eval",
+"cond": {
+"distance_m": 4.25
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129820123,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|16|eval",
+"cond": {
+"distance_m": 4.5
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129828042,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|17|eval",
+"cond": {
+"distance_m": 4.75
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129835961,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+},
+{
+"key": "distance_m|18|eval",
+"cond": {
+"distance_m": 5.0
+},
+"pmod": {},
+"pref": 33.011,
+"seed": 2129843880,
+"symbols": 1000,
+"only": [
+"HNCSM v2-CS",
+"HNCSM v2",
+"HNCSM",
+"HNCSM base-only",
+"CSK802-8",
+"CSK802-4",
+"OOK-8x8",
+"QR/Aztec-style",
+"NestedTexture-inspired (Salvi22)",
+"QCD-style-inspired (Vasantha22)",
+"Overlay-inspired (Nishimoto12)"
+],
+"mode": "dual"
+}
+]
+}

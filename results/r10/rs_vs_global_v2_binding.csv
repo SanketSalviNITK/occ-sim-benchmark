@@ -1,0 +1,39 @@
+distance_m,shutter,binding_baseline,crc,margin,lo,hi,verdict
+0.5,rolling (default),CSK802-8,native,-1560.0,-1560.0,-1560.0,negative
+0.5,global (t_row=0),CSK802-8,native,-1560.0,-1560.0,-1560.0,negative
+0.75,rolling (default),CSK802-8,native,-1560.0,-1560.0,-1560.0,negative
+0.75,global (t_row=0),CSK802-8,native,-1560.0,-1560.0,-1560.0,negative
+1.0,rolling (default),CSK802-8,native,-1560.0,-1560.0,-1560.0,negative
+1.0,global (t_row=0),CSK802-8,native,-1560.0,-1560.0,-1560.0,negative
+1.25,rolling (default),CSK802-8,native,-1560.84,-1562.1,-1560.0,negative
+1.25,global (t_row=0),CSK802-8,native,-1560.84,-1562.1,-1560.0,negative
+1.5,rolling (default),CSK802-8,48-bit,-1086.42,-1106.1,-1066.92,negative
+1.5,global (t_row=0),CSK802-8,48-bit,-1085.4,-1105.02,-1065.9,negative
+1.75,rolling (default),CSK802-4,native,-662.94,-674.28,-650.34,negative
+1.75,global (t_row=0),CSK802-4,native,-662.94,-674.28,-650.34,negative
+2.0,rolling (default),CSK802-4,48-bit,-561.12,-583.26,-538.5,negative
+2.0,global (t_row=0),CSK802-4,48-bit,-563.7,-585.66,-541.08,negative
+2.25,rolling (default),OOK-8x8,native,-157.44,-167.76,-146.88,negative
+2.25,global (t_row=0),OOK-8x8,native,-159.36,-169.26,-149.22,negative
+2.5,rolling (default),OOK-8x8,native,-157.5,-167.7,-146.76,negative
+2.5,global (t_row=0),OOK-8x8,native,-157.68,-167.88,-147.0,negative
+2.75,rolling (default),OOK-8x8,native,-132.78,-153.78,-112.08,negative
+2.75,global (t_row=0),OOK-8x8,native,-133.98,-155.1,-113.1,negative
+3.0,rolling (default),QCD-style-inspired (Vasantha22),native,148.2,125.4,171.6,positive
+3.0,global (t_row=0),QCD-style-inspired (Vasantha22),native,150.0,127.2,173.4,positive
+3.25,rolling (default),Overlay-inspired (Nishimoto12),48-bit,116.4,94.86,138.42,positive
+3.25,global (t_row=0),Overlay-inspired (Nishimoto12),48-bit,116.04,94.62,138.0,positive
+3.5,rolling (default),HNCSM base-only,native,28.56,13.2,44.28,positive
+3.5,global (t_row=0),HNCSM base-only,native,28.92,13.68,44.76,positive
+3.75,rolling (default),HNCSM base-only,native,-67.08,-74.76,-59.16,negative
+3.75,global (t_row=0),HNCSM base-only,native,-67.08,-74.76,-59.16,negative
+4.0,rolling (default),HNCSM base-only,native,-60.96,-69.48,-51.96,negative
+4.0,global (t_row=0),HNCSM base-only,native,-59.52,-68.28,-50.4,negative
+4.25,rolling (default),HNCSM base-only,native,-63.84,-70.08,-57.0,negative
+4.25,global (t_row=0),HNCSM base-only,native,-63.84,-70.08,-57.0,negative
+4.5,rolling (default),HNCSM base-only,native,-44.64,-49.32,-39.84,negative
+4.5,global (t_row=0),HNCSM base-only,native,-44.52,-49.2,-39.72,negative
+4.75,rolling (default),HNCSM base-only,native,-63.84,-67.56,-60.12,negative
+4.75,global (t_row=0),HNCSM base-only,native,-63.6,-67.32,-59.88,negative
+5.0,rolling (default),HNCSM base-only,native,-28.92,-32.16,-25.92,negative
+5.0,global (t_row=0),HNCSM base-only,native,-28.8,-32.04,-25.68,negative

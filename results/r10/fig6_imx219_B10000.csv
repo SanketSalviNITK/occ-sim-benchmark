@@ -1,0 +1,33 @@
+corners,cond,exposure,baseline,crc,margin,lo,hi,p_iut,verdict,derived_B10000_margin,derived_lo,derived_hi,B,boot_seed
+real finder,d2.5,fixed 1/1500,CSK802-8,native,-1273.62,-1322.64,-1222.02,0.0,negative,-1273.6,-1322.6,-1222.0,10000,0
+real finder,d2.5,tuned,CSK802-8,native,-1562.16,-1567.98,-1555.02,0.0,negative,-1562.2,-1568.0,-1555.0,10000,0
+real finder,d3.0,fixed 1/1500,CSK802-8,48-bit,-985.26,-1007.94,-962.28,0.0,negative,-985.3,-1007.9,-962.3,10000,0
+real finder,d3.0,tuned,CSK802-8,native,-1549.68,-1557.42,-1539.36,0.0,negative,-1549.7,-1557.4,-1539.4,10000,0
+real finder,d3.25,fixed 1/1500,CSK802-8,48-bit,-850.62,-879.96,-821.52,0.0,negative,-850.6,-880.0,-821.5,10000,0
+real finder,d3.25,tuned,CSK802-8,native,-1517.82,-1537.14,-1496.28,0.0,negative,-1517.8,-1537.1,-1496.3,10000,0
+real finder,d3.5,fixed 1/1500,CSK802-8,48-bit,-681.3,-715.14,-647.7,0.37,negative,-681.3,-715.1,-647.7,10000,0
+real finder,d3.5,tuned,CSK802-8,native,-1537.62,-1551.36,-1521.72,0.0,negative,-1537.6,-1551.4,-1521.7,10000,0
+real finder,m2.5,fixed 1/1500,OOK-8x8,native,-165.36,-173.22,-157.02,0.33,negative,-165.4,-173.2,-157.0,10000,0
+real finder,m2.5,tuned,OOK-8x8,native,-166.5,-175.08,-157.44,0.22,negative,-166.5,-175.1,-157.4,10000,0
+real finder,m3.0,fixed 1/1500,QCD-style-inspired (Vasantha22),native,-57.0,-75.6,-38.4,0.0,negative,-57.0,-75.6,-38.4,10000,0
+real finder,m3.0,tuned,QCD-style-inspired (Vasantha22),native,-57.0,-75.6,-38.4,0.0,negative,-57.0,-75.6,-38.4,10000,0
+real finder,m3.25,fixed 1/1500,QCD-style-inspired (Vasantha22),native,-82.2,-107.4,-57.0,0.0,negative,-82.2,-107.4,-57.0,10000,0
+real finder,m3.25,tuned,QCD-style-inspired (Vasantha22),native,-82.2,-108.0,-56.4,0.0,negative,-82.2,-108.0,-56.4,10000,0
+real finder,m3.5,fixed 1/1500,QCD-style-inspired (Vasantha22),native,13.2,-10.8,36.6,0.29,n.s.,13.2,-10.8,36.6,10000,0
+real finder,m3.5,tuned,QCD-style-inspired (Vasantha22),native,13.2,-10.8,36.6,0.29,n.s.,13.2,-10.8,36.6,10000,0
+oracle corners,d2.5,fixed 1/1500,CSK802-8,native,-1240.08,-1291.68,-1185.9,0.0,negative,-1240.1,-1291.7,-1185.9,10000,0
+oracle corners,d2.5,tuned,CSK802-8,native,-1562.16,-1567.98,-1555.02,0.0,negative,-1562.2,-1568.0,-1555.0,10000,0
+oracle corners,d3.0,fixed 1/1500,CSK802-8,48-bit,-978.18,-1000.98,-955.02,0.0,negative,-978.2,-1001.0,-955.0,10000,0
+oracle corners,d3.0,tuned,CSK802-8,native,-1547.1,-1557.42,-1534.2,0.0,negative,-1547.1,-1557.4,-1534.2,10000,0
+oracle corners,d3.25,fixed 1/1500,CSK802-8,48-bit,-843.6,-874.14,-813.9,0.0,negative,-843.6,-874.1,-813.9,10000,0
+oracle corners,d3.25,tuned,CSK802-8,native,-1552.2,-1561.2,-1540.62,0.0,negative,-1552.2,-1561.2,-1540.6,10000,0
+oracle corners,d3.5,fixed 1/1500,CSK802-8,48-bit,-679.44,-714.12,-644.64,0.2,negative,-679.4,-714.1,-644.6,10000,0
+oracle corners,d3.5,tuned,CSK802-8,native,-1521.72,-1539.78,-1501.08,0.0,negative,-1521.7,-1539.8,-1501.1,10000,0
+oracle corners,m2.5,fixed 1/1500,OOK-8x8,native,-174.48,-181.32,-167.4,0.0,negative,-174.5,-181.3,-167.4,10000,0
+oracle corners,m2.5,tuned,OOK-8x8,native,-181.68,-185.52,-178.2,0.59,negative,-181.7,-185.5,-178.2,10000,0
+oracle corners,m3.0,fixed 1/1500,QCD-style-inspired (Vasantha22),native,-76.8,-97.2,-55.8,0.0,negative,-76.8,-97.2,-55.8,10000,0
+oracle corners,m3.0,tuned,OOK-8x8,native,-137.28,-163.5,-110.82,0.0,negative,-137.3,-163.5,-110.8,10000,0
+oracle corners,m3.25,fixed 1/1500,QCD-style-inspired (Vasantha22),native,-44.4,-67.2,-21.0,0.0,negative,-44.4,-67.2,-21.0,10000,0
+oracle corners,m3.25,tuned,QCD-style-inspired (Vasantha22),native,-58.8,-80.4,-37.2,0.0,negative,-58.8,-80.4,-37.2,10000,0
+oracle corners,m3.5,fixed 1/1500,QCD-style-inspired (Vasantha22),native,0.6,-22.8,24.6,0.98,n.s.,0.6,-22.8,24.6,10000,0
+oracle corners,m3.5,tuned,QCD-style-inspired (Vasantha22),native,23.4,1.2,45.6,0.04,positive,23.4,1.2,45.6,10000,0
