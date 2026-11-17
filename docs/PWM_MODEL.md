@@ -54,8 +54,13 @@ latched into the LED sets the on-fraction of each PWM period. At the benchmark o
 * LED-to-LED PWM frequency spread and drift; data-refresh latency (24 bit x 1.25 us per LED + reset).
 
 ## Results (B = 10000, unadjusted; full tables in `results/r10/SUMMARY_r10.md`)
+**These are simulations of the model above, not hardware measurements.** Only the 432 Hz and 2 kHz frequencies are measured or from datasheets. The collapse and the 2 kHz margins depend on the ASSUMED linear duty map and the ASSUMED per-frame random phases. That model is optimistic at low codes, and WS2812C/D parts emit nothing at codes 1–2.
+
+Exposure grid vs PWM period:
+* **2 kHz** (period 0.5 ms): 1/500 s and 1/250 s are exact multiples (4 and 8 periods), so they are flicker-free.
+* **432 Hz** (period 2.315 ms): no grid exposure is a multiple (1/250 s = 1.73 periods), and no period-multiple exposure (2/432 s or 3/432 s) was tested.
 * Codes at P33 (`results/r10/ws2812b_codes_at_P33.csv`): at brightness 1/128 the largest latched code is 2. With integer codes, 40-53 % of the lit channels of v2-CS, CSK802-8, CSK802-4 and Overlay round to 0. At 1/256, 7 of 11 entries emit no light. The maximum on-time per PWM period is 18.1 us at 432 Hz and 3.9 us at 2 kHz (HNCSM v2), and 14.2 / 3.1 us for QCD-style and v2-CS.
-* C2 cell, shared finder, 1/1500 s (`results/r10/c2_r10_binding.csv`). Each row gives the HNCSM v2 binding margin at 3.0 m / 3.25 m:
+* C2 cell, shared finder, **fixed 1/1500 s** (`results/r10/c2_r10_binding.csv`). Each row gives the HNCSM v2 binding margin at 3.0 m / 3.25 m:
 
   | Condition | 3.0 m | 3.25 m |
   |---|---|---|
@@ -66,5 +71,9 @@ latched into the LED sets the on-fraction of each PWM period. At the benchmark o
   | PWM 432 Hz + integer codes | −0.84 [−1.32, −0.42] | −0.90 [−1.38, −0.48] |
 
   Under PWM 432 Hz every entry is ≈0 bps.
-* All-entry sweep 0.5-5 m (`results/r10/sweeps_r10_long.csv`, `sweep_table_PWM432Hz_detector.csv`, `sweep_table_PWM2kHz_detector.csv`). At 432 Hz all entries are ≤0.8 bps at every distance. At 2 kHz, v2 reaches 594 bps at 1 m (cap 1020) and CSK802-8 103 bps (cap 2580).
-* Caveat: because the code-to-duty map is ASSUMED linear and the measured map is darker at low codes (see above), these PWM results are, if anything, optimistic for the 1/128 operating point.
+
+  With per-scheme tuned exposure (same CSV):
+  * PWM 432 Hz: +16.2 [−9.0, 41.4] n.s. at 3.0 m and −3.84 [−18.24, 10.32] n.s. at 3.25 m.
+  * PWM 2 kHz: +31.8 [7.8, 56.4] at 3.0 m (v2 keeps 1/1500 s), but −11.4 [−33.0, 9.6] n.s. at 3.25 m, where v2 ranks 2nd. The 2 kHz C2 result holds at the fixed 1/1500 s exposure only.
+* All-entry sweep 0.5-5 m (`results/r10/sweeps_r10_long.csv`, `sweep_table_PWM432Hz_detector.csv`, `sweep_table_PWM2kHz_detector.csv`). At 432 Hz, with the shared finder every entry is ≤1.20 bps over 0.5–5 m (maximum: HNCSM at 0.5 m; HNCSM base-only 0.96 at 0.5 m) and ≤0.78 bps from 0.75 m. With oracle corners every entry is ≤1.98 bps. At 2 kHz, v2 reaches 594 bps at 1 m (cap 1020) and CSK802-8 103 bps (cap 2580).
+* Caveat: because the code-to-duty map is ASSUMED linear and the measured map is darker at low codes (see above), these PWM results are, if anything, optimistic for the 1/128 operating point. If WS2812B-V5 shares the WS2812C/D behaviour of no output at codes 1–2 (cpldcpu 2020), the 2 kHz operating point at 1/128 would emit almost no light.
