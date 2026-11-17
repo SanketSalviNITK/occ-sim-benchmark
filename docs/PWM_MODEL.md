@@ -54,7 +54,7 @@ latched into the LED sets the on-fraction of each PWM period. At the benchmark o
 * LED-to-LED PWM frequency spread and drift; data-refresh latency (24 bit x 1.25 us per LED + reset).
 
 ## Results (B = 10000, unadjusted; full tables in `results/r10/SUMMARY_r10.md`)
-* Codes at P33 (`results/r10/ws2812b_codes_at_P33.csv`): at brightness 1/128 the largest latched code is 2. With integer codes, 40-53 % of the lit channels of v2-CS, CSK802-8, CSK802-4 and Overlay round to 0. At 1/256, 7 of 11 entries emit no light. The maximum on-time per PWM period is 14.2 us at 432 Hz and 3.1 us at 2 kHz (QCD-style, v2-CS).
+* Codes at P33 (`results/r10/ws2812b_codes_at_P33.csv`): at brightness 1/128 the largest latched code is 2. With integer codes, 40-53 % of the lit channels of v2-CS, CSK802-8, CSK802-4 and Overlay round to 0. At 1/256, 7 of 11 entries emit no light. The maximum on-time per PWM period is 18.1 us at 432 Hz and 3.9 us at 2 kHz (HNCSM v2), and 14.2 / 3.1 us for QCD-style and v2-CS.
 * C2 cell, shared finder, 1/1500 s (`results/r10/c2_r10_binding.csv`). Each row gives the HNCSM v2 binding margin at 3.0 m / 3.25 m:
 
   | Condition | 3.0 m | 3.25 m |
