@@ -1,0 +1,13 @@
+work,bibkey,open_code,physics_grounded_channel,paired_stats_CIs,multiple_schemes,sensor_presets,validation_anchors,notes
+Moreno et al. 2026,moreno2026e2e,No,Yes,No (Clopper-Pearson bounds on experiment only),No (OOK/4-PAM),Yes (IMX219),Yes (SSIM/SNR vs captures),Strongest physics-grounded prior; BER estimated from SNR not decoded
+Gutierrez et al. 2025,gutierrez2025python,Yes (MIT),Yes (ray tracing+optics+noise+RS),No,No (CSK family only),Partial (CMOS QE curves),No (not in abstract),Closed-access paper; assessed abstract+repo
+Duque et al. CamComSim 2017-2020,duque2020tools,Yes (Apache-2.0),No (empirical Markov channel),No,No,Partial (camera parameters),Yes (testbed within ~10%),Network-level simulator
+Matus et al. 2019,matus2019rs,Unclear,Partial (RS acquisition),No,No,No,Partial (qualitative vs captures),
+Narasimman et al. 2024,narasimman2024sim,Unclear,Partial,No,No,No,Yes (experiment),
+Manh Tuan et al. 2021,manhtuan2021framework,Unclear,Partial (claimed realistic),No,Unclear,Unclear,Unclear,Abstract only
+Nguyen et al. 2025 (event),nguyen2025event,Unclear,Partial (rendered),No,Unclear,Partial,No,Event-camera focus
+Pham et al. 2025,pham2025std,Unclear,No,No,Yes (several 802.15.7-2018 modes),No,Partial (hardware),
+Yamamoto et al. 2021,yamamoto2021compare,No,Partial,No,Yes (3 LED-array schemes),No,Yes (experiment),
+Dong et al. 2022,dong2022csk,No,Partial (analytical camera channel),No,No (CSK),No,Partial,
+Liu et al. 2022,liu2022comprehensive,No,Yes (comprehensive analytical),No,No,No,Partial,
+This benchmark,—,Yes (planned public release; licence pending),Yes,Yes (paired bootstrap B=2000 + common random numbers),Yes (802.15.7 CSK + LED-matrix schemes incl. HNCSM v2),Yes (IMX219),Partial (no LED-matrix BER-vs-distance anchor exists; QCD-OCC order-of-magnitude),

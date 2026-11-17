@@ -1,0 +1,3 @@
+# Literature search artefacts (copied for release, benchmark-r10)
+
+Verbatim copies from the paper workspace `prisma/` directory (2026-11-02 search; see ../search_log.md). `search2.py` produced the used logs; `search.py` / `*_attempt1*` is the failed first attempt (kept for transparency, not used). Large JSON result pools (pool*.json, dedup.json, screened_auto.json; ~1.7 MB) are not copied; the screening decisions are in `screening_log.csv` and the extraction in `extraction.csv`. Scope limits stated in the log: OpenAlex, Semantic Scholar, Crossref only; no Scopus, Web of Science or IEEE Xplore; arXiv and DBLP queries failed; one screener.

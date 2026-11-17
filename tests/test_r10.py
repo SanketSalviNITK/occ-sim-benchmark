@@ -110,4 +110,4 @@ def test_r10_design():
     J = jobs_for('c2pwm432'); assert len(J) == 2 * 4 * 2 and {j[2]['pwm_hz'] for j in J} == {432.0}
     assert len(jobs_for('c2quant')) == 2 * 2 * 4 * 2 and all(j[7] == 'dual' for j in J)
     assert {j[4] for j in J if j[0].startswith('d3.0') and j[0].endswith('eval')} == {config.cond_seed('d3.0', 0, config.SEED)}
-    S = jobs_for('swfocus3'); assert len(S) == 19 and S[10][4] == config.cond_seed('distance_m', 10, config.SEED) and S[0][2] == dict(focus_m=3.0)
+    assert jobs_for('swdc')[0][2] == {}; S = jobs_for('swfocus3'); assert len(S) == 19 and S[10][4] == config.cond_seed('distance_m', 10, config.SEED) and S[0][2] == dict(focus_m=3.0)

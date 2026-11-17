@@ -1,0 +1,4 @@
+['S1', 'openalex', '("optical camera communication" OR "image sensor communication" OR "camera communication") AND ("LED matrix" OR "LED array" OR "LED panel") AND modulation', '2026-11-02 09:14 IST', 236, 50]
+['S2', 'openalex', '("optical camera communication" OR "image sensor communication" OR "camera communication") AND (simulator OR "simulation framework" OR "simulation tool" OR benchmark OR reproducibility)', '2026-11-02 09:14 IST', 475, 50]
+['S3', 'openalex', '("optical camera communication" OR "image sensor communication" OR "camera communication") AND ("channel model" OR "system model") AND ("rolling shutter" OR blur OR noise OR "point spread function")', '2026-11-02 09:14 IST', 369, 50]
+['S4', 'openalex', '("color shift keying" OR "colour shift keying") AND (camera OR "image sensor")', '2026-11-02 09:14 IST', 306, 50]

@@ -1,0 +1,4 @@
+['S1', 'arxiv', 'abs:"camera communication" AND (abs:"LED array" OR abs:"LED matrix")', '2026-11-02 09:21 IST', 'HTTP Error 429: Too Many Requests', 0]
+['S2', 'arxiv', 'abs:"camera communication" AND (abs:simulator OR abs:simulation OR abs:benchmark)', '2026-11-02 09:23 IST', 'HTTP Error 429: Unknown Error', 0]
+['S3', 'arxiv', 'abs:"camera communication" AND abs:"channel model"', '2026-11-02 09:26 IST', 'HTTP Error 429: Unknown Error', 0]
+['S4', 'arxiv', 'abs:"color shift keying"', '2026-11-02 09:27 IST', 'The read operation timed out', 0]

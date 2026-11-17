@@ -1,0 +1,21 @@
+set,source,query,datetime_IST,total_hits,retrieved
+S1 schemes,Crossref,optical camera communication LED matrix array modulation,2026-11-02T03:24,ERR,0
+S1 schemes,OpenAlex,optical camera communication LED matrix array modulation,2026-11-02T03:24,5372,30
+S1 schemes,SemanticScholar,optical camera communication LED matrix array modulation,2026-11-02T03:24,HTTP Error 429: ,0
+S1 schemes,arXiv,"abs:""camera communication"" AND (abs:LED AND abs:modulation)",2026-11-02T03:24,ERR,0
+S1 schemes,DBLP,optical camera communication LED,2026-11-02T03:24,ERR,0
+S2 simulators,Crossref,optical camera communication simulator simulation framework benchmark,2026-11-02T03:29,3167827,30
+S2 simulators,OpenAlex,optical camera communication simulator simulation framework benchmark,2026-11-02T03:29,2638,30
+S2 simulators,SemanticScholar,optical camera communication simulator simulation framework benchmark,2026-11-02T03:29,HTTP Error 429: ,0
+S2 simulators,arXiv,"abs:""camera communication"" AND (abs:simulator OR abs:simulation OR abs:benchmark)",2026-11-02T03:29,ERR,0
+S2 simulators,DBLP,camera communication simulat,2026-11-02T03:29,ERR,0
+S3 channel,Crossref,optical camera communication channel model rolling shutter blur noise image sensor,2026-11-02T03:34,249241,30
+S3 channel,OpenAlex,optical camera communication channel model rolling shutter blur noise image sensor,2026-11-02T03:34,300,30
+S3 channel,SemanticScholar,optical camera communication channel model rolling shutter blur noise image sensor,2026-11-02T03:34,HTTP Error 429: ,0
+S3 channel,arXiv,"abs:""camera communication"" AND abs:channel",2026-11-02T03:34,6,6
+S3 channel,DBLP,camera communication channel model,2026-11-02T03:34,ERR,0
+S4 CSK,Crossref,color shift keying camera image sensor 802.15.7,2026-11-02T03:38,ERR,0
+S4 CSK,OpenAlex,color shift keying camera image sensor 802.15.7,2026-11-02T03:38,171,30
+S4 CSK,SemanticScholar,color shift keying camera image sensor 802.15.7,2026-11-02T03:38,HTTP Error 429: ,0
+S4 CSK,arXiv,"abs:""color shift keying""",2026-11-02T03:38,ERR,0
+S4 CSK,DBLP,color shift keying,2026-11-02T03:38,ERR,0

@@ -1,0 +1,22 @@
+% PRISMA 2020 flow diagram (searches 2026-11-02 IST). Requires \usetikzlibrary{positioning}
+\begin{figure}[!t]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tikzpicture}[node distance=5mm and 6mm,
+ box/.style={draw,rectangle,align=center,text width=4.3cm,font=\footnotesize,minimum height=7mm},
+ side/.style={draw,rectangle,align=left,text width=4.4cm,font=\scriptsize},
+ >=stealth]
+\node[box](id){Records identified (2026-11-02):\\OpenAlex $n=200$, Semantic Scholar $n=113$,\\Crossref $n=150$ (total $n=463$)\\Not accessible: Scopus, WoS, Xplore, arXiv, DBLP};
+\node[side,right=of id](dup){Duplicates removed $n=151$\\(within-source 46; cross-source 104)};
+\node[box,below=of id](scr){Records screened (title/abstract)\\$n=312$};
+\node[side,right=of scr](ex1){Excluded $n=122$: E2 no camera Rx 59;\\E3 off-topic 56; E4 survey 7; E1 0};
+\node[box,below=of scr](el){Reports assessed for eligibility\\$n=190$ (full text where open access)};
+\node[side,right=of el](ex2){Excluded $n=147$: E5 application/DL 57;\\E9 no scheme/sim/model 57; E8 screen 22;\\E7 out of scope 7; E6 event camera 4};
+\node[box,below=of el](inc){Studies included $n=48$\\(databases 43 + other methods 5)};
+\node[side,left=of el](oth){Other methods (citation\\chasing) $n=12$; excluded 7\\(PD-based 5, surveys 2); included 5};
+\draw[->](id)--(scr);\draw[->](scr)--(el);\draw[->](el)--(inc);
+\draw[->](id)--(dup);\draw[->](scr)--(ex1);\draw[->](el)--(ex2);\draw[->](oth)|-(inc);
+\end{tikzpicture}}
+\caption{PRISMA 2020 flow of the literature search.}
+\label{fig:prisma}
+\end{figure}

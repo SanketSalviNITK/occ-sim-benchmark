@@ -19,6 +19,11 @@ Groups:
               -> CRN-paired with results/phys_sym/sweeps_PHYS_P33.npz (detector) and review_or_sweep.npz (oracle)
   swpwm2k   : same, PWM 2000 Hz
   swfocus3  : same, focus_m = 3.0 (DC)
+  swgs      : same, t_row = 0 (global shutter; the default 27.4 us rolling shutter switched off), std receiver
+  c2radiant : RADIANT-equal budget (experiments.audit_r1.scales_for 'radiant', pref 33.011) at the C2 points 3.0 / 3.25 m,
+              1/1500, 1/128, claims/E2 eval seeds (1000 symbols) -> CRN-paired with review_e2_P33.npz (equal summed drive)
+  swdc      : same, no option (benchmark-r9 DC model): oracle corners and finder error rates on the 19 sweep points;
+              its detector arrays must equal sweeps_PHYS_P33.npz (identity check in experiments.r10_report allentry)
 Usage: OMP_NUM_THREADS=1 PROCS=8 python -m experiments.revision_r10 c2pwm432 c2pwm2k c2quant c2focus3 swpwm432 swfocus3"""
 import os, sys, json, time, datetime, pickle, hashlib, numpy as np
 from multiprocessing import Pool
@@ -40,7 +45,8 @@ C2_GROUPS = {
     'c2pwm432q': {'1/128': dict(brightness=1 / 128, pwm_hz=PWM_432, ws_quant=True)},
     'c2focus3':  {'1/128': dict(brightness=1 / 128, focus_m=3.0)},
 }
-SW_GROUPS = {'swpwm432': dict(pwm_hz=PWM_432), 'swpwm2k': dict(pwm_hz=PWM_2K), 'swfocus3': dict(focus_m=3.0)}
+SW_GROUPS = {'swpwm432': dict(pwm_hz=PWM_432), 'swpwm2k': dict(pwm_hz=PWM_2K), 'swfocus3': dict(focus_m=3.0),
+             'swdc': {}, 'swgs': dict(t_row=0.0)}   # swdc: benchmark-r9 DC model, dual receiver (oracle + finder rates on the sweep seeds; detector must equal sweeps_PHYS_P33)
 
 def jobs_for(group):
     J = []   # (key, cond, pmod, pref, seed, n, only, mode)
@@ -54,9 +60,23 @@ def jobs_for(group):
     elif group in SW_GROUPS:
         for i, d in enumerate(DIST):
             J.append((f'distance_m|{i}|eval', dict(distance_m=float(d)), dict(SW_GROUPS[group]), 33.011,
-                      config.cond_seed('distance_m', i, config.SEED), 1000, list(ENTRIES), 'dual'))
+                      config.cond_seed('distance_m', i, config.SEED), 1000, list(ENTRIES), 'std' if group == 'swgs' else 'dual'))
+    elif group == 'c2radiant':
+        for cn, d in C2_D.items():
+            J.append((f'{cn}|1/1500|1/128|eval', dict(distance_m=d, t_exp=1 / 1500), dict(brightness=1 / 128), 33.011,
+                      config.cond_seed(cn, 0, config.SEED), 1000, list(ENTRIES), 'radiant'))
     else: raise KeyError(group)
     return J
+
+def _job10(a):
+    key, cond, pm, pref, seed, c0, n, only, mode = a
+    if mode == 'radiant':
+        from experiments.audit_r1 import job as ajob
+        return ajob((key, cond, pm, pref, 'radiant', False, seed, c0, n, only))
+    from experiments.revision_r6 import job
+    return job(a)
+
+def _ij10(a): return a[0], _job10(a[1])
 
 def run(group, procs):
     t = time.time(); J = jobs_for(group); work = []
@@ -68,7 +88,7 @@ def run(group, procs):
     todo = [w for w in work if not os.path.exists(fn(w))]
     print(group, len(work), 'chunks,', len(work) - len(todo), 'already checkpointed', flush=True)
     with Pool(procs) as pl:
-        for i, (j, r) in enumerate(pl.imap_unordered(_ijob, list(enumerate(todo)), chunksize=1)):
+        for i, (j, r) in enumerate(pl.imap_unordered(_ij10, list(enumerate(todo)), chunksize=1)):
             w = todo[j]; pickle.dump(r, open(fn(w) + '.tmp', 'wb')); os.replace(fn(w) + '.tmp', fn(w))
             if i % 20 == 0: print(group, i + 1, '/', len(todo), round(time.time() - t), 's', flush=True)
     out = [pickle.load(open(fn(w), 'rb')) for w in work]

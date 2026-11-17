@@ -1,0 +1,4 @@
+['S1', 'crossref', 'optical camera communication LED matrix array modulation [query.bibliographic, relevance-ranked]', '2026-11-02 09:19 IST', 2289472, 50]
+['S2', 'crossref', 'optical camera communication simulator simulation framework [query.bibliographic, relevance-ranked]', '2026-11-02 09:19 IST', 'HTTP Error 429: Too Many Requests', 0]
+['S3', 'crossref', 'optical camera communication channel model rolling shutter noise blur [query.bibliographic, relevance-ranked]', '2026-11-02 09:20 IST', 'HTTP Error 429: Too Many Requests', 0]
+['S4', 'crossref', 'color shift keying camera image sensor [query.bibliographic, relevance-ranked]', '2026-11-02 09:20 IST', 1353614, 50]
